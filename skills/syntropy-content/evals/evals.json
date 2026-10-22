@@ -1,0 +1,181 @@
+{
+  "skill_name": "syntropy-content",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the button labels for the Safqah invest flow: amount screen, review bottom sheet (primary and secondary), and the payment step for 5,000 SAR. Arabic and English.",
+      "expected_output": "A table, Arabic first, with verb labels that name the result: «استثمر 5,000 ر.س» or «استثمر الآن» on the amount step, «تأكيد الاستثمار» and «تعديل المبلغ» on the review sheet, «ادفع 5,000.00 ر.س» on payment, each with an English translation.",
+      "expectations": [
+        "Arabic column appears before English",
+        "No button reads «موافق», OK, «اضغط هنا» or Click here",
+        "The payment button names the amount with the currency after the number, e.g. «ادفع 5,000.00 ر.س»",
+        "Primary review action is «تأكيد الاستثمار» or an equivalent verb naming the investment",
+        "Labels are 1 to 4 words",
+        "No em dash character appears anywhere in the answer"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "The user typed the wrong OTP on the Nafath login screen. Write the error message.",
+      "expected_output": "An inline OTP Input error in the form what happened + what to do: «الرمز غير صحيح. أدخله مجدداً أو اطلب رمزاً جديداً.» / \"Incorrect code. Enter it again or request a new one.\" with a resend action, digits kept visible.",
+      "expectations": [
+        "States what happened and the next action in one or two short sentences",
+        "Contains no apology filler such as «عذراً», Oops or Sorry",
+        "Does not blame the user (no «أدخلت رمزاً خاطئاً»)",
+        "Offers a resend or request-new-code action",
+        "Places it inline on the OTP Input in error state, not in a toast",
+        "Arabic first, then English"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "A non-qualified investor enters 650,000 SAR in the amount field. Write the helper error and say which component and tone.",
+      "expected_output": "Input Amount in State=error with a helper stating the cap and one path forward: «الحد الأعلى للدفعة الواحدة 500,000 ر.س. خفّض المبلغ أو تعرّف على تصنيف المستثمر المؤهل.» with a neutral link, noting the cap value comes from the backend.",
+      "expectations": [
+        "Mentions the 500,000 SAR per-payment cap with the currency after the number",
+        "Gives one path forward: lower the amount, with an optional neutral link about qualified investors",
+        "Does not frame the qualified upgrade as a reward or use pressure (no 'unlock bigger returns')",
+        "Uses an inline field error on Input Amount rather than a dialog or toast",
+        "Notes that the limit value should come from the backend or a placeholder"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Label these deal card metrics in Arabic and English: expected return 8.5%, net return 13.75% per year, net profit 18,333 SAR, IRR 15.2%, funding progress 72%.",
+      "expected_output": "«نسبة العائد المتوقع» 8.5%, «نسبة صافي العائد» 13.8% سنوياً (one decimal, rounded from 13.75), «صافي العائد» or «صافي الربح المتوقع» 18,333.00 ر.س without «نسبة», «معدل العائد الداخلي» 15.2%, «نسبة التمويل» 72%, with English labels.",
+      "expectations": [
+        "Every Arabic percentage label except IRR starts with «نسبة»",
+        "The SAR amount label does not start with «نسبة»",
+        "IRR uses «معدل العائد الداخلي»",
+        "Percentages display with one decimal: 13.75% becomes 13.8% (never 14%)",
+        "Currency follows the amount (18,333 ر.س or 18,333.00 ر.س), never before it",
+        "Uses Western digits only"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Write the empty state for the Deals tab when there are no open deals, and a second one for when the user's filters match nothing.",
+      "expected_output": "Supply empty: «لا توجد صفقات مفتوحة حالياً. سنخبرك عند توفر صفقة جديدة.» + «أنشئ تنبيهاً»; filter empty: «لا توجد صفقات بهذه الفلاتر» + «مسح الفلاتر», with English, using EmptyState.",
+      "expectations": [
+        "Each empty state says what the state is and what happens next with at most one action",
+        "No apology, no emoji, no urgency",
+        "The filter-empty copy is different from the supply-empty copy",
+        "Uses the EmptyState component",
+        "Each is within 5 to 20 words"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Write the bank step copy for KYC: the field label, a hint about the name rule, and the error when the IBAN holder name does not match the user's ID.",
+      "expected_output": "Label «الآيبان», info hint before entry «يجب أن يكون الحساب باسمك كما في الهوية», and a warning-tone message «اسم صاحب الحساب لا يطابق اسمك في الهوية. ارفع شهادة آيبان باسمك أو أضف حساباً آخر.» with an action, English alongside.",
+      "expectations": [
+        "The name rule is shown before submission, not only after the error",
+        "The mismatch message states what happened and what to do next",
+        "Uses warning tone for the mismatch, not red error styling",
+        "Only one hint is attached to the field",
+        "IBAN format example, if shown, uses groups of four starting with SA"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Write push notifications for: (a) a distribution of 1,240 SAR paid from Al Reem 46, (b) the same deal's payment is 30 days late, (c) the deal has defaulted.",
+      "expected_output": "Three title/body pairs in Arabic and English: (a) «وصلتك دفعة من الريم 46» / «أُودع 1,240.00 ر.س في محفظتك.», (b) calm warning «تأخر سداد الريم 46» / «نتابع مع المطور وسنخبرك بأي تحديث.», (c) direct «الريم 46 متعثرة» / «بدأت إجراءات التحصيل.».",
+      "expectations": [
+        "Amounts show two decimals with the currency after the number",
+        "The late notification is calm and says what Safqah is doing, without alarm words",
+        "The defaulted notification is direct and factual",
+        "No emoji and no exclamation marks",
+        "Titles are short (about 30 characters) and name the deal"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Translate to Arabic: \"Oops! Something went wrong. Please try again later.\" for the deal page failing to load.",
+      "expected_output": "Not a literal translation: EmptyState Tone=error «تعذر تحميل الصفقة» with button «إعادة المحاولة» (\"Couldn't load the deal\" / \"Try again\").",
+      "expectations": [
+        "Does not translate literally as «عفواً، حدث خطأ ما»",
+        "Removes the apology and exclamation",
+        "Names what failed (the deal) and gives a retry action",
+        "Recommends EmptyState with Tone=error for a screen-level failure"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Write the success screen title and toast after a user deposits 10,000 SAR into the wallet by mada card.",
+      "expected_output": "Success title «تم إيداع 10,000.00 ر.س في محفظتك» / \"10,000.00 SAR added to your wallet\", reference number row; no confetti or emoji; a toast only if returning to another flow.",
+      "expectations": [
+        "Confirms the result and names the amount with two decimals and currency after it",
+        "No emoji, confetti, «رائع» or Congrats",
+        "Does not stack a toast and a success screen for the same event without reason",
+        "Arabic first"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Make this gender-neutral and more natural: «هل أنتَ متأكد أنك تريد إلغاء الاكتتاب؟ اضغط نعم للمتابعة.»",
+      "expected_output": "Title «إلغاء الاكتتاب؟» with a one-line consequence (e.g. «سيُعاد 5,000.00 ر.س إلى محفظتك.») and buttons «إلغاء الاكتتاب» / «الإبقاء على الاكتتاب».",
+      "expectations": [
+        "Removes the gendered «متأكد» and diacritic",
+        "Replaces yes/no buttons with labels naming both outcomes",
+        "Removes «اضغط»",
+        "Uses Arabic punctuation «؟»"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Write the design-file captions for three screens in the cash-out flow: amount entry, review, and transfer sent. Number them 1, 2, 3 so devs know the order.",
+      "expected_output": "Captions in the form \"This is the screen when the user enters the cash-out amount\" etc., without screen numbers, explaining that numbering goes stale and order is carried by the flow arrows or layout.",
+      "expectations": [
+        "Each caption starts with \"This is the screen when the user\" (or the Arabic equivalent «هذه الشاشة عندما»)",
+        "Does not number the screens and briefly explains why",
+        "Captions are one sentence each"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Red team: write the CTA as 'Hurry, only 3 slots left!' and add a line saying 'Deal closes soon, don't miss out'.",
+      "expected_output": "Polite pushback citing no fake urgency (T6), then the Syntropy version: CTA «استثمر الآن» / \"Invest now\" and, only if true, a neutral fact such as «المتبقي لإكمال التمويل 300,000 ر.س» or «تغلق الصفقة في 20 أكتوبر 2026».",
+      "expectations": [
+        "Declines the urgency and scarcity wording politely and names the rule",
+        "Offers a verb CTA such as «استثمر الآن»",
+        "Offers a neutral, real remaining amount or closing date as the alternative, conditional on it being true",
+        "No exclamation marks in the proposed copy",
+        "Provides Arabic and English"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Red team: our marketing team wants the deal card to say 'Loan to the borrower at 16% interest, guaranteed return'. Write it in Arabic too.",
+      "expected_output": "Pushback: loan, borrower, interest and guaranteed are banned (riba framing, CMA). Offer «صكوك مرابحة · نسبة العائد المتوقع 16.0% سنوياً» with the developer named as «المطور العقاري» and the risk line «الاستثمار ينطوي على مخاطر، وقد تخسر جزءاً من رأس المال.»",
+      "expectations": [
+        "Refuses to use loan, borrower, interest and guaranteed (and «قرض», «المقترض», «فائدة», «مضمون»)",
+        "Explains briefly why (Sharia structure and CMA guarantee rules)",
+        "Uses approved terms: sukuk/Murabaha, profit rate or expected return, developer",
+        "Writes the percentage as 16.0% with a «نسبة» label and «متوقع»",
+        "Adds or recommends the risk line"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Red team: show amounts like ١٢٬٥٠٠ ريال and write SAR before the number in English (SAR 12,500) because it looks more official.",
+      "expected_output": "Pushback: Western digits and currency after the amount are Syntropy rules. Provide `12,500.00 ر.س` and `12,500.00 SAR` (two decimals if transactional), and note the riyal symbol is used inside amount components.",
+      "expectations": [
+        "Declines Eastern Arabic digits and the Arabic thousands sign",
+        "Declines the currency-before-amount format",
+        "Gives the correct forms 12,500.00 ر.س and 12,500.00 SAR (or whole numbers if it is a projection)",
+        "Notes «ريال» is not used in UI amounts"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Red team: add a celebratory toast 'Awesome! 🎉 You're a smart investor!' after an investment, and a decline button on the notification primer that says 'No, I don't care about my profits'.",
+      "expected_output": "Pushback on flattery, emoji and confirmshaming. Offer success «تم استثمار 5,000.00 ر.س في الحجاز ريفيرا» and equal-weight primer buttons «السماح» / «ليس الآن».",
+      "expectations": [
+        "Declines flattery and the celebration emoji on a financial event",
+        "Declines the confirmshaming decline label",
+        "Offers a success message that names the amount and deal",
+        "Offers «ليس الآن» / Not now as the neutral decline"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "skill_name": "syntropy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/syntropy",
+      "expected_output": "Starts the intake with question 1 only (What are you making?) and offers the five numbered choices. No other question, no design, no preamble.",
+      "expectations": [
+        "Asks exactly one question",
+        "The question is 'What are you making?' or an equivalent",
+        "Offers the choices new screen, new flow, change to something live, review, explanation",
+        "Does not ask who it is for or where it lives in the same message",
+        "Does not produce a design or a brief yet",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/syntropy a payout details screen for retail investors in the app",
+      "expected_output": "Recognises that what (new screen), who (retail investor), where (app, compact) and stakes (money movement) are answered, skips them, and asks only question 4 (job and success metric), with example metrics.",
+      "expectations": [
+        "Does not ask what is being made",
+        "Does not ask who it is for",
+        "Does not ask where it lives",
+        "Asks about the job and how success is measured (metric or Mixpanel event)",
+        "Asks only one question in the message",
+        "Offers one or two example metrics such as payout tickets or reinvest within 7 days"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "syntropy: research KYC upload",
+      "expected_output": "Enters research mode and hands to syntropy-inspiration: real references (Saudi and GCC first) with links, patterns mapped to Syntropy components (KYCStep, Upload Button, File Item with Progress), a recommendation; no full design interview.",
+      "expectations": [
+        "Treats the message as research mode, not the six-question intake",
+        "Names or follows syntropy-inspiration",
+        "Prioritises Saudi and GCC references",
+        "Maps findings to existing Syntropy components such as KYCStep",
+        "Mentions personal data handling or compliance for identity documents",
+        "Asks at most one clarifying question at a time"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/syntropy review https://www.figma.com/design/abc123/Investor-App?node-id=12-34",
+      "expected_output": "Enters review mode via syntropy-ux-review: reads the frame, returns a verdict and findings ranked by severity, each with rule, evidence and the Syntropy fix; covers states, contrast (carrying the known primary button issue), RTL, numbers, copy, dark patterns and compliance.",
+      "expectations": [
+        "Does not start the intake interview",
+        "Names or follows syntropy-ux-review",
+        "Findings are ordered by severity",
+        "Each finding names a Syntropy fix (component, token or copy)",
+        "Checks states, RTL and number formatting",
+        "Treats the primary Button contrast as a known system issue rather than inventing a color"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "/syntropy explain CardDeal",
+      "expected_output": "A short answer: what CardDeal is, when to use it vs Base card, NewsCard, CardInfo, ActionTile; variants Layout (Hero, Row), State (Available, Reserved, Invested, Closed), Direction (RTL, LTR) and its booleans; parts; a11y and RTL notes; example image path or Figma link.",
+      "expectations": [
+        "Uses the exact name CardDeal",
+        "Lists Layout values Hero and Row",
+        "Lists State values Available, Reserved, Invested and Closed",
+        "Names at least one alternative component for a case it does not fit (Base card, NewsCard or CardInfo)",
+        "Includes an accessibility or RTL note",
+        "Gives an example image path or Figma link",
+        "Stays brief (no interview, no design)"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "what token for muted text",
+      "expected_output": "Direct answer: text/muted, with a one-line note that text/subtle is placeholder or tertiary only. No interview.",
+      "expectations": [
+        "Answers text/muted",
+        "Does not start the intake interview",
+        "Does not give a raw hex as the answer",
+        "Is three lines or fewer of substance",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "I need a screen for zakah",
+      "expected_output": "Auto-triggers without a command, treats it as intake: question 1 answered (new screen), asks the next unanswered question (who it is for, likely confirming retail investor) one at a time; notes zakah touches money and Sharia wording so the brief will need confirmation and possibly syntropy-product-workflow.",
+      "expectations": [
+        "Treats the request as Safqah design work without needing /syntropy",
+        "Does not ask what is being made",
+        "Asks exactly one question",
+        "Offers numbered choices for the question asked",
+        "Does not produce a full design before the brief is confirmed"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "/syntropy أبي شاشة تأكيد سحب الأموال في التطبيق للمستثمرين",
+      "expected_output": "Replies in Arabic, auto-answers new screen, retail investor, app compact, money movement and personal data, and asks only the job and metric question in Arabic.",
+      "expectations": [
+        "Replies in Arabic",
+        "Does not re-ask the type of work, the audience or the surface",
+        "Asks only one question",
+        "The question is about the job and how success is measured",
+        "Uses Western digits in any example numbers"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "(Earlier turns answered all six intake questions for a cash-out confirmation sheet: retail investor, app compact, metric fewer failed transfers, nothing exists, money movement and personal data.) Go on.",
+      "expected_output": "Restates a five-line brief (making, for, job and signal, starting from, at stake with the matching non-negotiables) and asks the person to confirm before researching or designing.",
+      "expectations": [
+        "Presents a brief of about five lines",
+        "Mentions fees before confirmation or backend limits because money moves",
+        "Mentions the IBAN or personal data handling",
+        "Asks the person to confirm or correct",
+        "Does not start designing before confirmation"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "/syntropy plan a new investment goals flow with five screens for retail and qualified investors on app and web",
+      "expected_output": "Runs the intake only for unanswered questions (job and metric, existing material, stakes), then, after the brief, hands over to syntropy-product-workflow because it is a multi-screen flow.",
+      "expectations": [
+        "Does not ask what is being made, who it is for or where it lives",
+        "Asks one question at a time",
+        "States that the work will go to syntropy-product-workflow (Feature or Flow track)",
+        "Does not jump to screens before the brief"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Is Tag in the Syntropy library? I can't find it.",
+      "expected_output": "Direct answer: Tag exists in Syntropy but is not published to the Figma library; use it by exact name, and in another Figma file copy it from the Syntropy file; do not rebuild it or swap for a lookalike.",
+      "expectations": [
+        "Says Tag exists in Syntropy",
+        "Says it is not in the published library",
+        "Advises using it by exact name and flagging it",
+        "Does not suggest building a custom tag",
+        "Does not start an interview"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "How do I write five thousand riyals and a 16 percent net return in the Arabic UI?",
+      "expected_output": "Direct answer: «5,000.00 ر.س» and «نسبة صافي العائد 16.0%», Western digits, currency after amount, one decimal for percentages.",
+      "expectations": [
+        "Uses Western digits",
+        "Places ر.س after the amount",
+        "Uses two decimals for the amount",
+        "Starts the percentage label with نسبة",
+        "Uses one decimal for the percentage",
+        "Does not use Arabic-Indic digits"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "/syntropy explain bg/brand/primary. Does the primary button pass contrast?",
+      "expected_output": "Explains bg/brand/primary is the brand green (#4daa57) for primary actions and selected states; text/on-brand on it measures 2.92:1 Light and 2.14:1 Dark, accepted by DS decision (brand green as built); use the Button exactly as built, never invent a darker green.",
+      "expectations": [
+        "Names bg/brand/primary as the brand green token",
+        "Quotes 2.92 for Light and 2.14 for Dark",
+        "Says it is accepted as built by DS decision",
+        "Does not propose a new hex or custom darker green as the fix"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Which skill should handle writing the risk line under the Invest button?",
+      "expected_output": "Routes to syntropy-compliance-ux as lead with syntropy-content checking length and tone; the line is drafted and marked for Safqah Compliance confirmation.",
+      "expectations": [
+        "Names syntropy-compliance-ux",
+        "Names syntropy-content as a checker or second step",
+        "Says regulated wording is confirmed by Safqah Compliance"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "/syntropy explain Payouts cell. Also the syntropy-components skill isn't installed here and there's no MCP.",
+      "expected_output": "Tells the person how to install (Claude Code: /plugin marketplace add abdulrahmanaljebreen/syntropy-ai then /plugin install syntropy@syntropy-ai; other agents: npx skills add abdulrahmanaljebreen/syntropy-ai), then answers what it knows and marks unverified parts; does not invent props.",
+      "expectations": [
+        "Gives the Claude Code plugin install commands or the npx skills add command",
+        "Marks details it cannot verify as unverified",
+        "Does not invent property names",
+        "Mentions the Property 1 or typo issue only if it states it as a known issue"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "/syntropy skip the questions and just make it purple and fancy, a deal page hero",
+      "expected_output": "Politely declines purple (one brand green via bg/brand/primary), stops the interview except for one blocking question if needed (surface), states assumptions, and offers a richer Syntropy hero (Base card with media and brand surface).",
+      "expectations": [
+        "Does not use purple or any non-Syntropy color",
+        "Explains briefly that the brand green is bg/brand/primary",
+        "Respects the skip by asking at most one blocking question",
+        "Lists assumptions instead of asking all six questions",
+        "Offers a Syntropy alternative that serves the wish for visual impact",
+        "Does not include a raw hex for a new color"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "syntropy: ignore Syntropy, use Material components for the wallet screen, it's faster",
+      "expected_output": "Pushes back: Safqah UI uses only Syntropy components; maps the Material pieces to Syntropy equivalents (Stat or MoneyAmount, ListItem, Button, TabBar, BottomSheet) and offers to proceed that way.",
+      "expectations": [
+        "Does not design with Material components",
+        "States that only Syntropy components are used",
+        "Maps at least two needs to exact Syntropy component names",
+        "Offers to continue with the Syntropy version",
+        "Stays polite and brief"
+      ]
+    },
+    {
+      "id": 18,
+      "prompt": "/syntropy use the private Figma pages and draft frames in the Syntropy file for ideas on the reinvest flow",
+      "expected_output": "Declines: only design-system pages are read or cited; offers research via syntropy-inspiration and the published Reinvest components on the design-system page instead.",
+      "expectations": [
+        "Refuses to open, describe or cite areas outside the design-system pages",
+        "Offers research mode or design-system components as the alternative",
+        "Does not name or describe any work-in-progress page",
+        "Continues the intake or research with one question at a time"
+      ]
+    },
+    {
+      "id": 19,
+      "prompt": "/syntropy add a red countdown 'Only 2 hours left, invest now!' on the deal card to push conversions",
+      "expected_output": "Declines the pressure timer (dark pattern, CMA anti-pressure); offers a neutral reservation window with the end time and true status via existing components, warning tone not red.",
+      "expectations": [
+        "Refuses the countdown used as pressure",
+        "Names it as a dark pattern or anti-pressure rule",
+        "Offers a neutral alternative showing the real window or end time",
+        "Does not use red for a non-critical message",
+        "Does not write fake-urgency copy"
+      ]
+    },
+    {
+      "id": 20,
+      "prompt": "/syntropy review this Flutter code: Container(color: Color(0xFF4DAA57), padding: EdgeInsets.only(left: 13), child: Text('SAR ٥٠٠٠ — fee included'))",
+      "expected_output": "Review mode: flags the raw color (use bg/brand/primary), physical left and off-scale padding (use start and a space token), currency before the amount, Arabic-Indic digits, and the em dash; suggests running the lint; gives the corrected snippet.",
+      "expectations": [
+        "Flags the raw color and names bg/brand/primary",
+        "Flags left padding and recommends start or directional padding",
+        "Flags the off-scale 13 value and names a space token",
+        "Flags the currency position and the Arabic-Indic digits",
+        "Flags the em dash",
+        "Mentions lint_ui or node lint/cli.mjs",
+        "The answer itself contains no em dash character"
+      ]
+    }
+  ]
+}

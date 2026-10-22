@@ -1,0 +1,23 @@
+{
+  "name": "syntropy-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Syntropy, the Safqah design system, packaged for AI agents: knowledge, skills, MCP, lint.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\" \"mcp/test/*.test.mjs\"",
+    "sync:figma": "node scripts/sync-figma.mjs",
+    "sync:icons": "node scripts/sync-icons.mjs",
+    "sync:images": "node scripts/export-images.mjs",
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "links:check": "node scripts/validate-links.mjs",
+    "mcp": "node mcp/server.mjs",
+    "mcp:bundle": "npx -y esbuild@0.25.0 mcp/server.mjs --bundle --platform=node --format=esm --target=node20 --outfile=mcp/dist/server.mjs --external:../lint/index.mjs --banner:js=\"import { createRequire as __cr } from 'module'; const require = __cr(import.meta.url);\" --log-level=warning",
+    "skills:build": "node scripts/build-skills.mjs",
+    "dist": "node scripts/build-skills.mjs && node scripts/build-dist.mjs",
+    "docs:build": "node scripts/build-docs.mjs"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "skill_name": "syntropy-rtl-arabic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run the RTL checker on evals/files/deal_summary_card.dart and fix every finding. Show the corrected widget.",
+      "files": ["evals/files/deal_summary_card.dart"],
+      "expected_output": "Runs scripts/check-rtl.mjs, reports 9 errors and 1 info, and rewrites the widget with EdgeInsetsDirectional.only(start: 16, end: 8, top: 12), EdgeInsetsDirectional.fromSTEB, AlignmentDirectional.centerStart, BorderRadiusDirectional, BorderDirectional, TextAlign.start, PositionedDirectional(end: 0), Western digits «نسبة العائد المتوقع 8.5%», and keeps TextDirection.ltr only around the IBAN with a comment.",
+      "expectations": [
+        "Actually runs node scripts/check-rtl.mjs on the file and quotes its summary line",
+        "Replaces EdgeInsets.only(left/right) with EdgeInsetsDirectional.only(start/end)",
+        "Replaces Alignment.centerLeft with AlignmentDirectional.centerStart and TextAlign.left with TextAlign.start",
+        "Replaces Positioned(right: 0) with PositionedDirectional(end: 0)",
+        "Converts ٨٫٥٪ to 8.5% and the Arabic percent sign to %",
+        "Keeps TextDirection.ltr on the IBAN text and explains it is intended LTR data",
+        "Re-runs the checker and shows 0 errors"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Convert this Tailwind card to be RTL-safe: <div className=\"flex ml-4 pr-2 text-left rounded-l-lg border-l space-x-2\">",
+      "expected_output": "className=\"flex ms-4 pe-2 text-start rounded-s-lg border-s gap-2\" with an explanation that logical utilities flip with dir and gap replaces space-x.",
+      "expectations": [
+        "Maps ml-4 to ms-4 and pr-2 to pe-2",
+        "Maps text-left to text-start, rounded-l-lg to rounded-s-lg and border-l to border-s",
+        "Replaces space-x-2 with gap-2 (or adds rtl:space-x-reverse) and says why",
+        "States that dir is set once on the html element from the locale, not on the component"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "In our Arabic transfer screen the phone number +966 54 123 4567 shows up as 4567 123 54 966+. Why, and how do we fix it in Flutter and on the web?",
+      "expected_output": "Explains that digit groups separated by spaces in an RTL paragraph are laid out right to left and the leading + is a weak character, then fixes with LRI/PDI isolation or Text(phone, textDirection: TextDirection.ltr) / Directionality in Flutter and <bdi dir=\"ltr\"> or <span dir=\"ltr\"> on the web; never reverse the string.",
+      "expectations": [
+        "Explains the bidi cause (space-separated number groups and the weak + sign in an RTL paragraph)",
+        "Gives a Flutter fix using TextDirection.ltr on the value or a \\u2066...\\u2069 isolate",
+        "Gives a web fix using <bdi>, dir=\"ltr\" or unicode isolates",
+        "Says not to reverse the string manually",
+        "Mentions stripping invisible marks before copy or submit if isolates are used in strings"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Which icons do I use for back and for the list chevron on an Arabic screen in Figma? Can I just flip the LTR ones?",
+      "expected_output": "Back in RTL uses Icon / arrow-right (or arrow-right-2 on the 24 grid) at the start, pointing right; list chevrons use Icon / chevron-left at the end; never flip vectors with negative scale; prefer the BackButton component's RTL direction variant.",
+      "expectations": [
+        "Names Icon / arrow-right (or arrow-right-2) for back in RTL",
+        "Names Icon / chevron-left for forward or see-all chevrons in RTL",
+        "Says not to flip or negative-scale icons; swap glyphs instead",
+        "Recommends the component direction variant (e.g. BackButton) where one exists"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I'm building an Arabic screen in Figma with Button, Input Phone, StatusPill, CardDeal and the Header. What direction values do I set on each?",
+      "expected_output": "Button and Input Phone use Direction=rtl (lowercase), StatusPill and CardDeal use Direction=RTL, Header uses Language=Arabic; values come from the component index and are case-sensitive.",
+      "expectations": [
+        "Gives Direction=rtl for Button and Input Phone",
+        "Gives Direction=RTL for StatusPill and CardDeal",
+        "Gives Language=Arabic for Header",
+        "Warns that values are case-sensitive and a wrong value falls back to LTR",
+        "Points to the component index as the source of truth"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Show the payout date 15 March 2026 and the Zakah due date on a Zakah statement in Arabic. Which calendar for which?",
+      "expected_output": "Payout in Gregorian «15 مارس 2026»; Zakah due date in Hijri (e.g. «26 رمضان 1447 هـ» when computed with Umm al-Qura); when both appear together, suffix years with «م» and «هـ»; Western digits; month names, no numeric dates; compute conversions, do not hardcode.",
+      "expectations": [
+        "Uses Gregorian for the payout date and Hijri for the Zakah date",
+        "Writes dates as day, month name, year with Western digits",
+        "Adds «م» / «هـ» suffixes when both calendars appear together",
+        "Recommends computing Hijri with the Umm al-Qura calendar rather than hardcoding",
+        "Mentions the date picker has no Hijri mode yet and flags it as a gap if picking is needed"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Display the IBAN SA0380000000608010167519 on the bank-transfer screen in Arabic, with a copy button.",
+      "expected_output": "Show «الآيبان» label and the value grouped in fours `SA03 8000 0000 6080 1016 7519`, isolated LTR, in KeyValue stacked with strong emphasis and a copy icon; copy yields the unspaced value without invisible marks; screen reader reads it in groups.",
+      "expectations": [
+        "Groups the IBAN in fours starting with SA",
+        "Keeps the IBAN LTR and isolated inside the RTL layout",
+        "Copies the clean value without spaces or bidi marks",
+        "Does not truncate the IBAN on the transfer screen",
+        "Uses a Syntropy component such as KeyValue for the row"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Review this Arabic deal list row: the deal name is cut at the right side with an ellipsis, the amount 500,000.00 ر.س is truncated to 500,0…, and the subtitle uses 10px text.",
+      "expected_output": "Ellipsis must be at the end of reading order (left in RTL); amounts are never truncated (wrap or stack the value); 10px Arabic is below minimum, use caption / 12 or larger; use text styles with 1.5 line height.",
+      "expectations": [
+        "Moves the ellipsis to the left (end of reading order) for the deal name",
+        "States amounts must never be truncated and proposes wrapping or stacking",
+        "Raises the subtitle to at least caption / 12",
+        "References IBM Plex Sans Arabic text styles"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Write the RTL QA plan for the new cash-out flow before release.",
+      "expected_output": "A plan covering check-rtl.mjs on changed files with 0 errors, pseudo-locale and long-string pass, 200% text, the RTL visual checklist (mirroring, non-mirroring, numbers, truncation), VoiceOver and TalkBack in Arabic with expected readings for amounts and IBANs, and an evidence block for the handoff.",
+      "expectations": [
+        "Includes running scripts/check-rtl.mjs with a 0-error target",
+        "Includes a pseudo-locale or long-string pass and 200% text size",
+        "Includes VoiceOver and TalkBack testing in Arabic with reading order starting top right",
+        "Includes checks for numbers, IBAN, currency and truncation",
+        "Includes an evidence or handoff block"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "In the English back-office, the owner column shows 'Invested in 46 الريم' instead of 'Invested in الريم 46'. Fix it.",
+      "expected_output": "Explains the digits attach to the preceding Arabic run in an LTR paragraph; wraps the deal name in RLI or FSI ... PDI (or <bdi>) so it renders «الريم 46»; recommends FSI/<bdi> for any user- or issuer-entered names.",
+      "expectations": [
+        "Identifies the cause as bidi number attachment to the Arabic run",
+        "Fixes with RLI/FSI + PDI or <bdi>",
+        "Recommends isolating all issuer or user-entered names by default"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Red team: use Arabic-Indic numerals (٠١٢٣) for Arabic users so it feels more native, including amounts like ١٬٢٥٠٫٥٠ ر.س.",
+      "expected_output": "Polite pushback: Syntropy uses Western digits in Arabic UI (Saudi banking convention, screen readers read them as Arabic words); give `1,250.50 ر.س`; normalise Eastern digits typed by users to Western; note check-rtl.mjs flags Eastern digits.",
+      "expectations": [
+        "Declines Eastern Arabic digits for the UI and amounts",
+        "Gives the correct form 1,250.50 ر.س",
+        "Explains the reason (Saudi banking convention, one digit system, misreads)",
+        "Recommends accepting and normalising Eastern digits typed by users"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Red team: mirror the returns chart in RTL so time goes right to left, oldest on the right.",
+      "expected_output": "Pushback: the time axis runs left to right in Arabic too; use Chart organisms with Direction=RTL, which move the y-axis to the right and mirror the legend while keeping time left to right; trend icons are not mirrored.",
+      "expectations": [
+        "Declines mirroring the time axis",
+        "States time runs left to right in RTL as a Syntropy rule",
+        "Explains what does change in RTL charts (y-axis on the right, legend order)",
+        "Points to the Chart component Direction=RTL variant"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Red team: just add textDirection: TextDirection.rtl to every widget on the Arabic screens, and flip the Safqah logo and the clock icon so everything faces the same way.",
+      "expected_output": "Pushback: direction is set once from the locale (MaterialApp), never per widget; logos and clocks never mirror; directional icons swap glyphs; run check-rtl.mjs to find hardcoded directions.",
+      "expectations": [
+        "Declines per-widget TextDirection and explains the locale-driven Directionality",
+        "Declines mirroring the SafqahLogo and the clock icon",
+        "Explains which things do mirror (back, chevrons, progress) and how (glyph swap or variant)",
+        "Mentions check-rtl.mjs reports hardcoded TextDirection"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Red team: Arabic headings look cramped, add 2% letter-spacing and set them in italic for emphasis, and use 1.2 line height to save space.",
+      "expected_output": "Pushback: no letter-spacing on Arabic (breaks letter joins), no italics in Arabic, keep the built 1.5 line height via text styles; emphasise with size or semibold weight instead.",
+      "expectations": [
+        "Declines letter-spacing on Arabic and explains joining",
+        "Declines italics for Arabic",
+        "Keeps the 1.5 line height from the built text styles",
+        "Offers weight or size as the alternative"
+      ]
+    }
+  ]
+}

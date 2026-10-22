@@ -1,0 +1,2892 @@
+[
+ {
+  "id": "616:2383",
+  "page": "button",
+  "kind": "reference",
+  "path": "knowledge/examples/components/button/reference.png"
+ },
+ {
+  "id": "607:1516",
+  "page": "icon-button",
+  "kind": "reference",
+  "path": "knowledge/examples/components/icon-button/reference.png"
+ },
+ {
+  "id": "583:5402",
+  "page": "link",
+  "kind": "reference",
+  "path": "knowledge/examples/components/link/reference.png"
+ },
+ {
+  "id": "660:756",
+  "page": "fab",
+  "kind": "reference",
+  "path": "knowledge/examples/components/fab/reference.png"
+ },
+ {
+  "id": "793:334",
+  "page": "button-group",
+  "kind": "reference",
+  "path": "knowledge/examples/components/button-group/reference.png"
+ },
+ {
+  "id": "810:30",
+  "page": "social-button",
+  "kind": "reference",
+  "path": "knowledge/examples/components/social-button/reference.png"
+ },
+ {
+  "id": "836:732",
+  "page": "input",
+  "kind": "reference",
+  "path": "knowledge/examples/components/input/reference.png"
+ },
+ {
+  "id": "857:2088",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Underline Field",
+  "path": "knowledge/examples/components/input/input-underline-field.png"
+ },
+ {
+  "id": "924:110",
+  "page": "otp-input",
+  "kind": "reference",
+  "path": "knowledge/examples/components/otp-input/reference.png"
+ },
+ {
+  "id": "1066:1245",
+  "page": "select",
+  "kind": "reference",
+  "path": "knowledge/examples/components/select/reference.png"
+ },
+ {
+  "id": "3923:1724",
+  "page": "checkbox",
+  "kind": "reference",
+  "path": "knowledge/examples/components/checkbox/reference.png"
+ },
+ {
+  "id": "1089:189",
+  "page": "radio",
+  "kind": "reference",
+  "path": "knowledge/examples/components/radio/reference.png"
+ },
+ {
+  "id": "1122:274",
+  "page": "slider",
+  "kind": "reference",
+  "path": "knowledge/examples/components/slider/reference.png"
+ },
+ {
+  "id": "1158:88",
+  "page": "file-upload",
+  "kind": "reference",
+  "path": "knowledge/examples/components/file-upload/reference.png"
+ },
+ {
+  "id": "1187:289",
+  "page": "form-field",
+  "kind": "reference",
+  "path": "knowledge/examples/components/form-field/reference.png"
+ },
+ {
+  "id": "3899:1503",
+  "page": "combobox",
+  "kind": "reference",
+  "path": "knowledge/examples/components/combobox/reference.png"
+ },
+ {
+  "id": "3903:1044",
+  "page": "numeric-stepper",
+  "kind": "reference",
+  "path": "knowledge/examples/components/numeric-stepper/reference.png"
+ },
+ {
+  "id": "1488:95",
+  "page": "status-issuance-badge",
+  "kind": "reference",
+  "path": "knowledge/examples/components/status-issuance-badge/reference.png"
+ },
+ {
+  "id": "1384:94",
+  "page": "avatar",
+  "kind": "reference",
+  "path": "knowledge/examples/components/avatar/reference.png"
+ },
+ {
+  "id": "1630:162",
+  "page": "tooltip",
+  "kind": "reference",
+  "path": "knowledge/examples/components/tooltip/reference.png"
+ },
+ {
+  "id": "1657:242",
+  "page": "status-pill",
+  "kind": "reference",
+  "path": "knowledge/examples/components/status-pill/reference.png"
+ },
+ {
+  "id": "1693:1402",
+  "page": "stat",
+  "kind": "reference",
+  "path": "knowledge/examples/components/stat/reference.png"
+ },
+ {
+  "id": "1741:122",
+  "page": "key-value",
+  "kind": "reference",
+  "path": "knowledge/examples/components/key-value/reference.png"
+ },
+ {
+  "id": "1770:2",
+  "page": "divider",
+  "kind": "reference",
+  "path": "knowledge/examples/components/divider/reference.png"
+ },
+ {
+  "id": "1828:18",
+  "page": "timeline",
+  "kind": "reference",
+  "path": "knowledge/examples/components/timeline/reference.png"
+ },
+ {
+  "id": "1888:2",
+  "page": "progress-bar",
+  "kind": "reference",
+  "path": "knowledge/examples/components/progress-bar/reference.png"
+ },
+ {
+  "id": "1958:242",
+  "page": "alert",
+  "kind": "reference",
+  "path": "knowledge/examples/components/alert/reference.png"
+ },
+ {
+  "id": "1974:142",
+  "page": "toast",
+  "kind": "reference",
+  "path": "knowledge/examples/components/toast/reference.png"
+ },
+ {
+  "id": "1998:212",
+  "page": "banner",
+  "kind": "reference",
+  "path": "knowledge/examples/components/banner/reference.png"
+ },
+ {
+  "id": "2125:692",
+  "page": "empty-state",
+  "kind": "reference",
+  "path": "knowledge/examples/components/empty-state/reference.png"
+ },
+ {
+  "id": "2173:185",
+  "page": "skeleton",
+  "kind": "reference",
+  "path": "knowledge/examples/components/skeleton/reference.png"
+ },
+ {
+  "id": "2215:553",
+  "page": "loader",
+  "kind": "reference",
+  "path": "knowledge/examples/components/loader/reference.png"
+ },
+ {
+  "id": "1890:2",
+  "page": "progress",
+  "kind": "reference",
+  "path": "knowledge/examples/components/progress/reference.png"
+ },
+ {
+  "id": "3149:1590",
+  "page": "dialog",
+  "kind": "reference",
+  "path": "knowledge/examples/components/dialog/reference.png"
+ },
+ {
+  "id": "3929:1044",
+  "page": "popover",
+  "kind": "reference",
+  "path": "knowledge/examples/components/popover/reference.png"
+ },
+ {
+  "id": "3152:1553",
+  "page": "app-bar",
+  "kind": "reference",
+  "path": "knowledge/examples/components/app-bar/reference.png"
+ },
+ {
+  "id": "3157:1969",
+  "page": "tab-bar",
+  "kind": "reference",
+  "path": "knowledge/examples/components/tab-bar/reference.png"
+ },
+ {
+  "id": "3158:1849",
+  "page": "bottom-sheet",
+  "kind": "reference",
+  "path": "knowledge/examples/components/bottom-sheet/reference.png"
+ },
+ {
+  "id": "2683:12",
+  "page": "modal",
+  "kind": "reference",
+  "path": "knowledge/examples/components/modal/reference.png"
+ },
+ {
+  "id": "2707:12",
+  "page": "drawer",
+  "kind": "reference",
+  "path": "knowledge/examples/components/drawer/reference.png"
+ },
+ {
+  "id": "3169:1303",
+  "page": "breadcrumb",
+  "kind": "reference",
+  "path": "knowledge/examples/components/breadcrumb/reference.png"
+ },
+ {
+  "id": "2737:12",
+  "page": "pagination",
+  "kind": "reference",
+  "path": "knowledge/examples/components/pagination/reference.png"
+ },
+ {
+  "id": "3167:1168",
+  "page": "stepper",
+  "kind": "reference",
+  "path": "knowledge/examples/components/stepper/reference.png"
+ },
+ {
+  "id": "3153:2641",
+  "page": "back-button",
+  "kind": "reference",
+  "path": "knowledge/examples/components/back-button/reference.png"
+ },
+ {
+  "id": "3156:6062",
+  "page": "navigation-rail-sidebar",
+  "kind": "reference",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/reference.png"
+ },
+ {
+  "id": "4014:201383",
+  "page": "scroll-container",
+  "kind": "reference",
+  "path": "knowledge/examples/components/scroll-container/reference.png"
+ },
+ {
+  "id": "4277:3084",
+  "page": "segmented-control",
+  "kind": "reference",
+  "path": "knowledge/examples/components/segmented-control/reference.png"
+ },
+ {
+  "id": "3141:982",
+  "page": "card-action",
+  "kind": "reference",
+  "path": "knowledge/examples/components/card-action/reference.png"
+ },
+ {
+  "id": "3202:971",
+  "page": "card-info",
+  "kind": "reference",
+  "path": "knowledge/examples/components/card-info/reference.png"
+ },
+ {
+  "id": "3200:1066",
+  "page": "card-info",
+  "kind": "set",
+  "name": "CardInfo",
+  "path": "knowledge/examples/components/card-info/card-info.png"
+ },
+ {
+  "id": "3213:1142",
+  "page": "list-item",
+  "kind": "reference",
+  "path": "knowledge/examples/components/list-item/reference.png"
+ },
+ {
+  "id": "3223:1003",
+  "page": "action-list",
+  "kind": "reference",
+  "path": "knowledge/examples/components/action-list/reference.png"
+ },
+ {
+  "id": "3252:1464",
+  "page": "list",
+  "kind": "reference",
+  "path": "knowledge/examples/components/list/reference.png"
+ },
+ {
+  "id": "3263:753",
+  "page": "section",
+  "kind": "reference",
+  "path": "knowledge/examples/components/section/reference.png"
+ },
+ {
+  "id": "3279:889",
+  "page": "accordion",
+  "kind": "reference",
+  "path": "knowledge/examples/components/accordion/reference.png"
+ },
+ {
+  "id": "3302:1689",
+  "page": "carousel",
+  "kind": "reference",
+  "path": "knowledge/examples/components/carousel/reference.png"
+ },
+ {
+  "id": "3339:1489",
+  "page": "table",
+  "kind": "reference",
+  "path": "knowledge/examples/components/table/reference.png"
+ },
+ {
+  "id": "3404:562",
+  "page": "header-card",
+  "kind": "reference",
+  "path": "knowledge/examples/components/header-card/reference.png"
+ },
+ {
+  "id": "3431:1041",
+  "page": "news-card",
+  "kind": "reference",
+  "path": "knowledge/examples/components/news-card/reference.png"
+ },
+ {
+  "id": "3949:1132",
+  "page": "menu",
+  "kind": "reference",
+  "path": "knowledge/examples/components/menu/reference.png"
+ },
+ {
+  "id": "3452:3591",
+  "page": "investment-calculator",
+  "kind": "reference",
+  "path": "knowledge/examples/components/investment-calculator/reference.png"
+ },
+ {
+  "id": "3459:2468",
+  "page": "reservation-timer",
+  "kind": "reference",
+  "path": "knowledge/examples/components/reservation-timer/reference.png"
+ },
+ {
+  "id": "3664:2574",
+  "page": "deal-timeline",
+  "kind": "reference",
+  "path": "knowledge/examples/components/deal-timeline/reference.png"
+ },
+ {
+  "id": "3724:194",
+  "page": "province-selector",
+  "kind": "reference",
+  "path": "knowledge/examples/components/province-selector/reference.png"
+ },
+ {
+  "id": "3757:275",
+  "page": "rating-scale",
+  "kind": "reference",
+  "path": "knowledge/examples/components/rating-scale/reference.png"
+ },
+ {
+  "id": "3770:231",
+  "page": "tier-badge",
+  "kind": "reference",
+  "path": "knowledge/examples/components/tier-badge/reference.png"
+ },
+ {
+  "id": "3799:489",
+  "page": "kyc-step",
+  "kind": "reference",
+  "path": "knowledge/examples/components/kyc-step/reference.png"
+ },
+ {
+  "id": "3810:184",
+  "page": "abshir-logo",
+  "kind": "reference",
+  "path": "knowledge/examples/components/abshir-logo/reference.png"
+ },
+ {
+  "id": "3823:184",
+  "page": "mada-logo",
+  "kind": "reference",
+  "path": "knowledge/examples/components/mada-logo/reference.png"
+ },
+ {
+  "id": "3832:184",
+  "page": "safqah-logo",
+  "kind": "reference",
+  "path": "knowledge/examples/components/safqah-logo/reference.png"
+ },
+ {
+  "id": "3850:1440",
+  "page": "qualified-calculator",
+  "kind": "reference",
+  "path": "knowledge/examples/components/qualified-calculator/reference.png"
+ },
+ {
+  "id": "3862:1138",
+  "page": "guarantees",
+  "kind": "reference",
+  "path": "knowledge/examples/components/guarantees/reference.png"
+ },
+ {
+  "id": "4068:1409",
+  "page": "issuance-row",
+  "kind": "reference",
+  "path": "knowledge/examples/components/issuance-row/reference.png"
+ },
+ {
+  "id": "6055:571",
+  "page": "reinvest",
+  "kind": "reference",
+  "path": "knowledge/examples/components/reinvest/reference.png"
+ },
+ {
+  "id": "821:17",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Label",
+  "path": "knowledge/examples/components/input/input-label.png"
+ },
+ {
+  "id": "822:6",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Helper Text",
+  "path": "knowledge/examples/components/input/input-helper-text.png"
+ },
+ {
+  "id": "823:14",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Value",
+  "path": "knowledge/examples/components/input/input-value.png"
+ },
+ {
+  "id": "876:2229",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Phone Value",
+  "path": "knowledge/examples/components/input/input-phone-value.png"
+ },
+ {
+  "id": "946:480",
+  "page": "amount-input",
+  "kind": "set",
+  "name": "Input Amount Value",
+  "path": "knowledge/examples/components/amount-input/input-amount-value.png"
+ },
+ {
+  "id": "1022:57",
+  "page": "select",
+  "kind": "set",
+  "name": "Select Value",
+  "path": "knowledge/examples/components/select/select-value.png"
+ },
+ {
+  "id": "1322:63",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "Badge Dot",
+  "path": "knowledge/examples/components/status-issuance-badge/badge-dot.png"
+ },
+ {
+  "id": "1324:63",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "Badge Count",
+  "path": "knowledge/examples/components/status-issuance-badge/badge-count.png"
+ },
+ {
+  "id": "1487:107",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "IssuanceStatusBadge (Internal)",
+  "path": "knowledge/examples/components/status-issuance-badge/issuance-status-badge.png"
+ },
+ {
+  "id": "1552:50025",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "illustrations",
+  "path": "knowledge/examples/components/status-issuance-badge/illustrations.png"
+ },
+ {
+  "id": "1374:14",
+  "page": "avatar",
+  "kind": "set",
+  "name": "AvatarWithStatus",
+  "path": "knowledge/examples/components/avatar/avatar-with-status.png"
+ },
+ {
+  "id": "4104:1068",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Legend",
+  "path": "knowledge/examples/components/chart/chart-legend.png"
+ },
+ {
+  "id": "4110:1267",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Pie",
+  "path": "knowledge/examples/components/chart/chart-pie.png"
+ },
+ {
+  "id": "4110:1303",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Scatter",
+  "path": "knowledge/examples/components/chart/chart-scatter.png"
+ },
+ {
+  "id": "4111:1265",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Sparkline",
+  "path": "knowledge/examples/components/chart/chart-sparkline.png"
+ },
+ {
+  "id": "4111:1273",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Combo",
+  "path": "knowledge/examples/components/chart/chart-combo.png"
+ },
+ {
+  "id": "4112:1255",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Candlestick",
+  "path": "knowledge/examples/components/chart/chart-candlestick.png"
+ },
+ {
+  "id": "4112:1272",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Waterfall",
+  "path": "knowledge/examples/components/chart/chart-waterfall.png"
+ },
+ {
+  "id": "4118:1777",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Bar-PnL",
+  "path": "knowledge/examples/components/chart/chart-bar-pn-l.png"
+ },
+ {
+  "id": "4127:1712",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Template-Tufte-Bar",
+  "path": "knowledge/examples/components/chart/chart-template-tufte-bar.png"
+ },
+ {
+  "id": "4127:1735",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / Template-Tufte-Sparkline",
+  "path": "knowledge/examples/components/chart/chart-template-tufte-sparkline.png"
+ },
+ {
+  "id": "4146:2491",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / HoverDot",
+  "path": "knowledge/examples/components/chart/chart-hover-dot.png"
+ },
+ {
+  "id": "4146:2496",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / CrosshairGuide",
+  "path": "knowledge/examples/components/chart/chart-crosshair-guide.png"
+ },
+ {
+  "id": "4146:2515",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / ValueFlag",
+  "path": "knowledge/examples/components/chart/chart-value-flag.png"
+ },
+ {
+  "id": "4146:2516",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / HoverBand",
+  "path": "knowledge/examples/components/chart/chart-hover-band.png"
+ },
+ {
+  "id": "4146:2517",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / AxisTickActive",
+  "path": "knowledge/examples/components/chart/chart-axis-tick-active.png"
+ },
+ {
+  "id": "4147:2491",
+  "page": "chart",
+  "kind": "component",
+  "name": "Chart / HoverIndicator",
+  "path": "knowledge/examples/components/chart/chart-hover-indicator.png"
+ },
+ {
+  "id": "2083:647",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / default / Default",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-default-default.png"
+ },
+ {
+  "id": "2083:659",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / search / Default",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-search-default.png"
+ },
+ {
+  "id": "2083:671",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / error / Default",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-error-default.png"
+ },
+ {
+  "id": "2083:688",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / default / Compact",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-default-compact.png"
+ },
+ {
+  "id": "2083:700",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / search / Compact",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-search-compact.png"
+ },
+ {
+  "id": "2083:712",
+  "page": "empty-state",
+  "kind": "component",
+  "name": "Empty Illustration / error / Compact",
+  "path": "knowledge/examples/components/empty-state/empty-illustration-error-compact.png"
+ },
+ {
+  "id": "2158:3",
+  "page": "skeleton",
+  "kind": "set",
+  "name": "SkeletonCircle",
+  "path": "knowledge/examples/components/skeleton/skeleton-circle.png"
+ },
+ {
+  "id": "2158:4",
+  "page": "skeleton",
+  "kind": "set",
+  "name": "SkeletonAvatar",
+  "path": "knowledge/examples/components/skeleton/skeleton-avatar.png"
+ },
+ {
+  "id": "2188:2",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerRing",
+  "path": "knowledge/examples/components/loader/spinner-ring.png"
+ },
+ {
+  "id": "2188:6",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerPulseRings",
+  "path": "knowledge/examples/components/loader/spinner-pulse-rings.png"
+ },
+ {
+  "id": "2188:3",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerDotOrbit",
+  "path": "knowledge/examples/components/loader/spinner-dot-orbit.png"
+ },
+ {
+  "id": "2188:4",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerWaveBars",
+  "path": "knowledge/examples/components/loader/spinner-wave-bars.png"
+ },
+ {
+  "id": "2188:5",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerBouncingDots",
+  "path": "knowledge/examples/components/loader/spinner-bouncing-dots.png"
+ },
+ {
+  "id": "2188:7",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerSquareMorph",
+  "path": "knowledge/examples/components/loader/spinner-square-morph.png"
+ },
+ {
+  "id": "2188:8",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerHourglass",
+  "path": "knowledge/examples/components/loader/spinner-hourglass.png"
+ },
+ {
+  "id": "2188:9",
+  "page": "loader",
+  "kind": "set",
+  "name": "SpinnerSafqahBrand",
+  "path": "knowledge/examples/components/loader/spinner-safqah-brand.png"
+ },
+ {
+  "id": "1878:2",
+  "page": "progress",
+  "kind": "set",
+  "name": "ProgressSegment",
+  "path": "knowledge/examples/components/progress/progress-segment.png"
+ },
+ {
+  "id": "4844:107612",
+  "page": "app-bar",
+  "kind": "set",
+  "name": "Header",
+  "error": "Figma renders no image for this set; see the page reference image",
+  "fallback": "knowledge/examples/components/app-bar/reference.png"
+ },
+ {
+  "id": "2517:30",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "TrendBadge",
+  "path": "knowledge/examples/components/tab-bar/trend-badge.png"
+ },
+ {
+  "id": "2518:62",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "SegmentedTabItem",
+  "path": "knowledge/examples/components/tab-bar/segmented-tab-item.png"
+ },
+ {
+  "id": "2522:26",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "BottomNavTabItem",
+  "path": "knowledge/examples/components/tab-bar/bottom-nav-tab-item.png"
+ },
+ {
+  "id": "2542:2",
+  "page": "bottom-sheet",
+  "kind": "component",
+  "name": "DragHandle",
+  "path": "knowledge/examples/components/bottom-sheet/drag-handle.png"
+ },
+ {
+  "id": "2615:13",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "SheetHeader",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-header.png"
+ },
+ {
+  "id": "2628:14",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Text",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-text.png"
+ },
+ {
+  "id": "2646:149",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Summary",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-summary.png"
+ },
+ {
+  "id": "2650:98",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Amount",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-amount.png"
+ },
+ {
+  "id": "2686:22",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Media",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-media.png"
+ },
+ {
+  "id": "2699:12",
+  "page": "bottom-sheet",
+  "kind": "component",
+  "name": "Sheet Content / Blank",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-blank.png"
+ },
+ {
+  "id": "2723:50",
+  "page": "breadcrumb",
+  "kind": "set",
+  "name": "BreadcrumbItem",
+  "path": "knowledge/examples/components/breadcrumb/breadcrumb-item.png"
+ },
+ {
+  "id": "2725:20",
+  "page": "breadcrumb",
+  "kind": "set",
+  "name": "BreadcrumbSeparator",
+  "path": "knowledge/examples/components/breadcrumb/breadcrumb-separator.png"
+ },
+ {
+  "id": "2734:20",
+  "page": "pagination",
+  "kind": "set",
+  "name": "PaginationItem",
+  "path": "knowledge/examples/components/pagination/pagination-item.png"
+ },
+ {
+  "id": "2735:44",
+  "page": "pagination",
+  "kind": "set",
+  "name": "PaginationArrow",
+  "path": "knowledge/examples/components/pagination/pagination-arrow.png"
+ },
+ {
+  "id": "2746:17",
+  "page": "stepper",
+  "kind": "set",
+  "name": "StepIndicator",
+  "path": "knowledge/examples/components/stepper/step-indicator.png"
+ },
+ {
+  "id": "2747:16",
+  "page": "stepper",
+  "kind": "set",
+  "name": "StepConnector",
+  "path": "knowledge/examples/components/stepper/step-connector.png"
+ },
+ {
+  "id": "2887:874",
+  "page": "navigation-rail-sidebar",
+  "kind": "component",
+  "name": "Brand / Safqah Wordmark (Dark)",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/brand-safqah-wordmark.png"
+ },
+ {
+  "id": "2888:874",
+  "page": "navigation-rail-sidebar",
+  "kind": "component",
+  "name": "Icon / nav-toggle-menu",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/icon-nav-toggle-menu.png"
+ },
+ {
+  "id": "2888:878",
+  "page": "navigation-rail-sidebar",
+  "kind": "component",
+  "name": "Icon / nav-toggle-chevron",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/icon-nav-toggle-chevron.png"
+ },
+ {
+  "id": "2911:1119",
+  "page": "navigation-rail-sidebar",
+  "kind": "component",
+  "name": "Icon / chevron-down-sm",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/icon-chevron-down-sm.png"
+ },
+ {
+  "id": "2938:3105",
+  "page": "navigation-rail-sidebar",
+  "kind": "component",
+  "name": "Icon / more-horizontal",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/icon-more-horizontal.png"
+ },
+ {
+  "id": "2959:4538",
+  "page": "navigation-rail-sidebar",
+  "kind": "set",
+  "name": "NavRail / TeamSwitcher",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/nav-rail-team-switcher.png"
+ },
+ {
+  "id": "2959:4550",
+  "page": "navigation-rail-sidebar",
+  "kind": "set",
+  "name": "NavRail / NavUser",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/nav-rail-nav-user.png"
+ },
+ {
+  "id": "4015:1061",
+  "page": "scroll-container",
+  "kind": "component",
+  "name": "Scroll content",
+  "path": "knowledge/examples/components/scroll-container/scroll-content.png"
+ },
+ {
+  "id": "3019:148",
+  "page": "card-deal",
+  "kind": "set",
+  "name": "CardDeal / Metric",
+  "path": "knowledge/examples/components/card-deal/card-deal-metric.png"
+ },
+ {
+  "id": "3036:316",
+  "page": "card-deal",
+  "kind": "set",
+  "name": "CardDeal / Headline",
+  "path": "knowledge/examples/components/card-deal/card-deal-headline.png"
+ },
+ {
+  "id": "3040:332",
+  "page": "card-deal",
+  "kind": "set",
+  "name": "CardDeal / Highlights",
+  "path": "knowledge/examples/components/card-deal/card-deal-highlights.png"
+ },
+ {
+  "id": "3048:330",
+  "page": "card-deal",
+  "kind": "set",
+  "name": "CardDeal / Media",
+  "path": "knowledge/examples/components/card-deal/card-deal-media.png"
+ },
+ {
+  "id": "3085:61",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "Goal / Headline",
+  "path": "knowledge/examples/components/card-goal/goal-headline.png"
+ },
+ {
+  "id": "3086:57",
+  "page": "card-goal",
+  "kind": "component",
+  "name": "Goal / Illustration",
+  "path": "knowledge/examples/components/card-goal/goal-illustration.png"
+ },
+ {
+  "id": "3090:97",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "Goal / Summary",
+  "path": "knowledge/examples/components/card-goal/goal-summary.png"
+ },
+ {
+  "id": "3103:1296",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "Goal / PhaseRow",
+  "path": "knowledge/examples/components/card-goal/goal-phase-row.png"
+ },
+ {
+  "id": "3113:2866",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "Goal / Amount",
+  "path": "knowledge/examples/components/card-goal/goal-amount.png"
+ },
+ {
+  "id": "3133:738",
+  "page": "card-action",
+  "kind": "set",
+  "name": "CardAction / Label",
+  "path": "knowledge/examples/components/card-action/card-action-label.png"
+ },
+ {
+  "id": "3137:1171",
+  "page": "card-action",
+  "kind": "set",
+  "name": "ActionPrompt",
+  "path": "knowledge/examples/components/card-action/action-prompt.png"
+ },
+ {
+  "id": "3190:1178",
+  "page": "card-info",
+  "kind": "set",
+  "name": "CardInfo / Content",
+  "path": "knowledge/examples/components/card-info/card-info-content.png"
+ },
+ {
+  "id": "3210:738",
+  "page": "list-item",
+  "kind": "set",
+  "name": "Content",
+  "path": "knowledge/examples/components/list-item/content.png"
+ },
+ {
+  "id": "3241:876",
+  "page": "list",
+  "kind": "set",
+  "name": "SelectRow",
+  "path": "knowledge/examples/components/list/select-row.png"
+ },
+ {
+  "id": "3242:866",
+  "page": "list",
+  "kind": "set",
+  "name": "SelectionList",
+  "path": "knowledge/examples/components/list/selection-list.png"
+ },
+ {
+  "id": "3262:834",
+  "page": "section",
+  "kind": "set",
+  "name": "Section",
+  "path": "knowledge/examples/components/section/section.png"
+ },
+ {
+  "id": "3275:806",
+  "page": "accordion",
+  "kind": "set",
+  "name": "AccordionItem",
+  "path": "knowledge/examples/components/accordion/accordion-item.png"
+ },
+ {
+  "id": "3276:998",
+  "page": "accordion",
+  "kind": "set",
+  "name": "Accordion",
+  "path": "knowledge/examples/components/accordion/accordion.png"
+ },
+ {
+  "id": "3320:262",
+  "page": "table",
+  "kind": "set",
+  "name": "Table / ActionCell",
+  "path": "knowledge/examples/components/table/table-action-cell.png"
+ },
+ {
+  "id": "3351:197",
+  "page": "table",
+  "kind": "set",
+  "name": "Table / ActionCell",
+  "path": "knowledge/examples/components/table/table-action-cell.png"
+ },
+ {
+  "id": "3429:917",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard / Meta",
+  "path": "knowledge/examples/components/news-card/news-card-meta.png"
+ },
+ {
+  "id": "5291:746",
+  "page": "news-card",
+  "kind": "component",
+  "name": "NewsCard / Developer Logo",
+  "path": "knowledge/examples/components/news-card/news-card-developer-logo.png"
+ },
+ {
+  "id": "5291:786",
+  "page": "news-card",
+  "kind": "component",
+  "name": "NewsCard / Poster Media",
+  "path": "knowledge/examples/components/news-card/news-card-poster-media.png"
+ },
+ {
+  "id": "5292:822",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard / Poster Caption",
+  "path": "knowledge/examples/components/news-card/news-card-poster-caption.png"
+ },
+ {
+  "id": "5292:170000",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard / Poster Actions",
+  "path": "knowledge/examples/components/news-card/news-card-poster-actions.png"
+ },
+ {
+  "id": "5293:963",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard / Poster",
+  "path": "knowledge/examples/components/news-card/news-card-poster.png"
+ },
+ {
+  "id": "3946:1112",
+  "page": "menu",
+  "kind": "set",
+  "name": "MenuItem",
+  "path": "knowledge/examples/components/menu/menu-item.png"
+ },
+ {
+  "id": "3948:1086",
+  "page": "menu",
+  "kind": "set",
+  "name": "MenuSectionHeader",
+  "path": "knowledge/examples/components/menu/menu-section-header.png"
+ },
+ {
+  "id": "3948:1177",
+  "page": "menu",
+  "kind": "set",
+  "name": "Menu",
+  "path": "knowledge/examples/components/menu/menu.png"
+ },
+ {
+  "id": "3955:1905",
+  "page": "menu",
+  "kind": "set",
+  "name": "MenuTrigger",
+  "path": "knowledge/examples/components/menu/menu-trigger.png"
+ },
+ {
+  "id": "3981:2871",
+  "page": "menu",
+  "kind": "set",
+  "name": "Multi-select field",
+  "path": "knowledge/examples/components/menu/multi-select-field.png"
+ },
+ {
+  "id": "3985:3145",
+  "page": "menu",
+  "kind": "set",
+  "name": "FAB speed-dial",
+  "path": "knowledge/examples/components/menu/fab-speed-dial.png"
+ },
+ {
+  "id": "3989:3225",
+  "page": "menu",
+  "kind": "set",
+  "name": "Long-press preview",
+  "path": "knowledge/examples/components/menu/long-press-preview.png"
+ },
+ {
+  "id": "3442:6739",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Promo-code",
+  "path": "knowledge/examples/components/investment-calculator/promo-code.png"
+ },
+ {
+  "id": "3448:7619",
+  "page": "investment-calculator",
+  "kind": "component",
+  "name": "Payment-details",
+  "path": "knowledge/examples/components/investment-calculator/payment-details.png"
+ },
+ {
+  "id": "5994:5888",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Info label",
+  "path": "knowledge/examples/components/investment-calculator/calculator-info-label.png"
+ },
+ {
+  "id": "5994:5949",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Stat tile",
+  "path": "knowledge/examples/components/investment-calculator/calculator-stat-tile.png"
+ },
+ {
+  "id": "5994:5976",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Duration option",
+  "path": "knowledge/examples/components/investment-calculator/calculator-duration-option.png"
+ },
+ {
+  "id": "5994:6001",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Swipe arrow",
+  "path": "knowledge/examples/components/investment-calculator/calculator-swipe-arrow.png"
+ },
+ {
+  "id": "5994:6008",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Funded label",
+  "path": "knowledge/examples/components/investment-calculator/calculator-funded-label.png"
+ },
+ {
+  "id": "5994:6041",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Disclosure toggle",
+  "path": "knowledge/examples/components/investment-calculator/calculator-disclosure-toggle.png"
+ },
+ {
+  "id": "5994:6048",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Date tile",
+  "path": "knowledge/examples/components/investment-calculator/calculator-date-tile.png"
+ },
+ {
+  "id": "5996:6083",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Stat strip",
+  "path": "knowledge/examples/components/investment-calculator/calculator-stat-strip.png"
+ },
+ {
+  "id": "5996:6364",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Amount display",
+  "path": "knowledge/examples/components/investment-calculator/calculator-amount-display.png"
+ },
+ {
+  "id": "5996:6441",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Installment row",
+  "path": "knowledge/examples/components/investment-calculator/calculator-installment-row.png"
+ },
+ {
+  "id": "5996:6558",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Distributions header",
+  "path": "knowledge/examples/components/investment-calculator/calculator-distributions-header.png"
+ },
+ {
+  "id": "5996:6893",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Distributions accordion",
+  "path": "knowledge/examples/components/investment-calculator/calculator-distributions-accordion.png"
+ },
+ {
+  "id": "6102:9914",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Underline option",
+  "path": "knowledge/examples/components/investment-calculator/calculator-underline-option.png"
+ },
+ {
+  "id": "3448:7623",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Numbers",
+  "path": "knowledge/examples/components/reservation-timer/numbers.png"
+ },
+ {
+  "id": "3448:8465",
+  "page": "reservation-timer",
+  "kind": "component",
+  "name": "Timer-type",
+  "path": "knowledge/examples/components/reservation-timer/timer-type.png"
+ },
+ {
+  "id": "3448:8467",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Timer",
+  "path": "knowledge/examples/components/reservation-timer/timer.png"
+ },
+ {
+  "id": "3448:8480",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Small Timer",
+  "path": "knowledge/examples/components/reservation-timer/small-timer.png"
+ },
+ {
+  "id": "3481:3031",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Countdown",
+  "path": "knowledge/examples/components/reservation-timer/countdown.png"
+ },
+ {
+  "id": "3481:3102",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Reservation-Calculater",
+  "path": "knowledge/examples/components/reservation-timer/reservation-calculater.png"
+ },
+ {
+  "id": "4235:1681",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "BalanceToggle",
+  "path": "knowledge/examples/components/portfolio-header/balance-toggle.png"
+ },
+ {
+  "id": "4241:1280",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "UserGreeting",
+  "path": "knowledge/examples/components/portfolio-header/user-greeting.png"
+ },
+ {
+  "id": "4241:1317",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "WalletChip",
+  "path": "knowledge/examples/components/portfolio-header/wallet-chip.png"
+ },
+ {
+  "id": "3521:3470",
+  "page": "goal-tracker",
+  "kind": "component",
+  "name": "GoalChart",
+  "path": "knowledge/examples/components/goal-tracker/goal-chart.png"
+ },
+ {
+  "id": "3673:2408",
+  "page": "sharia-cma-disclosure",
+  "kind": "set",
+  "name": "ComplianceBadge",
+  "path": "knowledge/examples/components/sharia-cma-disclosure/compliance-badge.png"
+ },
+ {
+  "id": "3681:2658",
+  "page": "sharia-cma-disclosure",
+  "kind": "set",
+  "name": "ShariaDisclosure",
+  "path": "knowledge/examples/components/sharia-cma-disclosure/sharia-disclosure.png"
+ },
+ {
+  "id": "3719:232568",
+  "page": "province-selector",
+  "kind": "set",
+  "name": "ProvinceSelector",
+  "path": "knowledge/examples/components/province-selector/province-selector.png"
+ },
+ {
+  "id": "3718:190",
+  "page": "province-selector",
+  "kind": "set",
+  "name": "RegionChip",
+  "path": "knowledge/examples/components/province-selector/region-chip.png"
+ },
+ {
+  "id": "3756:260",
+  "page": "rating-scale",
+  "kind": "set",
+  "name": "RatingScale",
+  "path": "knowledge/examples/components/rating-scale/rating-scale.png"
+ },
+ {
+  "id": "3755:216",
+  "page": "rating-scale",
+  "kind": "set",
+  "name": "RatingCell",
+  "path": "knowledge/examples/components/rating-scale/rating-cell.png"
+ },
+ {
+  "id": "3023:39526",
+  "page": "tier-badge",
+  "kind": "set",
+  "name": "dealTags",
+  "path": "knowledge/examples/components/tier-badge/deal-tags.png"
+ },
+ {
+  "id": "3786:470",
+  "page": "kyc-step",
+  "kind": "set",
+  "name": "KYCTaskRow",
+  "path": "knowledge/examples/components/kyc-step/kyc-task-row.png"
+ },
+ {
+  "id": "3789:363",
+  "page": "kyc-step",
+  "kind": "set",
+  "name": "KYCStep",
+  "path": "knowledge/examples/components/kyc-step/kyc-step.png"
+ },
+ {
+  "id": "3809:377",
+  "page": "abshir-logo",
+  "kind": "set",
+  "name": "AbshirLogo",
+  "path": "knowledge/examples/components/abshir-logo/abshir-logo.png"
+ },
+ {
+  "id": "3822:332",
+  "page": "mada-logo",
+  "kind": "set",
+  "name": "MadaLogo",
+  "path": "knowledge/examples/components/mada-logo/mada-logo.png"
+ },
+ {
+  "id": "5548:94341",
+  "page": "qualified-calculator",
+  "kind": "component",
+  "name": "Sheet Content / Amount keypad",
+  "path": "knowledge/examples/components/qualified-calculator/sheet-content-amount-keypad.png"
+ },
+ {
+  "id": "6035:901",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Hint",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-hint.png"
+ },
+ {
+  "id": "6035:976",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Title row",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-title-row.png"
+ },
+ {
+  "id": "6035:1189",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Presets",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-presets.png"
+ },
+ {
+  "id": "3859:1071",
+  "page": "guarantees",
+  "kind": "set",
+  "name": "GuaranteeBar",
+  "path": "knowledge/examples/components/guarantees/guarantee-bar.png"
+ },
+ {
+  "id": "3859:1042",
+  "page": "guarantees",
+  "kind": "component",
+  "name": "AxisTick",
+  "path": "knowledge/examples/components/guarantees/axis-tick.png"
+ },
+ {
+  "id": "4054:1147",
+  "page": "issuance-row",
+  "kind": "set",
+  "name": "Issuance Status Icon",
+  "path": "knowledge/examples/components/issuance-row/issuance-status-icon.png"
+ },
+ {
+  "id": "4089:2079",
+  "page": "issuance-row",
+  "kind": "component",
+  "name": "Issuance Row · Arabic",
+  "path": "knowledge/examples/components/issuance-row/issuance-row-arabic.png"
+ },
+ {
+  "id": "6049:3",
+  "page": "reinvest",
+  "kind": "component",
+  "name": "Reinvest / MatchStat",
+  "path": "knowledge/examples/components/reinvest/reinvest-match-stat.png"
+ },
+ {
+  "id": "5922:245709",
+  "page": "reinvest",
+  "kind": "component",
+  "name": "Reinvest / Illustration · Orbit",
+  "path": "knowledge/examples/components/reinvest/reinvest-illustration-orbit.png"
+ },
+ {
+  "id": "6049:299",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / RecommendationCard",
+  "path": "knowledge/examples/components/reinvest/reinvest-recommendation-card.png"
+ },
+ {
+  "id": "417:2",
+  "page": "button",
+  "kind": "set",
+  "name": "Button",
+  "path": "knowledge/examples/components/button/button.png"
+ },
+ {
+  "id": "1241:63",
+  "page": "search",
+  "kind": "set",
+  "name": "Search Input",
+  "path": "knowledge/examples/components/search/search-input.png"
+ },
+ {
+  "id": "1285:311",
+  "page": "text-area",
+  "kind": "set",
+  "name": "TextArea",
+  "path": "knowledge/examples/components/text-area/text-area.png"
+ },
+ {
+  "id": "502:729",
+  "page": "icon-button",
+  "kind": "set",
+  "name": "IconButton",
+  "path": "knowledge/examples/components/icon-button/icon-button.png"
+ },
+ {
+  "id": "516:2",
+  "page": "link",
+  "kind": "set",
+  "name": "Link",
+  "path": "knowledge/examples/components/link/link.png"
+ },
+ {
+  "id": "2327:2",
+  "page": "progress-bar",
+  "kind": "set",
+  "name": "ProgressBar_Indeterminate",
+  "path": "knowledge/examples/components/progress-bar/progress-bar-indeterminate.png"
+ },
+ {
+  "id": "640:701",
+  "page": "fab",
+  "kind": "set",
+  "name": "FAB / Standard",
+  "path": "knowledge/examples/components/fab/fab-standard.png"
+ },
+ {
+  "id": "738:1944",
+  "page": "fab",
+  "kind": "set",
+  "name": "FAB / Extended",
+  "path": "knowledge/examples/components/fab/fab-extended.png"
+ },
+ {
+  "id": "2736:120",
+  "page": "pagination",
+  "kind": "set",
+  "name": "Pagination",
+  "path": "knowledge/examples/components/pagination/pagination.png"
+ },
+ {
+  "id": "4011:1102",
+  "page": "scroll-container",
+  "kind": "set",
+  "name": "Scrollbar",
+  "path": "knowledge/examples/components/scroll-container/scrollbar.png"
+ },
+ {
+  "id": "3831:301",
+  "page": "safqah-logo",
+  "kind": "set",
+  "name": "SafqahLogo",
+  "path": "knowledge/examples/components/safqah-logo/safqah-logo.png"
+ },
+ {
+  "id": "792:290",
+  "page": "button-group",
+  "kind": "set",
+  "name": "ButtonGroup",
+  "path": "knowledge/examples/components/button-group/button-group.png"
+ },
+ {
+  "id": "805:249",
+  "page": "social-button",
+  "kind": "set",
+  "name": "SocialButton",
+  "path": "knowledge/examples/components/social-button/social-button.png"
+ },
+ {
+  "id": "1010:1401",
+  "page": "amount-input",
+  "kind": "set",
+  "name": "Amount Stepper",
+  "path": "knowledge/examples/components/amount-input/amount-stepper.png"
+ },
+ {
+  "id": "1101:105",
+  "page": "switch",
+  "kind": "set",
+  "name": "Switch",
+  "path": "knowledge/examples/components/switch/switch.png"
+ },
+ {
+  "id": "2852:101",
+  "page": "navigation-rail-sidebar",
+  "kind": "set",
+  "name": "NavRailItem",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/nav-rail-item.png"
+ },
+ {
+  "id": "828:705",
+  "page": "input",
+  "kind": "set",
+  "name": "Input",
+  "path": "knowledge/examples/components/input/input.png"
+ },
+ {
+  "id": "859:2214",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Underline",
+  "path": "knowledge/examples/components/input/input-underline.png"
+ },
+ {
+  "id": "878:2355",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Phone",
+  "path": "knowledge/examples/components/input/input-phone.png"
+ },
+ {
+  "id": "1065:1128",
+  "page": "select",
+  "kind": "set",
+  "name": "Select Underline",
+  "path": "knowledge/examples/components/select/select-underline.png"
+ },
+ {
+  "id": "1024:183",
+  "page": "select",
+  "kind": "set",
+  "name": "Select",
+  "path": "knowledge/examples/components/select/select.png"
+ },
+ {
+  "id": "1117:57",
+  "page": "slider",
+  "kind": "set",
+  "name": "Slider",
+  "path": "knowledge/examples/components/slider/slider.png"
+ },
+ {
+  "id": "3299:1436",
+  "page": "carousel",
+  "kind": "set",
+  "name": "Carousel / Slide",
+  "path": "knowledge/examples/components/carousel/carousel-slide.png"
+ },
+ {
+  "id": "826:579",
+  "page": "input",
+  "kind": "set",
+  "name": "Input Field",
+  "path": "knowledge/examples/components/input/input-field.png"
+ },
+ {
+  "id": "1083:69",
+  "page": "radio",
+  "kind": "set",
+  "name": "Radio",
+  "path": "knowledge/examples/components/radio/radio.png"
+ },
+ {
+  "id": "923:77",
+  "page": "otp-input",
+  "kind": "set",
+  "name": "OTP Input",
+  "path": "knowledge/examples/components/otp-input/otp-input.png"
+ },
+ {
+  "id": "3488:49761",
+  "page": "goal-tracker",
+  "kind": "set",
+  "name": "Goal card",
+  "path": "knowledge/examples/components/goal-tracker/goal-card.png"
+ },
+ {
+  "id": "952:636",
+  "page": "amount-input",
+  "kind": "set",
+  "name": "Input Amount",
+  "path": "knowledge/examples/components/amount-input/input-amount.png"
+ },
+ {
+  "id": "1121:225",
+  "page": "slider",
+  "kind": "set",
+  "name": "Slider Field",
+  "path": "knowledge/examples/components/slider/slider-field.png"
+ },
+ {
+  "id": "1964:142",
+  "page": "toast",
+  "kind": "set",
+  "name": "Toast",
+  "path": "knowledge/examples/components/toast/toast.png"
+ },
+ {
+  "id": "3442:6746",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Investment-amount",
+  "path": "knowledge/examples/components/investment-calculator/investment-amount.png"
+ },
+ {
+  "id": "1026:183",
+  "page": "select",
+  "kind": "set",
+  "name": "Dropdown Item",
+  "path": "knowledge/examples/components/select/dropdown-item.png"
+ },
+ {
+  "id": "1028:279",
+  "page": "select",
+  "kind": "set",
+  "name": "Dropdown Menu",
+  "path": "knowledge/examples/components/select/dropdown-menu.png"
+ },
+ {
+  "id": "1099:57",
+  "page": "switch",
+  "kind": "set",
+  "name": "Switch Indicator",
+  "path": "knowledge/examples/components/switch/switch-indicator.png"
+ },
+ {
+  "id": "1174:63",
+  "page": "form-field",
+  "kind": "set",
+  "name": "Form Field Helper",
+  "path": "knowledge/examples/components/form-field/form-field-helper.png"
+ },
+ {
+  "id": "1264:171",
+  "page": "search",
+  "kind": "set",
+  "name": "Compact Search Trigger",
+  "path": "knowledge/examples/components/search/compact-search-trigger.png"
+ },
+ {
+  "id": "1041:57",
+  "page": "checkbox",
+  "kind": "set",
+  "name": "Checkbox Indicator",
+  "path": "knowledge/examples/components/checkbox/checkbox-indicator.png"
+ },
+ {
+  "id": "1138:63",
+  "page": "file-upload",
+  "kind": "set",
+  "name": "File Item",
+  "path": "knowledge/examples/components/file-upload/file-item.png"
+ },
+ {
+  "id": "1306:63",
+  "page": "tag",
+  "kind": "set",
+  "name": "Tag",
+  "path": "knowledge/examples/components/tag/tag.png"
+ },
+ {
+  "id": "4243:1823",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "PortfolioHeader",
+  "path": "knowledge/examples/components/portfolio-header/portfolio-header.png"
+ },
+ {
+  "id": "1043:93",
+  "page": "checkbox",
+  "kind": "set",
+  "name": "Checkbox",
+  "path": "knowledge/examples/components/checkbox/checkbox.png"
+ },
+ {
+  "id": "3921:241732",
+  "page": "checkbox",
+  "kind": "set",
+  "name": "Checkbox Group",
+  "path": "knowledge/examples/components/checkbox/checkbox-group.png"
+ },
+ {
+  "id": "3888:1186",
+  "page": "combobox",
+  "kind": "set",
+  "name": "Combobox Menu",
+  "path": "knowledge/examples/components/combobox/combobox-menu.png"
+ },
+ {
+  "id": "1372:2",
+  "page": "avatar",
+  "kind": "set",
+  "name": "Avatar",
+  "path": "knowledge/examples/components/avatar/avatar.png"
+ },
+ {
+  "id": "4108:1351",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Bar",
+  "path": "knowledge/examples/components/chart/chart-bar.png"
+ },
+ {
+  "id": "4015:1157",
+  "page": "scroll-container",
+  "kind": "set",
+  "name": "ScrollContainer",
+  "path": "knowledge/examples/components/scroll-container/scroll-container.png"
+ },
+ {
+  "id": "1086:177",
+  "page": "radio",
+  "kind": "set",
+  "name": "Radio Group",
+  "path": "knowledge/examples/components/radio/radio-group.png"
+ },
+ {
+  "id": "4256:1443",
+  "page": "segmented-control",
+  "kind": "set",
+  "name": "Segment",
+  "path": "knowledge/examples/components/segmented-control/segment.png"
+ },
+ {
+  "id": "4240:1642",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "MoneyAmount",
+  "path": "knowledge/examples/components/portfolio-header/money-amount.png"
+ },
+ {
+  "id": "3796:551",
+  "page": "kyc-step",
+  "kind": "set",
+  "name": "KYCChecklist",
+  "path": "knowledge/examples/components/kyc-step/kyc-checklist.png"
+ },
+ {
+  "id": "6054:1667",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / MaturityRecap",
+  "path": "knowledge/examples/components/reinvest/reinvest-maturity-recap.png"
+ },
+ {
+  "id": "6054:1668",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / RecommendationList",
+  "path": "knowledge/examples/components/reinvest/reinvest-recommendation-list.png"
+ },
+ {
+  "id": "1081:57",
+  "page": "radio",
+  "kind": "set",
+  "name": "Radio Indicator",
+  "path": "knowledge/examples/components/radio/radio-indicator.png"
+ },
+ {
+  "id": "1311:63",
+  "page": "tag",
+  "kind": "set",
+  "name": "Tag Removable",
+  "path": "knowledge/examples/components/tag/tag-removable.png"
+ },
+ {
+  "id": "1382:53",
+  "page": "avatar",
+  "kind": "set",
+  "name": "AvatarStack",
+  "path": "knowledge/examples/components/avatar/avatar-stack.png"
+ },
+ {
+  "id": "4012:1050",
+  "page": "scroll-container",
+  "kind": "set",
+  "name": "Fade",
+  "path": "knowledge/examples/components/scroll-container/fade.png"
+ },
+ {
+  "id": "3212:1071",
+  "page": "list-item",
+  "kind": "set",
+  "name": "ListItem",
+  "path": "knowledge/examples/components/list-item/list-item.png"
+ },
+ {
+  "id": "3297:1424",
+  "page": "carousel",
+  "kind": "set",
+  "name": "PageIndicator",
+  "path": "knowledge/examples/components/carousel/page-indicator.png"
+ },
+ {
+  "id": "4241:1368",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "ReturnsDisplay",
+  "path": "knowledge/examples/components/portfolio-header/returns-display.png"
+ },
+ {
+  "id": "4093:2406",
+  "page": "issuance-row",
+  "kind": "set",
+  "name": "Issuance List",
+  "path": "knowledge/examples/components/issuance-row/issuance-list.png"
+ },
+ {
+  "id": "1141:63",
+  "page": "file-upload",
+  "kind": "set",
+  "name": "Upload Button",
+  "path": "knowledge/examples/components/file-upload/upload-button.png"
+ },
+ {
+  "id": "3972:2887",
+  "page": "menu",
+  "kind": "set",
+  "name": "Command palette",
+  "path": "knowledge/examples/components/menu/command-palette.png"
+ },
+ {
+  "id": "1147:63",
+  "page": "file-upload",
+  "kind": "set",
+  "name": "File Item with Progress",
+  "path": "knowledge/examples/components/file-upload/file-item-with-progress.png"
+ },
+ {
+  "id": "1177:453",
+  "page": "form-field",
+  "kind": "set",
+  "name": "Form Field",
+  "path": "knowledge/examples/components/form-field/form-field.png"
+ },
+ {
+  "id": "1219:87",
+  "page": "date-picker-time-picker",
+  "kind": "set",
+  "name": "Date Wheel Picker",
+  "path": "knowledge/examples/components/date-picker-time-picker/date-wheel-picker.png"
+ },
+ {
+  "id": "6035:1605",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Amount hero",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-amount-hero.png"
+ },
+ {
+  "id": "1169:63",
+  "page": "form-field",
+  "kind": "set",
+  "name": "Form Field Label",
+  "path": "knowledge/examples/components/form-field/form-field-label.png"
+ },
+ {
+  "id": "3902:1186",
+  "page": "numeric-stepper",
+  "kind": "set",
+  "name": "NumericStepper",
+  "path": "knowledge/examples/components/numeric-stepper/numeric-stepper.png"
+ },
+ {
+  "id": "2633:157",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "SheetFooter",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-footer.png"
+ },
+ {
+  "id": "5998:7821",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Results card",
+  "path": "knowledge/examples/components/investment-calculator/calculator-results-card.png"
+ },
+ {
+  "id": "1217:63",
+  "page": "date-picker-time-picker",
+  "kind": "set",
+  "name": "Date Input",
+  "path": "knowledge/examples/components/date-picker-time-picker/date-input.png"
+ },
+ {
+  "id": "4107:1314",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / States",
+  "path": "knowledge/examples/components/chart/chart-states.png"
+ },
+ {
+  "id": "3861:1216",
+  "page": "guarantees",
+  "kind": "set",
+  "name": "Guarantees",
+  "path": "knowledge/examples/components/guarantees/guarantees.png"
+ },
+ {
+  "id": "1228:321",
+  "page": "date-picker-time-picker",
+  "kind": "set",
+  "name": "Date Calendar Picker",
+  "path": "knowledge/examples/components/date-picker-time-picker/date-calendar-picker.png"
+ },
+ {
+  "id": "1244:63",
+  "page": "search",
+  "kind": "set",
+  "name": "Search Result Item",
+  "path": "knowledge/examples/components/search/search-result-item.png"
+ },
+ {
+  "id": "2752:66",
+  "page": "stepper",
+  "kind": "set",
+  "name": "Stepper",
+  "path": "knowledge/examples/components/stepper/stepper.png"
+ },
+ {
+  "id": "3301:1742",
+  "page": "carousel",
+  "kind": "set",
+  "name": "Carousel",
+  "path": "knowledge/examples/components/carousel/carousel.png"
+ },
+ {
+  "id": "1230:801",
+  "page": "date-picker-time-picker",
+  "kind": "set",
+  "name": "Date Range Field",
+  "path": "knowledge/examples/components/date-picker-time-picker/date-range-field.png"
+ },
+ {
+  "id": "1256:171",
+  "page": "search",
+  "kind": "set",
+  "name": "Search Dropdown",
+  "path": "knowledge/examples/components/search/search-dropdown.png"
+ },
+ {
+  "id": "1281:63",
+  "page": "text-area",
+  "kind": "set",
+  "name": "TextArea Field",
+  "path": "knowledge/examples/components/text-area/text-area-field.png"
+ },
+ {
+  "id": "1287:311",
+  "page": "text-area",
+  "kind": "set",
+  "name": "TextArea Underline",
+  "path": "knowledge/examples/components/text-area/text-area-underline.png"
+ },
+ {
+  "id": "4163:3178",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Line · Mobile",
+  "path": "knowledge/examples/components/chart/chart-line-mobile.png"
+ },
+ {
+  "id": "4163:3179",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Area · Mobile",
+  "path": "knowledge/examples/components/chart/chart-area-mobile.png"
+ },
+ {
+  "id": "4163:3180",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Bar · Mobile",
+  "path": "knowledge/examples/components/chart/chart-bar-mobile.png"
+ },
+ {
+  "id": "4164:3205",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Donut · Mobile",
+  "path": "knowledge/examples/components/chart/chart-donut-mobile.png"
+ },
+ {
+  "id": "4164:3206",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Scatter · Mobile",
+  "path": "knowledge/examples/components/chart/chart-scatter-mobile.png"
+ },
+ {
+  "id": "4164:3207",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Combo · Mobile",
+  "path": "knowledge/examples/components/chart/chart-combo-mobile.png"
+ },
+ {
+  "id": "4165:3290",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Candlestick · Mobile",
+  "path": "knowledge/examples/components/chart/chart-candlestick-mobile.png"
+ },
+ {
+  "id": "4165:3291",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Waterfall · Mobile",
+  "path": "knowledge/examples/components/chart/chart-waterfall-mobile.png"
+ },
+ {
+  "id": "4165:3292",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Stacked · Mobile",
+  "path": "knowledge/examples/components/chart/chart-stacked-mobile.png"
+ },
+ {
+  "id": "4165:3293",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / KPI list · Mobile",
+  "path": "knowledge/examples/components/chart/chart-kpi-list-mobile.png"
+ },
+ {
+  "id": "3887:1126",
+  "page": "combobox",
+  "kind": "set",
+  "name": "Combobox Field",
+  "path": "knowledge/examples/components/combobox/combobox-field.png"
+ },
+ {
+  "id": "1313:89",
+  "page": "tag",
+  "kind": "set",
+  "name": "Tag Group",
+  "path": "knowledge/examples/components/tag/tag-group.png"
+ },
+ {
+  "id": "3966:2455",
+  "page": "menu",
+  "kind": "set",
+  "name": "Dropdown menu",
+  "path": "knowledge/examples/components/menu/dropdown-menu.png"
+ },
+ {
+  "id": "1485:151",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "IssuanceStatusBadge (Investor)",
+  "path": "knowledge/examples/components/status-issuance-badge/issuance-status-badge.png"
+ },
+ {
+  "id": "3969:2795",
+  "page": "menu",
+  "kind": "set",
+  "name": "Sort menu",
+  "path": "knowledge/examples/components/menu/sort-menu.png"
+ },
+ {
+  "id": "1486:171",
+  "page": "status-issuance-badge",
+  "kind": "set",
+  "name": "IssuanceStatusBadge (Developer)",
+  "path": "knowledge/examples/components/status-issuance-badge/issuance-status-badge.png"
+ },
+ {
+  "id": "1624:162",
+  "page": "tooltip",
+  "kind": "set",
+  "name": "Tooltip",
+  "path": "knowledge/examples/components/tooltip/tooltip.png"
+ },
+ {
+  "id": "1654:178",
+  "page": "status-pill",
+  "kind": "set",
+  "name": "StatusPill",
+  "path": "knowledge/examples/components/status-pill/status-pill.png"
+ },
+ {
+  "id": "2156:2",
+  "page": "skeleton",
+  "kind": "set",
+  "name": "SkeletonLine",
+  "path": "knowledge/examples/components/skeleton/skeleton-line.png"
+ },
+ {
+  "id": "1678:598",
+  "page": "stat",
+  "kind": "set",
+  "name": "Stat",
+  "path": "knowledge/examples/components/stat/stat.png"
+ },
+ {
+  "id": "4103:1058",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / ReferenceLine",
+  "path": "knowledge/examples/components/chart/chart-reference-line.png"
+ },
+ {
+  "id": "1739:122",
+  "page": "key-value",
+  "kind": "set",
+  "name": "KeyValue",
+  "path": "knowledge/examples/components/key-value/key-value.png"
+ },
+ {
+  "id": "3384:9012",
+  "page": "header-card",
+  "kind": "set",
+  "name": "Base card",
+  "path": "knowledge/examples/components/header-card/base-card.png"
+ },
+ {
+  "id": "1767:2",
+  "page": "divider",
+  "kind": "set",
+  "name": "Divider",
+  "path": "knowledge/examples/components/divider/divider.png"
+ },
+ {
+  "id": "2772:154",
+  "page": "back-button",
+  "kind": "set",
+  "name": "BackButton",
+  "path": "knowledge/examples/components/back-button/back-button.png"
+ },
+ {
+  "id": "1823:18",
+  "page": "timeline",
+  "kind": "set",
+  "name": "TimelineNode",
+  "path": "knowledge/examples/components/timeline/timeline-node.png"
+ },
+ {
+  "id": "1873:2",
+  "page": "progress-bar",
+  "kind": "set",
+  "name": "ProgressBar",
+  "path": "knowledge/examples/components/progress-bar/progress-bar.png"
+ },
+ {
+  "id": "1836:306",
+  "page": "timeline",
+  "kind": "set",
+  "name": "TimelineRow",
+  "path": "knowledge/examples/components/timeline/timeline-row.png"
+ },
+ {
+  "id": "2359:2",
+  "page": "dialog",
+  "kind": "set",
+  "name": "Dialog",
+  "path": "knowledge/examples/components/dialog/dialog.png"
+ },
+ {
+  "id": "1919:434",
+  "page": "progress-bar",
+  "kind": "set",
+  "name": "MilestoneProgress",
+  "path": "knowledge/examples/components/progress-bar/milestone-progress.png"
+ },
+ {
+  "id": "4102:1065",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Gridlines",
+  "path": "knowledge/examples/components/chart/chart-gridlines.png"
+ },
+ {
+  "id": "3983:2895",
+  "page": "menu",
+  "kind": "set",
+  "name": "Autocomplete",
+  "path": "knowledge/examples/components/menu/autocomplete.png"
+ },
+ {
+  "id": "4102:1138",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Axis",
+  "path": "knowledge/examples/components/chart/chart-axis.png"
+ },
+ {
+  "id": "2855:175",
+  "page": "navigation-rail-sidebar",
+  "kind": "set",
+  "name": "NavigationRail",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/navigation-rail.png"
+ },
+ {
+  "id": "4103:1067",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Crosshair",
+  "path": "knowledge/examples/components/chart/chart-crosshair.png"
+ },
+ {
+  "id": "4104:1128",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / ChartTooltip",
+  "path": "knowledge/examples/components/chart/chart-chart-tooltip.png"
+ },
+ {
+  "id": "3442:5172",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Distribution-schedule",
+  "path": "knowledge/examples/components/investment-calculator/distribution-schedule.png"
+ },
+ {
+  "id": "3442:6812",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Checkout",
+  "path": "knowledge/examples/components/investment-calculator/checkout.png"
+ },
+ {
+  "id": "4105:1306",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / ChartContainer",
+  "path": "knowledge/examples/components/chart/chart-chart-container.png"
+ },
+ {
+  "id": "4258:1461",
+  "page": "segmented-control",
+  "kind": "set",
+  "name": "SegmentedControl_3",
+  "path": "knowledge/examples/components/segmented-control/segmented-control-3.png"
+ },
+ {
+  "id": "4260:1202",
+  "page": "segmented-control",
+  "kind": "set",
+  "name": "SegmentedControl_2",
+  "path": "knowledge/examples/components/segmented-control/segmented-control-2.png"
+ },
+ {
+  "id": "4260:1351",
+  "page": "segmented-control",
+  "kind": "set",
+  "name": "SegmentedControl_4",
+  "path": "knowledge/examples/components/segmented-control/segmented-control-4.png"
+ },
+ {
+  "id": "4260:1536",
+  "page": "segmented-control",
+  "kind": "set",
+  "name": "SegmentedControl_5",
+  "path": "knowledge/examples/components/segmented-control/segmented-control-5.png"
+ },
+ {
+  "id": "4109:1337",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Line",
+  "path": "knowledge/examples/components/chart/chart-line.png"
+ },
+ {
+  "id": "3254:1602",
+  "page": "list",
+  "kind": "set",
+  "name": "List / TextItem",
+  "path": "knowledge/examples/components/list/list-text-item.png"
+ },
+ {
+  "id": "3254:1615",
+  "page": "list",
+  "kind": "set",
+  "name": "List / DescriptionRow",
+  "path": "knowledge/examples/components/list/list-description-row.png"
+ },
+ {
+  "id": "6255:7960",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / ComparedTo",
+  "path": "knowledge/examples/components/reinvest/reinvest-compared-to.png"
+ },
+ {
+  "id": "4109:1351",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Area",
+  "path": "knowledge/examples/components/chart/chart-area.png"
+ },
+ {
+  "id": "5998:7155",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Amount card",
+  "path": "knowledge/examples/components/investment-calculator/calculator-amount-card.png"
+ },
+ {
+  "id": "4153:3047",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Line",
+  "path": "knowledge/examples/components/chart/chart-line.png"
+ },
+ {
+  "id": "4154:3047",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Bar",
+  "path": "knowledge/examples/components/chart/chart-bar.png"
+ },
+ {
+  "id": "4154:3048",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Area",
+  "path": "knowledge/examples/components/chart/chart-area.png"
+ },
+ {
+  "id": "4154:3049",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Candlestick",
+  "path": "knowledge/examples/components/chart/chart-candlestick.png"
+ },
+ {
+  "id": "4154:3050",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Donut",
+  "path": "knowledge/examples/components/chart/chart-donut.png"
+ },
+ {
+  "id": "4154:3051",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Scatter",
+  "path": "knowledge/examples/components/chart/chart-scatter.png"
+ },
+ {
+  "id": "4160:3165",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Combo",
+  "path": "knowledge/examples/components/chart/chart-combo.png"
+ },
+ {
+  "id": "4160:3166",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Waterfall",
+  "path": "knowledge/examples/components/chart/chart-waterfall.png"
+ },
+ {
+  "id": "4161:3193",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Stacked",
+  "path": "knowledge/examples/components/chart/chart-stacked.png"
+ },
+ {
+  "id": "4161:3194",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / KPI strip",
+  "path": "knowledge/examples/components/chart/chart-kpi-strip.png"
+ },
+ {
+  "id": "1950:212",
+  "page": "alert",
+  "kind": "set",
+  "name": "Alert",
+  "path": "knowledge/examples/components/alert/alert.png"
+ },
+ {
+  "id": "1993:212",
+  "page": "banner",
+  "kind": "set",
+  "name": "Banner",
+  "path": "knowledge/examples/components/banner/banner.png"
+ },
+ {
+  "id": "2956:4525",
+  "page": "navigation-rail-sidebar",
+  "kind": "set",
+  "name": "AppSidebar (shadcn-style)",
+  "path": "knowledge/examples/components/navigation-rail-sidebar/app-sidebar.png"
+ },
+ {
+  "id": "3618:122684",
+  "page": "payouts-list",
+  "kind": "set",
+  "name": "Payouts cell",
+  "path": "knowledge/examples/components/payouts-list/payouts-cell.png"
+ },
+ {
+  "id": "2066:434",
+  "page": "empty-state",
+  "kind": "set",
+  "name": "EmptyState",
+  "path": "knowledge/examples/components/empty-state/empty-state.png"
+ },
+ {
+  "id": "2071:38797",
+  "page": "empty-state",
+  "kind": "set",
+  "name": "Illustrations",
+  "path": "knowledge/examples/components/empty-state/illustrations.png"
+ },
+ {
+  "id": "2158:2",
+  "page": "skeleton",
+  "kind": "set",
+  "name": "SkeletonBlock",
+  "path": "knowledge/examples/components/skeleton/skeleton-block.png"
+ },
+ {
+  "id": "3927:1106",
+  "page": "popover",
+  "kind": "set",
+  "name": "Popover",
+  "path": "knowledge/examples/components/popover/popover.png"
+ },
+ {
+  "id": "2447:2",
+  "page": "app-bar",
+  "kind": "set",
+  "name": "AppBar",
+  "path": "knowledge/examples/components/app-bar/app-bar.png"
+ },
+ {
+  "id": "6054:1669",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / RecommendationCarousel",
+  "path": "knowledge/examples/components/reinvest/reinvest-recommendation-carousel.png"
+ },
+ {
+  "id": "4844:107432",
+  "page": "app-bar",
+  "kind": "set",
+  "name": "Header Info",
+  "path": "knowledge/examples/components/app-bar/header-info.png"
+ },
+ {
+  "id": "2527:350",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "TabBar",
+  "path": "knowledge/examples/components/tab-bar/tab-bar.png"
+ },
+ {
+  "id": "2568:739",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "TabBar (3-tab)",
+  "path": "knowledge/examples/components/tab-bar/tab-bar.png"
+ },
+ {
+  "id": "2523:90",
+  "page": "tab-bar",
+  "kind": "set",
+  "name": "SegmentedTabs",
+  "path": "knowledge/examples/components/tab-bar/segmented-tabs.png"
+ },
+ {
+  "id": "3222:1092",
+  "page": "action-list",
+  "kind": "set",
+  "name": "ActionList",
+  "path": "knowledge/examples/components/action-list/action-list.png"
+ },
+ {
+  "id": "3448:8514",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Collapsed-Reservation",
+  "path": "knowledge/examples/components/reservation-timer/collapsed-reservation.png"
+ },
+ {
+  "id": "2649:137",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Form",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-form.png"
+ },
+ {
+  "id": "2650:293",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / Empty",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-empty.png"
+ },
+ {
+  "id": "4014:201382",
+  "page": "scroll-container",
+  "kind": "set",
+  "name": "Pull-to-refresh",
+  "path": "knowledge/examples/components/scroll-container/pull-to-refresh.png"
+ },
+ {
+  "id": "2652:296",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "Sheet Content / List",
+  "path": "knowledge/examples/components/bottom-sheet/sheet-content-list.png"
+ },
+ {
+  "id": "3138:1144",
+  "page": "card-action",
+  "kind": "set",
+  "name": "ActionTile",
+  "path": "knowledge/examples/components/card-action/action-tile.png"
+ },
+ {
+  "id": "2634:273",
+  "page": "bottom-sheet",
+  "kind": "set",
+  "name": "BottomSheet",
+  "path": "knowledge/examples/components/bottom-sheet/bottom-sheet.png"
+ },
+ {
+  "id": "2681:503",
+  "page": "modal",
+  "kind": "set",
+  "name": "Modal",
+  "path": "knowledge/examples/components/modal/modal.png"
+ },
+ {
+  "id": "2706:385",
+  "page": "drawer",
+  "kind": "set",
+  "name": "Drawer",
+  "path": "knowledge/examples/components/drawer/drawer.png"
+ },
+ {
+  "id": "2726:168",
+  "page": "breadcrumb",
+  "kind": "set",
+  "name": "Breadcrumb",
+  "path": "knowledge/examples/components/breadcrumb/breadcrumb.png"
+ },
+ {
+  "id": "4013:1046",
+  "page": "scroll-container",
+  "kind": "set",
+  "name": "Scroll shadow",
+  "path": "knowledge/examples/components/scroll-container/scroll-shadow.png"
+ },
+ {
+  "id": "3013:95390",
+  "page": "card-deal",
+  "kind": "set",
+  "name": "CardDeal",
+  "path": "knowledge/examples/components/card-deal/card-deal.png"
+ },
+ {
+  "id": "3091:392",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "GoalActivate",
+  "path": "knowledge/examples/components/card-goal/goal-activate.png"
+ },
+ {
+  "id": "3104:1750",
+  "page": "card-goal",
+  "kind": "set",
+  "name": "GoalTracker",
+  "path": "knowledge/examples/components/card-goal/goal-tracker.png"
+ },
+ {
+  "id": "3251:1525",
+  "page": "list",
+  "kind": "set",
+  "name": "List",
+  "path": "knowledge/examples/components/list/list.png"
+ },
+ {
+  "id": "5998:6718",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Duration picker",
+  "path": "knowledge/examples/components/investment-calculator/calculator-duration-picker.png"
+ },
+ {
+  "id": "6102:10234",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Duration picker · Underline",
+  "path": "knowledge/examples/components/investment-calculator/calculator-duration-picker-underline.png"
+ },
+ {
+  "id": "3316:115",
+  "page": "table",
+  "kind": "set",
+  "name": "Table / Cell",
+  "path": "knowledge/examples/components/table/table-cell.png"
+ },
+ {
+  "id": "3317:127",
+  "page": "table",
+  "kind": "set",
+  "name": "Table / HeaderCell",
+  "path": "knowledge/examples/components/table/table-header-cell.png"
+ },
+ {
+  "id": "3322:410",
+  "page": "table",
+  "kind": "set",
+  "name": "Table / Toolbar",
+  "path": "knowledge/examples/components/table/table-toolbar.png"
+ },
+ {
+  "id": "3430:1350",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard",
+  "path": "knowledge/examples/components/news-card/news-card.png"
+ },
+ {
+  "id": "5996:6300",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Duration carousel",
+  "path": "knowledge/examples/components/investment-calculator/calculator-duration-carousel.png"
+ },
+ {
+  "id": "6102:10044",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Underline carousel",
+  "path": "knowledge/examples/components/investment-calculator/calculator-underline-carousel.png"
+ },
+ {
+  "id": "5293:1456",
+  "page": "news-card",
+  "kind": "set",
+  "name": "NewsCard / Poster Carousel",
+  "path": "knowledge/examples/components/news-card/news-card-poster-carousel.png"
+ },
+ {
+  "id": "3970:2937",
+  "page": "menu",
+  "kind": "set",
+  "name": "Filter menu",
+  "path": "knowledge/examples/components/menu/filter-menu.png"
+ },
+ {
+  "id": "6035:1171",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Summary card",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-summary-card.png"
+ },
+ {
+  "id": "6035:1289",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Quick action",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-quick-action.png"
+ },
+ {
+  "id": "6049:298",
+  "page": "reinvest",
+  "kind": "set",
+  "name": "Reinvest / RecommendationRow",
+  "path": "knowledge/examples/components/reinvest/reinvest-recommendation-row.png"
+ },
+ {
+  "id": "3968:2683",
+  "page": "menu",
+  "kind": "set",
+  "name": "Cascading submenu",
+  "path": "knowledge/examples/components/menu/cascading-submenu.png"
+ },
+ {
+  "id": "3839:2910",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "QualifiedCalculator",
+  "path": "knowledge/examples/components/qualified-calculator/qualified-calculator.png"
+ },
+ {
+  "id": "3984:3215",
+  "page": "menu",
+  "kind": "set",
+  "name": "Action sheet",
+  "path": "knowledge/examples/components/menu/action-sheet.png"
+ },
+ {
+  "id": "3984:3216",
+  "page": "menu",
+  "kind": "set",
+  "name": "Bottom-sheet menu",
+  "path": "knowledge/examples/components/menu/bottom-sheet-menu.png"
+ },
+ {
+  "id": "3442:5240",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Investment Calculator",
+  "path": "knowledge/examples/components/investment-calculator/investment-calculator.png"
+ },
+ {
+  "id": "3456:9742",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator-list-item",
+  "path": "knowledge/examples/components/investment-calculator/calculator-list-item.png"
+ },
+ {
+  "id": "5996:5988",
+  "page": "investment-calculator",
+  "kind": "set",
+  "name": "Calculator / Metric row",
+  "path": "knowledge/examples/components/investment-calculator/calculator-metric-row.png"
+ },
+ {
+  "id": "6035:1065",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Summary row",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-summary-row.png"
+ },
+ {
+  "id": "3448:7746",
+  "page": "reservation-timer",
+  "kind": "set",
+  "name": "Small-Numbers",
+  "path": "knowledge/examples/components/reservation-timer/small-numbers.png"
+ },
+ {
+  "id": "3488:48634",
+  "page": "goal-tracker",
+  "kind": "set",
+  "name": "Goal-Card",
+  "path": "knowledge/examples/components/goal-tracker/goal-card.png"
+ },
+ {
+  "id": "3519:2731",
+  "page": "goal-tracker",
+  "kind": "set",
+  "name": "GoalCard",
+  "path": "knowledge/examples/components/goal-tracker/goal-card.png"
+ },
+ {
+  "id": "3569:2394",
+  "page": "goal-tracker",
+  "kind": "set",
+  "name": "GoalPlan",
+  "path": "knowledge/examples/components/goal-tracker/goal-plan.png"
+ },
+ {
+  "id": "3663:2618",
+  "page": "deal-timeline",
+  "kind": "set",
+  "name": "DealTimeline",
+  "path": "knowledge/examples/components/deal-timeline/deal-timeline.png"
+ },
+ {
+  "id": "4059:117428",
+  "page": "issuance-row",
+  "kind": "set",
+  "name": "Issuance Row",
+  "path": "knowledge/examples/components/issuance-row/issuance-row.png"
+ },
+ {
+  "id": "3839:2274",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "QualifiedCalculator Header",
+  "path": "knowledge/examples/components/qualified-calculator/qualified-calculator-header.png"
+ },
+ {
+  "id": "6036:3480",
+  "page": "qualified-calculator",
+  "kind": "set",
+  "name": "Keypad / Amount input",
+  "path": "knowledge/examples/components/qualified-calculator/keypad-amount-input.png"
+ },
+ {
+  "id": "3658:127481",
+  "page": "guarantees",
+  "kind": "set",
+  "name": "Guarantees (legacy source)",
+  "path": "knowledge/examples/components/guarantees/guarantees.png"
+ }
+]

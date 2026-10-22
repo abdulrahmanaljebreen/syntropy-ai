@@ -1,0 +1,14 @@
+{
+  "name": "syntropy-ai",
+  "owner": { "name": "Abdulrahman Aljebreen" },
+  "description": "Syntropy, the Safqah design system, for AI agents.",
+  "plugins": [
+    {
+      "name": "syntropy",
+      "source": "./",
+      "description": "Skills, the /syntropy command and the Syntropy MCP server: design and build inside the Safqah design system.",
+      "category": "design",
+      "tags": ["design-system", "safqah", "rtl", "arabic", "accessibility"]
+    }
+  ]
+}

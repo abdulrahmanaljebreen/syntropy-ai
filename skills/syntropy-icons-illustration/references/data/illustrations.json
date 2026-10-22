@@ -1,0 +1,440 @@
+{
+ "$schema": "syntropy-illustrations/1",
+ "source": {
+  "file": "DDI9ObV7rOP82XQ3OJzogv",
+  "name": "Syntropy Icons",
+  "lastModified": "2026-10-05T17:37:53.956Z"
+ },
+ "count": 39,
+ "illustrations": [
+  {
+   "concept": "Scheduled",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Defaulted",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "In recovery",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Repayment due",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Matured",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Active",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Preparing",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Raising",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Partial",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Backspace",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Cards",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Stairs",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Garbage - Delete",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Data info alert",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Hearts - Favorite",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Info",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Settings",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Start",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Web - Globe",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Think",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Puzzle",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Flower",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Diamond",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Group hug",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Group",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Chosen checkmark",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Light bulb",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Arabic badge",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Bank",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Face ID standing",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Face ID flat",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Face ID deep",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Face ID layered",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation · Cycle",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation · Scan",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation · Funnel",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation · Target",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Recommendation · Orbit",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  }
+ ]
+}

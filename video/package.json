@@ -1,0 +1,15 @@
+{
+  "name": "syntropy-launch-video",
+  "private": true,
+  "type": "module",
+  "description": "Syntropy for AI launch and how-to film: canvas film rendered with headless Chrome, synthesised interface sound effects, ffmpeg mux.",
+  "scripts": {
+    "check": "node render.mjs film.html --only 60 --check",
+    "grid": "node render.mjs film.html --grid 36",
+    "audio": "node render.mjs film.html --audio",
+    "render": "node render.mjs film.html"
+  },
+  "dependencies": {
+    "puppeteer-core": "24.43.1"
+  }
+}

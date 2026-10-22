@@ -1,0 +1,813 @@
+{
+ "Font": {
+  "Size": {
+   "9": {
+    "$type": "dimension",
+    "$value": {
+     "value": 9,
+     "unit": "px"
+    },
+    "$description": "Fine print. Below readable threshold for normal copy. Use only for legal disclosures and compliance footnotes.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "10": {
+    "$type": "dimension",
+    "$value": {
+     "value": 10,
+     "unit": "px"
+    },
+    "$description": "Very small. Use only for compliance text and metadata.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "11": {
+    "$type": "dimension",
+    "$value": {
+     "value": 11,
+     "unit": "px"
+    },
+    "$description": "Small. Use sparingly for dense data tables and footnotes.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "12": {
+    "$type": "dimension",
+    "$value": {
+     "value": 12,
+     "unit": "px"
+    },
+    "$description": "Caption / fine print. Lowest size for normal product copy.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "13": {
+    "$type": "dimension",
+    "$value": {
+     "value": 13,
+     "unit": "px"
+    },
+    "$description": "Tight body. Between caption and default body.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "14": {
+    "$type": "dimension",
+    "$value": {
+     "value": 14,
+     "unit": "px"
+    },
+    "$description": "Default body text. Most product copy lives here.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "16": {
+    "$type": "dimension",
+    "$value": {
+     "value": 16,
+     "unit": "px"
+    },
+    "$description": "Emphasized body / small headings.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "18": {
+    "$type": "dimension",
+    "$value": {
+     "value": 18,
+     "unit": "px"
+    },
+    "$description": "Section subtitles.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "20": {
+    "$type": "dimension",
+    "$value": {
+     "value": 20,
+     "unit": "px"
+    },
+    "$description": "Page section titles.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "22": {
+    "$type": "dimension",
+    "$value": {
+     "value": 22,
+     "unit": "px"
+    },
+    "$description": "Between section title and page title.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "24": {
+    "$type": "dimension",
+    "$value": {
+     "value": 24,
+     "unit": "px"
+    },
+    "$description": "Page titles.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "28": {
+    "$type": "dimension",
+    "$value": {
+     "value": 28,
+     "unit": "px"
+    },
+    "$description": "Large page titles.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "32": {
+    "$type": "dimension",
+    "$value": {
+     "value": 32,
+     "unit": "px"
+    },
+    "$description": "Display / large hero text.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "36": {
+    "$type": "dimension",
+    "$value": {
+     "value": 36,
+     "unit": "px"
+    },
+    "$description": "Display large.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "40": {
+    "$type": "dimension",
+    "$value": {
+     "value": 40,
+     "unit": "px"
+    },
+    "$description": "Marketing / hero display text.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "48": {
+    "$type": "dimension",
+    "$value": {
+     "value": 48,
+     "unit": "px"
+    },
+    "$description": "Hero display. Onboarding and landing only.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "56": {
+    "$type": "dimension",
+    "$value": {
+     "value": 56,
+     "unit": "px"
+    },
+    "$description": "Extra-large hero. Use sparingly.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "64": {
+    "$type": "dimension",
+    "$value": {
+     "value": 64,
+     "unit": "px"
+    },
+    "$description": "Marketing hero. Use sparingly.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   },
+   "72": {
+    "$type": "dimension",
+    "$value": {
+     "value": 72,
+     "unit": "px"
+    },
+    "$description": "Largest size. Onboarding splash / marketing only.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_SIZE"
+      ]
+     }
+    }
+   }
+  },
+  "Family": {
+   "Base": {
+    "$type": "fontFamily",
+    "$value": "IBM Plex Sans Arabic",
+    "$description": "The single canonical font family for v2.0. Replaces v1's 5 redundant aliases (Display/Headline/Body/Title/Caption) that all resolved to the same font.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_FAMILY"
+      ]
+     }
+    }
+   }
+  },
+  "LetterSpacing": {
+   "Tight": {
+    "$type": "dimension",
+    "$value": {
+     "value": -0.5,
+     "unit": "px"
+    },
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LETTER_SPACING"
+      ]
+     }
+    }
+   },
+   "Normal": {
+    "$type": "dimension",
+    "$value": {
+     "value": 0,
+     "unit": "px"
+    },
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LETTER_SPACING"
+      ]
+     }
+    }
+   },
+   "Wide": {
+    "$type": "dimension",
+    "$value": {
+     "value": 0.5,
+     "unit": "px"
+    },
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LETTER_SPACING"
+      ]
+     }
+    }
+   },
+   "Snug": {
+    "$type": "dimension",
+    "$value": {
+     "value": -0.20000000298023224,
+     "unit": "px"
+    },
+    "$description": "Slightly tight tracking. Used for headings and emphasis where Tight is too aggressive.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LETTER_SPACING"
+      ]
+     }
+    }
+   }
+  },
+  "Weight": {
+   "Thin": {
+    "$type": "fontWeight",
+    "$value": 100,
+    "$description": "Thin, the least thick.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "ExtraLight": {
+    "$type": "fontWeight",
+    "$value": 200,
+    "$description": "Extra-light.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "Light": {
+    "$type": "fontWeight",
+    "$value": 300,
+    "$description": "Light.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "Regular": {
+    "$type": "fontWeight",
+    "$value": 400,
+    "$description": "Normal / regular / plain. Default body weight.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "Medium": {
+    "$type": "fontWeight",
+    "$value": 500,
+    "$description": "Medium. Emphasis within body text.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "SemiBold": {
+    "$type": "fontWeight",
+    "$value": 600,
+    "$description": "Semi-bold. Default heading weight.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "Bold": {
+    "$type": "fontWeight",
+    "$value": 700,
+    "$description": "Bold. Maximum emphasis. Use sparingly.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "ExtraBold": {
+    "$type": "fontWeight",
+    "$value": 800,
+    "$description": "Extra-bold.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "Black": {
+    "$type": "fontWeight",
+    "$value": 900,
+    "$description": "Black, the most thick.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   }
+  },
+  "LineHeight": {
+   "line-height-9px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 12.857142448425293,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 9px text. English: 9px × 10/7 ≈ 12.86px. Arabic: 9px × 1.5 = 13.5px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-10px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 14.285714149475098,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 10px text. English: 10px × 10/7 ≈ 14.29px. Arabic: 10px × 1.5 = 15px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-11px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 15.714285850524902,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 11px text. English: 11px × 10/7 ≈ 15.71px. Arabic: 11px × 1.5 = 16.5px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-12px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 17.14285659790039,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 12px text. English: 12px × 10/7 ≈ 17.14px. Arabic: 12px × 1.5 = 18px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-13px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 18.571428298950195,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 13px text. English: 13px × 10/7 ≈ 18.57px. Arabic: 13px × 1.5 = 19.5px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-14px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 20,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 14px text. English: 14px × 10/7 ≈ 20.00px. Arabic: 14px × 1.5 = 21px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-16px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 22.85714340209961,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 16px text. English: 16px × 10/7 ≈ 22.86px. Arabic: 16px × 1.5 = 24px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-18px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 25.714284896850586,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 18px text. English: 18px × 10/7 ≈ 25.71px. Arabic: 18px × 1.5 = 27px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-20px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 28.571428298950195,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 20px text. English: 20px × 10/7 ≈ 28.57px. Arabic: 20px × 1.5 = 30px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-22px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 31.428571701049805,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 22px text. English: 22px × 10/7 ≈ 31.43px. Arabic: 22px × 1.5 = 33px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-24px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 34.28571319580078,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 24px text. English: 24px × 10/7 ≈ 34.29px. Arabic: 24px × 1.5 = 36px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-28px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 40,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 28px text. English: 28px × 10/7 ≈ 40.00px. Arabic: 28px × 1.5 = 42px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-32px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 45.71428680419922,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 32px text. English: 32px × 10/7 ≈ 45.71px. Arabic: 32px × 1.5 = 48px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-36px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 51.42856979370117,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 36px text. English: 36px × 10/7 ≈ 51.43px. Arabic: 36px × 1.5 = 54px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-40px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 57.14285659790039,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 40px text. English: 40px × 10/7 ≈ 57.14px. Arabic: 40px × 1.5 = 60px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-48px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 68.57142639160156,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 48px text. English: 48px × 10/7 ≈ 68.57px. Arabic: 48px × 1.5 = 72px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-56px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 80,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 56px text. English: 56px × 10/7 ≈ 80.00px. Arabic: 56px × 1.5 = 84px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-64px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 91.42857360839844,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 64px text. English: 64px × 10/7 ≈ 91.43px. Arabic: 64px × 1.5 = 96px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   },
+   "line-height-72px": {
+    "$type": "dimension",
+    "$value": {
+     "value": 102.85713958740234,
+     "unit": "px"
+    },
+    "$description": "[Locked] Line height for 72px text. English: 72px × 10/7 ≈ 102.86px. Arabic: 72px × 1.5 = 108px (extra space prevents diacritic clipping).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Primitive / Typography",
+      "scopes": [
+       "LINE_HEIGHT"
+      ]
+     }
+    }
+   }
+  }
+ }
+}

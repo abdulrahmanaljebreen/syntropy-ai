@@ -1,0 +1,179 @@
+{
+  "skill_name": "syntropy-icons-illustration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Pick an icon for the withdraw button on the wallet screen.",
+      "expected_output": "Icon / money-out (published, Financial / Fintech, 24px), as the leading icon of Button Variant=primary labelled «سحب», coloured icon/on-brand by the component. Icon / bank is the alternative when the destination bank matters.",
+      "expectations": [
+        "Recommends Icon / money-out",
+        "States it is published or in the library",
+        "Uses the exact Icon / slug naming",
+        "Gives the Arabic label «سحب» or an Arabic-first label",
+        "Does not invent a slug that is not in icons.json"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Which icon for the back button in the Arabic app bar? Should it flip?",
+      "expected_output": "Use BackButton or an IconButton with Icon / arrow-right-2 in Arabic (back points right) and Icon / arrow-left-2 in English, swapping to the counterpart instead of flipping the row. Accessible label «رجوع». Tap target 48 x 48.",
+      "expectations": [
+        "States that back points right in RTL",
+        "Names arrow-right-2 / arrow-left-2 (or chevron-right / chevron-left) as the swap pair",
+        "Requires an accessible label such as «رجوع»",
+        "Says to swap or mirror only the icon, not the whole container"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "أبي أيقونة للمحفظة",
+      "expected_output": "Icon / wallet (published), or Icon / wallet-2 as an alternative, 24px, icon/default. Answer can be in Arabic.",
+      "expectations": [
+        "Recommends Icon / wallet",
+        "Handles the Arabic request correctly",
+        "Mentions size or colour token (24 px, icon/default)",
+        "Uses Western digits if any numbers appear"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Use a Material Design undo icon in the transaction editor.",
+      "expected_output": "Decline mixing families: undo is not in the Syntropy library. Use a text action («تراجع») or request the Streamline Sharp Line undo icon from the DS maintainer; when added it mirrors in RTL.",
+      "expectations": [
+        "States undo is not in the Syntropy library",
+        "Refuses to mix Material icons with Streamline Sharp Line",
+        "Offers a text action or requesting the icon",
+        "Mentions undo/redo are directional and mirror in RTL"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Use a 3D render of a glowing building as the hero illustration on the deal page.",
+      "expected_output": "Decline: 3D renders are banned by the illustration DNA. Offer a flat isometric building in the primary ramp (#008150 → #00B224 → #FBE900, diagonal) from the brand team's files, or an isocon for in-app moments. Hero illustrations are for marketing, not dense product UI.",
+      "expectations": [
+        "Refuses the 3D render",
+        "Names the allowed palette or primary gradient",
+        "Offers an on-brand alternative (brand illustration or isocon)",
+        "Notes hero illustrations belong to marketing or onboarding rather than inline product UI"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Make the empty-watchlist illustration blue so it matches our trust section.",
+      "expected_output": "Decline recolouring: isocons are never recoloured and brand illustrations ban blue tones. Use EmptyState Tone=default with the Hearts - Favorite isocon; change the section background with tokens if needed.",
+      "expectations": [
+        "Refuses to recolour the illustration blue",
+        "Recommends EmptyState with Tone=default",
+        "Suggests the Hearts - Favorite isocon for a watchlist",
+        "Offers token-based background changes instead of recolouring art"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "What illustration should the screen use when an investor has no open deals available right now?",
+      "expected_output": "EmptyState Tone=default (not error, scarcity is not a failure) with a Preparing or Raising isocon, Size=Default, a calm title and one action such as «أبلغني عند طرح فرصة».",
+      "expectations": [
+        "Uses EmptyState Tone=default rather than Tone=error",
+        "Suggests Preparing or Raising (or the default Scheduled) isocon",
+        "Explains that no supply must not read as an app failure",
+        "Includes one primary action"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Recolour the Safqah logo to our button green #4daa57 so it matches the CTA.",
+      "expected_output": "Decline: SafqahLogo only uses its seven Color variants. On light surfaces use Color=PigmentGreen or RoyalGreen; on dark use White or Offwhite. Logo colours and UI tokens are separate.",
+      "expectations": [
+        "Refuses to recolour the logo",
+        "Names SafqahLogo and its Color variants",
+        "Recommends a variant by background (PigmentGreen/RoyalGreen on light, White/Offwhite on dark)",
+        "Keeps logo colours separate from UI tokens"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Can I use the Absher logo as a 'verified' badge next to the user's name on the profile?",
+      "expected_output": "No. AbshirLogo is only for Absher / Nafath identity steps. For a verified badge use Icon / user-verified or Icon / shield-check with icon/success and a text label.",
+      "expectations": [
+        "Refuses to use AbshirLogo as a generic verified badge",
+        "Recommends Icon / user-verified or Icon / shield-check",
+        "Mentions a text label or accessible name",
+        "States the third-party mark rule"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "We need an icon-only share button on the deal card. What do I need?",
+      "expected_output": "IconButton (Variant=tertiary or text, Size=md) with Icon / share, icon token from the variant, accessible label «مشاركة», tap target 48 x 48. Share does not need mirroring.",
+      "expectations": [
+        "Uses IconButton with Icon / share",
+        "Requires an accessible label in Arabic such as «مشاركة»",
+        "Mentions a 48 x 48 (or at least 44) tap target",
+        "Does not mirror the share icon unnecessarily or explains it is not directional"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Should the clock icon flip in Arabic? And the trending-up icon on the returns card?",
+      "expected_output": "Neither mirrors: clocks run clockwise in every language, and trending-up follows chart time running left to right in both languages.",
+      "expectations": [
+        "Says the clock icon does not mirror",
+        "Says trending-up does not mirror",
+        "Gives the reason (clock direction, chart time axis left to right)"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Find me an icon for 'portfolio' and tell me if it's in the library.",
+      "expected_output": "Icon / portfolio exists but is not published. Published alternatives: Icon / pie-chart-investment is unpublished too, so offer Icon / briefcase-dollar or Icon / donut-graph (published). Say it exists in the icon file but is not in the library yet and can be requested.",
+      "expectations": [
+        "States that portfolio is not published",
+        "Offers at least one published alternative such as briefcase-dollar or donut-graph",
+        "Suggests requesting publication from the DS maintainer",
+        "Uses exact slugs from the library"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Use a piggy bank icon for the savings goal feature.",
+      "expected_output": "Decline: piggy banks are culturally inappropriate for a Saudi, Sharia-compliant audience. Use Icon / target-check for goals, or Icon / wallet / Icon / deposit-box / Icon / coins-stack for savings.",
+      "expectations": [
+        "Refuses the piggy bank metaphor and explains the cultural reason",
+        "Offers Syntropy alternatives such as target-check, wallet, deposit-box or coins-stack",
+        "Does not invent a piggy-bank slug"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Write an image prompt for a new illustration of a key unlocking a vault for the security onboarding page.",
+      "expected_output": "Use the illustration-dna brief template: flat vector, palette #00B224, #00AE26, #FBE900, #008150, #004348 shadows only, diagonal 45° gradient with 2 to 3 stops, geometric forms, #FFEB00 rim, white or transparent background, and the avoid list (3D, photorealism, watercolour, rainbow, blue or red, heavy outlines, people). Mark output as draft for brand review.",
+      "expectations": [
+        "Includes the closed palette hex values",
+        "Specifies a diagonal gradient with at most 3 stops",
+        "Lists the bans including 3D renders, photorealism, rainbow and blue or red tones",
+        "Says the result is a draft until the brand team accepts it"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Which tone and icon for a late distribution status pill?",
+      "expected_output": "StatusPill Tone=warning, Variant=subtle, HasIcon=true with Icon / alert-triangle (or clock-important), icon/warning, label «متأخرة». Not error/red.",
+      "expectations": [
+        "Uses the warning tone, not error",
+        "Suggests Icon / alert-triangle or Icon / clock-important",
+        "Names icon/warning as the colour",
+        "Includes a text label so colour is not the only cue"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Show the mada logo at 12px next to the card number and make it monochrome grey.",
+      "expected_output": "MadaLogo sizes are 16, 24, 32, 48, 64; prefer Size=24 so the wordmark stays legible. For single colour use Tone=Mono (bound to text/default), not a custom grey.",
+      "expectations": [
+        "Rejects 12px and recommends a supported size, ideally 24",
+        "Recommends Tone=Mono instead of a custom grey",
+        "Does not suggest recolouring the bars manually"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2958 @@
+{
+ "$schema": "syntropy-resolved-tokens/1",
+ "note": "Every token with its final value per mode. Semantic tokens are the ones to use in product UI; primitives are never used directly.",
+ "brandGreen": "#4daa57",
+ "tokens": {
+  "Color/Primary/LightGreen/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fafdfb"
+   },
+   "description": "The primary brand palette used across interactive elements: CTAs, links, inputs, active states, focus rings."
+  },
+  "Color/Primary/LightGreen/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e4f3e5"
+   }
+  },
+  "Color/Primary/LightGreen/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#d6edd9"
+   }
+  },
+  "Color/Primary/LightGreen/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#aedab2"
+   }
+  },
+  "Color/Primary/LightGreen/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#77c27f"
+   }
+  },
+  "Color/Primary/LightGreen/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#4daa57"
+   }
+  },
+  "Color/Primary/LightGreen/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#469b4f"
+   }
+  },
+  "Color/Primary/LightGreen/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#387c3f"
+   }
+  },
+  "Color/Primary/LightGreen/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#2a5d2f"
+   }
+  },
+  "Color/Primary/LightGreen/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#1c3e20"
+   }
+  },
+  "Color/Primary/Yellow/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fffdeb"
+   },
+   "description": "The brand secondary palette, used alongside primary green to indicate secondary focus."
+  },
+  "Color/Primary/Yellow/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fefac2"
+   }
+  },
+  "Color/Primary/Yellow/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fef79a"
+   }
+  },
+  "Color/Primary/Yellow/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fdf472"
+   }
+  },
+  "Color/Primary/Yellow/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fdf149"
+   }
+  },
+  "Color/Primary/Yellow/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fcee21"
+   }
+  },
+  "Color/Primary/Yellow/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e6d803"
+   }
+  },
+  "Color/Primary/Yellow/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#b3a802"
+   }
+  },
+  "Color/Primary/Yellow/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#666001"
+   }
+  },
+  "Color/Primary/Yellow/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#333001"
+   }
+  },
+  "Color/Secondary/Purple/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#f8effc"
+   },
+   "description": "Progress palette. Conveys progress, milestones, and reflective states."
+  },
+  "Color/Secondary/Purple/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e9d0f6"
+   }
+  },
+  "Color/Secondary/Purple/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#dbb0f0"
+   }
+  },
+  "Color/Secondary/Purple/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#cc91ea"
+   }
+  },
+  "Color/Secondary/Purple/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#be71e4"
+   }
+  },
+  "Color/Secondary/Purple/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#af52de"
+   }
+  },
+  "Color/Secondary/Purple/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#9828d1"
+   }
+  },
+  "Color/Secondary/Purple/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#761fa2"
+   }
+  },
+  "Color/Secondary/Purple/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#551674"
+   }
+  },
+  "Color/Secondary/Purple/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#330d46"
+   }
+  },
+  "Color/Info/Blue/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e8f3ff"
+   },
+   "description": "Informational palette. Used for neutral information, tips, and informational states."
+  },
+  "Color/Info/Blue/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#b9dbff"
+   }
+  },
+  "Color/Info/Blue/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#8bc3ff"
+   }
+  },
+  "Color/Info/Blue/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#5daaff"
+   }
+  },
+  "Color/Info/Blue/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#2e92ff"
+   }
+  },
+  "Color/Info/Blue/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#007aff"
+   }
+  },
+  "Color/Info/Blue/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#006fe8"
+   }
+  },
+  "Color/Info/Blue/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#0059b9"
+   }
+  },
+  "Color/Info/Blue/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#00438b"
+   }
+  },
+  "Color/Info/Blue/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#002c5d"
+   }
+  },
+  "Color/Success/Green/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#eefbf1"
+   },
+   "description": "Success palette. Conveys positivity, completion, and successful states."
+  },
+  "Color/Success/Green/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#bbedc7"
+   }
+  },
+  "Color/Success/Green/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#98e4ab"
+   }
+  },
+  "Color/Success/Green/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#76db90"
+   }
+  },
+  "Color/Success/Green/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#54d274"
+   }
+  },
+  "Color/Success/Green/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#34c759"
+   }
+  },
+  "Color/Success/Green/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#2ba349"
+   }
+  },
+  "Color/Success/Green/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#217f39"
+   }
+  },
+  "Color/Success/Green/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#185a28"
+   }
+  },
+  "Color/Success/Green/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#134820"
+   }
+  },
+  "Color/Caution/Brown/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ebe0dc"
+   },
+   "description": "Warning palette. Conveys holding states, warnings, and on-hold states."
+  },
+  "Color/Caution/Brown/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e3d1cc"
+   }
+  },
+  "Color/Caution/Brown/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#d4b4ae"
+   }
+  },
+  "Color/Caution/Brown/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#c49890"
+   }
+  },
+  "Color/Caution/Brown/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ae8278"
+   }
+  },
+  "Color/Caution/Brown/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#996c61"
+   }
+  },
+  "Color/Caution/Brown/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#85574a"
+   }
+  },
+  "Color/Caution/Brown/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#704234"
+   }
+  },
+  "Color/Caution/Brown/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#5c2e1f"
+   }
+  },
+  "Color/Caution/Brown/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#481a09"
+   }
+  },
+  "Color/Warning/Orange/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#fff5e8"
+   },
+   "description": "Warning palette. Conveys holding states, warnings, and on-hold states."
+  },
+  "Color/Warning/Orange/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffd8a2"
+   }
+  },
+  "Color/Warning/Orange/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffcf8b"
+   }
+  },
+  "Color/Warning/Orange/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffb246"
+   }
+  },
+  "Color/Warning/Orange/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffa82e"
+   }
+  },
+  "Color/Warning/Orange/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ff9500"
+   }
+  },
+  "Color/Warning/Orange/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#d17a00"
+   }
+  },
+  "Color/Warning/Orange/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#a25f00"
+   }
+  },
+  "Color/Warning/Orange/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#744400"
+   }
+  },
+  "Color/Warning/Orange/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#462900"
+   }
+  },
+  "Color/Error/Red/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffecf0"
+   },
+   "description": "Error palette. Conveys negativity, failures, and error states."
+  },
+  "Color/Error/Red/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffc6d1"
+   }
+  },
+  "Color/Error/Red/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffa0b2"
+   }
+  },
+  "Color/Error/Red/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ff6683"
+   }
+  },
+  "Color/Error/Red/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ff5374"
+   }
+  },
+  "Color/Error/Red/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ff2d55"
+   }
+  },
+  "Color/Error/Red/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#f5002f"
+   }
+  },
+  "Color/Error/Red/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#da002a"
+   }
+  },
+  "Color/Error/Red/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#a4001f"
+   }
+  },
+  "Color/Error/Red/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#6d0015"
+   }
+  },
+  "Color/Neutral/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#f9faf9"
+   },
+   "description": "Neutral palette. Supporting colors used for backgrounds, text, separators, and modal surfaces."
+  },
+  "Color/Neutral/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#edefee"
+   }
+  },
+  "Color/Neutral/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#e1e4e3"
+   }
+  },
+  "Color/Neutral/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#c3c9c6"
+   }
+  },
+  "Color/Neutral/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#b0b9b5"
+   }
+  },
+  "Color/Neutral/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#86938d"
+   }
+  },
+  "Color/Neutral/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#74827b"
+   }
+  },
+  "Color/Neutral/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#535d58"
+   }
+  },
+  "Color/Neutral/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#323835"
+   }
+  },
+  "Color/Neutral/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#111312"
+   }
+  },
+  "Color/Dark/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#353735"
+   },
+   "description": "Dark surface palette. Purpose-built for dark mode surfaces with near-black variants."
+  },
+  "Color/Dark/100": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#333533"
+   }
+  },
+  "Color/Dark/200": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#303230"
+   }
+  },
+  "Color/Dark/300": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#2b2d2c"
+   }
+  },
+  "Color/Dark/400": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#2a2b2a"
+   }
+  },
+  "Color/Dark/500": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#252625"
+   }
+  },
+  "Color/Dark/600": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#232423"
+   }
+  },
+  "Color/Dark/700": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#212221"
+   }
+  },
+  "Color/Dark/800": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#1c1d1c"
+   }
+  },
+  "Color/Dark/900": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#121614"
+   }
+  },
+  "Color/Shade/White": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffffff"
+   },
+   "description": "Pure white. Used as a primitive for surfaces and absolute light."
+  },
+  "Color/Shade/Off-White": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#f4f6f2"
+   },
+   "description": "Soft off-white. Used as a supporting background tone."
+  },
+  "Color/Shade/Black": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#000000"
+   },
+   "description": "Pure black. Used as a primitive for absolute dark and high-contrast text."
+  },
+  "Color/Alpha/White/10": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffffff1a"
+   },
+   "description": "White at 10% opacity. For light scrims and subtle overlays on dark images."
+  },
+  "Color/Alpha/White/30": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffffff4d"
+   }
+  },
+  "Color/Alpha/White/70": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffffffb2"
+   }
+  },
+  "Color/Alpha/White/80": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#ffffffcc"
+   }
+  },
+  "Color/Alpha/Black/10": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#0000001a"
+   },
+   "description": "Black at 10% opacity. For subtle dividers and shadow tints."
+  },
+  "Color/Alpha/Black/30": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#0000004d"
+   }
+  },
+  "Color/Alpha/Black/50": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#00000080"
+   },
+   "description": "Black at 50% opacity. Used as the canonical modal scrim and full-screen overlay backdrop."
+  },
+  "Color/Alpha/Black/70": {
+   "collection": "Primitive Core",
+   "type": "color",
+   "value": {
+    "Default": "#000000b2"
+   }
+  },
+  "Spacing/0": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 0
+   },
+   "description": "No space. For collapse and reset."
+  },
+  "Spacing/2": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 2
+   },
+   "description": "Hairline. Internal spacing on tight controls."
+  },
+  "Spacing/4": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 4
+   },
+   "description": "Tight. Between an icon and its label."
+  },
+  "Spacing/8": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 8
+   },
+   "description": "Compact. Internal padding on chips and small components."
+  },
+  "Spacing/12": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 12
+   },
+   "description": "Comfortable. Standard list-item vertical padding."
+  },
+  "Spacing/16": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 16
+   },
+   "description": "Default. Standard component internal padding."
+  },
+  "Spacing/20": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 20
+   },
+   "description": "Roomy. Vertical padding on cards."
+  },
+  "Spacing/24": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 24
+   },
+   "description": "Sections. Default gap between content sections."
+  },
+  "Spacing/32": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 32
+   },
+   "description": "Section breaks. Larger separation."
+  },
+  "Spacing/48": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 48
+   },
+   "description": "Page sections. Major content blocks."
+  },
+  "Spacing/64": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 64
+   },
+   "description": "Hero spacing. Top of a page."
+  },
+  "Spacing/80": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 80
+   },
+   "description": "Reserved for desktop/large surfaces."
+  },
+  "Spacing/96": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 96
+   },
+   "description": "Reserved for desktop/large surfaces."
+  },
+  "Radius/0": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 0
+   },
+   "description": "No rounding. Sharp corners."
+  },
+  "Radius/2": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 2
+   },
+   "description": "Hairline rounding. Almost imperceptible."
+  },
+  "Radius/4": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 4
+   },
+   "description": "Small. Tight controls, tags."
+  },
+  "Radius/8": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 8
+   },
+   "description": "Default for small components: inputs, chips."
+  },
+  "Radius/12": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 12
+   },
+   "description": "Default for medium components: buttons, cards."
+  },
+  "Radius/16": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 16
+   },
+   "description": "Default for large containers."
+  },
+  "Radius/20": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 20
+   },
+   "description": "Used by Safqah brand-aligned cards (v1 carries 20px)."
+  },
+  "Radius/24": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 24
+   },
+   "description": "Large modals and prominent cards."
+  },
+  "Radius/32": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 32
+   },
+   "description": "Extra large. Reserved for hero containers."
+  },
+  "Radius/Full": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 9999
+   },
+   "description": "Fully rounded, pills, avatars, circular buttons."
+  },
+  "Shadow/OffsetY/XS": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 1
+   }
+  },
+  "Shadow/OffsetY/SM": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 2
+   }
+  },
+  "Shadow/OffsetY/MD": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 4
+   }
+  },
+  "Shadow/OffsetY/LG": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 8
+   }
+  },
+  "Shadow/OffsetY/XL": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 16
+   }
+  },
+  "Shadow/Blur/XS": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 2
+   }
+  },
+  "Shadow/Blur/SM": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 4
+   }
+  },
+  "Shadow/Blur/MD": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 8
+   }
+  },
+  "Shadow/Blur/LG": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 16
+   }
+  },
+  "Shadow/Blur/XL": {
+   "collection": "Primitive Core",
+   "type": "dimension",
+   "value": {
+    "Default": 32
+   }
+  },
+  "bg/surface": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#f9faf9",
+    "Dark": "#121614"
+   },
+   "tag": "locked",
+   "description": "Least elevated surface. The canvas behind everything, the base layer at the back of the elevation ladder."
+  },
+  "bg/base": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#121614"
+   },
+   "tag": "locked",
+   "description": "Mid-elevation surface. The base content area where most page content sits, White in Light mode, mid-dark in Dark. Sits above bg/surface and below bg/elevated."
+  },
+  "bg/elevated": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#f4f6f2",
+    "Dark": "#1c1d1c"
+   },
+   "tag": "locked",
+   "description": "Most elevated surface. The off-white surface used for any element that needs to clearly elevate above the page, cards, modals, popovers, and prominent floating elements. The default surface when elevation is needed."
+  },
+  "bg/inverse": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#111312",
+    "Dark": "#ffffff"
+   },
+   "tag": "locked",
+   "description": "Inverse surface. Dark UI on light pages, tooltips, dark snippets, marketing dark-on-light blocks."
+  },
+  "bg/overlay": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#00000080",
+    "Dark": "#ffffff4d"
+   },
+   "tag": "locked",
+   "description": "Modal scrim and full-screen overlay backdrop."
+  },
+  "bg/reverse-overlay": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffffb2",
+    "Dark": "#00000080"
+   },
+   "tag": "locked",
+   "description": "Modal scrim and full-screen overlay backdrop."
+  },
+  "bg/brand/primary": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#4daa57",
+    "Dark": "#77c27f"
+   },
+   "tag": "themable",
+   "description": "Primary brand background. CTAs and brand-colored surfaces."
+  },
+  "bg/brand/primary-hover": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#469b4f",
+    "Dark": "#aedab2"
+   },
+   "tag": "themable",
+   "description": "Primary brand background, hover state."
+  },
+  "bg/brand/primary-pressed": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#387c3f",
+    "Dark": "#469b4f"
+   },
+   "tag": "themable",
+   "description": "Primary brand background, pressed state."
+  },
+  "bg/success": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#34c759",
+    "Dark": "#54d274"
+   },
+   "tag": "locked",
+   "description": "Success state background."
+  },
+  "bg/success-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#eefbf1",
+    "Dark": "#185a28"
+   },
+   "tag": "locked",
+   "description": "Success callout / inline alert background."
+  },
+  "bg/caution": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#996c61",
+    "Dark": "#ae8278"
+   },
+   "tag": "locked",
+   "description": "Success state background."
+  },
+  "bg/caution-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ebe0dc",
+    "Dark": "#5c2e1f"
+   },
+   "tag": "locked",
+   "description": "Success callout / inline alert background."
+  },
+  "bg/warning": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ff9500",
+    "Dark": "#ffa82e"
+   },
+   "tag": "locked",
+   "description": "Warning state background."
+  },
+  "bg/warning-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#fff5e8",
+    "Dark": "#744400"
+   },
+   "tag": "locked",
+   "description": "Warning callout / inline alert background."
+  },
+  "bg/error": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#da002a",
+    "Dark": "#ff5374"
+   },
+   "tag": "locked",
+   "description": "Error state background."
+  },
+  "bg/error-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffecf0",
+    "Dark": "#6d0015"
+   },
+   "tag": "locked",
+   "description": "Error callout / inline alert background."
+  },
+  "bg/info": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#007aff",
+    "Dark": "#2e92ff"
+   },
+   "tag": "locked",
+   "description": "Informational background."
+  },
+  "bg/info-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e8f3ff",
+    "Dark": "#00438b"
+   },
+   "tag": "locked",
+   "description": "Informational callout / inline alert background."
+  },
+  "bg/progress": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#af52de",
+    "Dark": "#be71e4"
+   },
+   "tag": "locked",
+   "description": "Progress / milestone background."
+  },
+  "bg/progress-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#f8effc",
+    "Dark": "#551674"
+   },
+   "tag": "locked",
+   "description": "Progress / milestone callout background."
+  },
+  "bg/disabled": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e1e4e3",
+    "Dark": "#2b2d2c"
+   },
+   "tag": "locked",
+   "description": "Disabled control background."
+  },
+  "text/default": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#111312",
+    "Dark": "#edefee"
+   },
+   "tag": "locked",
+   "description": "Default body text. Highest contrast on light backgrounds."
+  },
+  "text/muted": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#535d58",
+    "Dark": "#b0b9b5"
+   },
+   "tag": "locked",
+   "description": "Secondary body text. Captions, helper text."
+  },
+  "text/subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#86938d",
+    "Dark": "#86938d"
+   },
+   "tag": "locked",
+   "description": "Tertiary text. Placeholders, low-priority labels."
+  },
+  "text/disabled": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#c3c9c6",
+    "Dark": "#535d58"
+   },
+   "tag": "locked",
+   "description": "Disabled text."
+  },
+  "text/inverse": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#111312"
+   },
+   "tag": "locked",
+   "description": "Inverse text (used on dark/colored backgrounds)."
+  },
+  "text/brand/primary": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#4daa57",
+    "Dark": "#aedab2"
+   },
+   "tag": "themable",
+   "description": "Brand-colored text. Used for links and brand emphasis."
+  },
+  "text/on-brand": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#ffffff"
+   },
+   "tag": "locked",
+   "description": "Text on brand-colored surfaces (e.g. on primary buttons)."
+  },
+  "text/success": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#217f39",
+    "Dark": "#76db90"
+   },
+   "tag": "locked",
+   "description": "Success text. Pair with bg/success-subtle."
+  },
+  "text/caution": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#704234",
+    "Dark": "#c49890"
+   },
+   "tag": "locked",
+   "description": "Success text. Pair with bg/success-subtle."
+  },
+  "text/warning": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#a25f00",
+    "Dark": "#ffb246"
+   },
+   "tag": "locked",
+   "description": "Warning text."
+  },
+  "text/error": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#da002a",
+    "Dark": "#ffa0b2"
+   },
+   "tag": "locked",
+   "description": "Error text."
+  },
+  "text/info": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#0059b9",
+    "Dark": "#8bc3ff"
+   },
+   "tag": "locked",
+   "description": "Informational text."
+  },
+  "text/progress": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#af52de",
+    "Dark": "#cc91ea"
+   },
+   "tag": "locked",
+   "description": "Progress / milestone text."
+  },
+  "border/default": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e1e4e3",
+    "Dark": "#303230"
+   },
+   "tag": "locked",
+   "description": "Default border. Cards, dividers, input borders at rest."
+  },
+  "border/darkmode-divider": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#303230"
+   },
+   "tag": "locked",
+   "description": "Default border. Cards, dividers, input borders at rest."
+  },
+  "border/subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#edefee",
+    "Dark": "#2b2d2c"
+   },
+   "tag": "locked",
+   "description": "Subtle border. Background section breaks."
+  },
+  "border/strong": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#b0b9b5",
+    "Dark": "#86938d"
+   },
+   "tag": "locked",
+   "description": "Strong border. Emphasis or selected state."
+  },
+  "border/inverse": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#111312"
+   },
+   "tag": "locked",
+   "description": "Border on dark surfaces."
+  },
+  "border/disabled": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e1e4e3",
+    "Dark": "#2b2d2c"
+   },
+   "tag": "locked",
+   "description": "Disabled control border."
+  },
+  "border/brand/primary": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#4daa57",
+    "Dark": "#77c27f"
+   },
+   "tag": "themable",
+   "description": "Primary brand border. The strongest brand-colored border, used for selected states, emphasis, and brand-aligned containers."
+  },
+  "border/focus": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#111312",
+    "Dark": "#edefee"
+   },
+   "tag": "themable",
+   "description": "Focus ring color. Themed with brand."
+  },
+  "border/success": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#34c759",
+    "Dark": "#54d274"
+   },
+   "tag": "locked",
+   "description": "Success border. Used on inputs with successful validation."
+  },
+  "border/success-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#bbedc7",
+    "Dark": "#185a28"
+   },
+   "tag": "locked",
+   "description": "Success border. Used on inputs with successful validation."
+  },
+  "border/caution": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#996c61",
+    "Dark": "#ae8278"
+   },
+   "tag": "locked",
+   "description": "Success border. Used on inputs with successful validation."
+  },
+  "border/caution-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e3d1cc",
+    "Dark": "#5c2e1f"
+   },
+   "tag": "locked",
+   "description": "Success border. Used on inputs with successful validation."
+  },
+  "border/warning": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ff9500",
+    "Dark": "#ffa82e"
+   },
+   "tag": "locked",
+   "description": "Warning border."
+  },
+  "border/warning-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffd8a2",
+    "Dark": "#744400"
+   },
+   "tag": "locked",
+   "description": "Warning border."
+  },
+  "border/error": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ff2d55",
+    "Dark": "#ff5374"
+   },
+   "tag": "locked",
+   "description": "Error border. Used on inputs with validation errors."
+  },
+  "border/error-error": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffc6d1",
+    "Dark": "#a4001f"
+   },
+   "tag": "locked",
+   "description": "Error border. Used on inputs with validation errors."
+  },
+  "border/info": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#007aff",
+    "Dark": "#2e92ff"
+   },
+   "tag": "locked",
+   "description": "Informational border."
+  },
+  "border/info-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#b9dbff",
+    "Dark": "#00438b"
+   },
+   "tag": "locked",
+   "description": "Informational border."
+  },
+  "icon/default": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#111312",
+    "Dark": "#edefee"
+   },
+   "tag": "locked",
+   "description": "Default icon color. Matches body text."
+  },
+  "icon/muted": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#535d58",
+    "Dark": "#b0b9b5"
+   },
+   "tag": "locked",
+   "description": "Secondary icons. Inline icons next to muted text."
+  },
+  "icon/subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#86938d",
+    "Dark": "#86938d"
+   },
+   "tag": "locked",
+   "description": "Tertiary icons. Decorative or low-priority."
+  },
+  "icon/disabled": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#c3c9c6",
+    "Dark": "#535d58"
+   },
+   "tag": "locked",
+   "description": "Disabled icon."
+  },
+  "icon/inverse": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#111312"
+   },
+   "tag": "locked",
+   "description": "Inverse icon (on dark or brand backgrounds)."
+  },
+  "icon/brand/primary": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#469b4f",
+    "Dark": "#aedab2"
+   },
+   "tag": "themable",
+   "description": "Brand-colored icon."
+  },
+  "icon/on-brand": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#ffffff",
+    "Dark": "#ffffff"
+   },
+   "tag": "locked",
+   "description": "Icon on brand-colored surfaces."
+  },
+  "icon/success": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#2ba349",
+    "Dark": "#54d274"
+   },
+   "tag": "locked",
+   "description": "Success icon."
+  },
+  "icon/caution": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#85574a",
+    "Dark": "#ae8278"
+   },
+   "tag": "locked",
+   "description": "Success icon."
+  },
+  "icon/warning": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#d17a00",
+    "Dark": "#ffa82e"
+   },
+   "tag": "locked",
+   "description": "Warning icon."
+  },
+  "icon/error": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#f5002f",
+    "Dark": "#ff5374"
+   },
+   "tag": "locked",
+   "description": "Error icon."
+  },
+  "icon/info": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#006fe8",
+    "Dark": "#2e92ff"
+   },
+   "tag": "locked",
+   "description": "Informational icon."
+  },
+  "icon/progress": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#9828d1",
+    "Dark": "#be71e4"
+   },
+   "tag": "locked",
+   "description": "Progress icon."
+  },
+  "radius/none": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 0,
+    "Dark": 0
+   },
+   "tag": "locked",
+   "description": "No rounding."
+  },
+  "radius/xs": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 2,
+    "Dark": 2
+   },
+   "tag": "locked",
+   "description": "Hairline rounding."
+  },
+  "radius/sm": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 4,
+    "Dark": 4
+   },
+   "tag": "locked",
+   "description": "Small. Tags, chips."
+  },
+  "radius/md": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 8,
+    "Dark": 8
+   },
+   "tag": "locked",
+   "description": "Medium. Inputs, small components."
+  },
+  "radius/lg": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 12,
+    "Dark": 12
+   },
+   "tag": "locked",
+   "description": "Default. Buttons, standard cards."
+  },
+  "radius/xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 16,
+    "Dark": 16
+   },
+   "tag": "locked",
+   "description": "Large containers."
+  },
+  "radius/brand": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 20,
+    "Dark": 20
+   },
+   "tag": "locked",
+   "description": "Safqah brand-aligned radius. Used on featured cards."
+  },
+  "radius/2xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 24,
+    "Dark": 24
+   },
+   "tag": "locked",
+   "description": "Large modals, prominent cards."
+  },
+  "radius/3xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 32,
+    "Dark": 32
+   },
+   "tag": "locked",
+   "description": "Hero containers."
+  },
+  "radius/full": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 9999,
+    "Dark": 9999
+   },
+   "tag": "locked",
+   "description": "Fully rounded. Pills, avatars, circular buttons."
+  },
+  "space/none": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 0,
+    "Dark": 0
+   },
+   "tag": "locked",
+   "description": "No space."
+  },
+  "space/2xs": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 2,
+    "Dark": 2
+   },
+   "tag": "locked",
+   "description": "Hairline spacing."
+  },
+  "space/xs": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 4,
+    "Dark": 4
+   },
+   "tag": "locked",
+   "description": "Tight. Between icon and label."
+  },
+  "space/sm": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 8,
+    "Dark": 8
+   },
+   "tag": "locked",
+   "description": "Compact. Internal padding on chips."
+  },
+  "space/md": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 12,
+    "Dark": 12
+   },
+   "tag": "locked",
+   "description": "Comfortable. List item padding."
+  },
+  "space/lg": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 16,
+    "Dark": 16
+   },
+   "tag": "locked",
+   "description": "Default. Standard component padding."
+  },
+  "space/xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 20,
+    "Dark": 20
+   },
+   "tag": "locked",
+   "description": "Roomy. Card padding."
+  },
+  "space/2xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 24,
+    "Dark": 24
+   },
+   "tag": "locked",
+   "description": "Section gaps."
+  },
+  "space/3xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 32,
+    "Dark": 32
+   },
+   "tag": "locked",
+   "description": "Section breaks."
+  },
+  "space/4xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 48,
+    "Dark": 48
+   },
+   "tag": "locked",
+   "description": "Page sections."
+  },
+  "space/5xl": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 64,
+    "Dark": 64
+   },
+   "tag": "locked",
+   "description": "Hero spacing."
+  },
+  "font/family": {
+   "collection": "Semantic",
+   "type": "fontFamily",
+   "value": {
+    "Light": "IBM Plex Sans Arabic",
+    "Dark": "IBM Plex Sans Arabic"
+   },
+   "tag": "locked",
+   "description": "The canonical font family."
+  },
+  "font/weight/regular": {
+   "collection": "Semantic",
+   "type": "fontWeight",
+   "value": {
+    "Light": 400,
+    "Dark": 400
+   },
+   "tag": "locked",
+   "description": "Default body weight."
+  },
+  "font/weight/medium": {
+   "collection": "Semantic",
+   "type": "fontWeight",
+   "value": {
+    "Light": 500,
+    "Dark": 500
+   },
+   "tag": "locked",
+   "description": "Emphasis within body."
+  },
+  "bg/brand/lightest": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#d6edd9",
+    "Dark": "#387c3f"
+   },
+   "tag": "themable",
+   "description": "Light brand surface. Default light-end brand fill."
+  },
+  "bg/brand/lightest-hover": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#aedab2",
+    "Dark": "#469b4f"
+   },
+   "tag": "themable",
+   "description": "Light brand surface, hover state."
+  },
+  "bg/brand/lightest-pressed": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#77c27f",
+    "Dark": "#4daa57"
+   },
+   "tag": "themable",
+   "description": "Light brand surface, pressed state."
+  },
+  "bg/brand/darkest": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#387c3f",
+    "Dark": "#4daa57"
+   },
+   "tag": "themable",
+   "description": "Dark brand surface. Default dark-end brand fill (hero / marketing)."
+  },
+  "bg/brand/darkest-hover": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#2a5d2f",
+    "Dark": "#77c27f"
+   },
+   "tag": "themable",
+   "description": "Dark brand surface, hover state."
+  },
+  "bg/brand/darkest-pressed": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#1c3e20",
+    "Dark": "#469b4f"
+   },
+   "tag": "themable",
+   "description": "Dark brand surface, pressed state. Deepest brand fill."
+  },
+  "bg/brand/primary-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#fafdfb",
+    "Dark": "#1c3e20"
+   },
+   "tag": "themable",
+   "description": "Soft brand-tinted background. Used for brand callouts and inline highlights."
+  },
+  "radius/default": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 20,
+    "Dark": 20
+   },
+   "tag": "locked",
+   "description": "Default corner radius across v2 components. Same value as radius/brand (20px). Reach for this unless a component documents a different radius."
+  },
+  "bg/brand/accent-50": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#fafdfb",
+    "Dark": "#1c3e20"
+   },
+   "tag": "themable",
+   "description": "Lightest brand-tinted surface. Soft highlight on neutral backgrounds."
+  },
+  "bg/brand/accent-100": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e4f3e5",
+    "Dark": "#2a5d2f"
+   },
+   "tag": "themable",
+   "description": "Very light brand surface. Subtle brand presence on light backgrounds."
+  },
+  "bg/brand/yellow": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#fcee21",
+    "Dark": "#fdf149"
+   },
+   "tag": "themable",
+   "description": "Brand yellow background. Secondary brand surface used alongside the primary brand green to indicate secondary focus."
+  },
+  "bg/brand/yellow-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#fffdeb",
+    "Dark": "#333001"
+   },
+   "tag": "themable",
+   "description": "Soft brand-yellow background. Used for secondary brand callouts and inline highlights."
+  },
+  "border/brand/subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#d6edd9",
+    "Dark": "#387c3f"
+   },
+   "tag": "themable",
+   "description": "Very subtle brand-tinted border. Use for cards or inputs where a hint of brand presence is wanted without strong emphasis."
+  },
+  "border/brand/muted": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#aedab2",
+    "Dark": "#469b4f"
+   },
+   "tag": "themable",
+   "description": "Quiet brand border. Slightly more visible than subtle, for grouped sections or callouts with brand affinity."
+  },
+  "border/brand/accent": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#77c27f",
+    "Dark": "#4daa57"
+   },
+   "tag": "themable",
+   "description": "Visible brand-accent border. Use when a border should clearly read as brand-colored without competing with a CTA."
+  },
+  "border/brand/darkest": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#387c3f",
+    "Dark": "#aedab2"
+   },
+   "tag": "themable",
+   "description": "Darkest brand border. The deepest brand-colored border (#387C3F), used for high-emphasis edges on hero or marketing surfaces."
+  },
+  "text/brand/darkest": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#387c3f",
+    "Dark": "#77c27f"
+   },
+   "tag": "themable",
+   "description": "Darkest brand text. The deepest brand-colored text (#387C3F), used for high-emphasis text on light surfaces or hero / marketing copy."
+  },
+  "icon/brand/darkest": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#387c3f",
+    "Dark": "#77c27f"
+   },
+   "tag": "themable",
+   "description": "Darkest brand icon. The deepest brand-colored icon (#387C3F), used for high-emphasis icons on light surfaces or hero / marketing contexts."
+  },
+  "border/progress": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#af52de",
+    "Dark": "#be71e4"
+   },
+   "tag": "locked",
+   "description": "Progress / milestone border. Used on inputs and containers conveying progress states."
+  },
+  "border/progress-subtle": {
+   "collection": "Semantic",
+   "type": "color",
+   "value": {
+    "Light": "#e9d0f6",
+    "Dark": "#551674"
+   },
+   "tag": "locked",
+   "description": "Progress / milestone border. Used on inputs and containers conveying progress states."
+  },
+  "font/size/9": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 9,
+    "Dark": 9
+   }
+  },
+  "font/size/10": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 10,
+    "Dark": 10
+   }
+  },
+  "font/size/11": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 11,
+    "Dark": 11
+   }
+  },
+  "font/size/12": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 12,
+    "Dark": 12
+   }
+  },
+  "font/size/13": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 13,
+    "Dark": 13
+   }
+  },
+  "font/size/14": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 14,
+    "Dark": 14
+   }
+  },
+  "font/size/16": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 16,
+    "Dark": 16
+   }
+  },
+  "font/size/18": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 18,
+    "Dark": 18
+   }
+  },
+  "font/size/20": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 20,
+    "Dark": 20
+   }
+  },
+  "font/size/22": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 22,
+    "Dark": 22
+   }
+  },
+  "font/size/24": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 24,
+    "Dark": 24
+   }
+  },
+  "font/size/28": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 28,
+    "Dark": 28
+   }
+  },
+  "font/size/32": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 32,
+    "Dark": 32
+   }
+  },
+  "font/size/36": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 36,
+    "Dark": 36
+   }
+  },
+  "font/size/40": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 40,
+    "Dark": 40
+   }
+  },
+  "font/size/48": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 48,
+    "Dark": 48
+   }
+  },
+  "font/size/56": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 56,
+    "Dark": 56
+   }
+  },
+  "font/size/64": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 64,
+    "Dark": 64
+   }
+  },
+  "font/size/72": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 72,
+    "Dark": 72
+   }
+  },
+  "font/line-height/9": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 13.5,
+    "Dark": 13.5
+   }
+  },
+  "font/line-height/10": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 15,
+    "Dark": 15
+   }
+  },
+  "font/line-height/11": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 16.5,
+    "Dark": 16.5
+   }
+  },
+  "font/line-height/12": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 18,
+    "Dark": 18
+   }
+  },
+  "font/line-height/13": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 19.5,
+    "Dark": 19.5
+   }
+  },
+  "font/line-height/14": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 21,
+    "Dark": 21
+   }
+  },
+  "font/line-height/16": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 24,
+    "Dark": 24
+   }
+  },
+  "font/line-height/18": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 27,
+    "Dark": 27
+   }
+  },
+  "font/line-height/20": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 30,
+    "Dark": 30
+   }
+  },
+  "font/line-height/22": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 33,
+    "Dark": 33
+   }
+  },
+  "font/line-height/24": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 36,
+    "Dark": 36
+   }
+  },
+  "font/line-height/28": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 42,
+    "Dark": 42
+   }
+  },
+  "font/line-height/32": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 48,
+    "Dark": 48
+   }
+  },
+  "font/line-height/36": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 54,
+    "Dark": 54
+   }
+  },
+  "font/line-height/40": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 60,
+    "Dark": 60
+   }
+  },
+  "font/line-height/48": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 72,
+    "Dark": 72
+   }
+  },
+  "font/line-height/56": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 84,
+    "Dark": 84
+   }
+  },
+  "font/line-height/64": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 96,
+    "Dark": 96
+   }
+  },
+  "font/line-height/72": {
+   "collection": "Semantic",
+   "type": "dimension",
+   "value": {
+    "Light": 108,
+    "Dark": 108
+   }
+  },
+  "font/weight/semibold": {
+   "collection": "Semantic",
+   "type": "fontWeight",
+   "value": {
+    "Light": 600,
+    "Dark": 600
+   }
+  },
+  "font/weight/bold": {
+   "collection": "Semantic",
+   "type": "fontWeight",
+   "value": {
+    "Light": 700,
+    "Dark": 700
+   }
+  },
+  "Font/Size/9": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 9,
+    "English": 9
+   },
+   "description": "Fine print. Below readable threshold for normal copy. Use only for legal disclosures and compliance footnotes."
+  },
+  "Font/Family/Base": {
+   "collection": "Primitive / Typography",
+   "type": "fontFamily",
+   "value": {
+    "Arabic": "IBM Plex Sans Arabic",
+    "English": "IBM Plex Sans Arabic"
+   },
+   "description": "The single canonical font family for v2.0. Replaces v1's 5 redundant aliases (Display/Headline/Body/Title/Caption) that all resolved to the same font."
+  },
+  "Font/Size/12": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 12,
+    "English": 12
+   },
+   "description": "Caption / fine print. Lowest size for normal product copy."
+  },
+  "Font/Size/14": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 14,
+    "English": 14
+   },
+   "description": "Default body text. Most product copy lives here."
+  },
+  "Font/Size/16": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 16,
+    "English": 16
+   },
+   "description": "Emphasized body / small headings."
+  },
+  "Font/Size/18": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 18,
+    "English": 18
+   },
+   "description": "Section subtitles."
+  },
+  "Font/Size/20": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 20,
+    "English": 20
+   },
+   "description": "Page section titles."
+  },
+  "Font/Size/24": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 24,
+    "English": 24
+   },
+   "description": "Page titles."
+  },
+  "Font/Size/32": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 32,
+    "English": 32
+   },
+   "description": "Display / large hero text."
+  },
+  "Font/Size/40": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 40,
+    "English": 40
+   },
+   "description": "Marketing / hero display text."
+  },
+  "Font/LetterSpacing/Tight": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 0,
+    "English": -0.5
+   }
+  },
+  "Font/LetterSpacing/Normal": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 0,
+    "English": 0
+   }
+  },
+  "Font/LetterSpacing/Wide": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 0,
+    "English": 0.5
+   }
+  },
+  "Font/Weight/Thin": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 100,
+    "English": 100
+   },
+   "description": "Thin, the least thick."
+  },
+  "Font/Weight/ExtraLight": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 200,
+    "English": 200
+   },
+   "description": "Extra-light."
+  },
+  "Font/Weight/Light": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 300,
+    "English": 300
+   },
+   "description": "Light."
+  },
+  "Font/Weight/Regular": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 400,
+    "English": 400
+   },
+   "description": "Normal / regular / plain. Default body weight."
+  },
+  "Font/Weight/Medium": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 500,
+    "English": 500
+   },
+   "description": "Medium. Emphasis within body text."
+  },
+  "Font/Weight/SemiBold": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 600,
+    "English": 600
+   },
+   "description": "Semi-bold. Default heading weight."
+  },
+  "Font/Weight/Bold": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 700,
+    "English": 700
+   },
+   "description": "Bold. Maximum emphasis. Use sparingly."
+  },
+  "Font/Weight/ExtraBold": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 800,
+    "English": 800
+   },
+   "description": "Extra-bold."
+  },
+  "Font/Weight/Black": {
+   "collection": "Primitive / Typography",
+   "type": "fontWeight",
+   "value": {
+    "Arabic": 900,
+    "English": 900
+   },
+   "description": "Black, the most thick."
+  },
+  "Font/LetterSpacing/Snug": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 0,
+    "English": -0.20000000298023224
+   },
+   "description": "Slightly tight tracking. Used for headings and emphasis where Tight is too aggressive."
+  },
+  "Font/Size/10": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 10,
+    "English": 10
+   },
+   "description": "Very small. Use only for compliance text and metadata."
+  },
+  "Font/Size/11": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 11,
+    "English": 11
+   },
+   "description": "Small. Use sparingly for dense data tables and footnotes."
+  },
+  "Font/Size/13": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 13,
+    "English": 13
+   },
+   "description": "Tight body. Between caption and default body."
+  },
+  "Font/Size/22": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 22,
+    "English": 22
+   },
+   "description": "Between section title and page title."
+  },
+  "Font/Size/28": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 28,
+    "English": 28
+   },
+   "description": "Large page titles."
+  },
+  "Font/Size/36": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 36,
+    "English": 36
+   },
+   "description": "Display large."
+  },
+  "Font/Size/48": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 48,
+    "English": 48
+   },
+   "description": "Hero display. Onboarding and landing only."
+  },
+  "Font/Size/56": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 56,
+    "English": 56
+   },
+   "description": "Extra-large hero. Use sparingly."
+  },
+  "Font/Size/64": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 64,
+    "English": 64
+   },
+   "description": "Marketing hero. Use sparingly."
+  },
+  "Font/Size/72": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 72,
+    "English": 72
+   },
+   "description": "Largest size. Onboarding splash / marketing only."
+  },
+  "Font/LineHeight/line-height-9px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 13.5,
+    "English": 12.857142448425293
+   },
+   "tag": "locked",
+   "description": "Line height for 9px text. English: 9px × 10/7 ≈ 12.86px. Arabic: 9px × 1.5 = 13.5px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-10px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 15,
+    "English": 14.285714149475098
+   },
+   "tag": "locked",
+   "description": "Line height for 10px text. English: 10px × 10/7 ≈ 14.29px. Arabic: 10px × 1.5 = 15px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-11px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 16.5,
+    "English": 15.714285850524902
+   },
+   "tag": "locked",
+   "description": "Line height for 11px text. English: 11px × 10/7 ≈ 15.71px. Arabic: 11px × 1.5 = 16.5px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-12px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 18,
+    "English": 17.14285659790039
+   },
+   "tag": "locked",
+   "description": "Line height for 12px text. English: 12px × 10/7 ≈ 17.14px. Arabic: 12px × 1.5 = 18px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-13px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 19.5,
+    "English": 18.571428298950195
+   },
+   "tag": "locked",
+   "description": "Line height for 13px text. English: 13px × 10/7 ≈ 18.57px. Arabic: 13px × 1.5 = 19.5px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-14px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 21,
+    "English": 20
+   },
+   "tag": "locked",
+   "description": "Line height for 14px text. English: 14px × 10/7 ≈ 20.00px. Arabic: 14px × 1.5 = 21px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-16px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 24,
+    "English": 22.85714340209961
+   },
+   "tag": "locked",
+   "description": "Line height for 16px text. English: 16px × 10/7 ≈ 22.86px. Arabic: 16px × 1.5 = 24px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-18px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 27,
+    "English": 25.714284896850586
+   },
+   "tag": "locked",
+   "description": "Line height for 18px text. English: 18px × 10/7 ≈ 25.71px. Arabic: 18px × 1.5 = 27px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-20px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 30,
+    "English": 28.571428298950195
+   },
+   "tag": "locked",
+   "description": "Line height for 20px text. English: 20px × 10/7 ≈ 28.57px. Arabic: 20px × 1.5 = 30px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-22px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 33,
+    "English": 31.428571701049805
+   },
+   "tag": "locked",
+   "description": "Line height for 22px text. English: 22px × 10/7 ≈ 31.43px. Arabic: 22px × 1.5 = 33px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-24px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 36,
+    "English": 34.28571319580078
+   },
+   "tag": "locked",
+   "description": "Line height for 24px text. English: 24px × 10/7 ≈ 34.29px. Arabic: 24px × 1.5 = 36px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-28px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 42,
+    "English": 40
+   },
+   "tag": "locked",
+   "description": "Line height for 28px text. English: 28px × 10/7 ≈ 40.00px. Arabic: 28px × 1.5 = 42px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-32px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 48,
+    "English": 45.71428680419922
+   },
+   "tag": "locked",
+   "description": "Line height for 32px text. English: 32px × 10/7 ≈ 45.71px. Arabic: 32px × 1.5 = 48px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-36px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 54,
+    "English": 51.42856979370117
+   },
+   "tag": "locked",
+   "description": "Line height for 36px text. English: 36px × 10/7 ≈ 51.43px. Arabic: 36px × 1.5 = 54px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-40px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 60,
+    "English": 57.14285659790039
+   },
+   "tag": "locked",
+   "description": "Line height for 40px text. English: 40px × 10/7 ≈ 57.14px. Arabic: 40px × 1.5 = 60px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-48px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 72,
+    "English": 68.57142639160156
+   },
+   "tag": "locked",
+   "description": "Line height for 48px text. English: 48px × 10/7 ≈ 68.57px. Arabic: 48px × 1.5 = 72px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-56px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 84,
+    "English": 80
+   },
+   "tag": "locked",
+   "description": "Line height for 56px text. English: 56px × 10/7 ≈ 80.00px. Arabic: 56px × 1.5 = 84px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-64px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 96,
+    "English": 91.42857360839844
+   },
+   "tag": "locked",
+   "description": "Line height for 64px text. English: 64px × 10/7 ≈ 91.43px. Arabic: 64px × 1.5 = 96px (extra space prevents diacritic clipping)."
+  },
+  "Font/LineHeight/line-height-72px": {
+   "collection": "Primitive / Typography",
+   "type": "dimension",
+   "value": {
+    "Arabic": 108,
+    "English": 102.85713958740234
+   },
+   "tag": "locked",
+   "description": "Line height for 72px text. English: 72px × 10/7 ≈ 102.86px. Arabic: 72px × 1.5 = 108px (extra space prevents diacritic clipping)."
+  }
+ }
+}

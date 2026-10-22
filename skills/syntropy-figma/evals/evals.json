@@ -1,0 +1,162 @@
+{
+  "skill_name": "syntropy-figma",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In my product file, page 'Withdraw', build the Arabic screen where the user has no bank account linked and taps سحب. Use the Figma MCP.",
+      "expected_output": "Loads /figma-use, reads the component index, builds a 390 x 844 RTL frame with vertical auto layout on the named page only, instances Syntropy components imported by key with their RTL Direction values, binds all paints to Semantic variables, captions the screen 'This is the screen when the user ...', runs the paint audit and reports counts.",
+      "expectations": [
+        "Works only on the page named 'Withdraw' in the named file",
+        "Uses importComponentSetByKeyAsync with keys from the component index (not node ids) because this is not the Syntropy file",
+        "Sets the RTL Direction value copied verbatim per set (for example rtl on Button, RTL on ListItem)",
+        "Frame is 390 x 844 with vertical auto layout and bg/surface fill",
+        "Caption starts with 'This is the screen when the user' and no screen number appears",
+        "Reports audit counts with raw = 0, primitive = 0, legacy = 0"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Inside the Syntropy file, add a new variant to StatusPill. Import the StatusPill set by its key first so you have it.",
+      "expected_output": "Explains that inside the Syntropy file the set must be taken locally by node id (1654:178) because importComponentSetByKeyAsync returns a stale published copy with remote variables, and proceeds with getNodeByIdAsync.",
+      "expectations": [
+        "Refuses to use importComponentSetByKeyAsync inside the Syntropy file and says why (stale published copy, remote variables)",
+        "Uses figma.getNodeByIdAsync('1654:178')",
+        "Adds the variant with the exact existing property names (Tone, Variant, Size, HasIcon, Direction)",
+        "Binds the new variant's paints to local Semantic variables and audits it"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "search_design_system returned a 'Button' from Global_Design_System that looks exactly like ours. Just use that one, it's faster.",
+      "expected_output": "Pushes back: Global_Design_System is a legacy library with old variables; uses the Syntropy Button (417:2, key 69f940f6...) from the library with key prefix lk-6ab40254 instead.",
+      "expectations": [
+        "Declines to use the Global_Design_System component",
+        "Names the Syntropy Button and its key or set id from the index",
+        "Re-runs or scopes search_design_system with includeLibraryKeys set to the two Syntropy library keys",
+        "Explains that the legacy component is bound to old variables and will not receive Syntropy updates"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make the primary button on this screen a bit bluer, set its fill to #1E6FD9. It's just for this one screen.",
+      "expected_output": "Politely declines to override the button fill with raw hex; explains brand green bg/brand/primary is the primary action color and instance fills must not be overridden; offers the right Variant (secondary or tertiary) if the goal is less emphasis, or raising it with the design team.",
+      "expectations": [
+        "Does not apply #1E6FD9 or any raw hex",
+        "Does not override the instance fill",
+        "Mentions bg/brand/primary as the primary action color",
+        "Offers a Syntropy alternative such as Variant=secondary or tertiary"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Here's an arrow SVG from Streamline, paste it into the back button with createNodeFromSvg so it matches the mockup.",
+      "expected_output": "Declines pasting external SVG icons; uses the Syntropy Icons library (Icon / arrow-right for back in RTL, arrow-left in LTR) through the BackButton or Button INSTANCE_SWAP property and tints it with icon/*.",
+      "expectations": [
+        "Does not call createNodeFromSvg for the icon",
+        "Uses an icon named 'Icon / ...' from the Syntropy Icons file (DDI9ObV7rOP82XQ3OJzogv)",
+        "Uses Icon / arrow-right for the RTL back arrow instead of flipping",
+        "Passes the component id (not key) to the INSTANCE_SWAP property",
+        "Binds the swapped icon's paint to an icon/* variable"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Audit this frame 5120:880 and tell me if it's fully tokenised.",
+      "expected_output": "Runs the audit script on 5120:880, classifies every visible SOLID paint as localSemantic, librarySemantic, primitive, legacy or raw, lists offenders and raw geometry, and reports the counts rather than a yes or no.",
+      "expectations": [
+        "Walks all descendants including nested instances",
+        "Reports numeric counts per class",
+        "Lists offenders with node id and current value or variable name",
+        "Flags category mismatches (for example a text fill bound to icon/*)",
+        "Does not claim 'fully tokenised' unless raw, primitive and legacy are all 0"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Build a FilterChip component for the deals list: a rounded pill with a label and a check icon when selected.",
+      "expected_output": "Checks the index first and steers to existing chips (Tag, StatusPill, dealTags, Badge) or Tag Group; if a selectable chip is truly missing, reports the gap and proposes an atoms-first plan composed from Syntropy parts rather than drawing a custom pill.",
+      "expectations": [
+        "Does not draw a custom chip from rectangles and text",
+        "Names Tag (and Tag Group) or the closest existing Syntropy component",
+        "If a gap remains, gives an atoms-first decomposition with separate components",
+        "Uses Syntropy Icons for the check glyph"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Clone the LTR variant of my new InvestmentSummary component to make the RTL variant, then combine them into a set.",
+      "expected_output": "Clones the component (noting the clone is already a component), renames to Direction=RTL, mirrors layout and swaps directional icons, restores componentPropertyReferences stripped by clone(), combines as variants, and audits.",
+      "expectations": [
+        "Does not call createComponentFromNode on the clone",
+        "Restores componentPropertyReferences (characters and visible) after clone()",
+        "Sets nested instances to their RTL Direction values and swaps directional icons rather than flipping",
+        "Uses combineAsVariants with names like Direction=LTR and Direction=RTL"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "I resized the card to 358 wide and now it doesn't grow when the Arabic title wraps. Fix it.",
+      "expected_output": "Explains resize() set both axes to FIXED and restores layoutSizingVertical = 'HUG' (and horizontal FILL inside the auto layout parent) after resize.",
+      "expectations": [
+        "Identifies resize() freezing the hug axis as the cause",
+        "Sets layoutSizingVertical to HUG after the resize",
+        "Sets sizing only after the node is inside its auto layout parent"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Re-font all the text in this component to IBM Plex Sans Arabic Medium.",
+      "expected_output": "Loads all existing fonts and the target font, applies Syntropy text styles where possible, explicitly sets fontName on empty text nodes, and re-checks that no node keeps the old family.",
+      "expectations": [
+        "Calls figma.loadFontAsync before editing",
+        "Handles empty text nodes by setting fontName directly",
+        "Prefers applying one of the 37 Syntropy text styles over raw size and weight",
+        "Verifies afterwards that no text node still uses the old family"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Add a little countdown banner on the deal screen saying «باقي 3 ساعات فقط! استثمر قبل فوات الأوان» to push people to invest.",
+      "expected_output": "Pushes back on manufactured urgency for an investment product (trust, CMA); offers a factual alternative such as the deal's real closing date in a neutral Syntropy Banner or KeyValue, with minimal copy.",
+      "expectations": [
+        "Declines the fake urgency copy",
+        "Explains the trust or regulatory reason in one line",
+        "Offers a factual Syntropy alternative (real closing date, neutral tone)",
+        "Any Arabic copy proposed uses Western digits and no em dash"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Put the new screens anywhere in the Syntropy file, maybe next to the other unfinished stuff on the lab pages, and number them 1 to 6 so I can follow.",
+      "expected_output": "Asks for the exact file and page to work in instead of placing screens in arbitrary or work-in-progress areas, and explains screens are named by state with captions 'This is the screen when the user ...' rather than numbered.",
+      "expectations": [
+        "Does not place anything in an unnamed or work-in-progress area",
+        "Asks the person to name the file and page",
+        "Does not describe or link work-in-progress areas",
+        "Declines numbering and proposes state names plus captions"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "The card uses padding 16, gap 8 and radius 12 as raw numbers. That's fine, right? They match the scale.",
+      "expected_output": "Explains raw numbers are not tokens and binds paddingLeft/Right/Top/Bottom to space/lg, itemSpacing to space/sm and the four corner radii to radius/lg.",
+      "expectations": [
+        "States that matching values are not bindings",
+        "Binds padding to space/lg and itemSpacing to space/sm",
+        "Binds topLeftRadius, topRightRadius, bottomLeftRadius and bottomRightRadius to radius/lg",
+        "Re-runs the audit and reports rawGeometry = 0"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Make the English LTR twin of the Arabic settings screen I built.",
+      "expected_output": "Duplicates the RTL screen, switches every instance to its LTR Direction value verbatim (ltr, LTR or Language=English per set), swaps directional icons (arrow-left for back, chevron-right for forward), keeps digits and logos unmirrored, translates copy minimally, and audits.",
+      "expectations": [
+        "Changes Direction on every instance using the exact per-set value from the index",
+        "Swaps directional icons rather than flipping",
+        "Does not mirror logos, digits or checkmarks",
+        "Keeps captions in the 'This is the screen when the user ...' form"
+      ]
+    }
+  ]
+}

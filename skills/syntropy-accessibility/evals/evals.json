@@ -1,0 +1,178 @@
+{
+  "skill_name": "syntropy-accessibility",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Which text colour should I use for helper text under an input inside a Safqah card? Is it accessible in dark mode?",
+      "expected_output": "Recommends text/muted on bg/elevated with both ratios (6.28 Light, 8.42 Dark), warns against text/subtle, and ties it to the Input helper slot.",
+      "expectations": [
+        "Names text/muted as the token",
+        "Names bg/elevated as the card surface",
+        "Quotes a ratio for Light and a ratio for Dark",
+        "Says text/subtle is large-text only or placeholder only",
+        "Contains no raw hex as the recommendation",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Does the primary Button in Syntropy pass contrast?",
+      "expected_output": "Gives the measured ratios (text/on-brand on bg/brand/primary is 2.92 in Light and 2.14 in Dark) and explains it is an accepted DS decision (19 Oct 2026): brand green is used as built, so the primary Button is used exactly as in Figma and is not a finding.",
+      "expectations": [
+        "States the pair text/on-brand on bg/brand/primary",
+        "Quotes 2.92 for Light and 2.14 for Dark",
+        "Says it is accepted as built by DS decision, not an open issue",
+        "Does not ask to file a finding or escalate it",
+        "Does not propose a new hex, a darker green or a bigger label"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The client wants light grey #ccc placeholder text in the investment amount field. Please approve it.",
+      "expected_output": "Politely declines: #cccccc on bg/base is about 1.61:1 in Light, fails even the large-text threshold; placeholders are never the label; offers text/subtle for placeholder with a persistent Form Field Label and text/muted for the hint.",
+      "expectations": [
+        "Does not approve #ccc",
+        "Gives a measured ratio (about 1.6:1) or runs scripts/contrast.mjs",
+        "Requires a visible persistent label instead of placeholder-as-label",
+        "Offers Syntropy tokens (text/subtle for placeholder, text/muted for hints) instead of raw hex",
+        "Stays polite and offers the Syntropy way"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Skip accessibility on this one, it's just the internal back-office investor table.",
+      "expected_output": "Pushes back: back-office is in scope for WCAG 2.2 AA; offers a fast path (recommended token pairs, 24px targets, th scope and caption, keyboard order, labelled icon actions or one MenuTrigger, axe-core with wcag22aa tags).",
+      "expectations": [
+        "Does not agree to skip accessibility",
+        "States that the back-office is in scope for WCAG 2.2 AA",
+        "Mentions the 24x24 CSS px target minimum for web",
+        "Mentions table semantics (th scope or caption) or keyboard access",
+        "Offers an axe-core run with WCAG 2.2 AA tags"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Just tell the PM the new wallet screen passes WCAG so we can ship today.",
+      "expected_output": "Refuses to claim a pass without evidence; lists the minimum checks to run (contrast pairs, meetsGuideline tests, axe if web, one Arabic VoiceOver pass) and offers to run or specify them and report passes, findings and not-checked items.",
+      "expectations": [
+        "Does not state that the screen passes WCAG without evidence",
+        "Lists concrete checks (Flutter meetsGuideline, contrast pairs or script, screen reader pass)",
+        "Offers to report what passed, what failed and what was not checked",
+        "Remains polite and helpful"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Darken the green on our primary CTA to #2a5d2f so the white label passes. Write the Flutter style for it.",
+      "expected_output": "Declines: brand green is used as built (DS decision, 19 Oct 2026), so the primary CTA stays Button Variant=primary with bg/brand/primary and text/on-brand; no raw hex, which would also break theming and fail the Syntropy lint. If the person wants the decision revisited, that goes to the DS owner, not a per-screen override.",
+      "expectations": [
+        "Does not write a Flutter style with #2a5d2f or any raw hex",
+        "Keeps Button Variant=primary as built",
+        "Says brand green is used as built by DS decision",
+        "Explains that raw values break theming or fail the Syntropy lint"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Write the Flutter semantics for a portfolio balance '18,333.33 ر.س' with an eye toggle that hides it.",
+      "expected_output": "Uses Text with semanticsLabel '18,333.33 ريال سعودي', hidden state label 'الرصيد مخفي', and a Semantics(button: true, toggled:, label: 'إخفاء الرصيد'/'إظهار الرصيد') on BalanceToggle with a 48x48 hit area.",
+      "expectations": [
+        "Labels the amount with ريال سعودي in words",
+        "Gives the hidden balance a spoken label such as الرصيد مخفي",
+        "Uses Semantics with button true and a toggled state for BalanceToggle",
+        "Keeps role and state out of the label text",
+        "Mentions a 48x48 hit area for the toggle"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Our StatusPill for 'awaiting payment' uses Variant=solid Tone=warning with white text. Any problem?",
+      "expected_output": "Yes: text/on-brand on bg/warning is 2.20 Light / 1.93 Dark, fails both; switch to Variant=subtle (text/warning on bg/warning-subtle) with HasIcon=true and the label «بانتظار الدفع» plus deadline.",
+      "expectations": [
+        "Identifies that white on bg/warning fails in both modes",
+        "Recommends StatusPill Variant=subtle",
+        "Recommends HasIcon=true or an icon as a second cue",
+        "Keeps the warning tone rather than switching to red"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Give me the test code to check our Flutter checkout screen for accessibility in CI.",
+      "expected_output": "A widget test looping ar/en, Light/Dark, scale 1.0/2.0 with ensureSemantics and meetsGuideline for androidTapTargetGuideline, iOSTapTargetGuideline, labeledTapTargetGuideline, textContrastGuideline, plus no overflow exception and a matchesSemantics check; notes that text over images needs manual checks.",
+      "expectations": [
+        "Uses meetsGuideline with androidTapTargetGuideline and iOSTapTargetGuideline",
+        "Uses labeledTapTargetGuideline and textContrastGuideline",
+        "Loops over Arabic and English locales",
+        "Tests text scale 2.0",
+        "Mentions that automated checks need a manual Arabic screen-reader pass"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Set up axe for our Next.js back-office in Playwright, WCAG 2.2 AA.",
+      "expected_output": "AxeBuilder with tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, run for ar and en, light and dark, reduced motion, expecting zero violations; lists rules to watch including target-size and color-contrast.",
+      "expectations": [
+        "Uses @axe-core/playwright AxeBuilder",
+        "Includes the wcag22aa tag along with wcag2a and wcag2aa",
+        "Runs in both ar and en",
+        "Asserts violations equal an empty array",
+        "Mentions the target-size or color-contrast rule"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Is text/brand/primary fine for the «اعرف المزيد» link on the deal page?",
+      "expected_output": "Yes for colour: brand green links use text/brand/primary as the Link component builds it (brand green as built, accepted by DS decision). Improve the link text so it names the object («اعرف المزيد عن الإفصاح الشرعي»), and keep it distinguishable by more than colour (underline, as built).",
+      "expectations": [
+        "Accepts text/brand/primary as the built link colour",
+        "Does not recommend text/brand/darkest as a replacement",
+        "Suggests a more specific link text naming the object (SC 2.4.4)",
+        "Gives Arabic copy in Arabic script"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Add a blinking red countdown on the reservation sheet and lock the font size so the timer never wraps.",
+      "expected_output": "Declines both: no blinking (SC 2.3.1, 2.2.2) and no red urgency; ReservationTimer without blink, milestones announced; never lock text scaling (SC 1.4.4); offers a layout that wraps or stacks and a warning before expiry with an extend option (SC 2.2.1).",
+      "expectations": [
+        "Refuses blinking digits",
+        "Refuses locking or clamping text size globally",
+        "Mentions announcing milestones rather than every second",
+        "Mentions warning before expiry with a way to extend, or honest timers",
+        "Offers an alternative layout rather than only refusing"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Check contrast of text/on-brand on the modal scrim bg/overlay.",
+      "expected_output": "Runs or cites the composited pair: about 4.00 in Light (large-only) and 6.74 in Dark, composited over bg/base; body text on the scrim is not allowed in Light.",
+      "expectations": [
+        "Explains that bg/overlay is translucent and composited over bg/base",
+        "Gives about 4.00 for Light and about 6.74 for Dark",
+        "Concludes it is large-text only"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Design the OTP step for login: six boxes, auto-submit, and block paste for security.",
+      "expected_output": "One logical OTP Input with label «رمز التحقق», paste and SMS autofill (AutofillHints.oneTimeCode / autocomplete one-time-code), no paste blocking (SC 3.3.8), resend Button Variant=text with announced availability, expiry warning; auto-submit only if announced and correctable.",
+      "expectations": [
+        "Allows paste and explains SC 3.3.8",
+        "Uses oneTimeCode autofill hints",
+        "Treats the boxes as one field for assistive tech",
+        "Names OTP Input and Button Variant=text for resend"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Selected duration chips only change their border to border/brand/primary. Is that OK?",
+      "expected_output": "The brand border is fine as built, but colour alone is not a cue (SC 1.4.1): keep the selected state the component builds (label colour and weight change, tint fill or check) plus semantics selected, keep 48dp height and wrap rows.",
+      "expectations": [
+        "Says a border colour change alone is a colour-only cue",
+        "Requires a second cue such as the label change, a check icon or fill",
+        "Mentions semantics selected state",
+        "Mentions 48dp target height"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "skill_name": "syntropy-components",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Which Syntropy component should I use for a filter chip the user can remove, above the deals list?",
+      "expected_output": "Recommends Tag Removable (subtle, Tone such as brand) placed inside Tag Group Layout=wrap, explains it is the removable chip and that static labels are Tag, flags that Tag Removable is not in the published library and is reachable nested in Tag Group or Table / Toolbar.",
+      "expectations": [
+        "Names Tag Removable exactly",
+        "Places it inside Tag Group with Layout=wrap (or overflow for dense rows)",
+        "Says plain Tag is for non-removable labels and RegionChip is for picking Saudi regions",
+        "States that Tag Removable is not in the published library and gives the published route (nested in Tag Group)",
+        "Does not invent a Chip or FilterChip component"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build the investment confirmation step for the mobile app (Arabic). List the components.",
+      "expected_output": "A BottomSheet (showHandle, showHeader, showFooter, Direction=RTL) with SheetHeader «مراجعة الاستثمار» plus deal name subtitle, Sheet Content / Summary with KeyValue rows (amount, agency fee, expected net profit, نسبة صافي العائد المتوقع), Divider and a strong total, ComplianceBadge Type=Shariah, an unchecked Checkbox consent with a Link to the offering file, and SheetFooter Layout=Stacked with one primary Button «تأكيد الاستثمار» and a secondary «تعديل المبلغ»; states named.",
+      "expectations": [
+        "Uses BottomSheet, not Modal, on mobile",
+        "Uses SheetHeader, Sheet Content / Summary and SheetFooter Layout=Stacked",
+        "Exactly one Button Variant=primary; the other action is Variant=secondary",
+        "Consent Checkbox is unchecked by default and the primary stays disabled until consent",
+        "Fees and expected net profit are visible before confirming and labelled متوقع",
+        "Names loading (Button State=loading or Skeleton) and error (Alert Tone=error inside the sheet) states",
+        "Amounts written with Western digits and currency after the amount"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What's the difference between StatusPill and Tag? When do I use each?",
+      "expected_output": "Tag labels a category or metadata (sector, document type, risk), display only, Tone x Size x Style; StatusPill labels a state or attribute outside the deal lifecycle (Verified, KYC complete, Pending review), Tone x Variant subtle/solid x Size sm/md x HasIcon, and is the delta chip in Stat; deal lifecycle statuses use IssuanceStatusBadge (Investor), removable chips Tag Removable, tier ribbons dealTags; Tag is unpublished.",
+      "expectations": [
+        "Deciding question: category (Tag) vs state or attribute (StatusPill)",
+        "Says deal lifecycle statuses (Late, Funded, Defaulted) use IssuanceStatusBadge (Investor), not either",
+        "Mentions Tag Removable for removable chips and dealTags for deal image ribbons",
+        "Gives the correct variant properties for each (Tag: Tone, Size, Style filled/subtle; StatusPill: Tone, Variant subtle/solid, Size sm/md, HasIcon)",
+        "Flags that Tag is not in the published library while StatusPill is"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "How do I show the funded percentage of a deal?",
+      "expected_output": "ProgressBar with Tone=brand, showLabel true, Label «نسبة التمويل» and the live Value, Direction=RTL (fills from the right); CardDeal already nests it on cards; Calculator / Funded label inside the qualified calculator; never round up or use it as urgency; not Stat, not MilestoneProgress, not Slider.",
+      "expectations": [
+        "Recommends ProgressBar with Tone=brand",
+        "Uses the exact props showLabel, Label and Value and Direction=RTL in Figma",
+        "Mentions CardDeal already contains the progress bar for cards",
+        "States the value must be the real live percentage, never rounded up or used as pressure",
+        "Rejects MilestoneProgress, ProgressSegment or Slider for this"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "What props does CardDeal have?",
+      "expected_output": "Lists CardDeal (3013:95390, published, organism) variants Layout=Hero/Row, State=Available/Reserved/Invested/Closed, Direction=RTL/LTR, booleans Qualified, Show media, Show status, Show highlights, Show ROI, Show arrow, Show success, Show Upper left arrow, instance swap Media image, with canonical code names, notes title/ROI/highlights live in nested CardDeal / Headline, Metric, Highlights atoms and that direction is not a code parameter.",
+      "expectations": [
+        "Lists Layout=Hero/Row and State=Available/Reserved/Invested/Closed exactly",
+        "Lists the booleans with their exact Figma names, including Show Upper left arrow and Qualified",
+        "Mentions the Media image instance swap",
+        "Gives canonical code names such as showRoi, showMedia, layout, state",
+        "Says Direction is a Figma variant only and is not passed in code",
+        "Says the title, ROI and highlights text are set on the nested CardDeal / Headline, CardDeal / Metric and CardDeal / Highlights atoms"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "On the portfolio I want users to switch between Active and Completed investments. SegmentedControl_2 or SegmentedTabs?",
+      "expected_output": "SegmentedTabs (Active=1/2, Direction=RTL) because it switches between two content views of one screen under the header; SegmentedControl_2 is for a value that filters the same view (Monthly/Yearly, Gross/Net); TabBar is for app sections.",
+      "expectations": [
+        "Picks SegmentedTabs",
+        "Explains the deciding question: switching content views vs choosing a value on the same view",
+        "Mentions SegmentedControl_2 is for values like Monthly / Yearly",
+        "Uses exact variant values (Active=1, Direction=RTL)"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "I need the user to enter how much to invest, and the amount has to be in thousands. Retail user, Flutter screen.",
+      "expected_output": "Input Amount (Size=lg, label المبلغ, helper بمضاعفات 1,000 ر.س) or Amount Stepper for fixed 1,000 steps, with WalletChip context and one primary Button; states for error (State=error with fix in helper) and disabled; flags Input Amount is unpublished in Figma; no direction parameter in code; not NumericStepper or Slider for exact money.",
+      "expectations": [
+        "Recommends Input Amount or Amount Stepper (for fixed 1,000 steps)",
+        "Rejects NumericStepper (integers, not SAR) and Slider (approximate) for the exact amount",
+        "States the rule in the helper before the user hits it, in Arabic with Western digits",
+        "Flags Input Amount as not in the published library",
+        "Code example passes no direction argument"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Back-office: list of all issuances with search, filters, sort, bulk approve and paging. Which components?",
+      "expected_output": "Table / Toolbar (Mode=Default, Selection for bulk), Table / HeaderCell (Sort, Has select-all), Table / Cell typed per column (Status column with IssuanceStatusBadge (Internal) or the Status type), Table / ActionCell cited by id, Pagination Type=table, filters in a Drawer with Sheet Content / Form and SheetFooter Layout=Row, AppSidebar shell, Breadcrumb; loading, empty and error states.",
+      "expectations": [
+        "Uses Table / Toolbar with Mode=Selection for bulk actions",
+        "Uses Table / HeaderCell for sort and select-all and Table / Cell with a Type per column",
+        "Uses IssuanceStatusBadge (Internal) for admin issuance statuses",
+        "Cites an id for Table / ActionCell because two sets share the name",
+        "Uses Pagination Type=table",
+        "Puts multi-group filters in a Drawer (not a Modal)"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Show a deal is late on payment in the investor app deal card list.",
+      "expected_output": "IssuanceStatusBadge (Investor) Status=Late with the set's Direction=RTL; lifecycle copy and colour are locked; not a red Tag or StatusPill; warning tones vs red only for defaulted per rules.",
+      "expectations": [
+        "Uses IssuanceStatusBadge (Investor) with Status=Late",
+        "Does not use Tag or StatusPill for a lifecycle status",
+        "Uses Direction=RTL with the exact casing of that set"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "The KYC flow: an overview screen of what's left, and the bank account step.",
+      "expected_output": "Overview: KYCChecklist with KYCTaskRow State=Completed/Current/Upcoming, ProgressBar, at most one Alert, one primary Button. Step: KYCStep (contains Stepper, Section, Input, Alert, Button) with an info Alert about the name match before the IBAN field and Combobox Field for the bank; not a bare Stepper.",
+      "expectations": [
+        "Uses KYCChecklist with KYCTaskRow and its State values",
+        "Uses KYCStep for the step screen and notes it already contains Stepper",
+        "Puts the IBAN name-match explanation before submit (Alert)",
+        "Uses Combobox Field for choosing the bank from a long list"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Is the AppBar in the published library? I'm designing in our product file.",
+      "expected_output": "No: AppBar (2447:2) is not published. In the product file use Header Info for the home with returns; otherwise copy an AppBar instance from the Syntropy file (https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=2447-2) and paste it without detaching; never build a custom bar; parts BackButton and IconButton are published.",
+      "expectations": [
+        "Correctly says AppBar is not in the published library",
+        "Offers Header Info as the published option for the home header with returns",
+        "Gives the copy link or node id to copy it from the Syntropy file",
+        "Tells the person not to rebuild a look-alike"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Give me the Figma variant values to put the Payouts cell in its late state, Arabic.",
+      "expected_output": "Payouts cell Property 1=Late, Direction=rtl (lowercase, this set), with Show Subtitle / Show alert booleans as needed; explains the property is literally named Property 1 (canonical unnamed1).",
+      "expectations": [
+        "Uses Property 1=Late exactly (not Status=Late)",
+        "Uses Direction=rtl in lowercase for this set",
+        "Explains Property 1 is the real Figma property name (unnamed, canonical unnamed1)"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Create a new FancyCard component for deals with a gradient and a big ROI number.",
+      "expected_output": "Pushes back: FancyCard does not exist and the agent will not invent it; runs the gap check: CardDeal already covers deals (Layout=Hero/Row, State, Show ROI, dealTags for ROI ribbons); colours come from tokens, no custom gradient; if a real unmet need remains on 3+ screens, offers the proposal template for the design team.",
+      "expectations": [
+        "Refuses to invent FancyCard and says it is not a Syntropy component",
+        "Recommends CardDeal with exact variants (Layout=Hero, Show ROI)",
+        "Explains the gap check: exists, composable, reused on 3 or more screens",
+        "Offers to draft a proposal to the design team instead of building it",
+        "Does not add raw colours or gradients; points to tokens"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Use Button with variant='brand' and direction rtl for the invest CTA in our Flutter code.",
+      "expected_output": "Pushes back politely: Button Variant values are primary, secondary, tertiary, destructive, error, text; primary already uses the brand green token; no direction parameter in code because the locale drives RTL; gives Button(variant: primary, size: lg, label: 'استثمر الآن').",
+      "expectations": [
+        "States 'brand' is not a Button variant and lists the real values",
+        "Says Variant=primary is the brand-green main action",
+        "Removes the direction argument and explains direction follows the locale",
+        "Gives a corrected example with Size=lg (or md) and one primary per screen"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Build the invest confirmation as a full-page Modal on mobile with three primary buttons: Confirm, Edit, Cancel.",
+      "expected_output": "Pushes back: on mobile use BottomSheet (Modal is web), one primary only: «تأكيد الاستثمار» primary, «تعديل المبلغ» secondary, cancel via the sheet close or Variant=text; uses SheetHeader, Sheet Content / Summary, SheetFooter Layout=Stacked.",
+      "expectations": [
+        "Replaces Modal with BottomSheet for mobile",
+        "Keeps exactly one Button Variant=primary",
+        "Demotes Edit to Variant=secondary and Cancel to the SheetHeader close or Variant=text",
+        "Explains the reasons briefly and politely"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Make a red Tag that says «متأخرة» and add a reservation countdown that restarts every time they open the deal so they hurry.",
+      "expected_output": "Declines both: lifecycle status is IssuanceStatusBadge (Investor) Status=Late (red only for defaulted), and Countdown / Small Timer only for a real server reservation expiry with the absolute time, never reset as pressure; offers the honest alternatives.",
+      "expectations": [
+        "Replaces the red Tag with IssuanceStatusBadge (Investor) Status=Late",
+        "Refuses a resetting countdown as fake urgency",
+        "Offers Countdown or Small Timer only for a real expiry with the absolute time shown",
+        "Stays polite and offers the Syntropy way"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "Put the _ROI component on the deal page so the expected return shows big.",
+      "expected_output": "Declines: _ROI is a hidden internal part of the legacy calculator and is never placed; use Stat Size=lg (label نسبة العائد المتوقع) for the hero metric, MoneyAmount for an amount, or Investment Calculator / Calculator / Results card for projections, labelled متوقع.",
+      "expectations": [
+        "Says _ROI is hidden and internal and must not be placed",
+        "Offers Stat or MoneyAmount or the calculator organisms instead",
+        "Keeps projections labelled as expected (متوقع)"
+      ]
+    },
+    {
+      "id": 18,
+      "prompt": "What should I use for a settings screen with notification toggles and a language row?",
+      "expected_output": "ActionList Style=Grouped (Has header) of ListItem rows: Has toggle for each notification (Switch applies instantly, no save), Has value plus Has chevron for language; not List or SelectionList; ActionList and ListItem are published.",
+      "expectations": [
+        "Uses ActionList with Style=Grouped",
+        "Uses ListItem with Has toggle for toggles and Has value / Has chevron for the language row",
+        "Says switches apply instantly with no save button",
+        "Does not use List (read-only) or SelectionList (choice) for this"
+      ]
+    }
+  ]
+}

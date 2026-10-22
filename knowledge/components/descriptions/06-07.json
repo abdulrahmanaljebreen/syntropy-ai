@@ -1,0 +1,2198 @@
+{
+  "2447:2": {
+    "name": "AppBar",
+    "page": "app-bar",
+    "level": "organism",
+    "description": "The top header of every Safqah app screen: page title, leading back/close control and trailing actions, with 11 legacy layout types (home greeting with wallet balance, inner screens, deal page, onboarding, modal close). It is the screen-level navigation bar, not a content card.",
+    "useWhen": [
+      "Home/dashboard header with greeting, privacy eye and wallet balance (Type=main screens)",
+      "Inner screens and settings pages that need a title, subtitle and back arrow (Type=Inner screens or Small Title)",
+      "Deal page navigation with prev/next and share, including the sticky collapsed state on scroll (Type=Deal page, Deal page-collapsing)",
+      "Full-screen overlays that only need a title and a close X (Type=Close Icon-white / Close Icon-Black)"
+    ],
+    "dontUseWhen": [
+      "Showing the deal photo, title and developer at the top of a deal page: use HeaderCard (Base card) under the AppBar",
+      "Section navigation between Home/Investments/Wallet/Account: use TabBar",
+      "Titling a region inside the page: use Section",
+      "Desktop web side navigation: use NavigationRail or AppSidebar (shadcn-style)"
+    ],
+    "partOf": [],
+    "contains": ["BackButton", "IconButton"],
+    "keyProps": "Type (main screens / Inner screens / Small Title / Deal page-detail / Deal page / Large Icons / Deal page-collapsing), Title, Subtitle, Balance, TrailingLabel, showSubtitle, showLeading, showTrailing, showBalance, showProfile, showEyeButton, hideBalance, hasShade, hasDivider",
+    "a11y": "Render as a header landmark with the title as the page h1; icon-only back, close and share buttons need aria-labels (Back / رجوع); the eye button must announce whether the balance is shown or hidden.",
+    "confidence": "high"
+  },
+  "4844:107432": {
+    "name": "Header Info",
+    "page": "app-bar",
+    "level": "organism",
+    "description": "Home header variant that extends the main-screens AppBar with a returns summary: greeting, masked wallet balance, total returns and expected profit, amount invested and a View payouts list button. It is the 'Main screens with payouts' row of the AppBar reference.",
+    "useWhen": [
+      "Investor home screen when the user has active investments and returns to show",
+      "Entry point from home into the payouts / distribution schedule (Show Payouts list on)"
+    ],
+    "dontUseWhen": [
+      "Inner screens or deal pages: use AppBar with the matching Type",
+      "Building a new portfolio summary from parts: use PortfolioHeader (UserGreeting, WalletChip, ReturnsDisplay)",
+      "A single KPI tile: use Stat"
+    ],
+    "partOf": [],
+    "contains": ["Button"],
+    "keyProps": "Show Payouts list (boolean), Property 1=Default, Direction=rtl/ltr",
+    "a11y": "Amounts must be read with currency (324,763 ر.س); the eye toggle announces the hidden state; the payouts button label must describe the destination.",
+    "confidence": "medium"
+  },
+  "4844:107612": {
+    "name": "Header",
+    "page": "app-bar",
+    "level": "organism",
+    "description": "Product header set (not published to the library) used as the home greeting header and composed inside HeaderCard; State switches between visible and hidden balance and Show Qualified adds the qualified-investor badge. No example image exists, so treat it as a source part rather than a building block.",
+    "useWhen": [
+      "Reproducing the production home header where the balance can be hidden (State=Hide)",
+      "Showing the qualified badge for qualified investors (Show Qualified on)"
+    ],
+    "dontUseWhen": [
+      "New screens: prefer AppBar (Type=main screens) or PortfolioHeader, which are documented and tokenized",
+      "Home with returns and payouts: use Header Info"
+    ],
+    "partOf": ["Base card"],
+    "contains": [],
+    "keyProps": "Show Qualified (boolean), State=Default/Hide, Language=Arabic/English",
+    "a11y": "When State=Hide the masked value must be announced as hidden, not read as asterisks.",
+    "confidence": "medium"
+  },
+  "2517:30": {
+    "name": "TrendBadge",
+    "page": "tab-bar",
+    "level": "atom",
+    "description": "Small delta badge showing a percentage change with a green up or red down marker. Used beside a tab label, in portfolio table cells and anywhere a change value needs directional colour.",
+    "useWhen": [
+      "Showing a performance delta on a SegmentedTabItem (HasTrend=true)",
+      "Value change column in a portfolio Table (Table / Cell Type=Trend)",
+      "Next to a Stat or KeyValue value to show change since last period"
+    ],
+    "dontUseWhen": [
+      "Status of a deal or issuance: use StatusPill or IssuanceStatusBadge (Investor)",
+      "Category labels: use Tag"
+    ],
+    "partOf": ["SegmentedTabItem", "Table / Cell"],
+    "contains": [],
+    "keyProps": "Value (text), Tone=positive/negative, Direction=LTR/RTL",
+    "a11y": "Do not rely on colour: keep the sign and arrow, and expose text such as 'up 7.6%'; keep the numeric run bidi-isolated in RTL.",
+    "confidence": "high"
+  },
+  "2518:62": {
+    "name": "SegmentedTabItem",
+    "page": "tab-bar",
+    "level": "atom",
+    "description": "One tab of SegmentedTabs: a 16px SemiBold label with an underline when active and an optional TrendBadge. Its state is driven by the parent organism.",
+    "useWhen": [
+      "Inside SegmentedTabs only; set its Label per instance",
+      "Adding a delta beside a tab label (HasTrend=true)"
+    ],
+    "dontUseWhen": [
+      "Standalone: use SegmentedTabs",
+      "Bottom navigation items: use BottomNavTabItem",
+      "Pill-style value choice: use Segment inside SegmentedControl_2..5"
+    ],
+    "partOf": ["SegmentedTabs"],
+    "contains": ["TrendBadge"],
+    "keyProps": "Label (text), State=active/inactive, HasTrend=false/true, Direction=LTR/RTL",
+    "a11y": "role=tab with aria-selected; do not set State by hand inside an organism or it desyncs from the indicator.",
+    "confidence": "high"
+  },
+  "2522:26": {
+    "name": "BottomNavTabItem",
+    "page": "tab-bar",
+    "level": "atom",
+    "description": "One destination of the bottom TabBar: 24px icon stacked over an 11px label, brand colour when active and muted when inactive. Also the DNA reused by NavRailItem.",
+    "useWhen": [
+      "Inside TabBar or TabBar (3-tab); swap the icon and set the Label per instance"
+    ],
+    "dontUseWhen": [
+      "Standalone buttons: use IconButton or ActionTile",
+      "Desktop side navigation items: use NavRailItem"
+    ],
+    "partOf": ["TabBar", "TabBar (3-tab)"],
+    "contains": [],
+    "keyProps": "Label (text), State=active/inactive, Direction=LTR/RTL",
+    "a11y": "Active item exposes aria-current=page; the label is always visible so the icon is decorative; touch target at least 44x44.",
+    "confidence": "high"
+  },
+  "2527:350": {
+    "name": "TabBar",
+    "page": "tab-bar",
+    "level": "organism",
+    "description": "Fixed bottom navigation for the four-section Safqah app (Home, Investments, Wallet, Account) with exactly one active tab. The 4-tab IA is future: keep it in designs but do not wire into production until the IA ships.",
+    "useWhen": [
+      "Top-level app navigation on mobile, pinned to the bottom with safe-area padding",
+      "Designs for the four-section IA (Home, Investments, Wallet, Account)"
+    ],
+    "dontUseWhen": [
+      "Current three-section production app: use TabBar (3-tab)",
+      "Switching views of the same content inside a screen: use SegmentedTabs",
+      "Choosing a value such as Day/Week/Month: use SegmentedControl_3",
+      "Tablet and desktop: use NavigationRail or AppSidebar (shadcn-style)"
+    ],
+    "partOf": [],
+    "contains": ["BottomNavTabItem"],
+    "keyProps": "Active=1/2/3/4, Direction=LTR/RTL (labels set on each nested BottomNavTabItem)",
+    "a11y": "Wrap in a nav landmark; active item aria-current=page; in RTL the first tab sits on the right.",
+    "confidence": "high"
+  },
+  "2568:739": {
+    "name": "TabBar (3-tab)",
+    "page": "tab-bar",
+    "level": "organism",
+    "description": "Bottom navigation for the current three-section Safqah app (Deals, Portfolio, Settings), one tab always active in brand colour.",
+    "useWhen": [
+      "Primary navigation on mobile screens of the shipping app",
+      "Any production screen that sits at the top level of a section"
+    ],
+    "dontUseWhen": [
+      "Four-section IA designs: use TabBar",
+      "In-screen view switching: use SegmentedTabs",
+      "Inside flows such as checkout or KYC where navigation should be hidden: use AppBar with a back control only"
+    ],
+    "partOf": [],
+    "contains": ["BottomNavTabItem"],
+    "keyProps": "Active=1/2/3, Direction=LTR/RTL",
+    "a11y": "nav landmark with aria-current=page on the active item; keep visible labels.",
+    "confidence": "high"
+  },
+  "2523:90": {
+    "name": "SegmentedTabs",
+    "page": "tab-bar",
+    "level": "organism",
+    "description": "Underline tabs placed directly below the AppBar to switch between two content views of one screen, such as Active vs Completed investments. Navigation-like (changes the view), not a form control.",
+    "useWhen": [
+      "Switching between sibling views on one screen (Active / Completed investments)",
+      "Portfolio views that show a delta on a tab (SegmentedTabItem HasTrend=true)"
+    ],
+    "dontUseWhen": [
+      "Moving between app sections: use TabBar or TabBar (3-tab)",
+      "Picking a filter or range value that updates the same view (Day / Week / Month): use SegmentedControl_2..5",
+      "More than 2 to 3 options: use Select"
+    ],
+    "partOf": [],
+    "contains": ["SegmentedTabItem"],
+    "keyProps": "Active=1/2, Direction=LTR/RTL",
+    "a11y": "role=tablist with tabs and associated tabpanels; arrow keys move between tabs.",
+    "confidence": "high"
+  },
+  "2542:2": {
+    "name": "DragHandle",
+    "page": "bottom-sheet",
+    "level": "atom",
+    "description": "The grabber pill at the top of a BottomSheet that signals the sheet can be dragged down to dismiss.",
+    "useWhen": [
+      "Top of any BottomSheet that is dismissible (BottomSheet showHandle on)",
+      "Bottom-sheet menu and Action sheet patterns"
+    ],
+    "dontUseWhen": [
+      "Modal or Drawer: they have no drag-to-dismiss",
+      "Blocking sheets that must not be dismissed: hide it with showHandle off"
+    ],
+    "partOf": ["BottomSheet"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Decorative; always provide an accessible close or cancel action since drag is not available to all users.",
+    "confidence": "high"
+  },
+  "2615:13": {
+    "name": "SheetHeader",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Shared overlay header with title, optional subtitle and optional close X, reused by BottomSheet, Modal and Drawer.",
+    "useWhen": [
+      "Header of a BottomSheet, Modal or Drawer (toggle via showHeader on the shell)",
+      "Hiding the close for destructive confirms (showClose off)"
+    ],
+    "dontUseWhen": [
+      "Screen header: use AppBar",
+      "Titling a region in a page: use Section"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": ["IconButton"],
+    "keyProps": "showSubtitle, showClose, Direction=LTR/RTL",
+    "a11y": "Title is the dialog's accessible name (aria-labelledby); close button labelled Close / إغلاق.",
+    "confidence": "high"
+  },
+  "2628:14": {
+    "name": "Sheet Content / Text",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Ready content block for overlay slots: heading, paragraphs and an inline link. The default Content of BottomSheet, used for explanatory sheets such as 'About the developer'.",
+    "useWhen": [
+      "Explaining a term, fee or developer in a BottomSheet or Modal",
+      "Short informational sheet with one confirm action"
+    ],
+    "dontUseWhen": [
+      "Long legal text: use a full page",
+      "Breakdowns with amounts: use Sheet Content / Summary"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": [],
+    "keyProps": "Direction=LTR/RTL (swap the RTL variant for Arabic sheets; the slot default is LTR)",
+    "a11y": "Keep heading order under the sheet title; the link must be a real link with descriptive text.",
+    "confidence": "high"
+  },
+  "2633:157": {
+    "name": "SheetFooter",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Shared overlay action area: primary button with optional secondary and an optional overflow menu, stacked (mobile sheets, modals) or in a row (drawers).",
+    "useWhen": [
+      "Confirm / Cancel actions at the bottom of a BottomSheet or Modal (Layout=Stacked)",
+      "Drawer footer with Apply, Reset and overflow (Layout=Row)"
+    ],
+    "dontUseWhen": [
+      "Page-level button groups: use ButtonGroup",
+      "Pure navigation drawers: turn showFooter off on Drawer"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": ["Button", "IconButton"],
+    "keyProps": "showSecondary, showOverflow, Layout=Stacked/Row, Direction=LTR/RTL",
+    "a11y": "Primary action first in reading order; reserve the home-indicator safe area; overflow needs an aria-label.",
+    "confidence": "high"
+  },
+  "2646:149": {
+    "name": "Sheet Content / Summary",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block of KeyValue rows, a Divider and an emphasised total, for receipts and breakdowns.",
+    "useWhen": [
+      "Investment confirmation summary before paying",
+      "Fee and return breakdown in a sheet or modal",
+      "Contextual detail in a Drawer"
+    ],
+    "dontUseWhen": [
+      "Many comparable records: use a Table",
+      "Inline in a page: use List (Style=Description) or KeyValue"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": ["KeyValue", "Divider"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Expose rows as a description list (term/value); read amounts with currency after the number.",
+    "confidence": "high"
+  },
+  "2649:137": {
+    "name": "Sheet Content / Form",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block with Input and TextArea fields for collecting a few structured values, or filters in a Drawer.",
+    "useWhen": [
+      "Short data entry tied to the current screen (one to three fields)",
+      "Filter panel in a trailing Drawer"
+    ],
+    "dontUseWhen": [
+      "Long or multi-step forms: use a full page with Stepper",
+      "Entering an amount: use Sheet Content / Amount"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": ["Input", "TextArea"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Every field keeps a visible label; move focus to the first field on open; errors announced inline.",
+    "confidence": "high"
+  },
+  "2650:98": {
+    "name": "Sheet Content / Amount",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block with an Input Amount field and a Slider for entering an investment or transfer value.",
+    "useWhen": [
+      "Entering an investment amount from a deal page in a sheet",
+      "Withdraw or transfer amount entry with a min/max range"
+    ],
+    "dontUseWhen": [
+      "Full calculator with returns: use Investment Calculator",
+      "Quantity of units: use NumericStepper"
+    ],
+    "partOf": ["BottomSheet", "Modal"],
+    "contains": ["Input Amount", "Slider"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Slider and field stay in sync and both are keyboard operable; announce min, max and currency.",
+    "confidence": "high"
+  },
+  "2650:293": {
+    "name": "Sheet Content / Empty",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block wrapping EmptyState for zero-data or first-run cases inside a sheet or modal.",
+    "useWhen": [
+      "A sheet that lists items but has none yet",
+      "First-run explanation inside a sheet"
+    ],
+    "dontUseWhen": [
+      "Full-screen empty pages: use EmptyState directly"
+    ],
+    "partOf": ["BottomSheet", "Modal"],
+    "contains": ["EmptyState"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Illustration is decorative; the message and the single action carry the meaning.",
+    "confidence": "high"
+  },
+  "2652:296": {
+    "name": "Sheet Content / List",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block of rows with icon, title/subtitle and a Tag chip, for pickers, selection and navigation destinations in drawers.",
+    "useWhen": [
+      "Picking one item from a short list in a sheet",
+      "Navigation destinations in a leading Drawer"
+    ],
+    "dontUseWhen": [
+      "A list of commands on mobile: use Action sheet or Bottom-sheet menu",
+      "Radio/checkbox choice with a clear selected state: use SelectionList"
+    ],
+    "partOf": ["BottomSheet", "Modal", "Drawer"],
+    "contains": ["Tag"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Each row is one focusable target with its full text as the accessible name.",
+    "confidence": "high"
+  },
+  "2686:22": {
+    "name": "Sheet Content / Media",
+    "page": "bottom-sheet",
+    "level": "molecule",
+    "description": "Overlay content block with a 16:9 video or image and caption, built to pair with the Modal xl size.",
+    "useWhen": [
+      "Explainer video or image gallery in a web Modal (Size=xl)"
+    ],
+    "dontUseWhen": [
+      "Deal photo gallery on the deal page: use HeaderCard (Base card)",
+      "Browsable promos: use Carousel"
+    ],
+    "partOf": ["Modal"],
+    "contains": [],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Video needs captions and controls; images need alt text; caption stays as visible text.",
+    "confidence": "high"
+  },
+  "2699:12": {
+    "name": "Sheet Content / Blank",
+    "page": "bottom-sheet",
+    "level": "atom",
+    "description": "Empty placeholder for the overlay Content slot ('Your content here'), the default for Modal and Drawer, meant to be swapped for a real component.",
+    "useWhen": [
+      "Starting point before swapping in your own component",
+      "Never shipped as-is"
+    ],
+    "dontUseWhen": [
+      "Final designs: swap for Sheet Content / Text, List, Summary, Form, Amount, Empty, Media or a custom component"
+    ],
+    "partOf": ["Modal", "Drawer", "BottomSheet"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Not applicable; it must be replaced before handoff.",
+    "confidence": "high"
+  },
+  "2634:273": {
+    "name": "BottomSheet",
+    "page": "bottom-sheet",
+    "level": "organism",
+    "description": "Mobile modal surface that slides up from the bottom over a scrim for one short, focused task without leaving the screen: drag handle, SheetHeader, swappable Content slot and SheetFooter. The default overlay for Safqah mobile.",
+    "useWhen": [
+      "Confirming an investment or reviewing a summary before paying",
+      "Entering an amount or a short form tied to the current screen",
+      "Explaining a term or developer in context",
+      "Re-prompt or permission reminders on mobile"
+    ],
+    "dontUseWhen": [
+      "Centered blocking confirm on desktop/web: use Modal, or Dialog for a one-line confirm",
+      "Side panel for navigation or filters: use Drawer",
+      "A floating list of commands: use Menu (or Action sheet on mobile)",
+      "Long or multi-step flows: use a full page with Stepper"
+    ],
+    "partOf": [],
+    "contains": ["DragHandle", "SheetHeader", "SheetFooter", "Sheet Content / Text", "Sheet Content / List", "Sheet Content / Summary", "Sheet Content / Amount", "Sheet Content / Form", "Sheet Content / Empty"],
+    "keyProps": "showHandle, showHeader, showFooter, Content (instance swap), Direction=LTR/RTL",
+    "a11y": "role=dialog with aria-modal, labelled by the SheetHeader title; trap focus and restore it on close; provide a close or cancel besides drag; never stack two sheets.",
+    "confidence": "high"
+  },
+  "2681:503": {
+    "name": "Modal",
+    "page": "modal",
+    "level": "organism",
+    "description": "Centered overlay card on a dimmed scrim that blocks the page until the user acts; the web/desktop twin of BottomSheet sharing SheetHeader, SheetFooter and the content library, in four widths. Reserved for critical interruptions.",
+    "useWhen": [
+      "Critical or irreversible actions on web (delete, discard changes)",
+      "Information the flow cannot continue without (sign in to save a deal)",
+      "Media-rich explainer video or gallery on web (Size=xl with Sheet Content / Media)",
+      "Back-office forms or summaries that need focus (Size=md/lg)"
+    ],
+    "dontUseWhen": [
+      "On mobile: use BottomSheet",
+      "Simple one-line yes/no confirm: use Dialog",
+      "Promos, announcements or upsells during checkout: do not interrupt; use Banner or inline content",
+      "Side panels for filters or detail: use Drawer"
+    ],
+    "partOf": [],
+    "contains": ["SheetHeader", "SheetFooter", "Sheet Content / Blank", "Sheet Content / Media"],
+    "keyProps": "showHeader, showFooter, Content (instance swap), Size=sm/md/lg/xl, Direction=LTR/RTL",
+    "a11y": "role=dialog aria-modal, focus trapped and returned to the trigger, Esc closes routine modals; for destructive confirms disable scrim/Esc dismissal and require an explicit choice.",
+    "confidence": "high"
+  },
+  "2706:385": {
+    "name": "Drawer",
+    "page": "drawer",
+    "level": "organism",
+    "description": "Full-height side panel that slides in from the leading or trailing edge for navigation, filters or contextual detail while the page stays in context. Shares SheetHeader, SheetFooter (Row layout) and the content library with BottomSheet and Modal.",
+    "useWhen": [
+      "Filters in back-office tables, tweaked while results update (trailing side, Form content, Apply/Reset footer)",
+      "Record detail beside a list (trailing side, Summary content)",
+      "Temporary navigation on tablet or deep hierarchies (leading side, List content, footer off)"
+    ],
+    "dontUseWhen": [
+      "A short list of actions: use Menu or ActionList",
+      "A focused mobile task: use BottomSheet",
+      "A centered confirm: use Modal or Dialog",
+      "Persistent desktop navigation: use NavigationRail or AppSidebar (shadcn-style)"
+    ],
+    "partOf": [],
+    "contains": ["SheetHeader", "SheetFooter", "Sheet Content / Blank", "Sheet Content / List", "Sheet Content / Form", "Sheet Content / Summary"],
+    "keyProps": "showHeader, showFooter, Content (instance swap), Side=left/right (physical; mirrors with Direction), Direction=LTR/RTL",
+    "a11y": "Modal drawer: role=dialog, focus trap, Esc and scrim close; persistent drawer: no trap, use a complementary or nav landmark. One drawer at a time.",
+    "confidence": "high"
+  },
+  "2723:50": {
+    "name": "BreadcrumbItem",
+    "page": "breadcrumb",
+    "level": "atom",
+    "description": "One segment of a Breadcrumb trail: a muted link to an ancestor level, brand and underlined on hover, or the bold non-link current page.",
+    "useWhen": [
+      "Inside Breadcrumb; set Label per item, showIcon on the root (home) item, State=current on the last"
+    ],
+    "dontUseWhen": [
+      "Standalone links in text: use Link",
+      "Step labels in a flow: use Stepper"
+    ],
+    "partOf": ["Breadcrumb"],
+    "contains": [],
+    "keyProps": "showIcon, Label (text), State=default/hover/current, Direction=LTR/RTL",
+    "a11y": "Current item uses aria-current=page and is not a link; home icon item still needs a text label.",
+    "confidence": "high"
+  },
+  "2725:20": {
+    "name": "BreadcrumbSeparator",
+    "page": "breadcrumb",
+    "level": "atom",
+    "description": "The chevron between breadcrumb items, pointing in the reading direction and mirroring in RTL.",
+    "useWhen": [
+      "Between BreadcrumbItems inside Breadcrumb"
+    ],
+    "dontUseWhen": [
+      "As a generic chevron or arrow: use the Syntropy icon directly"
+    ],
+    "partOf": ["Breadcrumb"],
+    "contains": [],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Decorative: hide from assistive tech (aria-hidden).",
+    "confidence": "high"
+  },
+  "2726:168": {
+    "name": "Breadcrumb",
+    "page": "breadcrumb",
+    "level": "organism",
+    "description": "Single-line trail from the top of the hierarchy to the current page (Home > Investments > Active Deals > Deal #1024) for orientation in deep web and back-office structures. A secondary aid, never the primary navigation.",
+    "useWhen": [
+      "Back-office and web pages three or more levels deep",
+      "Users landing deep from search or a shared link",
+      "Long trails that must stay on one line (Type=collapsed with an ellipsis)"
+    ],
+    "dontUseWhen": [
+      "Flat one or two level structures: omit it",
+      "Sequential flows like KYC or checkout: use Stepper",
+      "Mobile app screens: use AppBar with BackButton",
+      "As the only navigation: pair with NavigationRail, AppSidebar (shadcn-style) or TabBar"
+    ],
+    "partOf": [],
+    "contains": ["BreadcrumbItem", "BreadcrumbSeparator"],
+    "keyProps": "Type=full/collapsed, Direction=LTR/RTL",
+    "a11y": "nav aria-label=Breadcrumb with an ordered list; last item aria-current=page; never wrap or truncate labels.",
+    "confidence": "high"
+  },
+  "2734:20": {
+    "name": "PaginationItem",
+    "page": "pagination",
+    "level": "atom",
+    "description": "A 36px page number cell (or the ellipsis) used to build Pagination; current page gets the brand fill.",
+    "useWhen": [
+      "Inside Pagination or a custom pagination row; Label holds the page number or the ellipsis"
+    ],
+    "dontUseWhen": [
+      "Carousel position dots: use PageIndicator",
+      "Step numbers: use StepIndicator"
+    ],
+    "partOf": ["Pagination"],
+    "contains": [],
+    "keyProps": "Label (text), State=default/hover/current/disabled",
+    "a11y": "aria-label 'Page 3', aria-current=page on the current item; Western digits per Syntropy number rules.",
+    "confidence": "high"
+  },
+  "2735:44": {
+    "name": "PaginationArrow",
+    "page": "pagination",
+    "level": "atom",
+    "description": "Previous or next 36px button in Pagination, disabled on the first and last page instead of hidden.",
+    "useWhen": [
+      "Inside Pagination, or alone for compact prev/next paging"
+    ],
+    "dontUseWhen": [
+      "Back navigation: use BackButton",
+      "Carousel arrows on media: use IconButton"
+    ],
+    "partOf": ["Pagination"],
+    "contains": [],
+    "keyProps": "Direction=left/right, State=default/hover/disabled",
+    "a11y": "aria-label Previous page / Next page; disabled state uses aria-disabled; chevrons mirror in RTL.",
+    "confidence": "high"
+  },
+  "2736:120": {
+    "name": "Pagination",
+    "page": "pagination",
+    "level": "organism",
+    "description": "Splits long ordered result sets into pages with prev/next and page numbers, in numbered, compact (Page X of Y) and table footer (rows per page + range) layouts. Main use is back-office tables of deals, investors and transactions.",
+    "useWhen": [
+      "Back-office Table footers (Type=table with rows-per-page Select and '1-10 of 200')",
+      "Long ordered lists where users need an exact page or total (Type=numbered)",
+      "Narrow cards, toolbars or mobile (Type=compact)"
+    ],
+    "dontUseWhen": [
+      "Continuous exploratory feeds such as updates: use infinite scroll or a Load more Button",
+      "Lists that fit on one screen: omit it",
+      "Carousel position: use PageIndicator"
+    ],
+    "partOf": [],
+    "contains": ["PaginationItem", "PaginationArrow", "Select"],
+    "keyProps": "Type=numbered/compact/table, Direction=LTR/RTL",
+    "a11y": "nav aria-label=Pagination; current page aria-current; keep a single line; use Western digits (0-9) even in RTL, overriding the page guide's Arabic-Indic note.",
+    "confidence": "high"
+  },
+  "2746:17": {
+    "name": "StepIndicator",
+    "page": "stepper",
+    "level": "atom",
+    "description": "28px step circle of a Stepper: check when completed, brand number when current, outlined number when upcoming, error fill with ! when the step failed.",
+    "useWhen": [
+      "Inside Stepper; set Number and State per step"
+    ],
+    "dontUseWhen": [
+      "Timelines of deal events: use TimelineNode",
+      "Counts on icons: use Badge Count"
+    ],
+    "partOf": ["Stepper"],
+    "contains": [],
+    "keyProps": "Number (text), State=completed/current/upcoming/error",
+    "a11y": "State must be announced in text (completed, current, error), not only by colour or icon.",
+    "confidence": "high"
+  },
+  "2747:16": {
+    "name": "StepConnector",
+    "page": "stepper",
+    "level": "atom",
+    "description": "Line between step indicators, brand when complete and muted when incomplete, horizontal or vertical, stretching to fill the gap.",
+    "useWhen": [
+      "Inside Stepper between StepIndicators; the connector before the current step is complete"
+    ],
+    "dontUseWhen": [
+      "Visual separators: use Divider",
+      "Progress amounts: use ProgressBar"
+    ],
+    "partOf": ["Stepper"],
+    "contains": [],
+    "keyProps": "Orientation=horizontal/vertical, State=complete/incomplete",
+    "a11y": "Decorative; hide from assistive tech.",
+    "confidence": "high"
+  },
+  "2752:66": {
+    "name": "Stepper",
+    "page": "stepper",
+    "level": "organism",
+    "description": "Process stepper that shows an ordered multi-step flow (Account, Identity, Bank details, Review) with completed, current and upcoming steps. It shows progress through a task; it is not a numeric input.",
+    "useWhen": [
+      "Onboarding, KYC, guided investment or checkout flows with 3 to 5 ordered steps",
+      "Showing total length and progress up front (Orientation=horizontal on wide layouts)",
+      "Long labels or narrow columns (Orientation=vertical)"
+    ],
+    "dontUseWhen": [
+      "Incrementing a quantity with minus and plus: use NumericStepper",
+      "Hierarchy or location: use Breadcrumb",
+      "Safqah KYC checklist screens: use KYCStep",
+      "A single short form: no stepper"
+    ],
+    "partOf": [],
+    "contains": ["StepIndicator", "StepConnector"],
+    "keyProps": "Orientation=horizontal/vertical, Direction=LTR/RTL (set each nested StepIndicator State and Number)",
+    "a11y": "Ordered list with the current step marked aria-current=step; progress also stated in text (Step 2 of 4); progress flows right to left in RTL.",
+    "confidence": "high"
+  },
+  "2772:154": {
+    "name": "BackButton",
+    "page": "back-button",
+    "level": "molecule",
+    "description": "Preset over Button/IconButton (Variant=tertiary) for returning to the previous screen or step, with a mirrored arrow (Back / رجوع) and an On-media white variant for hero images.",
+    "useWhen": [
+      "Leading slot of a header or inline above content on detail screens and wizard steps",
+      "Back over a deal hero photo or dark header (Emphasis=On-media)",
+      "Dense headers (Type=Icon only)"
+    ],
+    "dontUseWhen": [
+      "Showing location across levels: use Breadcrumb",
+      "Switching sibling views: use SegmentedTabs or TabBar",
+      "Dismissing an overlay: use the SheetHeader close",
+      "When the AppBar already shows a back arrow: keep one back affordance per screen"
+    ],
+    "partOf": ["AppBar"],
+    "contains": ["Button", "IconButton"],
+    "keyProps": "Emphasis=Standard/On-media, Type=Label/Icon only, Size=sm/md/lg, State=default/hover/pressed/focused/disabled, Direction=LTR/RTL",
+    "a11y": "Icon only needs aria-label Back / رجوع; keep the focus ring; hide rather than disable on the first screen of a flow.",
+    "confidence": "high"
+  },
+  "2852:101": {
+    "name": "NavRailItem",
+    "page": "navigation-rail-sidebar",
+    "level": "molecule",
+    "description": "One destination in NavigationRail or AppSidebar: Stacked icon over label when collapsed or Row icon plus title when expanded, with active pill, badge, submenu chevron and overflow action options.",
+    "useWhen": [
+      "Inside NavigationRail or AppSidebar (shadcn-style); swap Icon and set the label",
+      "Showing a count or dot on a destination (Show badge)",
+      "Expandable group with children (Show chevron)"
+    ],
+    "dontUseWhen": [
+      "Mobile bottom navigation: use BottomNavTabItem",
+      "Rows in a page list: use ListItem",
+      "Overflow command rows: use MenuItem"
+    ],
+    "partOf": ["NavigationRail", "AppSidebar (shadcn-style)"],
+    "contains": ["Badge Count", "Badge Dot"],
+    "keyProps": "Icon (instance swap), Show label, Show badge, Show chevron, Show action, Layout=Stacked/Row, State=active/inactive/hover, Direction=LTR/RTL",
+    "a11y": "aria-current=page when active; collapsed items need a tooltip and aria-label; badge counts announced (3 new).",
+    "confidence": "high"
+  },
+  "2887:874": {
+    "name": "Brand / Safqah Wordmark (Dark)",
+    "page": "navigation-rail-sidebar",
+    "level": "atom",
+    "description": "The real Safqah wordmark (صفقة المالية), dark variant, pinned at the top of the navigation rail and sidebar.",
+    "useWhen": [
+      "Header of NavigationRail or AppSidebar (shadcn-style)"
+    ],
+    "dontUseWhen": [
+      "Other brand placements (splash, marketing, documents): use SafqahLogo"
+    ],
+    "partOf": ["NavigationRail"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Provide alt text 'Safqah' / 'صفقة' or link it to home with that name.",
+    "confidence": "high"
+  },
+  "2888:874": {
+    "name": "Icon / nav-toggle-menu",
+    "page": "navigation-rail-sidebar",
+    "level": "atom",
+    "description": "Hamburger glyph that expands a collapsed NavigationRail.",
+    "useWhen": [
+      "Toggle control in a collapsed NavigationRail or AppSidebar header"
+    ],
+    "dontUseWhen": [
+      "Opening a menu of commands: use MenuTrigger (Glyph=hamburger)",
+      "Collapsing an expanded rail: use Icon / nav-toggle-chevron"
+    ],
+    "partOf": ["NavigationRail"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Wrap in a button with aria-label Expand navigation and aria-expanded=false.",
+    "confidence": "high"
+  },
+  "2888:878": {
+    "name": "Icon / nav-toggle-chevron",
+    "page": "navigation-rail-sidebar",
+    "level": "atom",
+    "description": "Chevron glyph that collapses an expanded NavigationRail; mirror it for RTL.",
+    "useWhen": [
+      "Collapse control in an expanded NavigationRail header"
+    ],
+    "dontUseWhen": [
+      "Back navigation: use BackButton",
+      "Expanding a collapsed rail: use Icon / nav-toggle-menu"
+    ],
+    "partOf": ["NavigationRail"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Button with aria-label Collapse navigation and aria-expanded=true.",
+    "confidence": "high"
+  },
+  "2911:1119": {
+    "name": "Icon / chevron-down-sm",
+    "page": "navigation-rail-sidebar",
+    "level": "atom",
+    "description": "Small chevron-down affordance marking an expandable NavRailItem with a submenu.",
+    "useWhen": [
+      "Trailing glyph of a NavRailItem group (Show chevron)"
+    ],
+    "dontUseWhen": [
+      "Accordion toggles: AccordionItem has its own arrowhead",
+      "Select fields: use Select"
+    ],
+    "partOf": ["NavRailItem"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Decorative; the parent item carries aria-expanded.",
+    "confidence": "high"
+  },
+  "2938:3105": {
+    "name": "Icon / more-horizontal",
+    "page": "navigation-rail-sidebar",
+    "level": "atom",
+    "description": "Horizontal ellipsis glyph for an overflow action on navigation items (for example on project rows in the sidebar).",
+    "useWhen": [
+      "Overflow action on a NavRailItem (Show action)"
+    ],
+    "dontUseWhen": [
+      "A standalone overflow trigger: use MenuTrigger (Glyph=meatball)",
+      "Row actions in tables: use Table / ActionCell"
+    ],
+    "partOf": ["NavRailItem"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Wrap in a button with aria-label More options and aria-haspopup=menu.",
+    "confidence": "high"
+  },
+  "2956:4525": {
+    "name": "AppSidebar (shadcn-style)",
+    "page": "navigation-rail-sidebar",
+    "level": "organism",
+    "description": "Published shadcn-style application sidebar for web: workspace switcher, search, grouped NavRailItems (Platform, Projects), pinned settings/help and a user footer, expanded or collapsed. The library-ready desktop navigation shell.",
+    "useWhen": [
+      "Web and back-office app shells with grouped destinations and a workspace switcher",
+      "Desktop layouts that need search plus account menu in the sidebar",
+      "Variant=Floating or Inset when the sidebar should sit as a card beside content"
+    ],
+    "dontUseWhen": [
+      "Mobile: use TabBar (3-tab)",
+      "Simple rail without workspace or search: use NavigationRail",
+      "Temporary navigation over content: use Drawer"
+    ],
+    "partOf": [],
+    "contains": ["NavRail / TeamSwitcher", "NavRail / NavUser", "NavRailItem", "Search Input"],
+    "keyProps": "Variant=Standard/Floating/Inset, Mode=Expanded/Collapsed, Direction=LTR/RTL",
+    "a11y": "nav landmark with group labels as headings; collapse toggle exposes aria-expanded; sits on the right edge in RTL.",
+    "confidence": "medium"
+  },
+  "2959:4538": {
+    "name": "NavRail / TeamSwitcher",
+    "page": "navigation-rail-sidebar",
+    "level": "molecule",
+    "description": "Sidebar header block with the Safqah app mark, workspace name (Investor workspace) and a chevron to switch workspace.",
+    "useWhen": [
+      "Top of AppSidebar (shadcn-style) when users can switch between workspaces or roles"
+    ],
+    "dontUseWhen": [
+      "Single-workspace apps: use Brand / Safqah Wordmark (Dark) alone",
+      "Choosing a form value: use Select"
+    ],
+    "partOf": ["AppSidebar (shadcn-style)"],
+    "contains": [],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Button with aria-haspopup=menu and the current workspace in its name.",
+    "confidence": "medium"
+  },
+  "2959:4550": {
+    "name": "NavRail / NavUser",
+    "page": "navigation-rail-sidebar",
+    "level": "molecule",
+    "description": "Sidebar footer block with the signed-in user's avatar, name and email and a chevron opening the account menu.",
+    "useWhen": [
+      "Bottom of AppSidebar (shadcn-style) or NavigationRail for account and sign-out access"
+    ],
+    "dontUseWhen": [
+      "Profile summaries in a page: use Avatar with ListItem",
+      "Investor profile headers in back-office: build from Avatar and KeyValue"
+    ],
+    "partOf": ["AppSidebar (shadcn-style)"],
+    "contains": ["Avatar"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Button with aria-haspopup=menu; avatar decorative when the name is shown.",
+    "confidence": "medium"
+  },
+  "2855:175": {
+    "name": "NavigationRail",
+    "page": "navigation-rail-sidebar",
+    "level": "organism",
+    "description": "Persistent vertical navigation for tablet and desktop, the rail counterpart of the bottom TabBar: wordmark and toggle, grouped NavRailItems with badges and submenus, account pinned at the bottom; Expanded (about 240px) or Collapsed (about 80px).",
+    "useWhen": [
+      "Tablet and desktop layouts with 3 to 7 top-level destinations",
+      "Web investor portal using the same destinations as the mobile TabBar",
+      "Mode=Collapsed to reclaim width on data-heavy screens"
+    ],
+    "dontUseWhen": [
+      "Mobile: use TabBar (3-tab)",
+      "Deep or temporary hierarchies: use Drawer",
+      "Needing a published library shell with workspace switcher and search: use AppSidebar (shadcn-style)"
+    ],
+    "partOf": [],
+    "contains": ["NavRailItem", "Brand / Safqah Wordmark (Dark)", "Icon / nav-toggle-menu", "Icon / nav-toggle-chevron", "Divider"],
+    "keyProps": "Show header, Show group labels, Show badges, Submenu open, Show footer, Variant=Standard/Floating/Inset, Mode=Expanded/Collapsed, Direction=LTR/RTL",
+    "a11y": "nav landmark, exactly one aria-current=page item, tooltips for collapsed labels; anchored to the right edge in RTL.",
+    "confidence": "high"
+  },
+  "4011:1102": {
+    "name": "Scrollbar",
+    "page": "scroll-container",
+    "level": "atom",
+    "description": "Track and thumb for scrollable areas, overlay or gutter model, thin or default, with idle, hover and dragging states.",
+    "useWhen": [
+      "Inside ScrollContainer to show scroll position on web and back-office panels",
+      "Model=gutter where content must not sit under the thumb (tables)"
+    ],
+    "dontUseWhen": [
+      "Native mobile scroll: hide it (ScrollContainer showScrollbar off)",
+      "Progress values: use ProgressBar"
+    ],
+    "partOf": ["ScrollContainer"],
+    "contains": [],
+    "keyProps": "Orientation=vertical/horizontal, Thickness=thin/default, Model=overlay/gutter, State=idle/hover/dragging",
+    "a11y": "Visual only; the scroll region itself must be keyboard scrollable (tabindex and a label).",
+    "confidence": "high"
+  },
+  "4012:1050": {
+    "name": "Fade",
+    "page": "scroll-container",
+    "level": "atom",
+    "description": "Edge gradient mask hinting that more content lies beyond the start or end of a scroll area; its stops are hardcoded from bg/surface and bg/elevated.",
+    "useWhen": [
+      "Edges of horizontal card rails and long lists (ScrollContainer fadeStart / fadeEnd)"
+    ],
+    "dontUseWhen": [
+      "Under sticky headers or above sticky footers: use Scroll shadow",
+      "Image overlays: use the media's own scrim"
+    ],
+    "partOf": ["ScrollContainer"],
+    "contains": [],
+    "keyProps": "Edge=start/end (logical, flips in RTL), Surface=surface/elevated",
+    "a11y": "Decorative; never fade over interactive content that must stay readable.",
+    "confidence": "high"
+  },
+  "4013:1046": {
+    "name": "Scroll shadow",
+    "page": "scroll-container",
+    "level": "atom",
+    "description": "Shadow divider shown under a sticky header or above a sticky footer once content scrolls beneath it; reuses the Shadow / sm style.",
+    "useWhen": [
+      "Sticky header or footer inside ScrollContainer, sheets and long pages"
+    ],
+    "dontUseWhen": [
+      "Static separators: use Divider",
+      "Scroll edge hints on rails: use Fade"
+    ],
+    "partOf": ["ScrollContainer"],
+    "contains": [],
+    "keyProps": "Position=top/bottom",
+    "a11y": "Decorative.",
+    "confidence": "high"
+  },
+  "4014:201382": {
+    "name": "Pull-to-refresh",
+    "page": "scroll-container",
+    "level": "molecule",
+    "description": "Mobile pull-to-refresh indicator that swaps a spinner through idle, pulling and refreshing states at the top of a scroll area.",
+    "useWhen": [
+      "Refreshing feeds such as deals, portfolio or updates on mobile"
+    ],
+    "dontUseWhen": [
+      "Web and back-office: use an explicit refresh Button",
+      "Initial page load: use Skeleton blocks"
+    ],
+    "partOf": ["ScrollContainer"],
+    "contains": ["SpinnerRing"],
+    "keyProps": "State=idle/pulling/refreshing",
+    "a11y": "Offer an alternative refresh action; announce 'Refreshing' and completion via a live region.",
+    "confidence": "medium"
+  },
+  "4015:1061": {
+    "name": "Scroll content",
+    "page": "scroll-container",
+    "level": "atom",
+    "description": "Placeholder content for the ScrollContainer Content slot, to be swapped for the real list or rail.",
+    "useWhen": [
+      "Default slot filler before swapping in real content"
+    ],
+    "dontUseWhen": [
+      "Final designs: swap in List, ActionList, Carousel or your own component"
+    ],
+    "partOf": ["ScrollContainer"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Not applicable; replace before handoff.",
+    "confidence": "high"
+  },
+  "4015:1157": {
+    "name": "ScrollContainer",
+    "page": "scroll-container",
+    "level": "organism",
+    "description": "Clipped scrollable area that assembles Scrollbar, edge Fades and Scroll shadows around a swappable Content slot, vertical or horizontal, with RTL origin handling.",
+    "useWhen": [
+      "Horizontal card rails such as deal or poster strips with fades at the edges",
+      "Long lists inside fixed-height panels with sticky header or footer",
+      "Back-office panels that need a visible scrollbar"
+    ],
+    "dontUseWhen": [
+      "Paged slides with an indicator: use Carousel",
+      "Whole-page scroll: let the screen scroll natively"
+    ],
+    "partOf": [],
+    "contains": ["Scrollbar", "Fade", "Scroll shadow", "Scroll content"],
+    "keyProps": "fadeStart, fadeEnd, stickyHeader, stickyFooter, showScrollbar, Content (instance swap), Axis=vertical/horizontal, Direction=LTR/RTL",
+    "a11y": "Scroll region must be focusable with an accessible name; in RTL horizontal scroll starts at the right and the vertical scrollbar sits on the left.",
+    "confidence": "high"
+  },
+  "4256:1443": {
+    "name": "Segment",
+    "page": "segmented-control",
+    "level": "atom",
+    "description": "One option inside a SegmentedControl: label, optional icon, count and dot, with selection shown by weight and colour while the parent's thumb provides the fill.",
+    "useWhen": [
+      "Inside SegmentedControl_2..5; set exactly one nested Segment to State=selected",
+      "Icon-only options (Has label off) or filter counts (Show count)"
+    ],
+    "dontUseWhen": [
+      "Standalone buttons: use Button or ButtonGroup",
+      "Tabs: use SegmentedTabItem"
+    ],
+    "partOf": ["SegmentedControl_2", "SegmentedControl_3", "SegmentedControl_4", "SegmentedControl_5"],
+    "contains": [],
+    "keyProps": "Label, Has label, Icon, Has icon, Show count, Count, Show Dot, Show Dot right, State=unselected/selected/hover/pressed/focus/disabled/selected-disabled, Size=sm/md/lg",
+    "a11y": "role=radio with aria-checked; md/lg meet the 44pt target; icon-only segments need aria-label.",
+    "confidence": "high"
+  },
+  "4258:1461": {
+    "name": "SegmentedControl_3",
+    "page": "segmented-control",
+    "level": "molecule",
+    "description": "Three-option pill single-select control (Day / Week / Month) that filters or toggles the same view. A radio group in a pill, not navigation.",
+    "useWhen": [
+      "Chart or returns range switches (Day / Week / Month)",
+      "Filtering a list in place (All / Active / Closed)",
+      "Choosing a mode inside a card or calculator"
+    ],
+    "dontUseWhen": [
+      "Moving between different screens or views: use SegmentedTabs or TabBar",
+      "Binary on/off: use Switch",
+      "Long value lists: use Select",
+      "Two or four or five options: use SegmentedControl_2, SegmentedControl_4 or SegmentedControl_5"
+    ],
+    "partOf": [],
+    "contains": ["Segment"],
+    "keyProps": "Style=pill-thumb/solid/dark/minimal, Size=sm/md/lg, Direction=LTR/RTL (selection = one nested Segment State=selected)",
+    "a11y": "role=radiogroup with an accessible label; arrow keys move selection; labels truncate, never scroll; order reverses in RTL.",
+    "confidence": "high"
+  },
+  "4260:1202": {
+    "name": "SegmentedControl_2",
+    "page": "segmented-control",
+    "level": "molecule",
+    "description": "Two-option pill single-select control (Monthly / Yearly) for toggling a value on the same view.",
+    "useWhen": [
+      "Two mutually exclusive modes such as Monthly / Yearly or Gross / Net",
+      "Compact toggles inside cards and calculators"
+    ],
+    "dontUseWhen": [
+      "Simple on/off: use Switch",
+      "Switching content views under the AppBar: use SegmentedTabs",
+      "Three or more options: use SegmentedControl_3, _4 or _5"
+    ],
+    "partOf": [],
+    "contains": ["Segment"],
+    "keyProps": "Style=pill-thumb/solid/dark/minimal, Size=sm/md/lg, Direction=LTR/RTL",
+    "a11y": "role=radiogroup; selection must not rely on colour alone (weight change plus thumb).",
+    "confidence": "high"
+  },
+  "4260:1351": {
+    "name": "SegmentedControl_4",
+    "page": "segmented-control",
+    "level": "molecule",
+    "description": "Four-option pill single-select control (Day / Week / Month / Year) for range or filter choices on the same view.",
+    "useWhen": [
+      "Four range options on a chart or report",
+      "Four-way filters on a list"
+    ],
+    "dontUseWhen": [
+      "Navigation between sections: use TabBar",
+      "Long labels that would truncate badly: use Select"
+    ],
+    "partOf": [],
+    "contains": ["Segment"],
+    "keyProps": "Style=pill-thumb/solid/dark/minimal, Size=sm/md/lg, Direction=LTR/RTL",
+    "a11y": "role=radiogroup with arrow-key support.",
+    "confidence": "high"
+  },
+  "4260:1536": {
+    "name": "SegmentedControl_5",
+    "page": "segmented-control",
+    "level": "molecule",
+    "description": "Five-option pill single-select control with short labels (1D / 1W / 1M / 1Y / All), typically for chart time ranges.",
+    "useWhen": [
+      "Chart time-range pickers with abbreviated labels",
+      "Five short filter options"
+    ],
+    "dontUseWhen": [
+      "More than five options or long labels: use Select",
+      "Scrolling tab rows: use SegmentedTabs or TabBar"
+    ],
+    "partOf": [],
+    "contains": ["Segment"],
+    "keyProps": "Style=pill-thumb/solid/dark/minimal, Size=sm/md/lg, Direction=LTR/RTL",
+    "a11y": "role=radiogroup; abbreviated labels need full aria-labels (1 week).",
+    "confidence": "high"
+  },
+  "3013:95390": {
+    "name": "CardDeal",
+    "page": "card-deal",
+    "level": "organism",
+    "description": "The investment deal card that lists or spotlights a Safqah opportunity: media, qualified badge, status, title, highlights, ROI and term, as a Hero card or a compact Row, across Available, Reserved, Invested and Closed states.",
+    "useWhen": [
+      "Deals feed or home featured deal (Layout=Hero)",
+      "Dense deal lists such as portfolio or closed deals (Layout=Row)",
+      "Showing qualified-only deals to qualified users (Qualified on)"
+    ],
+    "dontUseWhen": [
+      "Top of a single deal's detail page: use Base card (HeaderCard)",
+      "Updates about a deal or project: use NewsCard or NewsCard / Poster",
+      "Guidance or advisor messages: use CardInfo",
+      "A quick action or CTA nudge: use ActionTile or ActionPrompt"
+    ],
+    "partOf": ["Carousel"],
+    "contains": ["CardDeal / Media", "CardDeal / Headline", "CardDeal / Highlights", "CardDeal / Metric", "StatusPill", "Tag", "dealTags"],
+    "keyProps": "Layout=Hero/Row, State=Available/Reserved/Invested/Closed, Qualified, Show media, Show status, Show highlights, Show ROI, Show arrow, Show success, Show Upper left arrow, Media image (instance swap), Direction=RTL/LTR",
+    "a11y": "Whole card is one link named by the deal title; status and ROI read as text; Closed state must not rely on dimming alone; never show the qualified badge to standard users.",
+    "confidence": "high"
+  },
+  "3019:148": {
+    "name": "CardDeal / Metric",
+    "page": "card-deal",
+    "level": "atom",
+    "description": "Label plus value line on a deal card, such as ROI 12-29% or Term 6-12 months.",
+    "useWhen": [
+      "ROI and term lines inside CardDeal"
+    ],
+    "dontUseWhen": [
+      "Key-value rows outside the card: use KeyValue",
+      "Large KPI numbers: use Stat"
+    ],
+    "partOf": ["CardDeal"],
+    "contains": [],
+    "keyProps": "Label (text), Value (text), Direction=LTR/RTL",
+    "a11y": "Read label and value together; percentages labelled with نسبة in Arabic per content rules.",
+    "confidence": "high"
+  },
+  "3036:316": {
+    "name": "CardDeal / Headline",
+    "page": "card-deal",
+    "level": "atom",
+    "description": "Deal title text atom on CardDeal.",
+    "useWhen": [
+      "Deal name inside CardDeal"
+    ],
+    "dontUseWhen": [
+      "Section or page titles: use Section or AppBar"
+    ],
+    "partOf": ["CardDeal"],
+    "contains": [],
+    "keyProps": "Title (text), Direction=LTR/RTL",
+    "a11y": "Serves as the card link's accessible name; use a heading level that fits the list.",
+    "confidence": "high"
+  },
+  "3040:332": {
+    "name": "CardDeal / Highlights",
+    "page": "card-deal",
+    "level": "atom",
+    "description": "Muted one-line feature summary on a deal card (High yield, 14-yr track record, 3x collateral).",
+    "useWhen": [
+      "Short selling points under the deal title in CardDeal"
+    ],
+    "dontUseWhen": [
+      "Bullet lists in content: use List (Style=Bulleted)",
+      "Category chips: use Tag"
+    ],
+    "partOf": ["CardDeal"],
+    "contains": [],
+    "keyProps": "Text (text), Direction=LTR/RTL",
+    "a11y": "Muted text must still meet AA contrast; separators read naturally.",
+    "confidence": "high"
+  },
+  "3048:330": {
+    "name": "CardDeal / Media",
+    "page": "card-deal",
+    "level": "atom",
+    "description": "Deal image surface: Hero (16:9, large radius) or Thumb (square) used in Row layout.",
+    "useWhen": [
+      "Deal photo in CardDeal; swap the image fill per deal"
+    ],
+    "dontUseWhen": [
+      "Deal page gallery: use Base card (HeaderCard)",
+      "Update posters: use NewsCard / Poster Media"
+    ],
+    "partOf": ["CardDeal"],
+    "contains": [],
+    "keyProps": "Size=Hero/Thumb",
+    "a11y": "Decorative when the title is present (empty alt); otherwise describe the project.",
+    "confidence": "high"
+  },
+  "3085:61": {
+    "name": "Goal / Headline",
+    "page": "card-goal",
+    "level": "atom",
+    "description": "Goal card title atom with optional leading icon (Your investment goal / تتبع هدفك الاستثماري). Status wip.",
+    "useWhen": [
+      "Title of GoalActivate or GoalTracker"
+    ],
+    "dontUseWhen": [
+      "Generic region titles: use Section"
+    ],
+    "partOf": ["GoalActivate", "GoalTracker"],
+    "contains": [],
+    "keyProps": "Title (text), Show icon, Direction=LTR/RTL",
+    "a11y": "Heading for the goal card; icon decorative.",
+    "confidence": "high"
+  },
+  "3086:57": {
+    "name": "Goal / Illustration",
+    "page": "card-goal",
+    "level": "atom",
+    "description": "Placeholder network/map illustration for the goal CTA card; swap with the real localized KSA-map art before shipping. Status wip.",
+    "useWhen": [
+      "Visual of GoalActivate"
+    ],
+    "dontUseWhen": [
+      "Empty states: use EmptyState illustrations",
+      "Shipping as-is: replace with final art"
+    ],
+    "partOf": ["GoalActivate"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Decorative (empty alt).",
+    "confidence": "high"
+  },
+  "3090:97": {
+    "name": "Goal / Summary",
+    "page": "card-goal",
+    "level": "atom",
+    "description": "Goal total block: large radial ring, 'Total goal progress' label and the running total amount. Status wip.",
+    "useWhen": [
+      "Footer of GoalTracker showing overall progress"
+    ],
+    "dontUseWhen": [
+      "Generic KPIs: use Stat",
+      "Linear progress: use ProgressBar"
+    ],
+    "partOf": ["GoalTracker"],
+    "contains": ["Goal / Amount"],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Expose progress as text (amount and percent); the ring is decorative.",
+    "confidence": "high"
+  },
+  "3103:1296": {
+    "name": "Goal / PhaseRow",
+    "page": "card-goal",
+    "level": "molecule",
+    "description": "One milestone row in GoalTracker: ring with percent, month title, amount and chevron; green filled when achieved, light when pending. Status wip.",
+    "useWhen": [
+      "Each milestone in GoalTracker (Percent=+100% / 100% / 50% / 0%)"
+    ],
+    "dontUseWhen": [
+      "Generic list rows: use ListItem",
+      "Deal lifecycle events: use DealTimeline"
+    ],
+    "partOf": ["GoalTracker"],
+    "contains": ["Goal / Amount"],
+    "keyProps": "Percent=+100%/100%/50%/0%, Direction=LTR/RTL",
+    "a11y": "Keep the percent and status text on every row; do not rely on green vs grey.",
+    "confidence": "high"
+  },
+  "3113:2866": {
+    "name": "Goal / Amount",
+    "page": "card-goal",
+    "level": "atom",
+    "description": "Number plus riyal symbol atom used in goal cards, in three sizes and Default, Inverse or Brand tone. Status wip.",
+    "useWhen": [
+      "Amounts inside Goal / PhaseRow and Goal / Summary"
+    ],
+    "dontUseWhen": [
+      "Amounts elsewhere in Safqah: use MoneyAmount"
+    ],
+    "partOf": ["Goal / PhaseRow", "Goal / Summary"],
+    "contains": [],
+    "keyProps": "Value (text), Size=sm/md/lg, Tone=Default/Inverse/Brand",
+    "a11y": "The riyal glyph needs a text equivalent (ر.س / SAR) for screen readers.",
+    "confidence": "high"
+  },
+  "3091:392": {
+    "name": "GoalActivate",
+    "page": "card-goal",
+    "level": "organism",
+    "description": "Pre-activation goal CTA card with illustration, headline, body and a Button inviting the investor to set an investment goal. Status wip.",
+    "useWhen": [
+      "Before the user has a goal (Phase=Begining)",
+      "Setup started but unfinished (Phase=Started)",
+      "Informational goal card (Phase=Static)"
+    ],
+    "dontUseWhen": [
+      "An active goal with milestones: use GoalTracker",
+      "Generic CTA nudges such as completing verification: use ActionPrompt"
+    ],
+    "partOf": [],
+    "contains": ["Goal / Headline", "Goal / Illustration", "Button", "ProgressBar"],
+    "keyProps": "Phase=Begining/Started/Static, Direction=LTR/RTL",
+    "a11y": "One clear button label; illustration decorative.",
+    "confidence": "high"
+  },
+  "3104:1750": {
+    "name": "GoalTracker",
+    "page": "card-goal",
+    "level": "organism",
+    "description": "Active goal card listing milestone phase rows and a total progress summary, in Overachieved, Complete, Active and Early states. Status wip.",
+    "useWhen": [
+      "After the investor activates a goal, on home or the goal center",
+      "Showing milestone progress by month with a running total"
+    ],
+    "dontUseWhen": [
+      "No goal or zero milestones: use GoalActivate",
+      "Portfolio returns summary: use PortfolioHeader"
+    ],
+    "partOf": [],
+    "contains": ["Goal / Headline", "Goal / PhaseRow", "Goal / Summary"],
+    "keyProps": "State=Overachieved/Complete/Active/Early, Direction=LTR/RTL",
+    "a11y": "Rows in a list with status text; lead with the nearest milestone; progress as text, not colour only.",
+    "confidence": "high"
+  },
+  "3133:738": {
+    "name": "CardAction / Label",
+    "page": "card-action",
+    "level": "atom",
+    "description": "Title plus optional supporting info text atom shared by ActionTile and ActionPrompt.",
+    "useWhen": [
+      "Text inside ActionTile (Size=sm) or ActionPrompt (Size=md)"
+    ],
+    "dontUseWhen": [
+      "List row text: use Content",
+      "CardInfo text: use CardInfo / Content"
+    ],
+    "partOf": ["ActionTile", "ActionPrompt"],
+    "contains": [],
+    "keyProps": "Title (text), Info (text), Show info, Size=sm/md, Direction=LTR/RTL",
+    "a11y": "Title forms the action's accessible name; keep info short.",
+    "confidence": "high"
+  },
+  "3138:1144": {
+    "name": "ActionTile",
+    "page": "card-action",
+    "level": "organism",
+    "description": "Compact quick-action tile (icon plus short label) for dashboard shortcut grids or as a horizontal row with supporting info, with Default, Selected and Disabled states.",
+    "useWhen": [
+      "Home quick actions grid such as Deposit, Withdraw, Statements (Style=Vertical)",
+      "Shortcut rows with one-line info (Style=Horizontal)",
+      "Choosing one option among tiles (State=Selected)"
+    ],
+    "dontUseWhen": [
+      "A nudge with description and a button: use ActionPrompt",
+      "Settings rows grouped in a card: use ListItem inside ActionList",
+      "Informational guidance: use CardInfo",
+      "Deals: use CardDeal"
+    ],
+    "partOf": [],
+    "contains": ["CardAction / Label"],
+    "keyProps": "Icon (instance swap), Size=Small/Default, Style=Vertical/Horizontal, State=Default/Selected/Disabled, Direction=LTR/RTL",
+    "a11y": "Button or link role named by the label; Selected exposed via aria-pressed or aria-checked, not tint alone; icon decorative.",
+    "confidence": "high"
+  },
+  "3137:1171": {
+    "name": "ActionPrompt",
+    "page": "card-action",
+    "level": "organism",
+    "description": "Larger CTA card with an icon badge, title, description and a Button that nudges the user to one action, such as completing verification, toned by priority.",
+    "useWhen": [
+      "Must-do tasks such as completing KYC or adding a bank account (Tone=Warning)",
+      "Brand nudges such as enabling notifications (Tone=Brand)",
+      "Confirming completion with a next step (Tone=Success)"
+    ],
+    "dontUseWhen": [
+      "Simple shortcuts: use ActionTile",
+      "Information without a button: use CardInfo",
+      "Severity or system messages: use Alert or Banner",
+      "Goal setup: use GoalActivate"
+    ],
+    "partOf": [],
+    "contains": ["CardAction / Label", "Button"],
+    "keyProps": "Icon (instance swap), Tone=Neutral/Brand/Warning/Success, Direction=LTR/RTL",
+    "a11y": "Button label states the action; tone conveyed by text, not icon colour only.",
+    "confidence": "high"
+  },
+  "3190:1178": {
+    "name": "CardInfo / Content",
+    "page": "card-info",
+    "level": "atom",
+    "description": "Title (SemiBold 13) plus description (Regular 13) text atom of CardInfo.",
+    "useWhen": [
+      "Text block inside CardInfo"
+    ],
+    "dontUseWhen": [
+      "List rows: use Content",
+      "Action cards: use CardAction / Label"
+    ],
+    "partOf": ["CardInfo"],
+    "contains": [],
+    "keyProps": "Title (text), Description (text), Show description, Direction=LTR/RTL",
+    "a11y": "Toned text must keep AA contrast against the card surface.",
+    "confidence": "high"
+  },
+  "3200:1066": {
+    "name": "CardInfo",
+    "page": "card-info",
+    "level": "organism",
+    "description": "Standalone informational card with a circular icon or advisor avatar badge, title, description and chevron, themed by tone. Used for help prompts, relationship-manager cards, tips and status notes that tap through.",
+    "useWhen": [
+      "Help card (Type=Icon, Tone=Brand) such as 'Need any help with your investments?'",
+      "Relationship manager or advisor card (Type=Avatar)",
+      "Persistent status notes such as identity verified (Tone=Success) or document needed (Tone=Warning)"
+    ],
+    "dontUseWhen": [
+      "Transient or severity messages: use Toast, Alert or Banner",
+      "A CTA with a button: use ActionPrompt",
+      "A row inside a settings list: use ListItem",
+      "Deals: use CardDeal"
+    ],
+    "partOf": [],
+    "contains": ["CardInfo / Content", "Avatar"],
+    "keyProps": "Icon (instance swap), Type=Icon/Avatar, Tone=Brand/Info/Success/Warning/Error/Neutral, Direction=LTR/RTL",
+    "a11y": "Whole card is one link or button; tone carried by the text; avatar alt is the person's name or decorative if named in the title.",
+    "confidence": "high"
+  },
+  "3210:738": {
+    "name": "Content",
+    "page": "list-item",
+    "level": "atom",
+    "description": "Shared text block for rows and cards (Material anatomy): overline, title, supporting description plus optional value, metadata, badge, switch, rating and tags. Used by ListItem, SelectRow, List rows, AccordionItem, Carousel / Slide and NewsCard.",
+    "useWhen": [
+      "Text area of any list row or slide that must stay consistent with ListItem",
+      "Building a new row molecule from the system's text block"
+    ],
+    "dontUseWhen": [
+      "Long body copy: use plain text styles",
+      "Card-specific text: use CardInfo / Content or CardAction / Label"
+    ],
+    "partOf": ["ListItem", "SelectRow", "List / TextItem", "AccordionItem", "Carousel / Slide", "NewsCard"],
+    "contains": ["Switch", "Tag"],
+    "keyProps": "Title, Description, Show description, Overline, Show overline, Value, Show value, Metadata, Show metadata, Show badge, Show switch, Show rating, Show tags, Show top-left-item, Show top-right-item, Size=Lg/Md/Sm, Direction=LTR/RTL",
+    "a11y": "Title first in reading order; muted supporting text must meet AA.",
+    "confidence": "high"
+  },
+  "3212:1071": {
+    "name": "ListItem",
+    "page": "list-item",
+    "level": "molecule",
+    "description": "The universal single row: leading icon, title with optional description and exactly one trailing affordance (chevron, Switch, value, Tag label or action Button). It is the row, not the list.",
+    "useWhen": [
+      "Settings and account rows that navigate (Has chevron) or toggle (Has toggle)",
+      "Data rows showing a value such as balance",
+      "Rows inside ActionList, Drawer or sheet content"
+    ],
+    "dontUseWhen": [
+      "Grouping rows with header, dividers and footer: use ActionList",
+      "Choosing among options with radio or checkbox: use SelectRow inside SelectionList",
+      "Rich standalone content: use CardInfo or CardAction",
+      "Titling a region: use Section"
+    ],
+    "partOf": ["ActionList"],
+    "contains": ["Content", "Tag", "Switch", "Button"],
+    "keyProps": "Has leading, Has label, Has value, Has action, Has toggle, Has chevron, Has divider, Leading icon (instance swap), State=Default/Hover/Pressed/Selected/Disabled, Direction=LTR/RTL",
+    "a11y": "Whole row is one target; with a toggle the Switch is the control and is labelled by the title; one trailing slot per row.",
+    "confidence": "high"
+  },
+  "3222:1092": {
+    "name": "ActionList",
+    "page": "action-list",
+    "level": "organism",
+    "description": "Grouped list container that stacks ListItem rows under a section header with dividers (last off) and an optional footer hint, as a rounded card or plain edge-to-edge. The settings-screen building block.",
+    "useWhen": [
+      "Settings sections such as Account, Notifications, Privacy (Style=Grouped)",
+      "Account menus and payment methods lists",
+      "Edge-to-edge lists in full-width layouts (Style=Plain)"
+    ],
+    "dontUseWhen": [
+      "A single row: use ListItem",
+      "Choosing an option: use SelectionList",
+      "Read-only content lists (bullets, key-value): use List",
+      "Floating command lists: use Menu"
+    ],
+    "partOf": [],
+    "contains": ["ListItem"],
+    "keyProps": "Has header, Has footer, Style=Grouped/Plain, Direction=LTR/RTL",
+    "a11y": "Render as a list with the header as its label (aria-labelledby); footer text linked via aria-describedby.",
+    "confidence": "high"
+  },
+  "3251:1525": {
+    "name": "List",
+    "page": "list",
+    "level": "organism",
+    "description": "Read-only content list in six display styles: Plain, Divided, Inset, Bulleted, Numbered and Description (key-value with total). For presenting information, not for navigation or choice.",
+    "useWhen": [
+      "Feature or benefit bullets on deal or onboarding pages (Style=Bulleted)",
+      "Ordered how-to steps (Style=Numbered)",
+      "Amount breakdowns with a total such as total invested, profit, net value (Style=Description)",
+      "Static text lists (Plain / Divided / Inset)"
+    ],
+    "dontUseWhen": [
+      "Rows that navigate or toggle: use ActionList with ListItem",
+      "Choosing options: use SelectionList",
+      "Many comparable records: use a Table",
+      "Hidden optional detail: use Accordion"
+    ],
+    "partOf": [],
+    "contains": ["List / TextItem", "List / DescriptionRow"],
+    "keyProps": "Style=Plain/Divided/Inset/Bulleted/Numbered/Description, Direction=LTR/RTL",
+    "a11y": "ul/ol semantics for bulleted/numbered, dl for Description; Western digits in markers and values.",
+    "confidence": "high"
+  },
+  "3254:1602": {
+    "name": "List / TextItem",
+    "page": "list",
+    "level": "molecule",
+    "description": "A List text row: optional Bullet or Number marker plus the Content atom.",
+    "useWhen": [
+      "Rows of List in Plain, Divided, Inset, Bulleted or Numbered styles"
+    ],
+    "dontUseWhen": [
+      "Key-value rows: use List / DescriptionRow",
+      "Interactive rows: use ListItem"
+    ],
+    "partOf": ["List"],
+    "contains": ["Content"],
+    "keyProps": "Number (text), Marker=None/Bullet/Number, Direction=LTR/RTL",
+    "a11y": "Use native list markers so counts are announced.",
+    "confidence": "high"
+  },
+  "3254:1615": {
+    "name": "List / DescriptionRow",
+    "page": "list",
+    "level": "molecule",
+    "description": "Key-value row of a Description list: term and value, with a Total emphasis for the bottom line.",
+    "useWhen": [
+      "Breakdown rows in List Style=Description; Emphasis=Total for net value"
+    ],
+    "dontUseWhen": [
+      "Single attribute pairs elsewhere: use KeyValue",
+      "Table data: use Table / Cell"
+    ],
+    "partOf": ["List"],
+    "contains": [],
+    "keyProps": "Term (text), Value (text), Emphasis=Default/Total, Direction=LTR/RTL",
+    "a11y": "dt/dd pairing; currency after the amount.",
+    "confidence": "high"
+  },
+  "3241:876": {
+    "name": "SelectRow",
+    "page": "list",
+    "level": "molecule",
+    "description": "Selectable row with a radio or checkbox, title and description; selected state adds a brand border and tint.",
+    "useWhen": [
+      "Rows inside SelectionList",
+      "Choosing a payment method or plan (Type=Radio)",
+      "Multi-choice filters or channels (Type=Checkbox)"
+    ],
+    "dontUseWhen": [
+      "Rows that navigate or toggle a setting: use ListItem",
+      "Bare checkbox or radio with a label: use Checkbox or Radio"
+    ],
+    "partOf": ["SelectionList"],
+    "contains": ["Content", "Radio Indicator", "Checkbox Indicator"],
+    "keyProps": "Has leading icon, Has value, Leading icon (instance swap), Type=Radio/Checkbox, State=Unselected/Selected/Disabled, Direction=LTR/RTL",
+    "a11y": "Whole row is the radio/checkbox label; checked state exposed natively; never colour alone.",
+    "confidence": "high"
+  },
+  "3242:866": {
+    "name": "SelectionList",
+    "page": "list",
+    "level": "organism",
+    "description": "List for choosing among options: SelectRows in Single (radio, exactly one) or Multi (checkbox, any number) mode with group header and footer.",
+    "useWhen": [
+      "Select payment method or bank account (Mode=Single)",
+      "Filter by asset type or notification channels (Mode=Multi)",
+      "Picking a plan with a sensible default preselected"
+    ],
+    "dontUseWhen": [
+      "Navigation or settings rows: use ActionList",
+      "Single on/off: use Switch",
+      "Long option lists in a form field: use Select or Combobox Field",
+      "Compact 2 to 5 short options: use SegmentedControl_2..5"
+    ],
+    "partOf": [],
+    "contains": ["SelectRow"],
+    "keyProps": "Has header, Has footer, Mode=Single/Multi, Direction=LTR/RTL",
+    "a11y": "Single = radiogroup, Multi = group of checkboxes, both labelled by the header; never mix radio and checkbox rows.",
+    "confidence": "high"
+  },
+  "3262:834": {
+    "name": "Section",
+    "page": "section",
+    "level": "molecule",
+    "description": "Section header that titles a region of a screen (above a carousel, card row or list) with optional description, leading icon, divider and a See all action. It is a heading, not a row and not a container.",
+    "useWhen": [
+      "Titling a deals carousel or updates strip with a See all jump",
+      "Organising long screens into primary sections (Size=Lg) and sub-sections (Size=Md/Sm)"
+    ],
+    "dontUseWhen": [
+      "Collapsible content: use Accordion",
+      "Rows: use ListItem",
+      "The small header inside a grouped list: use ActionList Has header",
+      "Screen title: use AppBar"
+    ],
+    "partOf": [],
+    "contains": ["Button"],
+    "keyProps": "Title, Description, Action (text), Has description, Has action, Has leading icon, Has divider, Leading icon (instance swap), Size=Lg/Md/Sm, Direction=LTR/RTL",
+    "a11y": "Map Size to heading level (Lg h2, Md h3, Sm h4); See all link names its target (See all deals); hide it when nothing more exists.",
+    "confidence": "high"
+  },
+  "3275:806": {
+    "name": "AccordionItem",
+    "page": "accordion",
+    "level": "molecule",
+    "description": "One collapsible disclosure row: header with title and down arrowhead, body revealed when Expanded.",
+    "useWhen": [
+      "Each question of an FAQ inside Accordion",
+      "Optional detail such as terms or fee explanation"
+    ],
+    "dontUseWhen": [
+      "Always-visible rows: use ListItem",
+      "Region headings: use Section"
+    ],
+    "partOf": ["Accordion"],
+    "contains": ["Content"],
+    "keyProps": "Has leading icon, Body (text), Leading icon (instance swap), State=Collapsed/Expanded, Direction=LTR/RTL",
+    "a11y": "Header is a button with aria-expanded and aria-controls pointing at the body region.",
+    "confidence": "high"
+  },
+  "3276:998": {
+    "name": "Accordion",
+    "page": "accordion",
+    "level": "organism",
+    "description": "Grouped collapsible disclosure (FAQ, terms, breakdowns) stacking AccordionItems with dividers, boxed in a card or plain.",
+    "useWhen": [
+      "FAQs on deal, help or Zakah pages",
+      "Long optional content such as terms or risk detail chunked by topic",
+      "Breakdowns users open on demand"
+    ],
+    "dontUseWhen": [
+      "Essential info such as prices, fees, errors or key actions: keep it visible",
+      "Titling a region: use Section",
+      "Navigation lists: use ActionList",
+      "Always-visible lists: use List"
+    ],
+    "partOf": [],
+    "contains": ["AccordionItem"],
+    "keyProps": "Style=Boxed/Plain, Direction=LTR/RTL",
+    "a11y": "Each header a button with aria-expanded; keep one behaviour (single or multi open) per accordion.",
+    "confidence": "high"
+  },
+  "3297:1424": {
+    "name": "PageIndicator",
+    "page": "carousel",
+    "level": "atom",
+    "description": "Carousel page control showing position among up to 5 slides as dots with a pill active or segmented bars. Also reused as the scroll-snap indicator.",
+    "useWhen": [
+      "Under a Carousel or snap-scrolling rail (Style=Dots for a few slides)",
+      "Short ordered onboarding sets (Style=Bars)"
+    ],
+    "dontUseWhen": [
+      "Paged data: use Pagination",
+      "Flow progress: use Stepper or ProgressBar"
+    ],
+    "partOf": ["Carousel", "ScrollContainer"],
+    "contains": [],
+    "keyProps": "Style=Dots/Bars, Active=1/2/3/4/5",
+    "a11y": "Expose 'Slide 2 of 5'; if dots are tappable each is a button with a label; mirrors in RTL.",
+    "confidence": "high"
+  },
+  "3299:1436": {
+    "name": "Carousel / Slide",
+    "page": "carousel",
+    "level": "molecule",
+    "description": "One carousel slide: Standard media-over-text card or Hero full-bleed media with overlaid text, in three sizes.",
+    "useWhen": [
+      "Slides inside Carousel (Type=Standard for tips or featured content, Type=Hero for promos and onboarding)"
+    ],
+    "dontUseWhen": [
+      "Deal cards in a strip: use CardDeal",
+      "Project update posters: use NewsCard / Poster"
+    ],
+    "partOf": ["Carousel"],
+    "contains": ["Content"],
+    "keyProps": "Size=Sm/Md/Lg, Type=Standard/Hero, Direction=LTR/RTL",
+    "a11y": "Hero overlay text must meet contrast over the darkened media; images need alt or be decorative.",
+    "confidence": "high"
+  },
+  "3301:1742": {
+    "name": "Carousel",
+    "page": "carousel",
+    "level": "organism",
+    "description": "Horizontal peek strip of slides with a PageIndicator, for browsable featured content, promos and onboarding where the peek signals more.",
+    "useWhen": [
+      "Featured deals, tips or learning content on home (Type=Cards)",
+      "One big promo or onboarding sequence (Type=Hero)",
+      "Paired with a Section header that offers See all"
+    ],
+    "dontUseWhen": [
+      "Complete or comparable lists: use List, ActionList or a Table",
+      "Critical content users must not miss: show it inline",
+      "Project update posters: use NewsCard / Poster Carousel"
+    ],
+    "partOf": [],
+    "contains": ["Carousel / Slide", "PageIndicator"],
+    "keyProps": "Type=Cards/Hero, Size=Sm/Md/Lg, Direction=LTR/RTL",
+    "a11y": "No auto-advance; provide tappable indicator or arrows besides swipe; first slide on the right in RTL.",
+    "confidence": "high"
+  },
+  "3316:115": {
+    "name": "Table / Cell",
+    "page": "table",
+    "level": "molecule",
+    "description": "A transparent table cell typed by its data: Text, Numeric (end-aligned), Avatar, Tag, Status, Select, Trend and Progress, in two densities.",
+    "useWhen": [
+      "Body cells of back-office and portfolio tables, one Type per column",
+      "Mobile row-as-card layouts combined with KeyValue"
+    ],
+    "dontUseWhen": [
+      "Column headers: use Table / HeaderCell",
+      "Row actions: use Table / ActionCell",
+      "Standalone key-value display: use KeyValue"
+    ],
+    "partOf": [],
+    "contains": ["Avatar", "Tag", "StatusPill", "Checkbox Indicator", "TrendBadge", "ProgressBar"],
+    "keyProps": "Text (text), Type=Text/Numeric/Avatar/Tag/Status/Select/Trend/Progress, Density=Default/Compact, Direction=LTR/RTL",
+    "a11y": "Use real td/th semantics; numbers in Western digits and end-aligned; Select cells need a row label.",
+    "confidence": "high"
+  },
+  "3317:127": {
+    "name": "Table / HeaderCell",
+    "page": "table",
+    "level": "molecule",
+    "description": "Column header with label, optional select-all checkbox and sort state (brand arrowhead for ascending or descending).",
+    "useWhen": [
+      "Header row of a data Table",
+      "Sortable columns (Sort=Asc/Desc) and bulk selection (Has select-all)"
+    ],
+    "dontUseWhen": [
+      "Section titles above a table: use Section"
+    ],
+    "partOf": [],
+    "contains": ["Checkbox Indicator"],
+    "keyProps": "Label (text), Has select-all, Sort=None/Asc/Desc, Density=Default/Compact, Direction=LTR/RTL",
+    "a11y": "th scope=col with aria-sort on the sorted column; select-all checkbox labelled Select all rows.",
+    "confidence": "high"
+  },
+  "3320:262": {
+    "name": "Table / ActionCell",
+    "page": "table",
+    "level": "molecule",
+    "description": "End-aligned row action cell: overflow IconButton plus optional inline ghost IconButtons. One of two identical sets with this name on the table page (this one sits in the reference container).",
+    "useWhen": [
+      "Last column of back-office tables for row actions (view, edit, more)"
+    ],
+    "dontUseWhen": [
+      "Many actions per row: collapse them into the overflow Menu",
+      "Bulk actions: use Table / Toolbar Mode=Selection"
+    ],
+    "partOf": [],
+    "contains": ["IconButton"],
+    "keyProps": "Has inline actions, Density=Default/Compact, Direction=LTR/RTL",
+    "a11y": "Each icon button labelled with action and row (Edit Riyadh Tower); overflow opens a Menu with aria-haspopup.",
+    "confidence": "medium"
+  },
+  "3322:410": {
+    "name": "Table / Toolbar",
+    "page": "table",
+    "level": "molecule",
+    "description": "Bar above a table with search, filter and sort controls, switching to a selection mode with the selected count and bulk actions.",
+    "useWhen": [
+      "Above back-office data tables (Mode=Default)",
+      "After rows are selected to show bulk actions (Mode=Selection)"
+    ],
+    "dontUseWhen": [
+      "Page-level search outside tables: use Search Input",
+      "Mobile lists: use Filter menu or Bottom-sheet menu"
+    ],
+    "partOf": [],
+    "contains": ["Search Input", "Button", "Tag Removable"],
+    "keyProps": "Mode=Default/Selection, Direction=LTR/RTL",
+    "a11y": "role=toolbar labelled for the table; result count announced in a live region when filters change.",
+    "confidence": "high"
+  },
+  "3351:197": {
+    "name": "Table / ActionCell",
+    "page": "table",
+    "level": "molecule",
+    "description": "Second set named Table / ActionCell (same overflow plus inline IconButtons, same props), placed in the doc frame. Behaves identically to 3320:262; prefer one consistently.",
+    "useWhen": [
+      "Row actions column in tables, same as 3320:262"
+    ],
+    "dontUseWhen": [
+      "Many actions per row: use the overflow Menu",
+      "Bulk actions: use Table / Toolbar Mode=Selection"
+    ],
+    "partOf": [],
+    "contains": ["IconButton"],
+    "keyProps": "Has inline actions, Density=Default/Compact, Direction=LTR/RTL",
+    "a11y": "Icon buttons need labels that include the row name.",
+    "confidence": "medium"
+  },
+  "3384:9012": {
+    "name": "Base card",
+    "page": "header-card",
+    "level": "organism",
+    "description": "HeaderCard: the deal page hero that tops a single deal or project detail screen with the photo gallery and overlay back, share and favorite controls, qualified medallion, title, developer, meta tags and developer row; collapses to a sticky title bar (with Invest CTA on web).",
+    "useWhen": [
+      "Top of a deal or project detail page, once per screen (State=Expanded)",
+      "Sticky bar while scrolling the deal page (State=Collapsed)",
+      "Web deal page using the same design widened (Platform=Web)"
+    ],
+    "dontUseWhen": [
+      "Deal cards in a feed or list: use CardDeal",
+      "Updates about the deal: use NewsCard",
+      "Generic screen headers: use AppBar",
+      "A separate desktop layout with breadcrumbs: keep Base card for both platforms"
+    ],
+    "partOf": [],
+    "contains": ["Header", "dealTags", "Tag", "Avatar", "IconButton"],
+    "keyProps": "Platform=Mobile/Web, State=Expanded/Collapsed, Has Subtitle, Has Lable, Has meta, Has developer, Direction=RTL/LTR",
+    "a11y": "Deal title is the page h1; overlay icon buttons need labels (Back, Share, Save) and contrast over the photo; gallery counter announced (1 of 5).",
+    "confidence": "high"
+  },
+  "3430:1350": {
+    "name": "NewsCard",
+    "page": "news-card",
+    "level": "organism",
+    "description": "Update card about a deal or project (status change, milestone, announcement): title and developer, update paragraph, StatusPill and last-updated date, in Plain feed, Boxed and Media (thumbnail) styles.",
+    "useWhen": [
+      "Updates feed or a deal's activity list (Style=Plain, underline separates items)",
+      "A single standalone update (Style=Boxed)",
+      "Richer updates with a photo (Style=Media)"
+    ],
+    "dontUseWhen": [
+      "The deal itself: use CardDeal or Base card (HeaderCard)",
+      "Swipeable visual updates on the deal page: use NewsCard / Poster Carousel",
+      "System alerts: use Alert or Banner"
+    ],
+    "partOf": [],
+    "contains": ["Content", "NewsCard / Meta", "StatusPill"],
+    "keyProps": "Has chevron, Has content, Style=Plain/Boxed/Media, Direction=RTL/LTR",
+    "a11y": "Link named by the title when tappable (drop the chevron otherwise); status text not colour only; date in Western digits.",
+    "confidence": "high"
+  },
+  "3429:917": {
+    "name": "NewsCard / Meta",
+    "page": "news-card",
+    "level": "molecule",
+    "description": "Footer line of NewsCard: StatusPill badge (for example Behind schedule) plus last-updated date.",
+    "useWhen": [
+      "Bottom of NewsCard; swap the StatusPill tone and label per update status"
+    ],
+    "dontUseWhen": [
+      "Status inside tables: use Table / Cell Type=Status",
+      "Poster cards: use NewsCard / Poster Actions"
+    ],
+    "partOf": ["NewsCard"],
+    "contains": ["StatusPill"],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "Date as a time element; status tone matched to meaning (warning = behind, success = on track).",
+    "confidence": "high"
+  },
+  "5291:746": {
+    "name": "NewsCard / Developer Logo",
+    "page": "news-card",
+    "level": "atom",
+    "description": "32x16 developer or issuer logo slot used in NewsCard / Poster Caption, single-colour glyphs.",
+    "useWhen": [
+      "Issuer logo above the poster title (Poster Caption Has logo on)"
+    ],
+    "dontUseWhen": [
+      "Safqah branding: use SafqahLogo",
+      "Developer rows on the deal page: use Avatar within Base card"
+    ],
+    "partOf": ["NewsCard / Poster Caption"],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Alt text is the developer name, or decorative if the name appears in text.",
+    "confidence": "high"
+  },
+  "5291:786": {
+    "name": "NewsCard / Poster Media",
+    "page": "news-card",
+    "level": "atom",
+    "description": "Full-bleed photo for NewsCard / Poster with the frost fade, scrim and progressive blur stack that keeps the caption readable.",
+    "useWhen": [
+      "Background of NewsCard / Poster; swap the photo on the Image layer"
+    ],
+    "dontUseWhen": [
+      "Deal card images: use CardDeal / Media",
+      "Carousel slides: use Carousel / Slide"
+    ],
+    "partOf": ["NewsCard / Poster"],
+    "contains": [],
+    "keyProps": "No properties (swap the image fill)",
+    "a11y": "Decorative; the blur guarantees contrast only in the lower third, so keep text there.",
+    "confidence": "high"
+  },
+  "5292:822": {
+    "name": "NewsCard / Poster Caption",
+    "page": "news-card",
+    "level": "molecule",
+    "description": "Text block over the poster media: optional issuer logo, title and description in inverse text.",
+    "useWhen": [
+      "Caption of NewsCard / Poster; one-line title and 2 to 3 lines of description"
+    ],
+    "dontUseWhen": [
+      "Text on light surfaces: use Content"
+    ],
+    "partOf": ["NewsCard / Poster"],
+    "contains": ["NewsCard / Developer Logo"],
+    "keyProps": "Title, Description, Has description, Has logo, Logo (instance swap), Direction=RTL/LTR",
+    "a11y": "Inverse text relies on the media blur; keep copy short so it stays in the contrast zone.",
+    "confidence": "high"
+  },
+  "5292:170000": {
+    "name": "NewsCard / Poster Actions",
+    "page": "news-card",
+    "level": "molecule",
+    "description": "Poster footer row: IssuanceStatusBadge (Investor) at the start (On track, Late, Construction completed) and a round open IconButton at the end.",
+    "useWhen": [
+      "Footer of NewsCard / Poster (Has status, Has action)"
+    ],
+    "dontUseWhen": [
+      "Classic NewsCard footer: use NewsCard / Meta"
+    ],
+    "partOf": ["NewsCard / Poster"],
+    "contains": ["IssuanceStatusBadge (Investor)", "IconButton"],
+    "keyProps": "Has status, Has action, Direction=RTL/LTR",
+    "a11y": "Icon button labelled Open update; status as text; arrow points up-left in RTL.",
+    "confidence": "high"
+  },
+  "5293:963": {
+    "name": "NewsCard / Poster",
+    "page": "news-card",
+    "level": "organism",
+    "description": "Portrait 280x479 visual update card about a deal or project: photo, last-updated tab, issuer logo, title, description, status and open action, meant to be swiped in a carousel.",
+    "useWhen": [
+      "Project updates on the deal page or home feed inside NewsCard / Poster Carousel",
+      "Construction milestones that benefit from a photo"
+    ],
+    "dontUseWhen": [
+      "Vertical feeds: use NewsCard (Style=Plain)",
+      "The deal itself: use CardDeal",
+      "Marketing promos: use Carousel (Type=Hero)"
+    ],
+    "partOf": ["NewsCard / Poster Carousel"],
+    "contains": ["NewsCard / Poster Media", "NewsCard / Poster Caption", "NewsCard / Poster Actions", "dealTags"],
+    "keyProps": "Has tag, Direction=RTL/LTR",
+    "a11y": "Keep the status and last-updated tab so it reads as an update; card link named by the title.",
+    "confidence": "high"
+  },
+  "5293:1456": {
+    "name": "NewsCard / Poster Carousel",
+    "page": "news-card",
+    "level": "organism",
+    "description": "Horizontal peek carousel of NewsCard / Poster cards at mobile content width: one full poster plus a peek of the next.",
+    "useWhen": [
+      "Project updates strip on the deal page or home, under a Section header"
+    ],
+    "dontUseWhen": [
+      "Generic featured content: use Carousel",
+      "Long chronological update lists: use NewsCard (Style=Plain)"
+    ],
+    "partOf": [],
+    "contains": ["NewsCard / Poster"],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "Swipe plus focusable cards; first card on the right in RTL; no auto-advance.",
+    "confidence": "high"
+  },
+  "3946:1112": {
+    "name": "MenuItem",
+    "page": "menu",
+    "level": "atom",
+    "description": "Action row of every menu: leading icon (or checkbox/radio indicator) and label, with optional submenu arrowhead and keyboard shortcut; destructive state in red.",
+    "useWhen": [
+      "Rows inside Menu, Dropdown menu, Action sheet, Command palette and other menu patterns",
+      "Destructive actions fenced below a divider (State=destructive)"
+    ],
+    "dontUseWhen": [
+      "Persistent page rows: use ListItem",
+      "Form field options: use Dropdown Item"
+    ],
+    "partOf": ["Menu"],
+    "contains": [],
+    "keyProps": "Label (text), Icon (instance swap), Has shortcut, Shortcut (text), Has submenu, State=default/hover/disabled/destructive, Direction=ltr/rtl",
+    "a11y": "role=menuitem (menuitemcheckbox/radio in selection menus); shortcut text stays LTR in its own node.",
+    "confidence": "high"
+  },
+  "3948:1086": {
+    "name": "MenuSectionHeader",
+    "page": "menu",
+    "level": "atom",
+    "description": "Muted label that titles a group of menu items.",
+    "useWhen": [
+      "Grouping items in Menu, Command palette or Bottom-sheet menu"
+    ],
+    "dontUseWhen": [
+      "Page region titles: use Section",
+      "Grouped list headers: use ActionList Has header"
+    ],
+    "partOf": ["Menu", "Command palette"],
+    "contains": [],
+    "keyProps": "Label (text), Direction=ltr/rtl",
+    "a11y": "Label the group (role=group with aria-labelledby); not focusable.",
+    "confidence": "high"
+  },
+  "3948:1177": {
+    "name": "Menu",
+    "page": "menu",
+    "level": "organism",
+    "description": "Floating surface listing commands (Edit, Share, Delete) with section headers and a divider before the destructive action; the base every anchored menu reuses. Menus fire commands, they do not pick form values.",
+    "useWhen": [
+      "Overflow actions on a card, row or header",
+      "Context actions grouped by section",
+      "Base for building Dropdown menu, Sort menu and Filter menu"
+    ],
+    "dontUseWhen": [
+      "Picking a value for a form field: use Select or Multi-select field",
+      "Free-form floating content (text, links, close): use Popover",
+      "Persistent in-page rows: use ActionList",
+      "Long menus on mobile: use Action sheet or Bottom-sheet menu"
+    ],
+    "partOf": ["Dropdown menu", "Cascading submenu"],
+    "contains": ["MenuItem", "MenuSectionHeader", "Divider"],
+    "keyProps": "Direction=ltr/rtl",
+    "a11y": "role=menu, arrow-key navigation, Esc closes and returns focus to the trigger, outside click dismisses.",
+    "confidence": "high"
+  },
+  "3955:1905": {
+    "name": "MenuTrigger",
+    "page": "menu",
+    "level": "atom",
+    "description": "The button that opens a menu, in kebab, meatball, hamburger, bento, arrow or split glyphs; nests IconButton (split nests a Button plus an arrow IconButton).",
+    "useWhen": [
+      "Opening an overflow Menu on cards, rows or headers (Glyph=kebab / meatball)",
+      "Split button with a primary action and more options (Glyph=split)"
+    ],
+    "dontUseWhen": [
+      "Expanding the navigation rail: use Icon / nav-toggle-menu",
+      "Plain single actions: use IconButton or Button"
+    ],
+    "partOf": ["Dropdown menu"],
+    "contains": ["IconButton", "Button"],
+    "keyProps": "Glyph=kebab/meatball/hamburger/bento/arrow/split, Direction=ltr/rtl",
+    "a11y": "aria-haspopup=menu, aria-expanded, and an aria-label such as More options.",
+    "confidence": "high"
+  },
+  "3966:2455": {
+    "name": "Dropdown menu",
+    "page": "menu",
+    "level": "organism",
+    "description": "MenuTrigger plus Menu anchored with a placement (bottom/top x start/end); also the preset for split-button, overflow and context menus.",
+    "useWhen": [
+      "Web and back-office overflow actions anchored to a button",
+      "Header actions menus (export, share, settings)"
+    ],
+    "dontUseWhen": [
+      "Choosing a form value: use Select",
+      "Mobile: use Action sheet",
+      "Rich content panels: use Popover"
+    ],
+    "partOf": [],
+    "contains": ["MenuTrigger", "Menu"],
+    "keyProps": "Placement=bottom-start/bottom-end/top-start/top-end, Direction=ltr/rtl",
+    "a11y": "Focus moves into the menu on open and back to the trigger on close; start/end flip in RTL.",
+    "confidence": "high"
+  },
+  "3968:2683": {
+    "name": "Cascading submenu",
+    "page": "menu",
+    "level": "organism",
+    "description": "A child Menu flowing off a MenuItem with a submenu arrowhead, opening toward the end or start edge.",
+    "useWhen": [
+      "Desktop menus with a second level such as Export > CSV / PDF"
+    ],
+    "dontUseWhen": [
+      "Mobile: flatten into a Bottom-sheet menu",
+      "Deep navigation: use NavigationRail or Drawer"
+    ],
+    "partOf": [],
+    "contains": ["Menu", "MenuItem"],
+    "keyProps": "Open-direction=end/start, Direction=ltr/rtl",
+    "a11y": "Right/left arrow (mirrored in RTL) opens and closes the submenu; aria-haspopup on the parent item.",
+    "confidence": "high"
+  },
+  "3969:2795": {
+    "name": "Sort menu",
+    "page": "menu",
+    "level": "organism",
+    "description": "Selection menu of radio MenuItems for the sort field plus an ascending/descending order.",
+    "useWhen": [
+      "Sorting deal lists or table views (by return, date, amount)"
+    ],
+    "dontUseWhen": [
+      "Sorting a single table column: use Table / HeaderCell Sort",
+      "Filtering: use Filter menu"
+    ],
+    "partOf": [],
+    "contains": ["MenuItem", "Radio Indicator"],
+    "keyProps": "Order=asc/desc, Direction=ltr/rtl",
+    "a11y": "menuitemradio items with aria-checked; announce the chosen order.",
+    "confidence": "high"
+  },
+  "3970:2937": {
+    "name": "Filter menu",
+    "page": "menu",
+    "level": "organism",
+    "description": "Selection menu of checkbox MenuItems with an Apply / Clear footer for filtering a list or table.",
+    "useWhen": [
+      "Compact filters on back-office tables or deal lists (asset type, status)"
+    ],
+    "dontUseWhen": [
+      "Many filter groups: use a trailing Drawer with Sheet Content / Form",
+      "Inline in-page choices: use SelectionList (Mode=Multi)"
+    ],
+    "partOf": [],
+    "contains": ["MenuItem", "Checkbox Indicator", "Button"],
+    "keyProps": "Direction=ltr/rtl",
+    "a11y": "menuitemcheckbox items; Apply returns focus to the trigger and announces the result count.",
+    "confidence": "high"
+  },
+  "3972:2887": {
+    "name": "Command palette",
+    "page": "menu",
+    "level": "organism",
+    "description": "Command-K search over commands: a Combobox field header with grouped MenuItem results and a no-results state.",
+    "useWhen": [
+      "Power-user search across back-office actions and records"
+    ],
+    "dontUseWhen": [
+      "Investor mobile app: use Search Input",
+      "Picking a single form value: use Combobox Field"
+    ],
+    "partOf": [],
+    "contains": ["Combobox Field", "MenuSectionHeader", "MenuItem"],
+    "keyProps": "State=results/no-results, Direction=ltr/rtl",
+    "a11y": "Combobox pattern with aria-activedescendant; results count and no-results announced.",
+    "confidence": "high"
+  },
+  "3981:2871": {
+    "name": "Multi-select field",
+    "page": "menu",
+    "level": "organism",
+    "description": "Form field that holds several selected values shown as chips, a count or text, paired with a checkbox menu with select-all and clear-all.",
+    "useWhen": [
+      "Choosing several values in a back-office form or filter (regions, asset types)"
+    ],
+    "dontUseWhen": [
+      "A single value: use Select or Combobox Field",
+      "Few options visible on the page: use Checkbox Group or SelectionList (Mode=Multi)"
+    ],
+    "partOf": [],
+    "contains": ["Tag", "MenuItem", "Checkbox Indicator"],
+    "keyProps": "Value-display=chips/count/text, Direction=ltr/rtl",
+    "a11y": "Field has a visible label; chips removable by keyboard; selected count announced.",
+    "confidence": "high"
+  },
+  "3983:2895": {
+    "name": "Autocomplete",
+    "page": "menu",
+    "level": "organism",
+    "description": "Combobox field with a suggestions list that highlights the matching text, with a loading state.",
+    "useWhen": [
+      "Searching a long list as the user types (bank name, investor, city)"
+    ],
+    "dontUseWhen": [
+      "Short fixed option lists: use Select",
+      "Global search screens: use Search Input with Search Dropdown"
+    ],
+    "partOf": [],
+    "contains": ["Combobox Field", "MenuItem"],
+    "keyProps": "Loading=idle/loading, Direction=ltr/rtl",
+    "a11y": "ARIA combobox with listbox; loading announced; the loading row still needs a live spinner.",
+    "confidence": "high"
+  },
+  "3984:3215": {
+    "name": "Action sheet",
+    "page": "menu",
+    "level": "organism",
+    "description": "Mobile bottom-anchored list of actions with a destructive option and Cancel; the phone form of a Menu.",
+    "useWhen": [
+      "Overflow actions on mobile (share deal, cancel reservation)",
+      "Confirming a destructive choice among a few actions"
+    ],
+    "dontUseWhen": [
+      "Desktop: use Dropdown menu",
+      "Tasks with content or inputs: use BottomSheet",
+      "One-line confirm: use Dialog"
+    ],
+    "partOf": [],
+    "contains": ["MenuItem", "Button"],
+    "keyProps": "Direction=ltr/rtl",
+    "a11y": "Modal dialog semantics; Cancel always present and focusable; destructive action labelled clearly.",
+    "confidence": "high"
+  },
+  "3984:3216": {
+    "name": "Bottom-sheet menu",
+    "page": "menu",
+    "level": "organism",
+    "description": "Mobile menu on the BottomSheet surface: grabber, section header and a MenuItem list.",
+    "useWhen": [
+      "Longer grouped menus on mobile",
+      "Flattened submenus from desktop"
+    ],
+    "dontUseWhen": [
+      "Choosing an option with a selected state: use SelectionList in a BottomSheet",
+      "Desktop: use Dropdown menu"
+    ],
+    "partOf": [],
+    "contains": ["DragHandle", "MenuSectionHeader", "MenuItem"],
+    "keyProps": "Direction=ltr/rtl",
+    "a11y": "Dialog with menu inside; close action besides drag.",
+    "confidence": "high"
+  },
+  "3985:3145": {
+    "name": "FAB speed-dial",
+    "page": "menu",
+    "level": "organism",
+    "description": "Floating action button that expands into labelled action rows.",
+    "useWhen": [
+      "A few related create actions from one floating button on mobile"
+    ],
+    "dontUseWhen": [
+      "One primary action: use FAB / Standard or FAB / Extended",
+      "Dashboard shortcuts: use ActionTile"
+    ],
+    "partOf": [],
+    "contains": ["FAB / Standard", "MenuItem"],
+    "keyProps": "State=collapsed/expanded, Direction=ltr/rtl",
+    "a11y": "FAB has aria-expanded; each action labelled; Esc collapses.",
+    "confidence": "high"
+  },
+  "3989:3225": {
+    "name": "Long-press preview",
+    "page": "menu",
+    "level": "organism",
+    "description": "Long-press context pattern: a content preview card with a contextual action list.",
+    "useWhen": [
+      "Quick actions on a deal or update card via long press on mobile"
+    ],
+    "dontUseWhen": [
+      "As the only path to an action: also offer a visible MenuTrigger",
+      "Desktop: use Dropdown menu (context preset)"
+    ],
+    "partOf": [],
+    "contains": ["MenuItem"],
+    "keyProps": "Direction=ltr/rtl",
+    "a11y": "Long press is not discoverable or accessible to all; mirror every action in a visible menu.",
+    "confidence": "medium"
+  }
+}

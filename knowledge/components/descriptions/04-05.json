@@ -1,0 +1,2213 @@
+{
+  "1306:63": {
+    "name": "Tag",
+    "page": "tag",
+    "level": "atom",
+    "description": "Small static pill that labels a category or short metadata with one of six semantic tones (sector, investor classification, document type, risk level). It is display-only and never interactive.",
+    "useWhen": [
+      "Sector or asset-class label on a CardDeal, such as عقاري",
+      "Investor classification or document type in a list row or Table / Cell",
+      "Risk level or short metadata next to a deal title",
+      "Up to one Style=filled primary tag plus subtle secondary tags on a card"
+    ],
+    "dontUseWhen": [
+      "A deal or issuance lifecycle status (Raising, Funded, Late, Defaulted): use IssuanceStatusBadge (Investor)",
+      "An attribute label such as Verified, KYC complete or Sharia-certified with an optional icon: use StatusPill",
+      "A filter or selection the user can remove: use Tag Removable",
+      "A deal tier or marketing ribbon (Premium, Basic, Closed): use dealTags",
+      "Anything tappable that navigates: use Button or Link"
+    ],
+    "partOf": [
+      "Tag Group",
+      "CardDeal"
+    ],
+    "contains": [],
+    "keyProps": "Label (text); Tone=neutral|info|success|warning|error|brand; Size=lg|md|sm; Style=filled|subtle; Direction=ltr|rtl",
+    "a11y": "Meaning must live in the Label text, never in tone color alone (WCAG 1.4.1); read as plain text, no role=button.",
+    "confidence": "high"
+  },
+  "1311:63": {
+    "name": "Tag Removable",
+    "page": "tag",
+    "level": "molecule",
+    "description": "Tag with a built-in close X for dismissible filter chips and applied selections, for example an applied sector filter above the deals list. Always subtle style so the X stays visible.",
+    "useWhen": [
+      "Applied filters in a deals search or filter header (Sector: عقاري)",
+      "Chosen values in a multi-select field shown as chips",
+      "User-picked interests or segments that can be cleared one by one"
+    ],
+    "dontUseWhen": [
+      "A static label the user cannot remove: use Tag",
+      "A status or attribute label: use StatusPill",
+      "Selecting a Saudi region chip in a selector: use RegionChip inside ProvinceSelector",
+      "A toggle between options: use SegmentedControl_2 (or _3/_4/_5)"
+    ],
+    "partOf": [
+      "Tag Group"
+    ],
+    "contains": [
+      "Tag"
+    ],
+    "keyProps": "Label (text); Tone=neutral|info|success|warning|error|brand; Size=lg|md|sm; Direction=ltr|rtl",
+    "a11y": "The X is a button with an accessible name like \"Remove عقاري filter\"; make the whole tag the 24px minimum target at Size=sm.",
+    "confidence": "high"
+  },
+  "1313:89": {
+    "name": "Tag Group",
+    "page": "tag",
+    "level": "molecule",
+    "description": "Layout container that arranges two or more Tags inline, wrapped, or as the first three plus a +N overflow counter. Spacing between tags is fixed by the component.",
+    "useWhen": [
+      "Two or more tags together on a deal card (sector + type + risk), Layout=inline",
+      "A variable number of applied filters, Layout=wrap",
+      "Dense rows or table cells with many categories, Layout=overflow showing +N"
+    ],
+    "dontUseWhen": [
+      "A single label: use Tag on its own",
+      "Lifecycle status next to categories: place one IssuanceStatusBadge (Investor) separately, do not group it as a Tag",
+      "Wrap layout inside a horizontally scrolling Table / Cell: use Layout=overflow"
+    ],
+    "partOf": [
+      "CardDeal"
+    ],
+    "contains": [
+      "Tag",
+      "Tag Removable"
+    ],
+    "keyProps": "Layout=inline|wrap|overflow; Direction=ltr|rtl",
+    "a11y": "Expose as a list of labels; the +N counter needs an accessible name like \"4 more tags\" and Western digits.",
+    "confidence": "high"
+  },
+  "1322:63": {
+    "name": "Badge Dot",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Tiny colored dot with no text that signals presence or unread state, such as an online indicator or a new-activity mark on a tab.",
+    "useWhen": [
+      "Unread indicator on a TabBar item or notification bell",
+      "Presence dot (this is the dot AvatarWithStatus reuses)",
+      "\"Has updates\" mark on a list row where the count does not matter"
+    ],
+    "dontUseWhen": [
+      "Showing how many items are unread: use Badge Count",
+      "Any status that needs words (Approved, Funded): use StatusPill or IssuanceStatusBadge (Investor)",
+      "Presence on a user avatar: use AvatarWithStatus, which already composes the dot"
+    ],
+    "partOf": [
+      "AvatarWithStatus"
+    ],
+    "contains": [],
+    "keyProps": "Tone=neutral|info|success|warning|error|brand; Size=md|sm",
+    "a11y": "Decorative to screen readers on its own; the parent must announce the state in text, for example \"new notifications\".",
+    "confidence": "high"
+  },
+  "1324:63": {
+    "name": "Badge Count",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Small numeric counter pill (3, 12, 99+) anchored to an icon or tab to show how many items need attention. Direction flips its anchor corner.",
+    "useWhen": [
+      "Unread notification count on the bell or a TabBar item",
+      "Number of pending KYC tasks or documents on a menu entry",
+      "Count of new deal updates on a tab"
+    ],
+    "dontUseWhen": [
+      "Presence or unread without a number: use Badge Dot",
+      "A text status label: use StatusPill",
+      "A KPI number such as total invested: use Stat"
+    ],
+    "partOf": [
+      "TabBar"
+    ],
+    "contains": [],
+    "keyProps": "Count (text); Tone=neutral|info|success|warning|error|brand; Size=lg|md|sm; Direction=ltr|rtl",
+    "a11y": "Pair with an accessible label (\"3 unread notifications\"); cap at 99+ and keep Western digits.",
+    "confidence": "high"
+  },
+  "1485:151": {
+    "name": "IssuanceStatusBadge (Investor)",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Locked-copy lifecycle badge that shows investors where a deal (issuance) sits: Reserved, Raising/Confirmed, Fully Funded, Active, Matured, Repayment Due, Late, Defaulted, Completed and so on. Color and Arabic/English copy come from the Issuance Status Copy spec and use raw per-phase palettes on purpose.",
+    "useWhen": [
+      "Deal status on a CardDeal, portfolio card or investment history row seen by investors",
+      "Status in an Issuance Row or NewsCard / Poster Actions",
+      "Status label in push-notification previews or a deal header for investors"
+    ],
+    "dontUseWhen": [
+      "A developer-portal surface: use IssuanceStatusBadge (Developer)",
+      "Admin or Monitoring dashboards: use IssuanceStatusBadge (Internal)",
+      "Generic attributes outside the lifecycle (Verified, Premium, Expired): use StatusPill",
+      "Sector or category labels: use Tag",
+      "Deal tier or marketing ribbon (Premium, Basic, Closed tab): use dealTags",
+      "Showing Reimbursed or PendingDrawdown to investors: never; the resolver maps them to Completed and Fully Funded"
+    ],
+    "partOf": [
+      "CardDeal",
+      "Issuance Row",
+      "NewsCard / Poster Actions"
+    ],
+    "contains": [
+      "illustrations"
+    ],
+    "keyProps": "Status=Reserved|Confirmed|Funded|Active|Matured|Late|Defaulted|Funding Failed|Fully Funded|Completed|Partially Repaid|Private Reservation|Repayment Due|Written Off|Cancelled; Direction=LTR|RTL",
+    "a11y": "Status is carried by the label text (Arabic in RTL), never color alone; do not detach or recolor instances.",
+    "confidence": "high"
+  },
+  "1486:171": {
+    "name": "IssuanceStatusBadge (Developer)",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Lifecycle badge set for the developer portal, covering the 19 statuses developers see, including operational ones investors never see (ListingPreparation, PendingLaunch, PendingDrawdown \"Transfer in progress\", RepaymentMonitoring, Reimbursed \"Investors paid\").",
+    "useWhen": [
+      "Issuance list and detail screens in the developer portal",
+      "Developer-facing notifications about funding, drawdown and repayment",
+      "Showing a developer that Reimbursed means Safqah paid investors and their debt is not cleared"
+    ],
+    "dontUseWhen": [
+      "Any investor-facing surface: use IssuanceStatusBadge (Investor)",
+      "Admin-only states (OnHold, Dispute, Rejected): use IssuanceStatusBadge (Internal)",
+      "Non-lifecycle attributes: use StatusPill"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Status=ListingPreparation|PendingLaunch|Scheduled|BookBuilding|Raising|Funded|PendingDrawdown|Active|RepaymentMonitoring|Matured|RepaymentDue|Late|Defaulted|Reimbursed|Repaid|PartiallyRepaid|WrittenOff|Cancelled|FundingFailed; Direction=LTR|RTL",
+    "a11y": "Same as the investor set: label text carries the meaning; pick audience from the signed-in user, not from the data record.",
+    "confidence": "high"
+  },
+  "1487:107": {
+    "name": "IssuanceStatusBadge (Internal)",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Admin-only lifecycle badge for six internal states (ReadyForListing, PendingApproval, Rejected, ReservationsAllocated, OnHold, Dispute), English only and never user-facing.",
+    "useWhen": [
+      "Monitoring team dashboards and back-office issuance tables",
+      "Audit logs and ops tooling that track pre-listing review",
+      "Back-office Table / Cell status columns"
+    ],
+    "dontUseWhen": [
+      "Investor screens: use IssuanceStatusBadge (Investor)",
+      "Developer portal: use IssuanceStatusBadge (Developer)",
+      "Generic back-office states unrelated to issuance (user verified, ticket open): use StatusPill"
+    ],
+    "partOf": [
+      "Table / Cell"
+    ],
+    "contains": [],
+    "keyProps": "Status=ReadyForListing|PendingApproval|Rejected|ReservationsAllocated|OnHold|Dispute",
+    "a11y": "Label text is the semantic; ensure contrast on back-office table backgrounds.",
+    "confidence": "medium"
+  },
+  "1552:50025": {
+    "name": "illustrations",
+    "page": "status-issuance-badge",
+    "level": "atom",
+    "description": "Small isometric Isocon glyph set for deal lifecycle phases (Scheduled, Raising, Preparing, Active, Matured, Repayment due, In recovery, Defaulted), each with Right or Left alignment for RTL/LTR. It supplies the leading glyph inside IssuanceStatusBadge pills.",
+    "useWhen": [
+      "Leading glyph inside an IssuanceStatusBadge (Investor) or (Developer) variant",
+      "A small lifecycle-phase pictogram beside a status in a dense list",
+      "Matching the badge glyph when building a status legend"
+    ],
+    "dontUseWhen": [
+      "Large empty-state or onboarding artwork: use Illustrations (the full Isocon set on the EmptyState page)",
+      "Issuance list row status icons: use Issuance Status Icon",
+      "UI icons such as info, check or close: use the Syntropy icon set"
+    ],
+    "partOf": [
+      "IssuanceStatusBadge (Investor)",
+      "IssuanceStatusBadge (Developer)"
+    ],
+    "contains": [],
+    "keyProps": "Property 1=Scheduled|Defaulted|In recovery|Repayment due|Matured|Active|Preparing|Raising; Alignment=Right|Left",
+    "a11y": "Decorative; hide from screen readers because the badge label already states the status.",
+    "confidence": "medium"
+  },
+  "1372:2": {
+    "name": "Avatar",
+    "page": "avatar",
+    "level": "atom",
+    "description": "Single user or organization picture with a fallback chain Photo, Initials, Icon, Placeholder. Circle means a person (investor, admin), Rounded means an entity (developer company, bank, Safqah).",
+    "useWhen": [
+      "Investor or support agent in a comment, list row or account header (Shape=Circle)",
+      "Developer company logo on a deal or NewsCard (Shape=Rounded)",
+      "Profile header in settings at Size=xl",
+      "Placeholder while user data loads (Type=Placeholder)"
+    ],
+    "dontUseWhen": [
+      "Showing online/away presence: use AvatarWithStatus",
+      "Several committed investors: use AvatarStack",
+      "Loading a whole row or card layout: use SkeletonAvatar inside a Skeleton composition",
+      "Brand marks of partners: use SafqahLogo, MadaLogo or AbshirLogo"
+    ],
+    "partOf": [
+      "AvatarWithStatus",
+      "AvatarStack",
+      "ListItem"
+    ],
+    "contains": [],
+    "keyProps": "Type=Photo|Initials|Icon|Placeholder; Size=xs|sm|md|lg|xl; Shape=Circle|Rounded",
+    "a11y": "Photo needs alt text with the person or company name; Initials avatars expose the full name, not the letters.",
+    "confidence": "high"
+  },
+  "1374:14": {
+    "name": "AvatarWithStatus",
+    "page": "avatar",
+    "level": "molecule",
+    "description": "Avatar with a Badge Dot overlay showing online, away, busy or offline presence, at sm/md/lg only.",
+    "useWhen": [
+      "Support chat agent who is online now",
+      "Deal-room or chat participants where presence is actionable",
+      "Assigning a back-office reviewer who must be available"
+    ],
+    "dontUseWhen": [
+      "Past comments or activity feeds where live presence is misleading: use Avatar",
+      "Groups of users: use AvatarStack",
+      "Very small (xs) or hero (xl) avatars: use Avatar and state presence in text"
+    ],
+    "partOf": [],
+    "contains": [
+      "Avatar",
+      "Badge Dot"
+    ],
+    "keyProps": "Status=online|away|busy|offline; Size=sm|md|lg",
+    "a11y": "Announce presence in text (\"online\") alongside the dot; color alone is not enough.",
+    "confidence": "high"
+  },
+  "1382:53": {
+    "name": "AvatarStack",
+    "page": "avatar",
+    "level": "molecule",
+    "description": "Overlapping group of 2 to 4 avatars with a +N counter for overflow, used to show social proof such as how many investors committed to a deal.",
+    "useWhen": [
+      "\"12 investors committed\" on a deal page, always with a count label beside it",
+      "Reviewers or approvers of a document in back-office",
+      "Collaborators on a shared goal"
+    ],
+    "dontUseWhen": [
+      "A single person: use Avatar",
+      "The precise number as the main message: use Stat or KeyValue and keep the stack decorative",
+      "A full list of people: use List or ActionList"
+    ],
+    "partOf": [],
+    "contains": [
+      "Avatar"
+    ],
+    "keyProps": "Count=2|3|4|5+; Size=sm|md|lg",
+    "a11y": "The stack is decorative; the adjacent label carries the number for screen readers; +N uses Western digits.",
+    "confidence": "high"
+  },
+  "1624:162": {
+    "name": "Tooltip",
+    "page": "tooltip",
+    "level": "molecule",
+    "description": "Light bordered bubble with an arrow that appears on hover, focus or long-press to explain an icon, term or number. Supplementary only and never interactive.",
+    "useWhen": [
+      "Defining a financial term such as Sukuk or net return next to a label",
+      "Explaining how expected return or a fee is calculated (Size=md with title)",
+      "Naming an icon-only IconButton",
+      "Clarifying an info icon on a KeyValue row"
+    ],
+    "dontUseWhen": [
+      "Content with a link, button or form: use Popover",
+      "Information the investor must see to decide (fees, risk, minimum): show it inline or with Alert",
+      "Form validation errors: use the Form Field error state and Form Field Helper",
+      "Rich explanations on mobile: use BottomSheet",
+      "Hover readouts inside charts: use Chart / ChartTooltip"
+    ],
+    "partOf": [
+      "KeyValue"
+    ],
+    "contains": [],
+    "keyProps": "icon (instance swap); Placement=top|right|bottom|left; Size=sm|md; HasTitle=true|false; HasIcon=true|false; Direction=LTR|RTL",
+    "a11y": "role=tooltip linked by aria-describedby; show on keyboard focus and long-press; never hide critical info in it.",
+    "confidence": "high"
+  },
+  "1654:178": {
+    "name": "StatusPill",
+    "page": "status-pill",
+    "level": "atom",
+    "description": "Read-only pill that labels an attribute or state outside the deal lifecycle (Verified, KYC complete, Pending review, Sharia-certified, Featured) with a semantic tone and optional leading icon. It also serves as the delta chip inside Stat.",
+    "useWhen": [
+      "Investor profile attributes: KYC complete, Qualified investor, Verified",
+      "Document or request states: Draft, Pending, Approved, Rejected, Expired",
+      "Compliance markers on a deal: Sharia-certified, CMA-regulated",
+      "KPI delta inside Stat (↑ 12% success, ↓ 3% error)"
+    ],
+    "dontUseWhen": [
+      "Deal or issuance lifecycle statuses (Raising, Funded, Late, Defaulted): use IssuanceStatusBadge (Investor)",
+      "Plain categories like sector or document type: use Tag",
+      "Anything removable or toggleable: use Tag Removable",
+      "Deal tier ribbons (Premium, Basic): use dealTags",
+      "A field validation message: use Form Field Helper"
+    ],
+    "partOf": [
+      "Stat",
+      "CardDeal"
+    ],
+    "contains": [],
+    "keyProps": "icon (instance swap); Tone=neutral|info|success|warning|error|brand; Variant=subtle|solid; Size=sm|md; HasIcon=true|false; Direction=LTR|RTL",
+    "a11y": "Keep 1 to 3 words of text; the icon is decorative and the text conveys meaning; no hover or focus states.",
+    "confidence": "high"
+  },
+  "1678:598": {
+    "name": "Stat",
+    "page": "stat",
+    "level": "molecule",
+    "description": "One headline KPI with label, display-size value, optional icon, optional delta StatusPill and optional helper text, for example Total invested 1.2M with ↑ 12% vs last quarter.",
+    "useWhen": [
+      "Portfolio summary numbers: total invested, expected return, distributions received",
+      "Hero metric on a deal page such as expected return 12.5% (Size=lg)",
+      "A grid of 2 to 4 dashboard KPIs, one Stat each",
+      "Back-office overview tiles (active deals, investors)"
+    ],
+    "dontUseWhen": [
+      "Lookup details in a list (issuance ID, maturity, profit rate): use KeyValue",
+      "A value over time: use Chart / Line or Chart / KPI strip",
+      "A categorical status: use StatusPill",
+      "Funding progress toward a target: use ProgressBar",
+      "The portfolio balance header with hide toggle: use PortfolioHeader"
+    ],
+    "partOf": [],
+    "contains": [
+      "StatusPill"
+    ],
+    "keyProps": "Size=sm|md|lg; Layout=vertical|horizontal; HasIcon=true|false; HasDelta=true|false; HasHelperText=true|false; Direction=LTR|RTL",
+    "a11y": "Read label then value then delta; announce delta direction in words (\"up 12 percent\"), not by color.",
+    "confidence": "high"
+  },
+  "1739:122": {
+    "name": "KeyValue",
+    "page": "key-value",
+    "level": "molecule",
+    "description": "Body-size label and value pair for lookup facts in detail panels and receipts: issuance ID, profit rate, maturity, trustee, transfer reference. Optional trailing icon for info, copy, link or chevron.",
+    "useWhen": [
+      "Deal terms panel: profit rate, maturity period, minimum investment",
+      "Transaction or payout receipt rows: amount, date, reference number with copy icon",
+      "Investor profile or KYC details review",
+      "One row with Emphasis=strong for the key financial figure"
+    ],
+    "dontUseWhen": [
+      "The single hero number on a screen: use Stat",
+      "Multi-column data: use Table / Cell",
+      "Editable fields: use Input or Form Field",
+      "Tappable navigation rows with leading icons: use ListItem"
+    ],
+    "partOf": [
+      "ActionList"
+    ],
+    "contains": [],
+    "keyProps": "icon (instance swap); label (text); value (text); Layout=horizontal|stacked; Size=sm|md|lg; Emphasis=default|strong; HasIcon=true|false; Direction=LTR|RTL",
+    "a11y": "Expose label and value as one readable pair; trailing icon needs its own accessible name (Copy reference).",
+    "confidence": "high"
+  },
+  "1767:2": {
+    "name": "Divider",
+    "page": "divider",
+    "level": "atom",
+    "description": "One-pixel line, horizontal or vertical, solid or dashed, in subtle/default/strong tone, that separates rows or sections when whitespace is not enough.",
+    "useWhen": [
+      "Between KeyValue rows in a deal terms panel (Tone=subtle)",
+      "Between sections inside a card (Tone=default)",
+      "Vertical separator between toolbar groups or side-by-side figures",
+      "Dashed before an optional or collapsible details group"
+    ],
+    "dontUseWhen": [
+      "Separating whole containers: use a card boundary or spacing",
+      "First or last element inside a card: omit it, the card edge separates",
+      "Rows inside ListItem or ActionList: use their built-in divider option"
+    ],
+    "partOf": [
+      "KeyValue",
+      "Table / Cell"
+    ],
+    "contains": [],
+    "keyProps": "Orientation=horizontal|vertical; Variant=solid|dashed; Tone=subtle|default|strong",
+    "a11y": "Decorative; hide from assistive tech (role=presentation) unless it marks a real section break.",
+    "confidence": "high"
+  },
+  "1823:18": {
+    "name": "TimelineNode",
+    "page": "timeline",
+    "level": "atom",
+    "description": "Timeline dot with optional connectors above and below, in completed, active, upcoming or skipped state, with a swappable inner glyph (check, Riyal, clock).",
+    "useWhen": [
+      "The node inside each TimelineRow of a payout or deal lifecycle timeline",
+      "A compact horizontal step marker",
+      "Payment nodes by swapping the glyph to the Riyal icon"
+    ],
+    "dontUseWhen": [
+      "A complete sequence with titles and dates: use TimelineRow stacked, or DealTimeline for the deal page",
+      "Form step progress: use Stepper or StepIndicator",
+      "Failure states: skipped means bypassed, not failed"
+    ],
+    "partOf": [
+      "TimelineRow",
+      "DealTimeline"
+    ],
+    "contains": [],
+    "keyProps": "icon (instance swap); Orientation=vertical|horizontal; State=completed|active|upcoming|skipped; HasConnectorAbove=true|false; HasConnectorBelow=true|false",
+    "a11y": "State must also be stated in the row text (completed, current, upcoming); only one active node per timeline.",
+    "confidence": "high"
+  },
+  "1836:306": {
+    "name": "TimelineRow",
+    "page": "timeline",
+    "level": "molecule",
+    "description": "One event in a timeline: a TimelineNode beside title, date, optional description and optional amount. Stack rows with zero spacing to build a payout schedule, KYC progress or audit trail.",
+    "useWhen": [
+      "Distribution or repayment schedule rows: First distribution, date, 12,500 with Riyal icon",
+      "KYC verification steps with dates",
+      "Audit trail or deal history in back-office",
+      "Short horizontal step labels (Orientation=horizontal)"
+    ],
+    "dontUseWhen": [
+      "The full Safqah deal lifecycle module on a deal page: use DealTimeline",
+      "Wizard step progress without dates: use Stepper or Progress via ProgressSegment",
+      "A percentage toward a goal: use ProgressBar"
+    ],
+    "partOf": [
+      "DealTimeline"
+    ],
+    "contains": [
+      "TimelineNode"
+    ],
+    "keyProps": "title (text); date (text); description (text); amount (text); node (instance swap); Orientation=vertical|horizontal; HasAmount=true|false; HasDescription=true|false; HasDate=true|false; Direction=LTR|RTL",
+    "a11y": "Render the stacked rows as an ordered list; first row HasConnectorAbove=false, last row HasConnectorBelow=false.",
+    "confidence": "high"
+  },
+  "1873:2": {
+    "name": "ProgressBar",
+    "page": "progress-bar",
+    "level": "atom",
+    "description": "Linear bar that fills to a known percentage, with an optional label row (Label, Value). The core use is deal funding progress such as 78% funded, plus profile completion and uploads.",
+    "useWhen": [
+      "Funded % on a CardDeal or deal page (Tone=brand)",
+      "Profile or KYC completion percentage",
+      "File upload progress, switching Tone to success or error by outcome",
+      "Goal amount progress toward a target"
+    ],
+    "dontUseWhen": [
+      "Unknown duration: use ProgressBar_Indeterminate or a Spinner",
+      "Discrete steps (3 of 5 documents): use ProgressSegment composition",
+      "Named onboarding milestones with a reward: use MilestoneProgress",
+      "Dated stages: use TimelineRow",
+      "Loading a layout: use Skeleton primitives"
+    ],
+    "partOf": [
+      "CardDeal",
+      "File Item with Progress"
+    ],
+    "contains": [],
+    "keyProps": "Label (text); Value (text); showLabel (boolean); Size=sm|md|lg; Tone=brand|success|warning|error|neutral; Direction=LTR|RTL",
+    "a11y": "role=progressbar with aria-valuenow; Value text uses Western digits (70%); fill grows from the right in RTL.",
+    "confidence": "high"
+  },
+  "1919:434": {
+    "name": "MilestoneProgress",
+    "page": "progress-bar",
+    "level": "molecule",
+    "description": "Rich milestone bar with four swappable milestone icons, gradient fill, knob and a reward end-cap, built for profile completion journeys (profile, KYC, preferences, email) that end in a reward.",
+    "useWhen": [
+      "Home-screen profile completion hero card (Size=Large)",
+      "Compact pinned reminder of the same journey (Size=Small)",
+      "Reward moment after the last milestone (Value=fullGift, briefly fullParty)"
+    ],
+    "dontUseWhen": [
+      "Plain percentage such as funded %: use ProgressBar",
+      "More than four steps: use a ProgressSegment composition",
+      "Dated stages: use TimelineRow",
+      "Goal savings progress: use GoalTracker"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "icon1 (instance swap); icon2 (instance swap); icon3 (instance swap); icon4 (instance swap); Size=Small|Large; Value=0|25|50|75|100|fullGift|fullParty; Direction=LTR|RTL",
+    "a11y": "Announce milestone text (\"Step 2 of 4, verify identity\"); icons are decorative; respect reduced motion for fullParty.",
+    "confidence": "high"
+  },
+  "2327:2": {
+    "name": "ProgressBar_Indeterminate",
+    "page": "progress-bar",
+    "level": "atom",
+    "description": "Indeterminate linear bar that sweeps continuously (Phase 0 to 3 loop) when an operation is running but progress cannot be measured.",
+    "useWhen": [
+      "Waiting on a bank or Nafath/Abshir verification response with no progress signal",
+      "Top-of-screen activity bar while a list refreshes",
+      "Background sync where a bar fits better than a spinner"
+    ],
+    "dontUseWhen": [
+      "Known percentage: use ProgressBar",
+      "Short waits under 500ms or inside a button: use SpinnerRing or Button loading state",
+      "Layout loading: use SkeletonLine and SkeletonBlock"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=sm|md|lg; Phase=0|1|2|3",
+    "a11y": "role=progressbar without aria-valuenow plus a text status; stop animation under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "1878:2": {
+    "name": "ProgressSegment",
+    "page": "progress",
+    "level": "atom",
+    "description": "One filled or empty segment; several in a row form the segmented Progress pattern for discrete steps like 5 of 7 documents uploaded.",
+    "useWhen": [
+      "Onboarding or KYC wizard header showing step 2 of 5",
+      "Document checklist progress (5 of 7 uploaded)",
+      "Short multi-page forms with 3 to 10 steps"
+    ],
+    "dontUseWhen": [
+      "Continuous percentage: use ProgressBar",
+      "More than 10 steps: use ProgressBar with a count label",
+      "Steps with labels and navigation: use Stepper or StepIndicator",
+      "Named milestones with a reward: use MilestoneProgress"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "State=filled|empty; Size=sm|md",
+    "a11y": "Expose the group as one progressbar with text \"Step 3 of 5\"; reverse segment order in RTL.",
+    "confidence": "high"
+  },
+  "1950:212": {
+    "name": "Alert",
+    "page": "alert",
+    "level": "molecule",
+    "description": "Inline in-page message with tone icon, title, optional description, link, action chip and close, in Filled, Outlined or Plain style. It sits inside content and persists until dismissed or resolved.",
+    "useWhen": [
+      "Form submission errors at the top of a form (Tone=error)",
+      "Confirmation after an action that stays on screen, such as KYC documents received",
+      "Contextual guidance inside a flow with a Read more link",
+      "Warning with an action chip, such as an expired ID that needs renewal"
+    ],
+    "dontUseWhen": [
+      "Page-level or account-level announcement with a primary CTA (KYC reminder, maintenance): use Banner",
+      "Brief auto-dismissing confirmation: use Toast",
+      "A decision that must block the screen: use Dialog or Modal",
+      "Help text under one field: use Form Field Helper",
+      "Nothing to show after loading: use EmptyState"
+    ],
+    "partOf": [],
+    "contains": [
+      "Button"
+    ],
+    "keyProps": "title (text); description (text); linkText (text); buttonLabel (text); showDescription (boolean); showLink (boolean); showButton (boolean); showClose (boolean); closeIcon (instance swap); Tone=info|success|warning|error|neutral; Style=Filled|Outlined|Plain; Direction=LTR|RTL",
+    "a11y": "Error alerts use role=alert, others role=status; title text states the meaning; keep showClose unless the issue blocks.",
+    "confidence": "high"
+  },
+  "1964:142": {
+    "name": "Toast",
+    "page": "toast",
+    "level": "molecule",
+    "description": "Floating pill that confirms something just happened and auto-dismisses after a few seconds; no links or buttons by design.",
+    "useWhen": [
+      "Investment confirmed, bank details saved, reference copied",
+      "Connection lost or restored (Size=Small)",
+      "Non-blocking background failure such as preview failed to load"
+    ],
+    "dontUseWhen": [
+      "The user must act or read it later: use Alert",
+      "Page or account-level messages: use Banner",
+      "Blocking errors or confirmations: use Dialog",
+      "Long explanations: use Alert"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "title (text); description (text); showDescription (boolean); showClose (boolean); closeIcon (instance swap); Tone=info|success|warning|error|neutral; Size=Large|Small; Direction=LTR|RTL",
+    "a11y": "role=status with polite live region; keep visible long enough to read (about 4 to 6 s) and pause on focus.",
+    "confidence": "high"
+  },
+  "1993:212": {
+    "name": "Banner",
+    "page": "banner",
+    "level": "molecule",
+    "description": "Large page-level notification with icon circle, title, description, optional link, solid action pill and close, in Filled, Outlined or Elevated style. One per screen; also the preferred mobile RTL alert surface.",
+    "useWhen": [
+      "KYC or IBAN verification reminder at the top of home with a Verify action",
+      "Scheduled maintenance notice (showClose=false)",
+      "Account-level failure such as payout transfer failed with Retry",
+      "Feature announcement or upsell with a CTA (Style=Elevated)"
+    ],
+    "dontUseWhen": [
+      "Inline message inside a form or card: use Alert",
+      "Transient confirmation: use Toast",
+      "Required decision: use Dialog",
+      "Permanent compliance disclosure on a deal: use ShariaDisclosure",
+      "Two or more banners on one screen: keep one, demote the rest to Alert or Toast"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "title (text); description (text); linkText (text); buttonLabel (text); showDescription (boolean); showLink (boolean); showButton (boolean); showClose (boolean); closeIcon (instance swap); Show Title (boolean); Tone=info|success|warning|error|neutral; Style=Filled|Outlined|Elevated; Direction=LTR|RTL",
+    "a11y": "role=status (role=alert for error); keep close available except for system-critical messages; Show Title can hide the title for body-only banners.",
+    "confidence": "high"
+  },
+  "2066:434": {
+    "name": "EmptyState",
+    "page": "empty-state",
+    "level": "organism",
+    "description": "Centered placeholder that replaces content when a list or view has nothing to show after loading: illustration, title, description, optional primary Button and link. Tone default (nothing yet), search (no matches) or error (failed to load).",
+    "useWhen": [
+      "No investments yet in the portfolio, with a Browse deals button",
+      "Filters return no deals (Tone=search, Clear filters)",
+      "Deals failed to load (Tone=error, Retry)",
+      "No open deals right now, explained so it does not look broken"
+    ],
+    "dontUseWhen": [
+      "While data is still loading: use SkeletonLine, SkeletonBlock and friends",
+      "Feedback about an action the user just took: use Toast or Alert",
+      "A chart with no data inside a chart card: use Chart / States State=empty"
+    ],
+    "partOf": [
+      "Chart / States"
+    ],
+    "contains": [
+      "Empty Illustration / default / Default",
+      "Button",
+      "Link"
+    ],
+    "keyProps": "title (text); description (text); linkText (text); showDescription (boolean); showButton (boolean); showLink (boolean); Tone=default|search|error; Size=Default|Compact; Direction=LTR|RTL",
+    "a11y": "Title as a heading; the button must have a clear verb label; the illustration is decorative.",
+    "confidence": "high"
+  },
+  "2071:38797": {
+    "name": "Illustrations",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Library of 33 isometric Safqah Isocon illustrations (lifecycle phases plus themes like Bank, Face ID, Light bulb, Diamond, Info), each with Right or Left alignment, used as artwork in empty states and feature moments.",
+    "useWhen": [
+      "Swapping the illustration inside EmptyState to fit the context (Bank for no linked account)",
+      "Feature intro or onboarding cards that need a Safqah-style illustration",
+      "Face ID or biometric prompts (Face ID variants)",
+      "Pick Alignment to match the layout direction"
+    ],
+    "dontUseWhen": [
+      "Small status glyphs inside a status badge: use illustrations (on the badge page)",
+      "UI icons in buttons or lists: use the Syntropy icon set",
+      "Brand logos: use SafqahLogo"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [],
+    "keyProps": "Property 1=Scheduled|Defaulted|In recovery|Repayment due|Matured|Active|Preparing|Raising|Partial|Backspace|Cards|Stairs|Garbage - Delete|Data info alert|Hearts - Favorite|Info|Settings|Start|Web - Globe|Think|Puzzle|Flower|Diamond|Group hug|Group|Chosen checkmark|Light bulb|Arabic badge|Bank|Face ID standing|Face ID flat|Face ID deep|Face ID layered; Alignment=Right|Left",
+    "a11y": "Decorative; mark aria-hidden and let adjacent text carry the message.",
+    "confidence": "medium"
+  },
+  "2083:647": {
+    "name": "Empty Illustration / default / Default",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=default, Size=Default: the Scheduled camera Isocon on a concentric-circle backdrop (240px box, art scaled to 132px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=default Size=Default (nothing here yet)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2083:659": {
+    "name": "Empty Illustration / search / Default",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=search, Size=Default: the Preparing coin-grid Isocon on a concentric-circle backdrop (240px box, art scaled to 132px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=search Size=Default (no results match)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2083:671": {
+    "name": "Empty Illustration / error / Default",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=error, Size=Default: the Defaulted crossed-circle Isocon on a concentric-circle backdrop (240px box, art scaled to 132px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=error Size=Default (content failed to load)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2083:688": {
+    "name": "Empty Illustration / default / Compact",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=default, Size=Compact: the Scheduled camera Isocon on a concentric-circle backdrop (160px box, art scaled to 88px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=default Size=Compact (nothing here yet)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2083:700": {
+    "name": "Empty Illustration / search / Compact",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=search, Size=Compact: the Preparing coin-grid Isocon on a concentric-circle backdrop (160px box, art scaled to 88px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=search Size=Compact (no results match)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2083:712": {
+    "name": "Empty Illustration / error / Compact",
+    "page": "empty-state",
+    "level": "atom",
+    "description": "Source illustration slot for EmptyState Tone=error, Size=Compact: the Defaulted crossed-circle Isocon on a concentric-circle backdrop (160px box, art scaled to 88px). Editing it updates every EmptyState variant that uses it.",
+    "useWhen": [
+      "Comes automatically inside EmptyState Tone=error Size=Compact (content failed to load)",
+      "Updating the default artwork for that tone and size centrally"
+    ],
+    "dontUseWhen": [
+      "Placing illustrations directly in screens: use EmptyState, or Illustrations for standalone art",
+      "Other tone or size combinations: use the matching Empty Illustration / <tone> / <size> component"
+    ],
+    "partOf": [
+      "EmptyState"
+    ],
+    "contains": [
+      "Illustrations"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "medium"
+  },
+  "2156:2": {
+    "name": "SkeletonLine",
+    "page": "skeleton",
+    "level": "atom",
+    "description": "Pill-shaped grey placeholder for a text line while data loads, sized to the text it replaces (Small 12 to XLarge 28) at Full, 3Q, Half, Quarter or Auto width.",
+    "useWhen": [
+      "Deal title and subtitle lines while CardDeal data loads",
+      "Label, big value and delta lines of a Stat tile recipe",
+      "Rows of a transaction or payout list during fetch"
+    ],
+    "dontUseWhen": [
+      "After load with zero items: use EmptyState",
+      "Work with no predictable layout (submitting, processing): use SpinnerRing",
+      "Button submitting: use Button loading state",
+      "Measurable progress: use ProgressBar"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=Small|MD|Large|XLarge; Width=Full|3Q|Half|Quarter|Auto",
+    "a11y": "Container gets aria-busy=true and a single \"Loading\" label; shimmer off under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2158:2": {
+    "name": "SkeletonBlock",
+    "page": "skeleton",
+    "level": "atom",
+    "description": "Rectangular placeholder for images, charts, cards or buttons during loading, with Radius None to XLarge matching the real element.",
+    "useWhen": [
+      "Deal cover image area while CardDeal loads",
+      "Chart area placeholder before data arrives",
+      "Button or card surface shapes in a loading composition"
+    ],
+    "dontUseWhen": [
+      "Text lines: use SkeletonLine",
+      "Round icons or dots: use SkeletonCircle",
+      "Avatars: use SkeletonAvatar",
+      "Chart card that is loading inside its own chrome: use Chart / States State=loading"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Radius=None|Small|Medium|Large|XLarge",
+    "a11y": "Decorative inside an aria-busy container; match the real size to avoid layout shift.",
+    "confidence": "high"
+  },
+  "2158:3": {
+    "name": "SkeletonCircle",
+    "page": "skeleton",
+    "level": "atom",
+    "description": "Circular placeholder from 16 to 72px for icons, status dots or small round elements while loading.",
+    "useWhen": [
+      "Icon slots in list rows or ActionTile grids during loading",
+      "Small round markers in a loading layout",
+      "Round elements up to 72px"
+    ],
+    "dontUseWhen": [
+      "User or company avatars: use SkeletonAvatar",
+      "Text: use SkeletonLine"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL|XXL",
+    "a11y": "Decorative inside an aria-busy container.",
+    "confidence": "high"
+  },
+  "2158:4": {
+    "name": "SkeletonAvatar",
+    "page": "skeleton",
+    "level": "atom",
+    "description": "Avatar-shaped placeholder at S, M, L in Circle (people) or Square (organizations) while profile data loads.",
+    "useWhen": [
+      "Avatar slot of a comment or notification row recipe",
+      "Developer company logo slot (Shape=Square) on a loading deal card",
+      "Account header loading"
+    ],
+    "dontUseWhen": [
+      "Generic round icons: use SkeletonCircle",
+      "A loaded user without a photo: use Avatar Type=Initials",
+      "Avatar data loading inside Avatar itself: Avatar Type=Placeholder is also valid"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=S|M|L; Shape=Circle|Square",
+    "a11y": "Decorative inside an aria-busy container.",
+    "confidence": "high"
+  },
+  "2188:2": {
+    "name": "SpinnerRing",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: the canonical Syntropy spinner: a 270 degree brand-green arc that rotates. Use it for about 95% of indeterminate waits; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Inline status like fetching deals next to a label (Size=S)",
+      "Centered in a Modal or BottomSheet while an investment processes (Size=L)",
+      "Small indicator in a dense row (Size=XS)"
+    ],
+    "dontUseWhen": [
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:6": {
+    "name": "SpinnerPulseRings",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: three concentric rings expanding and fading, reading as scanning or detecting. Reserve for scanning or polling contexts; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Waiting for a Face ID or document scan result",
+      "Polling a bank or Nafath verification status",
+      "Searching for nearby or linked accounts"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:3": {
+    "name": "SpinnerDotOrbit",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: three dots orbiting with fading trails. For chat and messaging contexts; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Support chat waiting for an agent",
+      "Message sending state in a conversation"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:4": {
+    "name": "SpinnerWaveBars",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: five bars in an equalizer wave. For audio or media contexts; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Voice note recording or playback buffering",
+      "Video or audio content loading in a learning card"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:5": {
+    "name": "SpinnerBouncingDots",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: three dots bouncing in sequence, a typing indicator. For typing or AI-response-pending states; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Support agent or assistant is typing",
+      "AI answer pending in a help chat bubble"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:7": {
+    "name": "SpinnerSquareMorph",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: a rotating rounded square, a non-circular alternative to Ring. When the surrounding UI is full of circles; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "A surface dense with circular elements where Ring would blend in",
+      "A distinctive loader for one consistent product surface"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:8": {
+    "name": "SpinnerHourglass",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: a rotating hourglass that signals time passing. For deliberate, slower waits; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "Large document upload processing",
+      "Generating a statement or report that takes a few seconds"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2188:9": {
+    "name": "SpinnerSafqahBrand",
+    "page": "loader",
+    "level": "atom",
+    "description": "Indeterminate loader: three stacked coin discs with the top coin rising, the branded Safqah loader. Reserve for branded full-screen moments; pick one spinner style per surface and keep it consistent.",
+    "useWhen": [
+      "App boot or after sign-in (Size=XL)",
+      "Post-investment confirmation transition",
+      "Onboarding transitions"
+    ],
+    "dontUseWhen": [
+      "General-purpose waiting: use SpinnerRing",
+      "Loading a list, card or grid with known shape: use SkeletonLine and SkeletonBlock",
+      "Measurable progress or waits over 10 seconds: use ProgressBar",
+      "A button that is submitting: use Button loading state"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=XS|S|M|L|XL; Phase=0|1|2|3. Phase is internal animation, leave at 0",
+    "a11y": "role=status with a text label (\"Loading\"); show only after 200ms; static under prefers-reduced-motion.",
+    "confidence": "high"
+  },
+  "2359:2": {
+    "name": "Dialog",
+    "page": "dialog",
+    "level": "organism",
+    "description": "Centered modal card that pauses the screen for one considered decision: optional tone icon or hero image, title, description, optional content slot, Cancel and Confirm. Tone=destructive gives a red confirm for irreversible actions.",
+    "useWhen": [
+      "Confirm withdrawing or cancelling a reservation or investment (Tone=destructive, confirm label Withdraw)",
+      "Acknowledge a regulatory or Sharia disclaimer before continuing (showCancel=false)",
+      "Celebrate a completed investment with a hero image (showImage=true)",
+      "Small picker or form that does not need its own screen (showContent=true)"
+    ],
+    "dontUseWhen": [
+      "Non-blocking feedback: use Toast or Banner",
+      "Hints or term definitions: use Tooltip, or Popover for interactive ones",
+      "Mobile bottom-anchored choices or long content: use BottomSheet or Action sheet",
+      "Multi-step flows: use a full screen",
+      "Marketing interruptions: never use Dialog"
+    ],
+    "partOf": [],
+    "contains": [
+      "Button",
+      "IconButton"
+    ],
+    "keyProps": "Title (text); Description (text); showIcon (boolean); showClose (boolean); showCancel (boolean); showDescription (boolean); showImage (boolean); showContent (boolean); Size=sm|md|lg; Tone=default|destructive; Direction=LTR|RTL",
+    "a11y": "role=dialog aria-modal with focus trapped and returned; Esc and the close X act as Cancel; confirm label is a specific verb.",
+    "confidence": "high"
+  },
+  "3927:1106": {
+    "name": "Popover",
+    "page": "popover",
+    "level": "molecule",
+    "description": "Click or tap anchored floating panel with title, close, body and an action or link, built on the Tooltip bubble and arrow. Non-blocking: dismiss on outside tap or Esc.",
+    "useWhen": [
+      "Explaining Qualified investor with a Learn more link next to a tier label",
+      "Quick filter or small form anchored to a toolbar button on web or back-office",
+      "Confirm-in-place for a minor action",
+      "Contextual help that needs a link"
+    ],
+    "dontUseWhen": [
+      "Passive hover hint with text only: use Tooltip",
+      "A list of actions: use Menu",
+      "A required decision: use Dialog or Modal",
+      "On phones or heavy content: use BottomSheet"
+    ],
+    "partOf": [],
+    "contains": [
+      "Button",
+      "IconButton"
+    ],
+    "keyProps": "Placement=top|right|bottom|left; Direction=ltr|rtl",
+    "a11y": "Trigger has aria-expanded and aria-controls; move focus into the panel on open and back on close; Esc closes.",
+    "confidence": "high"
+  },
+  "4102:1065": {
+    "name": "Chart / Gridlines",
+    "page": "chart",
+    "level": "atom",
+    "description": "Background gridlines for a plot area (horizontal or vertical, sparse or default density) drawn in the neutral border/subtle token so they recede behind data. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Value gridlines behind bar, line or area plots",
+      "Sparse density on mobile or small cards"
+    ],
+    "dontUseWhen": [
+      "Highlighting a target or average value: use Chart / ReferenceLine",
+      "Hover guides: use Chart / CrosshairGuide"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=horizontal|vertical; Density=sparse|default",
+    "a11y": "Decorative; aria-hidden.",
+    "confidence": "high"
+  },
+  "4102:1138": {
+    "name": "Chart / Axis",
+    "page": "chart",
+    "level": "atom",
+    "description": "X or Y axis with ticks and labels in neutral tokens, with full, abbreviated or rotated label behavior; in RTL the y-axis moves right while time still runs left to right. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Time axis of a returns or payout chart (Orientation=x)",
+      "Value axis with abbreviated labels such as 25k, 50k (Orientation=y)",
+      "Rotated labels when category names are long"
+    ],
+    "dontUseWhen": [
+      "Highlighting the hovered tick: use Chart / AxisTickActive",
+      "Sparklines in KPI rows: omit axes and use Chart / Sparkline"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=LTR|RTL; Orientation=x|y; LabelBehavior=full|abbreviated|rotated",
+    "a11y": "Axis labels must also exist in the data table or summary offered to screen readers; Western digits.",
+    "confidence": "high"
+  },
+  "4103:1058": {
+    "name": "Chart / ReferenceLine",
+    "page": "chart",
+    "level": "atom",
+    "description": "Horizontal or vertical solid or dashed line marking a meaningful value such as a target return, average, or today. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Target funding amount or expected return line on a chart",
+      "Zero baseline in a gain/loss chart",
+      "A vertical line marking today or maturity date"
+    ],
+    "dontUseWhen": [
+      "General background grid: use Chart / Gridlines",
+      "Hover guides: use Chart / CrosshairGuide or Chart / Crosshair"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=LTR|RTL; Orientation=h|v; Style=solid|dashed",
+    "a11y": "Label the line in text (Target 12%); do not rely on dash style alone.",
+    "confidence": "high"
+  },
+  "4103:1067": {
+    "name": "Chart / Crosshair",
+    "page": "chart",
+    "level": "atom",
+    "description": "Crosshair overlay on x, y or both axes showing the pointer position across the plot. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Precise reading of price or value charts such as Candlestick on desktop",
+      "Dense scatter plots where both axes matter"
+    ],
+    "dontUseWhen": [
+      "Standard hover on one point: use Chart / HoverIndicator",
+      "Static reference values: use Chart / ReferenceLine"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=LTR|RTL; Axis=x|y|both",
+    "a11y": "Pointer-only aid; provide keyboard point navigation with announced values.",
+    "confidence": "high"
+  },
+  "4104:1068": {
+    "name": "Chart / Legend",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Series key with color swatches and labels, horizontal or vertical, mirrored in RTL; hidden series appear struck through. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Multi-series charts such as revenue, costs, profit",
+      "Stacked or donut charts where segments need names"
+    ],
+    "dontUseWhen": [
+      "Single-series charts: label the chart title instead",
+      "Donut with exact values: use a labelled list (Chart / Donut shows values)"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=LTR|RTL; Orientation=horizontal|vertical",
+    "a11y": "Legend items are text; if they toggle series they must be buttons with pressed state.",
+    "confidence": "high"
+  },
+  "4104:1128": {
+    "name": "Chart / ChartTooltip",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Hover readout card for charts showing period, series swatch, value and Riyal icon, in single or multi-series mode with an optional Total (الإجمالي) row. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Hovering a point in a returns line chart (Mode=single)",
+      "Group hover in stacked or multi-series charts (Mode=multi-series, ShowTotal=true)"
+    ],
+    "dontUseWhen": [
+      "Explaining a UI term: use Tooltip",
+      "Interactive panels: use Popover"
+    ],
+    "partOf": [
+      "Chart / HoverIndicator",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Direction=LTR|RTL; Mode=single|multi-series; ShowTotal=true|false",
+    "a11y": "Values announced via live region or focusable points; Western digits and Riyal icon labelled as SAR.",
+    "confidence": "high"
+  },
+  "4105:1306": {
+    "name": "Chart / ChartContainer",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Chart card shell with title, subtitle, period selector, plot area and legend, with booleans to toggle grid, axis, legend, tooltip and data labels; comfortable or compact density. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Wrapping any chart in a dashboard or portfolio card",
+      "Compact density in a back-office grid of charts"
+    ],
+    "dontUseWhen": [
+      "A single headline number without plot: use Stat",
+      "Loading, empty or error state of a chart card: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / Gridlines",
+      "Chart / Axis",
+      "Chart / Legend",
+      "Chart / ChartTooltip"
+    ],
+    "keyProps": "showGrid (boolean); showAxis (boolean); showLegend (boolean); showTooltip (boolean); showDataLabels (boolean); Density=comfortable|compact; Direction=LTR|RTL",
+    "a11y": "Title as heading; provide a text summary or data table alternative for the plotted data.",
+    "confidence": "high"
+  },
+  "4107:1314": {
+    "name": "Chart / States",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Chart card states: default, loading (grey bars plus spinner), empty (no items yet with button) and error (couldn't load chart with Retry), in LTR and RTL. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Chart data still fetching (State=loading)",
+      "No returns or payouts yet to plot (State=empty)",
+      "Chart request failed (State=error, Retry)"
+    ],
+    "dontUseWhen": [
+      "A whole page with no content: use EmptyState",
+      "A whole page loading: use Skeleton primitives"
+    ],
+    "partOf": [],
+    "contains": [
+      "EmptyState",
+      "SpinnerRing"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=default|loading|empty|error",
+    "a11y": "Loading sets aria-busy; error text and Retry button must be reachable by keyboard.",
+    "confidence": "high"
+  },
+  "4108:1351": {
+    "name": "Chart / Bar",
+    "page": "chart",
+    "level": "atom",
+    "description": "Plotted bar marks only (no chrome) in vertical or horizontal layout, single, grouped, stacked or 100% stacked, in green shades. A building block that the full chart organisms compose; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Composing a custom chart inside Chart / ChartContainer when the ready Chart / Bar organism does not fit",
+      "Showing the mark styles in specs for engineering (charts render in code with Recharts or D3)"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, legend and hover: use the Chart / Bar organism (Direction x State set)",
+      "A tiny inline trend: use Chart / Sparkline",
+      "Categorical red/green for gain and loss: never; use vivid vs dark green"
+    ],
+    "partOf": [
+      "Chart / Bar",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Layout=vertical|horizontal; Grouping=single|grouped|stacked|stacked100",
+    "a11y": "Decorative on its own; the chart must offer a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4109:1337": {
+    "name": "Chart / Line",
+    "page": "chart",
+    "level": "atom",
+    "description": "Plotted line marks only (no chrome), linear, smooth or stepped, single or multi-series. A building block that the full chart organisms compose; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Composing a custom chart inside Chart / ChartContainer when the ready Chart / Line organism does not fit",
+      "Showing the mark styles in specs for engineering (charts render in code with Recharts or D3)"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, legend and hover: use the Chart / Line organism (Direction x State set)",
+      "A tiny inline trend: use Chart / Sparkline",
+      "Categorical red/green for gain and loss: never; use vivid vs dark green"
+    ],
+    "partOf": [
+      "Chart / Line",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Curve=linear|smooth|stepped; Series=single|multi",
+    "a11y": "Decorative on its own; the chart must offer a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4109:1351": {
+    "name": "Chart / Area",
+    "page": "chart",
+    "level": "atom",
+    "description": "Plotted area marks only (no chrome), single, stacked or 100% stacked, with tinted green fills. A building block that the full chart organisms compose; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Composing a custom chart inside Chart / ChartContainer when the ready Chart / Area organism does not fit",
+      "Showing the mark styles in specs for engineering (charts render in code with Recharts or D3)"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, legend and hover: use the Chart / Area organism (Direction x State set)",
+      "A tiny inline trend: use Chart / Sparkline",
+      "Categorical red/green for gain and loss: never; use vivid vs dark green"
+    ],
+    "partOf": [
+      "Chart / Area",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Grouping=single|stacked|stacked100",
+    "a11y": "Decorative on its own; the chart must offer a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4110:1267": {
+    "name": "Chart / Pie",
+    "page": "chart",
+    "level": "atom",
+    "description": "Pie or donut ring marks only, in green shades, for share of a whole with 6 slices or fewer. A building block that the full chart organisms compose; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Composing a custom chart inside Chart / ChartContainer when the ready Chart / Donut organism does not fit",
+      "Showing the mark styles in specs for engineering (charts render in code with Recharts or D3)"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, legend and hover: use the Chart / Donut organism (Direction x State set)",
+      "A tiny inline trend: use Chart / Sparkline",
+      "Categorical red/green for gain and loss: never; use vivid vs dark green"
+    ],
+    "partOf": [
+      "Chart / Donut",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "Type=pie|donut",
+    "a11y": "Decorative on its own; the chart must offer a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4110:1303": {
+    "name": "Chart / Scatter",
+    "page": "chart",
+    "level": "atom",
+    "description": "Scatter dot marks with an optional trend line, for relationships such as risk vs return. A building block that the full chart organisms compose; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Composing a custom chart inside Chart / ChartContainer when the ready Chart / Scatter organism does not fit",
+      "Showing the mark styles in specs for engineering (charts render in code with Recharts or D3)"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, legend and hover: use the Chart / Scatter organism (Direction x State set)",
+      "A tiny inline trend: use Chart / Sparkline",
+      "Categorical red/green for gain and loss: never; use vivid vs dark green"
+    ],
+    "partOf": [
+      "Chart / Scatter",
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "TrendLine=false|true",
+    "a11y": "Decorative on its own; the chart must offer a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4111:1265": {
+    "name": "Chart / Sparkline",
+    "page": "chart",
+    "level": "atom",
+    "description": "Tiny line or bar trend without axes, meant to sit next to a number to show direction over time. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Trend next to a KPI in Chart / KPI strip or a portfolio summary",
+      "Small trend inside a table row or list item"
+    ],
+    "dontUseWhen": [
+      "A chart users must read values from: use Chart / Line",
+      "A single number with delta only: use Stat"
+    ],
+    "partOf": [
+      "Chart / KPI strip",
+      "Chart / Template-Tufte-Sparkline"
+    ],
+    "contains": [],
+    "keyProps": "Type=line|bar",
+    "a11y": "Decorative; the adjacent number and delta text carry meaning.",
+    "confidence": "medium"
+  },
+  "4111:1273": {
+    "name": "Chart / Combo",
+    "page": "chart",
+    "level": "atom",
+    "description": "Combo marks: green bars plus a dark-green line with dots on one shared axis, for two related series. A plot-only building block; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Monthly payouts as bars with cumulative return as a line",
+      "Specs or custom compositions inside Chart / ChartContainer"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, tooltip and states: use the Chart / Combo organism set",
+      "Signalling losses in red: never; losses are dark green"
+    ],
+    "partOf": [
+      "Chart / Combo"
+    ],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative alone; pair with a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4112:1255": {
+    "name": "Chart / Candlestick",
+    "page": "chart",
+    "level": "atom",
+    "description": "Candlestick marks showing open, high, low, close per period in green shades. A plot-only building block; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Price movement of a traded instrument or unit value over time",
+      "Specs or custom compositions inside Chart / ChartContainer"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, tooltip and states: use the Chart / Candlestick organism set",
+      "Signalling losses in red: never; losses are dark green"
+    ],
+    "partOf": [
+      "Chart / Candlestick"
+    ],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative alone; pair with a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4112:1272": {
+    "name": "Chart / Waterfall",
+    "page": "chart",
+    "level": "atom",
+    "description": "Waterfall marks: start and end totals in dark green with vivid green increases and darker decreases, joined by connector lines. A plot-only building block; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Breaking net return into gross profit, fees and other contributions",
+      "Specs or custom compositions inside Chart / ChartContainer"
+    ],
+    "dontUseWhen": [
+      "A complete chart with axes, tooltip and states: use the Chart / Waterfall organism set",
+      "Signalling losses in red: never; losses are dark green"
+    ],
+    "partOf": [
+      "Chart / Waterfall"
+    ],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Decorative alone; pair with a text summary or data table.",
+    "confidence": "medium"
+  },
+  "4118:1777": {
+    "name": "Chart / Bar-PnL",
+    "page": "chart",
+    "level": "atom",
+    "description": "Gain and loss bar marks around a zero baseline with signed value labels: gains vivid green above, losses dark green below, never red. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Monthly profit and loss of a portfolio or deal",
+      "Period-over-period changes where direction matters"
+    ],
+    "dontUseWhen": [
+      "Running totals: use Chart / Waterfall",
+      "Simple category comparison: use Chart / Bar"
+    ],
+    "partOf": [
+      "Chart / ChartContainer"
+    ],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Signed labels (+35, -28) carry direction in text; Western digits.",
+    "confidence": "medium"
+  },
+  "4127:1712": {
+    "name": "Chart / Template-Tufte-Bar",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Tufte-style template bar chart: a title that states the insight (Monthly return, March leads at 92%), bars sorted by value, one highlighted bar and the rest light green, minimal axis. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Calling out one standout category, such as the best month or top sector",
+      "Report-style or Notion/deck charts where the headline states the finding"
+    ],
+    "dontUseWhen": [
+      "Interactive dashboard charts: use Chart / Bar",
+      "Time series that must stay in chronological order: use Chart / Line or Chart / Bar"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / Bar"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Insight title doubles as the text summary; highlighted value stated in text.",
+    "confidence": "medium"
+  },
+  "4127:1735": {
+    "name": "Chart / Template-Tufte-Sparkline",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Tufte-style KPI template: label, big value with Riyal icon, area sparkline with end dot and a signed delta (Revenue 4.2M, +12%). Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "A single headline metric with its recent trend in a report or dashboard card",
+      "Executive summary tiles"
+    ],
+    "dontUseWhen": [
+      "Several KPIs with sparklines: use Chart / KPI strip",
+      "A KPI without trend: use Stat"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / Sparkline"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Value and delta are text; sparkline decorative; Riyal icon labelled SAR.",
+    "confidence": "medium"
+  },
+  "4146:2491": {
+    "name": "Chart / HoverDot",
+    "page": "chart",
+    "level": "atom",
+    "description": "Active or resting marker dot drawn on the hovered data point. Part of the chart hover-interaction spec; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Marking the hovered point on a line or area series",
+      "Specifying hover states for engineering"
+    ],
+    "dontUseWhen": [
+      "A full hover set: use Chart / HoverIndicator"
+    ],
+    "partOf": [
+      "Chart / HoverIndicator"
+    ],
+    "contains": [],
+    "keyProps": "State=Active|Rest",
+    "a11y": "Pointer aid only; the same value must be reachable by keyboard and announced.",
+    "confidence": "medium"
+  },
+  "4146:2496": {
+    "name": "Chart / CrosshairGuide",
+    "page": "chart",
+    "level": "atom",
+    "description": "Dashed vertical or horizontal guide line through the hovered point. Part of the chart hover-interaction spec; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Aligning the hovered point with its axis label",
+      "Specifying hover states for engineering"
+    ],
+    "dontUseWhen": [
+      "Static target lines: use Chart / ReferenceLine",
+      "Two-axis crosshair: use Chart / Crosshair"
+    ],
+    "partOf": [
+      "Chart / HoverIndicator"
+    ],
+    "contains": [],
+    "keyProps": "Orientation=Vertical|Horizontal",
+    "a11y": "Pointer aid only; the same value must be reachable by keyboard and announced.",
+    "confidence": "medium"
+  },
+  "4146:2515": {
+    "name": "Chart / ValueFlag",
+    "page": "chart",
+    "level": "atom",
+    "description": "Green value flag (pointer down or left) that shows the hovered value with Riyal icon, such as 4.20M. Part of the chart hover-interaction spec; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Showing the exact value at the hovered point without a full tooltip",
+      "Specifying hover states for engineering"
+    ],
+    "dontUseWhen": [
+      "Multi-series readouts: use Chart / ChartTooltip"
+    ],
+    "partOf": [
+      "Chart / HoverIndicator"
+    ],
+    "contains": [],
+    "keyProps": "Pointer=Down|Left",
+    "a11y": "Pointer aid only; the same value must be reachable by keyboard and announced.",
+    "confidence": "medium"
+  },
+  "4146:2516": {
+    "name": "Chart / HoverBand",
+    "page": "chart",
+    "level": "atom",
+    "description": "Tinted vertical band highlighting a whole group or period on group hover. Part of the chart hover-interaction spec; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Group-hover over a month in stacked or multi-series charts",
+      "Specifying hover states for engineering"
+    ],
+    "dontUseWhen": [
+      "Single-point hover: use Chart / HoverIndicator"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Pointer aid only; the same value must be reachable by keyboard and announced.",
+    "confidence": "medium"
+  },
+  "4146:2517": {
+    "name": "Chart / AxisTickActive",
+    "page": "chart",
+    "level": "atom",
+    "description": "Highlighted axis tick label (green pill) for the hovered period, such as Aug. Part of the chart hover-interaction spec; Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Emphasizing the hovered period on the x-axis",
+      "Specifying hover states for engineering"
+    ],
+    "dontUseWhen": [
+      "Normal axis labels: use Chart / Axis"
+    ],
+    "partOf": [
+      "Chart / HoverIndicator"
+    ],
+    "contains": [],
+    "keyProps": "No properties (single component)",
+    "a11y": "Pointer aid only; the same value must be reachable by keyboard and announced.",
+    "confidence": "medium"
+  },
+  "4147:2491": {
+    "name": "Chart / HoverIndicator",
+    "page": "chart",
+    "level": "molecule",
+    "description": "Single-point hover assembly: dashed guide, active marker, value flag and active axis tick, as used in every chart Hover state. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Hover state of a single point in line, area or bar charts",
+      "Specs showing the hover interaction to engineering"
+    ],
+    "dontUseWhen": [
+      "Group hover across several series: use Chart / HoverBand with Chart / ChartTooltip Mode=multi-series"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / CrosshairGuide",
+      "Chart / HoverDot",
+      "Chart / ValueFlag",
+      "Chart / AxisTickActive"
+    ],
+    "keyProps": "No properties (single component)",
+    "a11y": "Mirror for keyboard focus on data points with announced value.",
+    "confidence": "medium"
+  },
+  "4153:3047": {
+    "name": "Chart / Line",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full line chart organism: header, axes, grid, green line series and hover, for a value over time (multi-hue allowed for overlapping series). Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Portfolio value or cumulative returns over months",
+      "Comparing a few series over time, such as deal returns vs benchmark",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Magnitude or cumulative fill: use Chart / Area",
+      "Category comparison: use Chart / Bar",
+      "Phone width: use the Chart / Line · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "high"
+  },
+  "4154:3047": {
+    "name": "Chart / Bar",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full bar chart organism for comparing categories or periods, with axes, grid, legend and hover. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Monthly payouts or revenue by period",
+      "Invested amount by sector",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Composition per group: use Chart / Stacked",
+      "Trend emphasis: use Chart / Line",
+      "Phone width: use the Chart / Bar · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "high"
+  },
+  "4154:3048": {
+    "name": "Chart / Area",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full area chart organism for magnitude or cumulative value over time, tinted green fill under the line. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Cumulative distributions received",
+      "Portfolio balance growth",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Precise multi-series comparison: use Chart / Line",
+      "Parts of a whole per group: use Chart / Stacked",
+      "Phone width: use the Chart / Area · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4154:3049": {
+    "name": "Chart / Candlestick",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full candlestick chart organism for open/high/low/close movement per period, in green shades. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Unit price or market value movement of a traded instrument",
+      "Back-office market monitoring",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Simple value trend for retail investors: use Chart / Line",
+      "Phone width: use the Chart / Candlestick · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4154:3050": {
+    "name": "Chart / Donut",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full donut chart organism for share of a whole (6 slices or fewer) with legend and center total. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Portfolio allocation by sector or deal type",
+      "Split of returns between profit and capital",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "More than 6 categories or exact comparison: use Chart / Bar or a labelled list",
+      "Phone width: use the Chart / Donut · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4154:3051": {
+    "name": "Chart / Scatter",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full scatter chart organism for the relationship between two measures. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Risk vs return of deals",
+      "Duration vs yield comparison in back-office analysis",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Time series: use Chart / Line",
+      "Phone width: use the Chart / Scatter · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4160:3165": {
+    "name": "Chart / Combo",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full combo chart organism: bars and a line sharing one honest axis. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Monthly payouts (bars) with cumulative return (line)",
+      "Funding volume with number of investors",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Two unrelated scales on dual axes: split into two charts",
+      "Phone width: use the Chart / Combo · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4160:3166": {
+    "name": "Chart / Waterfall",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full waterfall chart organism showing a running total broken into positive and negative contributions. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Gross return to net return after fees",
+      "Change in portfolio value by contribution",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Simple period comparison: use Chart / Bar",
+      "Phone width: use the Chart / Waterfall · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4161:3193": {
+    "name": "Chart / Stacked",
+    "page": "chart",
+    "level": "organism",
+    "description": "Full stacked bar chart organism for composition per group. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Payout split into profit and principal per month",
+      "Investments by sector per quarter",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "Single series comparison: use Chart / Bar",
+      "Share of a single whole: use Chart / Donut",
+      "Phone width: use the Chart / Stacked · Mobile set",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "medium"
+  },
+  "4161:3194": {
+    "name": "Chart / KPI strip",
+    "page": "chart",
+    "level": "organism",
+    "description": "Dashboard KPI organism: a grid of headline numbers each with delta and sparkline (Platform overview), with hover readouts. Desktop set with Direction x State (Default, Hover, Group hover); Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL, currency uses the Riyal logo icon.",
+    "useWhen": [
+      "Back-office or portfolio overview with 4 KPIs and trends",
+      "Assets under management, active investors, average ROI, deals funded",
+      "Web or back-office dashboards at desktop width"
+    ],
+    "dontUseWhen": [
+      "One KPI without trend: use Stat",
+      "Phone width: use Chart / KPI list · Mobile",
+      "Loading, empty or error: use Chart / States",
+      "Gain/loss in red and green hues: never; gains vivid green, losses dark green"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartContainer",
+      "Chart / Axis",
+      "Chart / Gridlines",
+      "Chart / ChartTooltip",
+      "Chart / HoverIndicator"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Provide a text summary or data table; hover values must also be keyboard reachable; Western digits.",
+    "confidence": "high"
+  },
+  "4163:3178": {
+    "name": "Chart / Line · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Line with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a line chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Line",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4163:3179": {
+    "name": "Chart / Area · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Area with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a area chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Area",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4163:3180": {
+    "name": "Chart / Bar · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Bar with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a bar chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Bar",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4164:3205": {
+    "name": "Chart / Donut · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Donut with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a donut chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Donut",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4164:3206": {
+    "name": "Chart / Scatter · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Scatter with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a scatter chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Scatter",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4164:3207": {
+    "name": "Chart / Combo · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Combo with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a combo chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Combo",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4165:3290": {
+    "name": "Chart / Candlestick · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Candlestick with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a candlestick chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Candlestick",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4165:3291": {
+    "name": "Chart / Waterfall · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Waterfall with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a waterfall chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Waterfall",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4165:3292": {
+    "name": "Chart / Stacked · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "343-wide mobile version of Chart / Stacked with a real reflow (narrower plot, three axis labels, stacked header) and the same Direction x State matrix. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "In-app phone screens that need a stacked chart, such as the portfolio or deal page",
+      "RTL Arabic screens (time still runs left to right)",
+      "Tap-and-hold hover readouts on mobile"
+    ],
+    "dontUseWhen": [
+      "Desktop or back-office width: use Chart / Stacked",
+      "One number with trend: use Stat or Chart / KPI list · Mobile",
+      "Loading or empty data: use Chart / States"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / ChartTooltip",
+      "Chart / Axis"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Offer a text summary; touch targets for points at least 24px; Western digits.",
+    "confidence": "medium"
+  },
+  "4165:3293": {
+    "name": "Chart / KPI list · Mobile",
+    "page": "chart",
+    "level": "organism",
+    "description": "Mobile KPI organism: a single-column list of KPIs, each with label, value, delta and sparkline, the phone reflow of Chart / KPI strip. Semantic tokens only, green-first palette, Western numerals, time axis left to right even in RTL.",
+    "useWhen": [
+      "Portfolio or platform overview on a phone",
+      "Summary of 3 to 5 metrics with trends in the app"
+    ],
+    "dontUseWhen": [
+      "Desktop grid: use Chart / KPI strip",
+      "Metrics without trend: use Stat in a list"
+    ],
+    "partOf": [],
+    "contains": [
+      "Chart / Sparkline"
+    ],
+    "keyProps": "Direction=LTR|RTL; State=Default|Hover|Group hover",
+    "a11y": "Each row reads label, value, delta in order; sparklines decorative.",
+    "confidence": "medium"
+  }
+}

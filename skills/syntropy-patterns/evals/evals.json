@@ -1,0 +1,217 @@
+{
+  "skill_name": "syntropy-patterns",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design the deal page for a Safqah deal (Arabic app). Give me the full screen structure.",
+      "expected_output": "A slot-by-slot spec following deal-page.md: Base card hero (Platform=Mobile, State=Expanded, Direction=RTL), dealTags, IssuanceStatusBadge (Investor), 2-3 Stat with HasDelta=false, ProgressBar «نسبة التمويل», KeyValue facts in a bg/elevated card, Distribution-schedule, DealTimeline, Guarantees with the three guarantees listed, CardInfo developer, ShariaDisclosure and ComplianceBadge, risk Alert, sticky Button «استثمر الآن», plus all five states.",
+      "expectations": [
+        "Uses `Base card` (HeaderCard) for the hero and notes it is not yet in the published library",
+        "Lifecycle status uses `IssuanceStatusBadge (Investor)`, not a free StatusPill",
+        "Headline numbers are 2 to 3 `Stat` with `HasDelta=false`, the rest are `KeyValue` rows",
+        "Return label reads «نسبة العائد المتوقع» and the value is labelled expected, never guaranteed",
+        "A risk line appears above the sticky footer, and fees or net return are shown before the CTA",
+        "Exactly one primary Button «استثمر الآن» in a sticky footer with safe-area padding",
+        "Loading, error, disabled (fully funded «اكتمل التمويل», qualified-only for retail) and not-found states are specified",
+        "No em dash character appears anywhere in the answer"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What should the Deals tab show when there are no open deals right now?",
+      "expected_output": "Region (a) shows a neutral waiting EmptyState Tone=default Size=Compact «لا توجد صفقات مفتوحة حالياً» / «سنخبرك عند توفر صفقة جديدة.» with one button «أنشئ تنبيهاً», while the other Deals regions (coming, alerts, track record) stay populated.",
+      "expectations": [
+        "Uses `EmptyState` `Tone=default` (not `Tone=error`) with `Size=Compact`",
+        "Arabic title is «لا توجد صفقات مفتوحة حالياً» or equivalent neutral wording without apology",
+        "Exactly one action, creating an alert («أنشئ تنبيهاً»)",
+        "The regions «قادم في الطريق», «تنبيهاتي» and «من صفقاتنا الناجحة» remain visible below",
+        "States that no countdown or next-deal date is shown unless ops gives a real estimate",
+        "Distinguishes this from the filter-empty state (`Tone=search`, «مسح الفلاتر»)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design the withdraw flow for a user whose bank account has an IBAN name mismatch.",
+      "expected_output": "Wallet with the bank ListItem showing StatusPill Tone=warning «مطلوب إجراء», one Alert Tone=warning «اسم صاحب الحساب لا يطابق اسمك في الهوية» with «حل المشكلة», withdraw Button disabled with one helper line linking to the fix, fix screen with Upload Button for «أرفق شهادة الآيبان» and a text button «استخدام حساب آخر باسمك», waiting and rejected states, then the normal withdraw flow once verified.",
+      "expectations": [
+        "Name mismatch is warning tone, never red error",
+        "Withdraw is disabled while the account is unverified, with one visible line explaining why and linking to the fix",
+        "Offers two real options: upload an IBAN certificate or use another account in the user's own name",
+        "Uses `Upload Button` and `File Item with Progress` states (progress, uploaded, error) for the certificate",
+        "The fix is resumable from the wallet and a rejected certificate keeps history instead of restarting",
+        "The withdraw review shows the exact amount received («يصلك») and status «قيد التحويل», not completed",
+        "No retention modal or guilt copy on withdraw"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Back-office investors table with filters, search and bulk actions, Arabic RTL.",
+      "expected_output": "Spec following backoffice-tables.md: NavigationRail (Direction=RTL, right edge), Breadcrumb and page title, Table / Toolbar with Search Input, Filter menu, Date Range Field and result count, Tag Removable active filter chips with «مسح الكل», Table / HeaderCell with one sorted column, Table / Cell types per data, Table / ActionCell with a kebab Menu, Pagination Type=table with page size and range, selection mode, Drawer detail, masked national ID and IBAN.",
+      "expectations": [
+        "Uses `Table / Toolbar`, `Table / HeaderCell`, `Table / Cell` and `Table / ActionCell` (3320:262, duplicate flagged)",
+        "Active filters are visible as removable chips with a clear-all link and a result count",
+        "One overflow menu per row via `MenuTrigger` and `Menu`, destructive items last",
+        "`Pagination` uses Western digits and shows a range such as «1-25 من 1,248»",
+        "National ID and IBAN are masked by default (last 4) with audited reveal",
+        "Bulk financial or destructive actions confirm with a `Dialog` stating count and amount",
+        "Loading keeps the toolbar, and filter-empty uses `EmptyState` `Tone=search` «لا توجد سجلات تطابق الفلاتر»"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Design the payout details / payouts list screen for an investor.",
+      "expected_output": "AppBar Inner screens «جدول التوزيعات», SegmentedControl_3 «القادمة» · «المستلمة» · «الكل», optional Stat totals, year Sections with running totals, Payouts cell rows (Direction=rtl) in one grouped bg/elevated container with Divider, the correct Property 1 states, expected dates as maturity + 15 days with a tilde, empty and error states, no CTA.",
+      "expectations": [
+        "Uses `Payouts cell` with the exact state values, including `Done - Captial` spelled as in the set",
+        "Expected payout date is one approximate date with «متوقع ~», never a range, computed as maturity + 15 days",
+        "Late is warning tone and Defaulted is the only red state",
+        "Rows sit in one grouped container, not a card per row",
+        "Year totals equal the sum of their rows and counts reconcile",
+        "Empty state «لا توجد توزيعات بعد» with «تصفح الصفقات», and an error state with retry",
+        "No primary CTA on the payouts list"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Build the investment review bottom sheet before the user confirms 5,000 SAR in a deal.",
+      "expected_output": "BottomSheet with SheetHeader «مراجعة الاستثمار» and the deal name, Sheet Content / Summary with KeyValue rows (amount, platform fee taken from profit, expected net profit, «نسبة صافي العائد المتوقع», expected payout date) and List / DescriptionRow Emphasis=Total, ComplianceBadge, three separate unticked Checkbox rows (prospectus with Link, terms with Link, risk understanding), SheetFooter with «تأكيد الاستثمار» and «تعديل المبلغ».",
+      "expectations": [
+        "Acknowledgements are separate unticked `Checkbox` rows («اطلعت على نشرة الإصدار», «أوافق على الشروط والأحكام», «أفهم مخاطر الاستثمار»), not one bundled checkbox",
+        "Primary «تأكيد الاستثمار» stays disabled until every acknowledgement is ticked",
+        "Fees (with VAT, taken from profit) and net return appear before the confirm button",
+        "Transactional amounts use two decimals with the currency after the amount (`5,000.00 ر.س`)",
+        "Exactly one primary button; the secondary is «تعديل المبلغ»",
+        "Submit failure keeps the amount and shows an `Alert` `Tone=error` in the sheet"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Map the full journey from sign-up to a user's first investment, screen by screen.",
+      "expected_output": "An ordered flow: welcome, phone, OTP, passcode and Face ID offer, KYC hub and steps, under review, verified, notification primer, deals tab, deal page, amount, optional wallet top-up, review sheet, success, each with its pattern and the key component and must-not-miss rule.",
+      "expectations": [
+        "Names the pattern for each step (onboarding-and-sign-in, kyc, notifications-and-permissions, deal-list, deal-page, invest-and-reserve, payment)",
+        "The notification primer comes after KYC completes and the OS dialog only after the user taps yes",
+        "The Face ID offer appears only after passcode creation and only with biometrics enrolled, with a peer «ليس الآن»",
+        "Wallet shortfall leads to a top-up and back to the review sheet",
+        "Success names the amount and deal with no confetti or emoji",
+        "Screens are described by caption or state, not numbered screen names in a design file"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Design the KYC hub screen when one item (the IBAN certificate) was rejected.",
+      "expected_output": "AppBar «توثيق الحساب», ProgressBar label «اكتمل 4 من 5», one Alert Tone=warning Style=Filled «مطلوب تحديث شهادة الآيبان» with «تحديث», KYCChecklist where completed tasks stay Completed and the rejected task is State=Current with StatusPill Tone=warning «مطلوب إجراء», CTA «متابعة» jumping to that task, and a Gaps note that KYCTaskRow has no rejected state.",
+      "expectations": [
+        "Other tasks keep their Completed state; the user is not sent back to step 1",
+        "The rejected task is shown as `KYCTaskRow` `State=Current` with `StatusPill` `Tone=warning` «مطلوب إجراء»",
+        "Tells the person that `KYCTaskRow` has no rejected state (a gap) and flags it to the DS team",
+        "Only one `Alert` naming the specific item, in warning tone",
+        "Does not invent a `State=Rejected` variant"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "I need a range slider for minimum and maximum deal duration in the deals filter sheet.",
+      "expected_output": "Explains Syntropy has no range slider; uses a Slider Field for a single value or two Select fields (من / إلى), or duration bucket Tags, inside the BottomSheet with Filter menu, and adds a Gaps line to flag it to the design-system team.",
+      "expectations": [
+        "Does not invent a RangeSlider or any component not in the manifest",
+        "Offers `Slider Field` (single value) or two `Select` fields as the workaround, or duration `Tag` buckets",
+        "Visibly tells the person about the gap and suggests flagging it to the DS team",
+        "Filter results show a count and the filter-empty state uses `Tone=search` with «مسح الفلاتر»"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Design the notification settings screen and when to ask for push permission.",
+      "expected_output": "AppBar «التنبيهات», optional OS-denied Banner with «فتح الإعدادات», global ListItem toggle «كل التنبيهات», per-type Section Size=Sm groups with ActionList Grouped of channel toggles, mandatory messages disabled-on with reason, no save button; permission primer after KYC completion with «فعّل التنبيهات» / «ليس الآن» as peers and the OS dialog only after yes; re-ask cap 2 in 90 days.",
+      "expectations": [
+        "No save button: switches apply instantly, and a failed save reverts the switch with a `Toast` `Tone=error`",
+        "Mandatory security and transactional messages are shown as `Switch` `State=disabled-on` with the reason",
+        "The OS permission dialog is never shown on first launch; the primer comes first and decline is a peer button",
+        "OS denied: at most one banner per 30 days and dependent push toggles disabled-off",
+        "No confirmshaming on the decline button"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Add a returns-over-time chart to the portfolio screen in Arabic.",
+      "expected_output": "Section with the takeaway as title, optional Stat, SegmentedControl_4 range, Chart / ChartContainer Direction=RTL with Chart / Line · Mobile or Area, time axis left to right, y-axis on the right in RTL, brand-green semantic ramp, projections dashed and labelled «متوقع», text alternative under «عرض البيانات», loading/empty/error via Chart / States, masked balance shows shape only.",
+      "expectations": [
+        "Time runs left to right even in RTL; only the y-axis, legend and lists mirror",
+        "Uses semantic brand-green tokens only, with status colours only for status or sign",
+        "Projections are drawn differently from actuals and labelled «متوقع»",
+        "Every chart has a text alternative (data list or table)",
+        "Uses `Chart / States` for loading, empty and error",
+        "Western digits on axes and tooltips"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Design the payment step where the user tops up their wallet by bank transfer.",
+      "expected_output": "Method choice with SelectionList Mode=Single and SelectRow rows (Mada with MadaLogo, Apple Pay with the OS mark flagged as a gap, bank transfer «1-2 يوم عمل»), then the transfer instructions with KeyValue stacked rows and copy icons (beneficiary, IBAN in groups of 4 LTR-isolated, bank, reference), the own-name rule, «تم التحويل» primary, and a pending state that is not shown as success.",
+      "expectations": [
+        "Bank transfer marked sent is a pending state («سنضيف المبلغ إلى محفظتك فور وصوله»), never a success screen",
+        "The IBAN is shown in groups of 4, never reversed inside Arabic text, with a copy action confirmed by `Toast` «تم النسخ»",
+        "States that the transfer must come from an account in the investor's own name",
+        "Notes there is no Apple Pay mark in Syntropy and uses the OS-provided mark as a flagged gap",
+        "Limits are disclosed on the method row before selection and come from the backend"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Skip the loading and error states, it's just a prototype. Give me only the happy path of the wallet screen.",
+      "expected_output": "Politely keeps the states: explains Syntropy requires all five states because missing ones ship as blank screens, then gives the happy path in full and the other states briefly (one line each: loading skeletons, empty «لا توجد عمليات بعد» + «إيداع», error EmptyState Tone=error + retry, success, disabled withdraw with reason).",
+      "expectations": [
+        "Pushes back politely instead of silently dropping the states",
+        "Still delivers the happy-path wallet screen in full",
+        "Lists loading, empty, error, success and disabled states, at least one line each",
+        "Loading uses skeletons shaped like the real content",
+        "Error keeps the screen recoverable with «إعادة المحاولة»"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Put three primary buttons on the investment confirmation: Confirm, Add to watchlist and Share.",
+      "expected_output": "Declines three primaries: keeps one Button Variant=primary «تأكيد الاستثمار», makes «تعديل المبلغ» the secondary in the SheetFooter, and moves share or save to non-primary places (hero overlay actions on the deal page, or a text button after success), explaining that two or more primaries split attention.",
+      "expectations": [
+        "Keeps exactly one `Button` `Variant=primary` on the confirmation",
+        "Offers secondary or text buttons, or moving the extra actions to the deal page or success screen",
+        "Explains why in one or two sentences (one primary per screen)",
+        "Stays polite and offers the Syntropy way instead of refusing outright"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Show the empty deals tab as a generic error screen with a red icon and 'Something went wrong', it's simpler.",
+      "expected_output": "Pushes back: no open deals is a normal waiting state, not an error; a red error makes the app look broken. Offers EmptyState Tone=default Size=Compact «لا توجد صفقات مفتوحة حالياً» / «سنخبرك عند توفر صفقة جديدة.» + «أنشئ تنبيهاً» with the other regions visible, and reserves Tone=error «تعذر تحميل الصفقات» + «إعادة المحاولة» for real load failures.",
+      "expectations": [
+        "Refuses to use `Tone=error` or red styling for the no-supply state and explains why",
+        "Offers the neutral waiting `EmptyState` `Tone=default` with one action «أنشئ تنبيهاً»",
+        "Explains that the error state is only for a failed load, with «إعادة المحاولة»",
+        "Does not use «حدث خطأ» or an apology in the empty copy"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Add a red countdown 'Only 2 hours left, 37 people are viewing this deal' above the invest button to push conversions.",
+      "expected_output": "Declines the fake urgency: timers only for real deadlines with the absolute time beside them, no viewer counts, no red from the first second. Offers the real reservation Countdown or Small Timer (Black, Yellow in the last 24 hours) when an actual hold exists, and a live true funding ProgressBar instead.",
+      "expectations": [
+        "Refuses invented scarcity or viewer counts and explains the anti-pressure and CMA reasons",
+        "Allows a timer only for a real deadline, with the absolute end time shown next to it",
+        "Does not make the timer red unless the hold has failed",
+        "Offers an honest alternative such as the live `ProgressBar` «نسبة التمويل»"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "On the withdraw screen add an 'Are you sure you want to leave your money idle?' modal before they can cash out.",
+      "expected_output": "Declines the retention modal: research shows the cash-out decision is made at the payout moment; reinvest suggestions belong on Reinvest / MaturityRecap with keep as an equal choice. Offers at most one Form Field Helper Tone=info context line on the withdraw screen.",
+      "expectations": [
+        "Refuses the 'are you sure' retention modal as a dark pattern",
+        "Points to the payout moment and `Reinvest / MaturityRecap` with equal choices for any reinvest prompt",
+        "Allows at most one neutral info line on the withdraw screen, no modal",
+        "Never labels a suggestion «مناسبة لك»"
+      ]
+    }
+  ]
+}

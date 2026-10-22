@@ -1,0 +1,1965 @@
+{
+ "bg": {
+  "surface": {
+   "$type": "color",
+   "$value": "{Color.Dark.900}",
+   "$description": "[Locked] Least elevated surface. The canvas behind everything, the base layer at the back of the elevation ladder.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "base": {
+   "$type": "color",
+   "$value": "{Color.Dark.900}",
+   "$description": "[Locked] Mid-elevation surface. The base content area where most page content sits, White in Light mode, mid-dark in Dark. Sits above bg/surface and below bg/elevated.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "elevated": {
+   "$type": "color",
+   "$value": "{Color.Dark.800}",
+   "$description": "[Locked] Most elevated surface. The off-white surface used for any element that needs to clearly elevate above the page, cards, modals, popovers, and prominent floating elements. The default surface when elevation is needed.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "inverse": {
+   "$type": "color",
+   "$value": "{Color.Shade.White}",
+   "$description": "[Locked] Inverse surface. Dark UI on light pages, tooltips, dark snippets, marketing dark-on-light blocks.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "overlay": {
+   "$type": "color",
+   "$value": "{Color.Alpha.White.30}",
+   "$description": "[Locked] Modal scrim and full-screen overlay backdrop.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "reverse-overlay": {
+   "$type": "color",
+   "$value": "{Color.Alpha.Black.50}",
+   "$description": "[Locked] Modal scrim and full-screen overlay backdrop.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "brand": {
+   "primary": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.400}",
+    "$description": "[Themable] Primary brand background. CTAs and brand-colored surfaces.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "primary-hover": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.300}",
+    "$description": "[Themable] Primary brand background, hover state.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "primary-pressed": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.600}",
+    "$description": "[Themable] Primary brand background, pressed state.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "lightest": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.700}",
+    "$description": "[Themable] Light brand surface. Default light-end brand fill.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "lightest-hover": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.600}",
+    "$description": "[Themable] Light brand surface, hover state.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "lightest-pressed": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.500}",
+    "$description": "[Themable] Light brand surface, pressed state.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "darkest": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.500}",
+    "$description": "[Themable] Dark brand surface. Default dark-end brand fill (hero / marketing).",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "darkest-hover": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.400}",
+    "$description": "[Themable] Dark brand surface, hover state.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "darkest-pressed": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.600}",
+    "$description": "[Themable] Dark brand surface, pressed state. Deepest brand fill.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "primary-subtle": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.900}",
+    "$description": "[Themable] Soft brand-tinted background. Used for brand callouts and inline highlights.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "accent-50": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.900}",
+    "$description": "[Themable] Lightest brand-tinted surface. Soft highlight on neutral backgrounds.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "accent-100": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.800}",
+    "$description": "[Themable] Very light brand surface. Subtle brand presence on light backgrounds.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "yellow": {
+    "$type": "color",
+    "$value": "{Color.Primary.Yellow.400}",
+    "$description": "[Themable] Brand yellow background. Secondary brand surface used alongside the primary brand green to indicate secondary focus.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   },
+   "yellow-subtle": {
+    "$type": "color",
+    "$value": "{Color.Primary.Yellow.900}",
+    "$description": "[Themable] Soft brand-yellow background. Used for secondary brand callouts and inline highlights.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS"
+      ]
+     }
+    }
+   }
+  },
+  "success": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.400}",
+   "$description": "[Locked] Success state background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "success-subtle": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.800}",
+   "$description": "[Locked] Success callout / inline alert background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "caution": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.400}",
+   "$description": "[Locked] Success state background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "caution-subtle": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.800}",
+   "$description": "[Locked] Success callout / inline alert background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "warning": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.400}",
+   "$description": "[Locked] Warning state background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "warning-subtle": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.800}",
+   "$description": "[Locked] Warning callout / inline alert background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "error": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.400}",
+   "$description": "[Locked] Error state background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "error-subtle": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.900}",
+   "$description": "[Locked] Error callout / inline alert background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "info": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.400}",
+   "$description": "[Locked] Informational background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "info-subtle": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.800}",
+   "$description": "[Locked] Informational callout / inline alert background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "progress": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.400}",
+   "$description": "[Locked] Progress / milestone background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "progress-subtle": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.800}",
+   "$description": "[Locked] Progress / milestone callout background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  },
+  "disabled": {
+   "$type": "color",
+   "$value": "{Color.Dark.300}",
+   "$description": "[Locked] Disabled control background.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS"
+     ]
+    }
+   }
+  }
+ },
+ "text": {
+  "default": {
+   "$type": "color",
+   "$value": "{Color.Neutral.100}",
+   "$description": "[Locked] Default body text. Highest contrast on light backgrounds.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "muted": {
+   "$type": "color",
+   "$value": "{Color.Neutral.400}",
+   "$description": "[Locked] Secondary body text. Captions, helper text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "subtle": {
+   "$type": "color",
+   "$value": "{Color.Neutral.500}",
+   "$description": "[Locked] Tertiary text. Placeholders, low-priority labels.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "disabled": {
+   "$type": "color",
+   "$value": "{Color.Neutral.700}",
+   "$description": "[Locked] Disabled text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "inverse": {
+   "$type": "color",
+   "$value": "{Color.Neutral.900}",
+   "$description": "[Locked] Inverse text (used on dark/colored backgrounds).",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "brand": {
+   "primary": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.300}",
+    "$description": "[Themable] Brand-colored text. Used for links and brand emphasis.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "TEXT_FILL"
+      ]
+     }
+    }
+   },
+   "darkest": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.400}",
+    "$description": "[Themable] Darkest brand text. The deepest brand-colored text (#387C3F), used for high-emphasis text on light surfaces or hero / marketing copy.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "TEXT_FILL"
+      ]
+     }
+    }
+   }
+  },
+  "on-brand": {
+   "$type": "color",
+   "$value": "{Color.Shade.White}",
+   "$description": "[Locked] Text on brand-colored surfaces (e.g. on primary buttons).",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "success": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.300}",
+   "$description": "[Locked] Success text. Pair with bg/success-subtle.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "caution": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.300}",
+   "$description": "[Locked] Success text. Pair with bg/success-subtle.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "warning": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.300}",
+   "$description": "[Locked] Warning text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "error": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.200}",
+   "$description": "[Locked] Error text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "info": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.200}",
+   "$description": "[Locked] Informational text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  },
+  "progress": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.300}",
+   "$description": "[Locked] Progress / milestone text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "TEXT_FILL"
+     ]
+    }
+   }
+  }
+ },
+ "border": {
+  "default": {
+   "$type": "color",
+   "$value": "{Color.Dark.200}",
+   "$description": "[Locked] Default border. Cards, dividers, input borders at rest.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "darkmode-divider": {
+   "$type": "color",
+   "$value": "{Color.Dark.200}",
+   "$description": "[Locked] Default border. Cards, dividers, input borders at rest.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "subtle": {
+   "$type": "color",
+   "$value": "{Color.Dark.300}",
+   "$description": "[Locked] Subtle border. Background section breaks.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "strong": {
+   "$type": "color",
+   "$value": "{Color.Neutral.500}",
+   "$description": "[Locked] Strong border. Emphasis or selected state.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "inverse": {
+   "$type": "color",
+   "$value": "{Color.Neutral.900}",
+   "$description": "[Locked] Border on dark surfaces.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "disabled": {
+   "$type": "color",
+   "$value": "{Color.Dark.300}",
+   "$description": "[Locked] Disabled control border.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "brand": {
+   "primary": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.400}",
+    "$description": "[Themable] Primary brand border. The strongest brand-colored border, used for selected states, emphasis, and brand-aligned containers.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   },
+   "subtle": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.700}",
+    "$description": "[Themable] Very subtle brand-tinted border. Use for cards or inputs where a hint of brand presence is wanted without strong emphasis.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   },
+   "muted": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.600}",
+    "$description": "[Themable] Quiet brand border. Slightly more visible than subtle, for grouped sections or callouts with brand affinity.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   },
+   "accent": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.500}",
+    "$description": "[Themable] Visible brand-accent border. Use when a border should clearly read as brand-colored without competing with a CTA.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   },
+   "darkest": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.300}",
+    "$description": "[Themable] Darkest brand border. The deepest brand-colored border (#387C3F), used for high-emphasis edges on hero or marketing surfaces.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   }
+  },
+  "focus": {
+   "$type": "color",
+   "$value": "{text.default}",
+   "$description": "[Themable] Focus ring color. Themed with brand.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "success": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.400}",
+   "$description": "[Locked] Success border. Used on inputs with successful validation.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "success-subtle": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.800}",
+   "$description": "[Locked] Success border. Used on inputs with successful validation.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "caution": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.400}",
+   "$description": "[Locked] Success border. Used on inputs with successful validation.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "caution-subtle": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.800}",
+   "$description": "[Locked] Success border. Used on inputs with successful validation.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "warning": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.400}",
+   "$description": "[Locked] Warning border.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "warning-subtle": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.800}",
+   "$description": "[Locked] Warning border.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "error": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.400}",
+   "$description": "[Locked] Error border. Used on inputs with validation errors.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "error-error": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.800}",
+   "$description": "[Locked] Error border. Used on inputs with validation errors.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "info": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.400}",
+   "$description": "[Locked] Informational border.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "info-subtle": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.800}",
+   "$description": "[Locked] Informational border.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "progress": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.400}",
+   "$description": "[Locked] Progress / milestone border. Used on inputs and containers conveying progress states.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "progress-subtle": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.800}",
+   "$description": "[Locked] Progress / milestone border. Used on inputs and containers conveying progress states.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  }
+ },
+ "icon": {
+  "default": {
+   "$type": "color",
+   "$value": "{Color.Neutral.100}",
+   "$description": "[Locked] Default icon color. Matches body text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "muted": {
+   "$type": "color",
+   "$value": "{Color.Neutral.400}",
+   "$description": "[Locked] Secondary icons. Inline icons next to muted text.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "subtle": {
+   "$type": "color",
+   "$value": "{Color.Neutral.500}",
+   "$description": "[Locked] Tertiary icons. Decorative or low-priority.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "disabled": {
+   "$type": "color",
+   "$value": "{Color.Neutral.700}",
+   "$description": "[Locked] Disabled icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "inverse": {
+   "$type": "color",
+   "$value": "{Color.Neutral.900}",
+   "$description": "[Locked] Inverse icon (on dark or brand backgrounds).",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "brand": {
+   "primary": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.300}",
+    "$description": "[Themable] Brand-colored icon.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS",
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   },
+   "darkest": {
+    "$type": "color",
+    "$value": "{Color.Primary.LightGreen.400}",
+    "$description": "[Themable] Darkest brand icon. The deepest brand-colored icon (#387C3F), used for high-emphasis icons on light surfaces or hero / marketing contexts.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_FILLS",
+       "STROKE_COLOR"
+      ]
+     }
+    }
+   }
+  },
+  "on-brand": {
+   "$type": "color",
+   "$value": "{Color.Shade.White}",
+   "$description": "[Locked] Icon on brand-colored surfaces.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "success": {
+   "$type": "color",
+   "$value": "{Color.Success.Green.400}",
+   "$description": "[Locked] Success icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "caution": {
+   "$type": "color",
+   "$value": "{Color.Caution.Brown.400}",
+   "$description": "[Locked] Success icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "warning": {
+   "$type": "color",
+   "$value": "{Color.Warning.Orange.400}",
+   "$description": "[Locked] Warning icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "error": {
+   "$type": "color",
+   "$value": "{Color.Error.Red.400}",
+   "$description": "[Locked] Error icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "info": {
+   "$type": "color",
+   "$value": "{Color.Info.Blue.400}",
+   "$description": "[Locked] Informational icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  },
+  "progress": {
+   "$type": "color",
+   "$value": "{Color.Secondary.Purple.400}",
+   "$description": "[Locked] Progress icon.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+     ]
+    }
+   }
+  }
+ },
+ "radius": {
+  "none": {
+   "$type": "dimension",
+   "$value": "{Radius.0}",
+   "$description": "[Locked] No rounding.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "xs": {
+   "$type": "dimension",
+   "$value": "{Radius.2}",
+   "$description": "[Locked] Hairline rounding.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "sm": {
+   "$type": "dimension",
+   "$value": "{Radius.4}",
+   "$description": "[Locked] Small. Tags, chips.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "md": {
+   "$type": "dimension",
+   "$value": "{Radius.8}",
+   "$description": "[Locked] Medium. Inputs, small components.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "lg": {
+   "$type": "dimension",
+   "$value": "{Radius.12}",
+   "$description": "[Locked] Default. Buttons, standard cards.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "xl": {
+   "$type": "dimension",
+   "$value": "{Radius.16}",
+   "$description": "[Locked] Large containers.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "brand": {
+   "$type": "dimension",
+   "$value": "{Radius.20}",
+   "$description": "[Locked] Safqah brand-aligned radius. Used on featured cards.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "2xl": {
+   "$type": "dimension",
+   "$value": "{Radius.24}",
+   "$description": "[Locked] Large modals, prominent cards.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "3xl": {
+   "$type": "dimension",
+   "$value": "{Radius.32}",
+   "$description": "[Locked] Hero containers.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "full": {
+   "$type": "dimension",
+   "$value": "{Radius.Full}",
+   "$description": "[Locked] Fully rounded. Pills, avatars, circular buttons.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  },
+  "default": {
+   "$type": "dimension",
+   "$value": "{Radius.20}",
+   "$description": "[Locked] Default corner radius across v2 components. Same value as radius/brand (20px). Reach for this unless a component documents a different radius.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "CORNER_RADIUS"
+     ]
+    }
+   }
+  }
+ },
+ "space": {
+  "none": {
+   "$type": "dimension",
+   "$value": "{Spacing.0}",
+   "$description": "[Locked] No space.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "2xs": {
+   "$type": "dimension",
+   "$value": "{Spacing.2}",
+   "$description": "[Locked] Hairline spacing.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "xs": {
+   "$type": "dimension",
+   "$value": "{Spacing.4}",
+   "$description": "[Locked] Tight. Between icon and label.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "sm": {
+   "$type": "dimension",
+   "$value": "{Spacing.8}",
+   "$description": "[Locked] Compact. Internal padding on chips.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "md": {
+   "$type": "dimension",
+   "$value": "{Spacing.12}",
+   "$description": "[Locked] Comfortable. List item padding.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "lg": {
+   "$type": "dimension",
+   "$value": "{Spacing.16}",
+   "$description": "[Locked] Default. Standard component padding.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "xl": {
+   "$type": "dimension",
+   "$value": "{Spacing.20}",
+   "$description": "[Locked] Roomy. Card padding.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "2xl": {
+   "$type": "dimension",
+   "$value": "{Spacing.24}",
+   "$description": "[Locked] Section gaps.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "3xl": {
+   "$type": "dimension",
+   "$value": "{Spacing.32}",
+   "$description": "[Locked] Section breaks.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "4xl": {
+   "$type": "dimension",
+   "$value": "{Spacing.48}",
+   "$description": "[Locked] Page sections.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  },
+  "5xl": {
+   "$type": "dimension",
+   "$value": "{Spacing.64}",
+   "$description": "[Locked] Hero spacing.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+     ]
+    }
+   }
+  }
+ },
+ "font": {
+  "family": {
+   "$type": "fontFamily",
+   "$value": "{Font.Family.Base}",
+   "$description": "[Locked] The canonical font family.",
+   "$extensions": {
+    "com.figma": {
+     "collection": "Semantic",
+     "scopes": [
+      "FONT_FAMILY"
+     ]
+    }
+   }
+  },
+  "weight": {
+   "regular": {
+    "$type": "fontWeight",
+    "$value": "{Font.Weight.Regular}",
+    "$description": "[Locked] Default body weight.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "medium": {
+    "$type": "fontWeight",
+    "$value": "{Font.Weight.Medium}",
+    "$description": "[Locked] Emphasis within body.",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "FONT_WEIGHT"
+      ]
+     }
+    }
+   },
+   "semibold": {
+    "$type": "fontWeight",
+    "$value": "{Font.Weight.SemiBold}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "bold": {
+    "$type": "fontWeight",
+    "$value": "{Font.Weight.Bold}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   }
+  },
+  "size": {
+   "9": {
+    "$type": "dimension",
+    "$value": "{Font.Size.9}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "10": {
+    "$type": "dimension",
+    "$value": "{Font.Size.10}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "11": {
+    "$type": "dimension",
+    "$value": "{Font.Size.11}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "12": {
+    "$type": "dimension",
+    "$value": "{Font.Size.12}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "13": {
+    "$type": "dimension",
+    "$value": "{Font.Size.13}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "14": {
+    "$type": "dimension",
+    "$value": "{Font.Size.14}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "16": {
+    "$type": "dimension",
+    "$value": "{Font.Size.16}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "18": {
+    "$type": "dimension",
+    "$value": "{Font.Size.18}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "20": {
+    "$type": "dimension",
+    "$value": "{Font.Size.20}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "22": {
+    "$type": "dimension",
+    "$value": "{Font.Size.22}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "24": {
+    "$type": "dimension",
+    "$value": "{Font.Size.24}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "28": {
+    "$type": "dimension",
+    "$value": "{Font.Size.28}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "32": {
+    "$type": "dimension",
+    "$value": "{Font.Size.32}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "36": {
+    "$type": "dimension",
+    "$value": "{Font.Size.36}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "40": {
+    "$type": "dimension",
+    "$value": "{Font.Size.40}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "48": {
+    "$type": "dimension",
+    "$value": "{Font.Size.48}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "56": {
+    "$type": "dimension",
+    "$value": "{Font.Size.56}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "64": {
+    "$type": "dimension",
+    "$value": "{Font.Size.64}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "72": {
+    "$type": "dimension",
+    "$value": "{Font.Size.72}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   }
+  },
+  "line-height": {
+   "9": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-9px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "10": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-10px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "11": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-11px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "12": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-12px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "13": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-13px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "14": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-14px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "16": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-16px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "18": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-18px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "20": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-20px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "22": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-22px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "24": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-24px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "28": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-28px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "32": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-32px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "36": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-36px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "40": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-40px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "48": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-48px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "56": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-56px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "64": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-64px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   },
+   "72": {
+    "$type": "dimension",
+    "$value": "{Font.LineHeight.line-height-72px}",
+    "$extensions": {
+     "com.figma": {
+      "collection": "Semantic",
+      "scopes": [
+       "ALL_SCOPES"
+      ]
+     }
+    }
+   }
+  }
+ }
+}

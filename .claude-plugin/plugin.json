@@ -1,0 +1,8 @@
+{
+  "name": "syntropy",
+  "description": "Syntropy, the Safqah design system, packaged for AI agents: 14 skills, the /syntropy command and the Syntropy MCP server.",
+  "author": {
+    "name": "Abdulrahman Aljebreen"
+  },
+  "homepage": "https://github.com/abdulrahmanaljebreen/syntropy-ai"
+}

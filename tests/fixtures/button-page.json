@@ -1,0 +1,158 @@
+{
+ "document": {
+  "id": "69:889",
+  "name": "02a. Button",
+  "type": "CANVAS",
+  "children": [
+   {
+    "id": "465:2",
+    "name": "Button Doc Page",
+    "type": "FRAME",
+    "children": [
+     {
+      "id": "465:3",
+      "name": "Page Header",
+      "type": "INSTANCE",
+      "children": []
+     }
+    ]
+   },
+   {
+    "id": "616:2383",
+    "name": "Button Component Reference",
+    "type": "FRAME",
+    "children": [
+     {
+      "id": "417:2",
+      "name": "Button",
+      "type": "COMPONENT_SET",
+      "componentPropertyDefinitions": {
+       "Label#417:0": {
+        "type": "TEXT",
+        "defaultValue": "Button"
+       },
+       "Has icon leading#417:1": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+       },
+       "Has icon trailing#417:2": {
+        "type": "BOOLEAN",
+        "defaultValue": false
+       },
+       "Icon leading#417:3": {
+        "type": "INSTANCE_SWAP",
+        "defaultValue": "398:2",
+        "preferredValues": []
+       },
+       "Icon trailing#417:4": {
+        "type": "INSTANCE_SWAP",
+        "defaultValue": "398:2",
+        "preferredValues": []
+       },
+       "Variant": {
+        "type": "VARIANT",
+        "defaultValue": "primary",
+        "variantOptions": [
+         "primary",
+         "secondary",
+         "tertiary",
+         "destructive",
+         "error",
+         "text"
+        ]
+       },
+       "Size": {
+        "type": "VARIANT",
+        "defaultValue": "lg",
+        "variantOptions": [
+         "lg",
+         "md",
+         "sm"
+        ]
+       },
+       "State": {
+        "type": "VARIANT",
+        "defaultValue": "default",
+        "variantOptions": [
+         "default",
+         "hover",
+         "pressed",
+         "focused",
+         "disabled",
+         "loading"
+        ]
+       },
+       "Direction": {
+        "type": "VARIANT",
+        "defaultValue": "ltr",
+        "variantOptions": [
+         "ltr",
+         "rtl"
+        ]
+       }
+      },
+      "children": [
+       {
+        "id": "403:2",
+        "name": "Variant=primary, Size=lg, State=default, Direction=ltr",
+        "type": "COMPONENT"
+       },
+       {
+        "id": "403:6",
+        "name": "Variant=primary, Size=lg, State=hover, Direction=ltr",
+        "type": "COMPONENT"
+       },
+       {
+        "id": "403:10",
+        "name": "Variant=primary, Size=lg, State=pressed, Direction=ltr",
+        "type": "COMPONENT"
+       }
+      ]
+     },
+     {
+      "id": "9:1",
+      "name": "Button / Spinner",
+      "type": "COMPONENT",
+      "children": []
+     },
+     {
+      "id": "9:2",
+      "name": "Inner",
+      "type": "INSTANCE",
+      "children": [
+       {
+        "id": "9:3",
+        "name": "Nested",
+        "type": "COMPONENT",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "componentSets": {
+  "417:2": {
+   "key": "69f940f6f7aa57f1a5c0637e6f128a63a1f7c6f4",
+   "name": "Button",
+   "description": "",
+   "documentationLinks": []
+  }
+ },
+ "components": {
+  "398:2": {
+   "key": "399693acc8af39e08f635c3ef50d902e82d52ce5",
+   "name": "Button Icon Placeholder",
+   "description": "",
+   "remote": false,
+   "documentationLinks": []
+  },
+  "9:1": {
+   "key": "kk",
+   "name": "Button / Spinner",
+   "description": "Loading glyph"
+  }
+ },
+ "_variantTotal": 216
+}

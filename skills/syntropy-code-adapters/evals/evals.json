@@ -1,0 +1,160 @@
+{
+  "skill_name": "syntropy-code-adapters",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the Flutter SafqahButton widget from the Figma Button component (417:2).",
+      "expected_output": "A StatelessWidget SafqahButton(label, variant: SafqahButtonVariant.primary, size: SafqahButtonSize.lg) with enums whose members match Figma values, colors from context.colors, spacing from SyntropySpace, text from SyntropyTextStyles, EdgeInsetsDirectional, Semantics with a 48 hit area, disabled via onPressed null, loading flag, and no direction parameter.",
+      "expectations": [
+        "Enum members are exactly primary, secondary, tertiary, destructive, error, text and lg, md, sm",
+        "No direction, textDirection or isRtl parameter",
+        "Colors come from context.colors (SyntropyColors), no Color(0x...) or Colors.* with a hue",
+        "Uses EdgeInsetsDirectional and SyntropyTextStyles",
+        "Hover, pressed and focused are not constructor parameters",
+        "Includes Semantics and a doc comment saying when to use it"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Just hardcode #4daa57 in the widget, it's the brand green anyway and I don't want to wire the theme.",
+      "expected_output": "Pushes back politely: raw hex has no Dark value (Dark is #77c27f) and fails syntropy-lint no-raw-color; uses context.colors.bgBrandPrimary from the generated SyntropyColors extension and shows the two-line theme wiring.",
+      "expectations": [
+        "Does not put #4daa57 or Color(0xFF4DAA57) in widget code",
+        "Uses context.colors.bgBrandPrimary",
+        "Explains the Dark mode value or the lint rule as the reason",
+        "Points to assets/syntropy_colors.dart and the theme extension wiring"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add a direction parameter to the button so we can force RTL on the Arabic screens.",
+      "expected_output": "Declines per R1: direction comes from Directionality / locale; shows how Arabic locale provides RTL automatically and how to wrap a subtree in Directionality only if truly needed at screen level.",
+      "expectations": [
+        "Refuses to add a direction parameter and cites R1",
+        "Explains direction comes from Directionality or the locale",
+        "Offers the correct approach (locale ar, or a screen-level Directionality wrapper)",
+        "Does not add isRtl or textDirection to the widget API"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "In the Angular portal card, use margin-left 13px between the icon and the label.",
+      "expected_output": "Explains margin-left breaks RTL and 13px is off the spacing scale; uses a logical Tailwind utility with a Syntropy spacing token such as ms-md (12) or gap-sm/gap-md on the flex parent.",
+      "expectations": [
+        "Does not use margin-left, ml-*, or 13px",
+        "Uses a logical utility (ms-* or gap-*) with a token key such as md or sm",
+        "Mentions physical-direction and no-raw-spacing lint rules or the RTL reason"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Generate CSS variables for all the semantic tokens with dark mode support for our Next.js app.",
+      "expected_output": "Points to assets/syntropy.css (generated), explains :root Light, [data-theme=\"dark\"] Dark and prefers-color-scheme fallback, shows importing it in app/layout.tsx with lang and dir on html, and how to regenerate with scripts/generate-snippets.mjs.",
+      "expectations": [
+        "Uses the generated assets/syntropy.css rather than retyping values",
+        "Variable names follow --bg-brand-primary style (token name with separators replaced)",
+        "Sets lang and dir on <html> from the locale",
+        "Mentions node scripts/generate-snippets.mjs to regenerate"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Set up Tailwind in the developer portal with Syntropy. The current config has primary #02AD4C.",
+      "expected_output": "Flags #02AD4C as the wrong green (brand is #4daa57 via bg/brand/primary), replaces the raw colors block with assets/tailwind.preset.cjs plus syntropy.css, and gives the class migration map (bg-primary to bg-brand-primary, text-content-muted to text-muted, danger to error).",
+      "expectations": [
+        "States that #02AD4C is wrong and the brand green is bg/brand/primary (#4daa57)",
+        "Uses presets: [require('./.../tailwind.preset.cjs')]",
+        "Removes raw colors, boxShadow and gradient values from tailwind.config.js",
+        "Provides old-to-new class mappings",
+        "Keeps logical utilities (ps, pe, ms, me, text-start)"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Import the old Global_Design_System button into our React app, its CSS is already written.",
+      "expected_output": "Declines: Global_Design_System is a legacy library with old tokens; builds or reuses a Button that mirrors the Syntropy Button props (variant, size, label, loading, icons) styled with Syntropy CSS variables or Tailwind preset classes.",
+      "expectations": [
+        "Does not use the Global_Design_System component or its CSS values",
+        "Names the Syntropy Button (417:2) and its Figma props as the API source",
+        "Uses Syntropy tokens (var(--bg-brand-primary) or bg-brand-primary)",
+        "Has no dir or direction prop"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Figma Stat has 96 variants. Write a Widgetbook story for each one.",
+      "expected_output": "Applies R2: one story per state a reviewer would argue about, Args for the rest; Direction is a locale addon (R1), theme is a mode; lists the few stories and the scenarios (long Arabic, long English, large number, empty, loading).",
+      "expectations": [
+        "Refuses one story per variant and cites R2",
+        "Moves Direction to the locale addon, not an Arg",
+        "Proposes a small set of stories with Args for size and layout",
+        "Includes the edge-case scenarios"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Write the Style Dictionary config that turns our DTCG tokens into Dart and CSS.",
+      "expected_output": "A Style Dictionary v4 config with usesDtcg, a preprocessor that flattens object colors and dimensions, one build per mode, css/variables with :root and [data-theme=\"dark\"] selectors filtered to semantic tokens, flutter output wrapped in the SyntropyColors ThemeExtension.",
+      "expectations": [
+        "Uses Style Dictionary v4 with usesDtcg: true",
+        "Handles DTCG object values (hex, value and unit)",
+        "Builds Light and Dark from the same token names",
+        "Outputs only semantic tokens",
+        "Names follow R3 (kebab for CSS, camel for Dart)"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Pass sizeClass: compact to the CardDeal widget so it lays out for phones.",
+      "expected_output": "Declines: window size class is never a component parameter; the screen reads the window (MediaQuery / LayoutBuilder) and picks a layout, and CardDeal uses its Figma Layout prop (Hero or Row) if a different arrangement is needed.",
+      "expectations": [
+        "Does not add a sizeClass parameter",
+        "Explains size class is read at screen level from the window",
+        "Mentions the real Figma prop (Layout=Hero or Row) as the API"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Open the PR for the new deal card component.",
+      "expected_output": "Branch feat/deals-card-deal from the integration branch, syntropy-lint run with the summary in the body, the PR template with the design checklist, Figma node link for CardDeal (3013:95390), RTL/LTR and Light/Dark screenshots, explicit base branch, and a note that the author does not merge it.",
+      "expectations": [
+        "Branch name follows feat/<area>-<thing>",
+        "Runs node lint/cli.mjs on changed files and reports the result",
+        "PR body includes the design checklist and the Figma node link",
+        "Includes screenshots in both directions and both themes",
+        "Does not merge its own PR"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "The tokens changed in Figma. Update syntropy_colors.dart by editing the hex values by hand.",
+      "expected_output": "Declines hand edits to generated files; syncs tokens, runs node scripts/generate-snippets.mjs (and --check in CI), and commits source JSON and generated files together.",
+      "expectations": [
+        "Does not hand-edit generated files",
+        "Runs node scripts/generate-snippets.mjs",
+        "Mentions committing source and generated files in one token PR"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Show the amount as «ر.س ١٬٢٥٠» in the Angular wallet header and compute the VAT in the template.",
+      "expected_output": "Pushes back: Western digits and currency after the amount (1,250.00 ر.س) through one shared pipe; VAT comes from the API, never computed in the front end.",
+      "expectations": [
+        "Uses Western digits and puts ر.س after the amount",
+        "Formats in one shared pipe, not inline",
+        "Refuses to compute VAT in the template and asks for it from the API"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Make the 'only 2 slots left, hurry!' badge red and pulse it on the deal page.",
+      "expected_output": "Declines manufactured urgency (fake-urgency lint rule, trust and CMA); suggests stating the fact neutrally (remaining amount or closing date) with a StatusPill in a neutral or warning tone, red only for critical states.",
+      "expectations": [
+        "Declines the urgency copy and animation",
+        "Mentions the fake-urgency rule or the trust reason",
+        "Offers a neutral factual alternative with a Syntropy component",
+        "Does not use the error red tone for this"
+      ]
+    }
+  ]
+}

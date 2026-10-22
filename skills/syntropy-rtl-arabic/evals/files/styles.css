@@ -1,0 +1,16 @@
+/* syntropy-lint-disable (check-rtl test fixture; violations are deliberate) */
+/* Test fixture for check-rtl.mjs: stylesheet with deliberate RTL mistakes. */
+.deal-card {
+  margin-left: 16px;
+  padding-right: 8px;
+  text-align: left;
+  border-top-left-radius: 12px;
+  float: right;
+  direction: rtl;
+}
+.deal-card__badge {
+  position: absolute;
+  right: 0;
+  inset-inline-start: 0; /* fine: logical */
+  padding-inline: 12px; /* fine: logical */
+}

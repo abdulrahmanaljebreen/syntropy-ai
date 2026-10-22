@@ -1,0 +1,1754 @@
+{
+ "$schema": "syntropy-links/1",
+ "checked": "2026-10-15",
+ "note": "Every link the team and its agents need. Edit through a PR; the Notion database is generated from this file.",
+ "links": [
+  {
+   "id": "syntropy-design-system",
+   "name": "Syntropy design system (Figma)",
+   "url": "https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y",
+   "category": "syntropy",
+   "bestFor": "The source of truth for every component, token and doc page",
+   "access": "internal",
+   "agent": "figma"
+  },
+  {
+   "id": "syntropy-icons",
+   "name": "Syntropy Icons (Figma)",
+   "url": "https://www.figma.com/design/DDI9ObV7rOP82XQ3OJzogv",
+   "category": "syntropy",
+   "bestFor": "636 line icons and the isometric status illustrations",
+   "access": "internal",
+   "agent": "figma"
+  },
+  {
+   "id": "design-system-v2-0-initiative",
+   "name": "Design System v2.0 initiative (Notion)",
+   "url": "https://www.notion.so/34f1a53e1a6b8149bcfbe82855242f0a",
+   "category": "syntropy",
+   "bestFor": "Scope, phases, glossary and governance of Syntropy",
+   "access": "internal",
+   "agent": "web"
+  },
+  {
+   "id": "stage-1-3-principles",
+   "name": "Stage 1-3 Principles (Notion)",
+   "url": "https://www.notion.so/3501a53e1a6b8190ba9ece891190bef9",
+   "category": "syntropy",
+   "bestFor": "Architecture, voice, visual, RTL and meta rules",
+   "access": "internal",
+   "agent": "web"
+  },
+  {
+   "id": "experience-home",
+   "name": "Experience Home (Notion)",
+   "url": "https://www.notion.so/1731a53e1a6b82e0884801540fb9233f",
+   "category": "syntropy",
+   "bestFor": "Front door of the Experience department",
+   "access": "internal",
+   "agent": "web"
+  },
+  {
+   "id": "ux-process-and-lifecycle",
+   "name": "UX Process and Lifecycle (Notion)",
+   "url": "https://www.notion.so/3481a53e1a6b81119a92c79e0ac0c3e2",
+   "category": "syntropy",
+   "bestFor": "Discover to Measure phases and the 11 templates",
+   "access": "internal",
+   "agent": "web"
+  },
+  {
+   "id": "brand-guidelines",
+   "name": "Brand Guidelines (Notion)",
+   "url": "https://www.notion.so/49c64ca145b84c509ffbe8c473ad66a7",
+   "category": "syntropy",
+   "bestFor": "Logos, fonts and brand assets",
+   "access": "internal",
+   "agent": "web"
+  },
+  {
+   "id": "safqah",
+   "name": "Safqah",
+   "url": "https://safqah.co",
+   "category": "syntropy",
+   "bestFor": "The live product and brand",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "lazyweb",
+   "name": "Lazyweb",
+   "url": "https://www.lazyweb.com",
+   "category": "research-tools",
+   "bestFor": "Real app screens, flows and A/B experiments built for agents; growth scores and reports",
+   "access": "freemium",
+   "agent": "mcp",
+   "mcp": "https://www.lazyweb.com/mcp"
+  },
+  {
+   "id": "refero",
+   "name": "Refero",
+   "url": "https://refero.design",
+   "category": "research-tools",
+   "bestFor": "Curated screens, flows and styles searchable by pattern, iOS and web",
+   "access": "paid",
+   "agent": "mcp",
+   "mcp": "https://refero.design/mcp"
+  },
+  {
+   "id": "mobbin",
+   "name": "Mobbin",
+   "url": "https://mobbin.com",
+   "category": "research-tools",
+   "bestFor": "Largest library of real iOS, Android and web screens and flows",
+   "access": "paid",
+   "agent": "mcp",
+   "mcp": "https://mobbin.com/mcp"
+  },
+  {
+   "id": "screensdesign",
+   "name": "ScreensDesign",
+   "url": "https://screensdesign.com",
+   "category": "research-tools",
+   "bestFor": "iOS onboarding and paywall flows linked to revenue data",
+   "access": "paid",
+   "agent": "mcp",
+   "mcp": "https://screensdesign.com/mcp"
+  },
+  {
+   "id": "nicelydone",
+   "name": "Nicelydone",
+   "url": "https://nicelydone.club",
+   "category": "research-tools",
+   "bestFor": "SaaS and web-app flows; good for back-office",
+   "access": "paid",
+   "agent": "mcp",
+   "mcp": "https://nicelydone.club/mcp"
+  },
+  {
+   "id": "figma-mcp-server",
+   "name": "Figma MCP server",
+   "url": "https://developers.figma.com/docs/figma-mcp-server/",
+   "category": "research-tools",
+   "bestFor": "Read Syntropy directly: components, variables, design context, screenshots",
+   "access": "paid",
+   "agent": "mcp",
+   "mcp": "https://developers.figma.com/docs/figma-mcp-server/"
+  },
+  {
+   "id": "streamline",
+   "name": "Streamline",
+   "url": "https://www.streamlinehq.com",
+   "category": "research-tools",
+   "bestFor": "Source family of Syntropy Icons; use only to propose a missing icon",
+   "access": "freemium",
+   "agent": "mcp",
+   "mcp": "Streamline connector in Claude"
+  },
+  {
+   "id": "lottiefiles-mcp",
+   "name": "LottieFiles MCP",
+   "url": "https://mcp.lottiefiles.com/mcp",
+   "category": "research-tools",
+   "bestFor": "Motion asset search for agents",
+   "access": "free",
+   "agent": "mcp",
+   "mcp": "https://mcp.lottiefiles.com/mcp"
+  },
+  {
+   "id": "shadcn-ui-mcp",
+   "name": "shadcn/ui MCP",
+   "url": "https://ui.shadcn.com/docs/mcp",
+   "category": "research-tools",
+   "bestFor": "Web component behaviour reference for engineers, never the Safqah look",
+   "access": "free",
+   "agent": "mcp",
+   "mcp": "https://ui.shadcn.com/docs/mcp"
+  },
+  {
+   "id": "ant-design-mcp",
+   "name": "Ant Design MCP",
+   "url": "https://ant.design/docs/react/mcp",
+   "category": "research-tools",
+   "bestFor": "Dense back-office component behaviour for engineers",
+   "access": "free",
+   "agent": "mcp",
+   "mcp": "https://ant.design/docs/react/mcp"
+  },
+  {
+   "id": "mobbin-finance-apps",
+   "name": "Mobbin finance apps",
+   "url": "https://mobbin.com/explore/mobile/app-categories/finance",
+   "category": "mobile-patterns",
+   "bestFor": "Finance category: banks, investing, wallets",
+   "access": "paid",
+   "agent": "web"
+  },
+  {
+   "id": "page-flows",
+   "name": "Page Flows",
+   "url": "https://pageflows.com",
+   "category": "mobile-patterns",
+   "bestFor": "Recorded end-to-end flows: onboarding, KYC, checkout",
+   "access": "paid",
+   "agent": "none"
+  },
+  {
+   "id": "growth-design-case-studies",
+   "name": "Growth.design case studies",
+   "url": "https://growth.design/case-studies",
+   "category": "mobile-patterns",
+   "bestFor": "Comic-style UX and psychology teardowns",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "pttrns",
+   "name": "Pttrns",
+   "url": "https://pttrns.com",
+   "category": "mobile-patterns",
+   "bestFor": "Mobile UI patterns by category",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "collect-ui",
+   "name": "Collect UI",
+   "url": "https://collectui.com",
+   "category": "mobile-patterns",
+   "bestFor": "Daily UI shots grouped by component",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "ui-coach",
+   "name": "UI Coach",
+   "url": "https://www.uicoach.io",
+   "category": "mobile-patterns",
+   "bestFor": "Practice briefs for UI skills",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "savee",
+   "name": "Savee",
+   "url": "https://savee.com",
+   "category": "mobile-patterns",
+   "bestFor": "Moodboards and visual inspiration",
+   "access": "freemium",
+   "agent": "none"
+  },
+  {
+   "id": "best-designs-on-x",
+   "name": "Best Designs On X",
+   "url": "https://bestdesignsonx.com",
+   "category": "web-inspiration",
+   "bestFor": "Hand-picked UI and brand work posted on X, updated hourly",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "recent",
+   "name": "Recent (formerly Godly)",
+   "url": "https://recent.design",
+   "category": "web-inspiration",
+   "bestFor": "High-end web design inspiration",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "land-book",
+   "name": "Land-book",
+   "url": "https://land-book.com",
+   "category": "web-inspiration",
+   "bestFor": "Filterable landing-page gallery",
+   "access": "freemium",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "lapa-ninja",
+   "name": "Lapa Ninja",
+   "url": "https://www.lapa.ninja",
+   "category": "web-inspiration",
+   "bestFor": "Landing pages by category, including finance",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "awwwards",
+   "name": "Awwwards",
+   "url": "https://www.awwwards.com",
+   "category": "web-inspiration",
+   "bestFor": "Award-winning and experimental web",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "saas-landing-page",
+   "name": "SaaS Landing Page",
+   "url": "https://saaslandingpage.com",
+   "category": "web-inspiration",
+   "bestFor": "SaaS landing pages broken into sections",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "siteinspire",
+   "name": "Siteinspire",
+   "url": "https://www.siteinspire.com",
+   "category": "web-inspiration",
+   "bestFor": "Curated minimal web design",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "minimal-gallery",
+   "name": "Minimal Gallery",
+   "url": "https://minimal.gallery",
+   "category": "web-inspiration",
+   "bestFor": "Minimal, typography-led sites",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "one-page-love",
+   "name": "One Page Love",
+   "url": "https://onepagelove.com",
+   "category": "web-inspiration",
+   "bestFor": "Single-page sites and templates",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "landingfolio",
+   "name": "Landingfolio",
+   "url": "https://www.landingfolio.com",
+   "category": "web-inspiration",
+   "bestFor": "Landing pages and section components",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "httpster",
+   "name": "Httpster",
+   "url": "https://httpster.net",
+   "category": "web-inspiration",
+   "bestFor": "Bold, unconventional sites",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "css-design-awards",
+   "name": "CSS Design Awards",
+   "url": "https://www.cssdesignawards.com",
+   "category": "web-inspiration",
+   "bestFor": "Award-winning web UI",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "navbar-gallery",
+   "name": "Navbar Gallery",
+   "url": "https://navbar.gallery",
+   "category": "web-inspiration",
+   "bestFor": "Navigation bar patterns",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "footer-design",
+   "name": "Footer Design",
+   "url": "https://www.footer.design",
+   "category": "web-inspiration",
+   "bestFor": "Footer patterns",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "dark-mode-design",
+   "name": "Dark Mode Design",
+   "url": "https://www.darkmodedesign.com",
+   "category": "web-inspiration",
+   "bestFor": "Dark-theme sites",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "saasframe",
+   "name": "SaaSFrame",
+   "url": "https://www.saasframe.io",
+   "category": "web-inspiration",
+   "bestFor": "SaaS web-app screens, good for back-office",
+   "access": "freemium",
+   "agent": "none"
+  },
+  {
+   "id": "toolfolio",
+   "name": "Toolfolio",
+   "url": "https://toolfolio.com",
+   "category": "tool-directories",
+   "bestFor": "Curated tools for design, productivity and AI",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "toools-design",
+   "name": "TOOOLS.design",
+   "url": "https://www.toools.design",
+   "category": "tool-directories",
+   "bestFor": "2,000+ design tools",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "ux-tools",
+   "name": "UX Tools",
+   "url": "https://www.uxtools.co",
+   "category": "tool-directories",
+   "bestFor": "Tool comparisons and the yearly UX tools survey",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "design-resources",
+   "name": "Design Resources",
+   "url": "https://designresourc.es",
+   "category": "tool-directories",
+   "bestFor": "Directory of design tools and resources",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "uiux-showcase",
+   "name": "UIUX Showcase",
+   "url": "https://uiuxshowcase.com",
+   "category": "tool-directories",
+   "bestFor": "Galleries, resources and AI tools",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "checklist-design",
+   "name": "Checklist Design",
+   "url": "https://www.checklist.design",
+   "category": "tool-directories",
+   "bestFor": "Checklists per page and component type",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "figma-community",
+   "name": "Figma Community",
+   "url": "https://www.figma.com/community",
+   "category": "tool-directories",
+   "bestFor": "Kits, plugins and RTL files",
+   "access": "free",
+   "agent": "figma"
+  },
+  {
+   "id": "product-hunt",
+   "name": "Product Hunt",
+   "url": "https://www.producthunt.com",
+   "category": "tool-directories",
+   "bestFor": "New tool launches",
+   "access": "free",
+   "agent": "api"
+  },
+  {
+   "id": "stake",
+   "name": "Stake",
+   "url": "https://getstake.com",
+   "category": "saudi-investing",
+   "bestFor": "Closest peer: fractional real estate in KSA and Dubai",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "sukuk",
+   "name": "Sukuk",
+   "url": "https://sukuk.sa",
+   "category": "saudi-investing",
+   "bestFor": "Saudi sukuk and debt platform",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "manafa",
+   "name": "Manafa",
+   "url": "https://manafa.sa",
+   "category": "saudi-investing",
+   "bestFor": "Saudi debt crowdfunding",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "raqamyah",
+   "name": "Raqamyah",
+   "url": "https://raqamyah.sa",
+   "category": "saudi-investing",
+   "bestFor": "SME debt crowdfunding, investor UX",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "lendo",
+   "name": "Lendo",
+   "url": "https://www.lendo.sa",
+   "category": "saudi-investing",
+   "bestFor": "SME financing and investor dashboards",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "derayah",
+   "name": "Derayah",
+   "url": "https://www.derayah.com",
+   "category": "saudi-investing",
+   "bestFor": "Saudi brokerage and wealth",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "al-rajhi-capital",
+   "name": "Al Rajhi Capital",
+   "url": "https://www.alrajhi-capital.sa",
+   "category": "saudi-investing",
+   "bestFor": "Large Islamic brokerage",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "snb-capital",
+   "name": "SNB Capital",
+   "url": "https://snbcapital.com",
+   "category": "saudi-investing",
+   "bestFor": "Bank-owned brokerage",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "sahm",
+   "name": "Sahm",
+   "url": "https://www.sahmcapital.com",
+   "category": "saudi-investing",
+   "bestFor": "US and Saudi stock trading app",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "drahim",
+   "name": "Drahim",
+   "url": "https://drahim.sa",
+   "category": "saudi-investing",
+   "bestFor": "Personal finance and investing",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "tamara",
+   "name": "Tamara",
+   "url": "https://tamara.co",
+   "category": "saudi-investing",
+   "bestFor": "Saudi BNPL with strong Arabic UX",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "al-rajhi-bank",
+   "name": "Al Rajhi Bank",
+   "url": "https://www.alrajhibank.com.sa",
+   "category": "saudi-banking",
+   "bestFor": "The largest Saudi retail banking app",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "d360-bank",
+   "name": "D360 Bank",
+   "url": "https://d360.com",
+   "category": "saudi-banking",
+   "bestFor": "Saudi digital bank",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "stc-bank",
+   "name": "STC Bank",
+   "url": "https://stcbank.com.sa",
+   "category": "saudi-banking",
+   "bestFor": "Mass-market Saudi wallet and bank",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "urpay",
+   "name": "urpay",
+   "url": "https://www.urpay.com.sa",
+   "category": "saudi-banking",
+   "bestFor": "Saudi wallet and transfers",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "barq",
+   "name": "Barq",
+   "url": "https://www.barq.com",
+   "category": "saudi-banking",
+   "bestFor": "Saudi wallet and transfers",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "hala",
+   "name": "Hala",
+   "url": "https://hala.com",
+   "category": "saudi-banking",
+   "bestFor": "Payments for Saudi small businesses",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "tweeq",
+   "name": "Tweeq",
+   "url": "https://tweeq.sa",
+   "category": "saudi-banking",
+   "bestFor": "Saudi spending wallet",
+   "access": "free",
+   "agent": "web",
+   "region": "KSA",
+   "benchmark": true
+  },
+  {
+   "id": "tabby",
+   "name": "Tabby",
+   "url": "https://tabby.ai",
+   "category": "gcc-investing",
+   "bestFor": "GCC BNPL",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "sarwa",
+   "name": "Sarwa",
+   "url": "https://www.sarwa.co",
+   "category": "gcc-investing",
+   "bestFor": "UAE robo-advisor and trading",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "baraka",
+   "name": "baraka",
+   "url": "https://getbaraka.com",
+   "category": "gcc-investing",
+   "bestFor": "GCC investing in US stocks",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "wahed",
+   "name": "Wahed",
+   "url": "https://www.wahed.com",
+   "category": "gcc-investing",
+   "bestFor": "Halal investing app",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "thndr",
+   "name": "Thndr",
+   "url": "https://thndr.app",
+   "category": "gcc-investing",
+   "bestFor": "Arabic-first investing app",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "ziina",
+   "name": "Ziina",
+   "url": "https://ziina.com",
+   "category": "gcc-investing",
+   "bestFor": "UAE payments app",
+   "access": "free",
+   "agent": "web",
+   "region": "GCC",
+   "benchmark": true
+  },
+  {
+   "id": "fundrise",
+   "name": "Fundrise",
+   "url": "https://fundrise.com",
+   "category": "real-estate-investing",
+   "bestFor": "Real estate investing UX and reporting",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "arrived",
+   "name": "Arrived",
+   "url": "https://arrived.com",
+   "category": "real-estate-investing",
+   "bestFor": "Fractional rental property",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "realt",
+   "name": "RealT",
+   "url": "https://realt.co",
+   "category": "real-estate-investing",
+   "bestFor": "Tokenized real estate",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "crowdstreet",
+   "name": "CrowdStreet",
+   "url": "https://crowdstreet.com",
+   "category": "real-estate-investing",
+   "bestFor": "Commercial real estate deals and disclosures",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "masterworks",
+   "name": "Masterworks",
+   "url": "https://www.masterworks.com",
+   "category": "real-estate-investing",
+   "bestFor": "Fractional alternatives with offering documents",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "republic",
+   "name": "Republic",
+   "url": "https://republic.com",
+   "category": "real-estate-investing",
+   "bestFor": "Crowdfunding deal pages",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "wealthsimple",
+   "name": "Wealthsimple",
+   "url": "https://www.wealthsimple.com",
+   "category": "global-investing",
+   "bestFor": "Calm, trust-led wealth UX",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "robinhood",
+   "name": "Robinhood",
+   "url": "https://robinhood.com",
+   "category": "global-investing",
+   "bestFor": "Simple trading UX",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "public",
+   "name": "Public",
+   "url": "https://public.com",
+   "category": "global-investing",
+   "bestFor": "Social investing",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "trade-republic",
+   "name": "Trade Republic",
+   "url": "https://traderepublic.com",
+   "category": "global-investing",
+   "bestFor": "European broker with minimal UI",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "scalable-capital",
+   "name": "Scalable Capital",
+   "url": "https://de.scalable.capital",
+   "category": "global-investing",
+   "bestFor": "European broker and savings plans",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "etoro",
+   "name": "eToro",
+   "url": "https://www.etoro.com",
+   "category": "global-investing",
+   "bestFor": "Social trading at scale",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "webull",
+   "name": "Webull",
+   "url": "https://www.webull.com",
+   "category": "global-investing",
+   "bestFor": "Data-dense trading",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "groww",
+   "name": "Groww",
+   "url": "https://groww.in",
+   "category": "global-investing",
+   "bestFor": "Mass-market investing onboarding",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "zerodha-kite",
+   "name": "Zerodha Kite",
+   "url": "https://kite.zerodha.com",
+   "category": "global-investing",
+   "bestFor": "Fast, dense trading interface",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "betterment",
+   "name": "Betterment",
+   "url": "https://www.betterment.com",
+   "category": "global-investing",
+   "bestFor": "Goal-based investing",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "m1",
+   "name": "M1",
+   "url": "https://m1.com",
+   "category": "global-investing",
+   "bestFor": "Portfolio pies and automation",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "acorns",
+   "name": "Acorns",
+   "url": "https://www.acorns.com",
+   "category": "global-investing",
+   "bestFor": "Round-up and goal investing",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "stash",
+   "name": "Stash",
+   "url": "https://www.stash.com",
+   "category": "global-investing",
+   "bestFor": "Investing for beginners",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "qapital",
+   "name": "Qapital",
+   "url": "https://www.qapital.com",
+   "category": "global-investing",
+   "bestFor": "Goal savings rules",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "revolut",
+   "name": "Revolut",
+   "url": "https://www.revolut.com",
+   "category": "neobanks",
+   "bestFor": "Super-app banking",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "monzo",
+   "name": "Monzo",
+   "url": "https://monzo.com",
+   "category": "neobanks",
+   "bestFor": "Friendly banking tone and UX",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "wise",
+   "name": "Wise",
+   "url": "https://wise.com",
+   "category": "neobanks",
+   "bestFor": "Transparent fees and transfer tracking",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "nubank",
+   "name": "Nubank",
+   "url": "https://nubank.com.br",
+   "category": "neobanks",
+   "bestFor": "Mass-market digital bank",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "cash-app",
+   "name": "Cash App",
+   "url": "https://cash.app",
+   "category": "neobanks",
+   "bestFor": "Simple money movement",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "chime",
+   "name": "Chime",
+   "url": "https://www.chime.com",
+   "category": "neobanks",
+   "bestFor": "Banking for everyday users",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "ally",
+   "name": "Ally",
+   "url": "https://www.ally.com",
+   "category": "neobanks",
+   "bestFor": "Online bank and invest",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "mercury",
+   "name": "Mercury",
+   "url": "https://mercury.com",
+   "category": "finance-backoffice",
+   "bestFor": "Business banking dashboard",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "ramp",
+   "name": "Ramp",
+   "url": "https://ramp.com",
+   "category": "finance-backoffice",
+   "bestFor": "Finance operations and approvals",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "url": "https://stripe.com",
+   "category": "finance-backoffice",
+   "bestFor": "Payments dashboard and docs",
+   "access": "free",
+   "agent": "web",
+   "region": "Global",
+   "benchmark": true
+  },
+  {
+   "id": "dga-platforms-code-design-system",
+   "name": "DGA Platforms Code design system",
+   "url": "https://design.dga.gov.sa",
+   "category": "arabic-rtl",
+   "bestFor": "Saudi national government UI standard",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "material-3-bidirectionality-and-rtl",
+   "name": "Material 3: Bidirectionality and RTL",
+   "url": "https://m3.material.io/foundations/layout/bidirectionality-rtl",
+   "category": "arabic-rtl",
+   "bestFor": "Mirroring rules for icons, layout and numbers",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apple-hig-right-to-left",
+   "name": "Apple HIG: Right to left",
+   "url": "https://developer.apple.com/design/human-interface-guidelines/right-to-left",
+   "category": "arabic-rtl",
+   "bestFor": "iOS RTL rules",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apple-localization",
+   "name": "Apple Localization",
+   "url": "https://developer.apple.com/localization/",
+   "category": "arabic-rtl",
+   "bestFor": "iOS localization process",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "android-supporting-languages",
+   "name": "Android: supporting languages",
+   "url": "https://developer.android.com/training/basics/supporting-devices/languages",
+   "category": "arabic-rtl",
+   "bestFor": "Android RTL and localization",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "flutter-internationalization",
+   "name": "Flutter internationalization",
+   "url": "https://docs.flutter.dev/ui/internationalization",
+   "category": "arabic-rtl",
+   "bestFor": "Flutter RTL and localization",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "rtl-styling",
+   "name": "RTL Styling",
+   "url": "https://rtlstyling.com/posts/rtl-styling",
+   "category": "arabic-rtl",
+   "bestFor": "The most complete CSS RTL guide",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "mdn-dir-attribute",
+   "name": "MDN dir attribute",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir",
+   "category": "arabic-rtl",
+   "bestFor": "Bidi markup reference",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "w3c-inline-bidi-markup",
+   "name": "W3C inline bidi markup",
+   "url": "https://www.w3.org/International/articles/inline-bidi-markup/",
+   "category": "arabic-rtl",
+   "bestFor": "Mixed Arabic and Latin text",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "microsoft-text-directionality",
+   "name": "Microsoft text directionality",
+   "url": "https://learn.microsoft.com/en-us/globalization/fonts-layout/text-directionality",
+   "category": "arabic-rtl",
+   "bestFor": "Bidi concepts",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "dubai-design-system",
+   "name": "Dubai Design System",
+   "url": "https://designsystem.dubai.ae/foundations",
+   "category": "arabic-rtl",
+   "bestFor": "Bilingual typography and scale",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "uae-design-system",
+   "name": "UAE Design System",
+   "url": "https://designsystem.gov.ae",
+   "category": "arabic-rtl",
+   "bestFor": "UAE federal government system",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "google-fonts-arabic",
+   "name": "Google Fonts Arabic",
+   "url": "https://fonts.google.com/?subset=arabic",
+   "category": "arabic-rtl",
+   "bestFor": "Arabic fonts including IBM Plex Sans Arabic",
+   "access": "free",
+   "agent": "api"
+  },
+  {
+   "id": "29lt",
+   "name": "29LT",
+   "url": "https://www.29lt.com",
+   "category": "arabic-rtl",
+   "bestFor": "Bi-script Arabic and Latin type foundry",
+   "access": "paid",
+   "agent": "web"
+  },
+  {
+   "id": "arabic-typography",
+   "name": "Arabic Typography",
+   "url": "https://www.arabictypography.com",
+   "category": "arabic-rtl",
+   "bestFor": "Arabic type foundry",
+   "access": "paid",
+   "agent": "web"
+  },
+  {
+   "id": "khtt-net",
+   "name": "khtt.net",
+   "url": "https://www.khtt.net",
+   "category": "arabic-rtl",
+   "bestFor": "Arabic type and design research",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "vtex-ux-writing",
+   "name": "VTEX UX Writing",
+   "url": "https://uxwriting.vtex.com",
+   "category": "arabic-rtl",
+   "bestFor": "Multilingual UX writing guide",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "material-3",
+   "name": "Material 3",
+   "url": "https://m3.material.io",
+   "category": "design-systems",
+   "bestFor": "Android-native patterns and motion",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apple-hig",
+   "name": "Apple HIG",
+   "url": "https://developer.apple.com/design/human-interface-guidelines",
+   "category": "design-systems",
+   "bestFor": "iOS-native patterns",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "carbon",
+   "name": "Carbon",
+   "url": "https://carbondesignsystem.com",
+   "category": "design-systems",
+   "bestFor": "Enterprise data-dense UI",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "polaris",
+   "name": "Polaris",
+   "url": "https://shopify.dev/docs/api/polaris",
+   "category": "design-systems",
+   "bestFor": "Admin and merchant UI",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "atlassian-design",
+   "name": "Atlassian Design",
+   "url": "https://atlassian.design",
+   "category": "design-systems",
+   "bestFor": "Product UI and content design",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "primer",
+   "name": "Primer",
+   "url": "https://primer.style",
+   "category": "design-systems",
+   "bestFor": "Model for a design system MCP server",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "fluent-2",
+   "name": "Fluent 2",
+   "url": "https://fluent2.microsoft.design",
+   "category": "design-systems",
+   "bestFor": "Elevation and accessibility guidance",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "gov-uk-design-system",
+   "name": "GOV.UK Design System",
+   "url": "https://design-system.service.gov.uk",
+   "category": "design-systems",
+   "bestFor": "Accessible forms and plain language",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "base-web",
+   "name": "Base Web",
+   "url": "https://baseweb.design",
+   "category": "design-systems",
+   "bestFor": "Uber component system",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "ant-design",
+   "name": "Ant Design",
+   "url": "https://ant.design",
+   "category": "design-systems",
+   "bestFor": "Dense back-office components",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "shadcn-ui",
+   "name": "shadcn/ui",
+   "url": "https://ui.shadcn.com",
+   "category": "design-systems",
+   "bestFor": "Composable web components",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "radix",
+   "name": "Radix",
+   "url": "https://www.radix-ui.com",
+   "category": "design-systems",
+   "bestFor": "Accessible primitives",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "adobe-spectrum",
+   "name": "Adobe Spectrum",
+   "url": "https://spectrum.adobe.com",
+   "category": "design-systems",
+   "bestFor": "Thorough component guidance",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "salesforce-lightning",
+   "name": "Salesforce Lightning",
+   "url": "https://www.lightningdesignsystem.com",
+   "category": "design-systems",
+   "bestFor": "Enterprise patterns and agent skills",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "component-gallery",
+   "name": "Component Gallery",
+   "url": "https://component.gallery",
+   "category": "design-systems",
+   "bestFor": "The same component compared across systems",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "design-systems-repo",
+   "name": "Design Systems Repo",
+   "url": "https://designsystemsrepo.com",
+   "category": "design-systems",
+   "bestFor": "Index of design systems",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "design-systems-surf",
+   "name": "Design Systems Surf",
+   "url": "https://designsystems.surf",
+   "category": "design-systems",
+   "bestFor": "Searchable design system examples",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "the-design-system-guide",
+   "name": "The Design System Guide",
+   "url": "https://thedesignsystem.guide",
+   "category": "design-systems",
+   "bestFor": "How to run a design system",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "zeroheight",
+   "name": "zeroheight",
+   "url": "https://zeroheight.com",
+   "category": "design-systems",
+   "bestFor": "Design system documentation examples",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "nn-g-10-usability-heuristics",
+   "name": "NN/g 10 usability heuristics",
+   "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+   "category": "ux-principles",
+   "bestFor": "Heuristic reviews",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "laws-of-ux",
+   "name": "Laws of UX",
+   "url": "https://lawsofux.com",
+   "category": "ux-principles",
+   "bestFor": "Psychology principles",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "baymard-institute",
+   "name": "Baymard Institute",
+   "url": "https://baymard.com",
+   "category": "ux-principles",
+   "bestFor": "Research-backed forms and checkout",
+   "access": "paid",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "goodui",
+   "name": "GoodUI",
+   "url": "https://goodui.org",
+   "category": "ux-principles",
+   "bestFor": "A/B-tested UI patterns",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "deceptive-design",
+   "name": "Deceptive Design",
+   "url": "https://deceptive.design/types",
+   "category": "ux-principles",
+   "bestFor": "Dark-pattern taxonomy, all banned at Safqah",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "principles-design",
+   "name": "Principles.design",
+   "url": "https://principles.design",
+   "category": "ux-principles",
+   "bestFor": "Real-world design principles",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "mailchimp-content-style-guide",
+   "name": "Mailchimp Content Style Guide",
+   "url": "https://styleguide.mailchimp.com",
+   "category": "ux-principles",
+   "bestFor": "Voice and tone",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "atlassian-content-design",
+   "name": "Atlassian content design",
+   "url": "https://atlassian.design/foundations/content",
+   "category": "ux-principles",
+   "bestFor": "Product microcopy",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "carbon-content-guidelines",
+   "name": "Carbon content guidelines",
+   "url": "https://www.carbondesignsystem.com/building-blocks/foundations/content",
+   "category": "ux-principles",
+   "bestFor": "Enterprise UI copy",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "material-ux-writing",
+   "name": "Material UX writing",
+   "url": "https://m3.material.io/foundations/content-design/style-guide/ux-writing-best-practices",
+   "category": "ux-principles",
+   "bestFor": "Mobile microcopy",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apple-hig-writing",
+   "name": "Apple HIG Writing",
+   "url": "https://developer.apple.com/design/human-interface-guidelines/writing",
+   "category": "ux-principles",
+   "bestFor": "iOS copy",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "gov-uk-style-guides",
+   "name": "GOV.UK style guides",
+   "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/",
+   "category": "ux-principles",
+   "bestFor": "Plain language",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "microsoft-style-guide",
+   "name": "Microsoft Style Guide",
+   "url": "https://learn.microsoft.com/en-us/style-guide/welcome/",
+   "category": "ux-principles",
+   "bestFor": "Terminology and copy",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "ux-writing-hub",
+   "name": "UX Writing Hub",
+   "url": "https://uxwritinghub.com",
+   "category": "ux-principles",
+   "bestFor": "UX writing articles",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "smashing-magazine",
+   "name": "Smashing Magazine",
+   "url": "https://www.smashingmagazine.com",
+   "category": "ux-principles",
+   "bestFor": "In-depth UX articles",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "wcag-2-2-quick-reference",
+   "name": "WCAG 2.2 Quick Reference",
+   "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+   "category": "accessibility",
+   "bestFor": "Every success criterion with techniques",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "understanding-wcag-2-2",
+   "name": "Understanding WCAG 2.2",
+   "url": "https://www.w3.org/WAI/WCAG22/Understanding/",
+   "category": "accessibility",
+   "bestFor": "Why each criterion exists",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "wai-aria-authoring-practices",
+   "name": "WAI-ARIA Authoring Practices",
+   "url": "https://www.w3.org/WAI/ARIA/apg/",
+   "category": "accessibility",
+   "bestFor": "Accessible widget patterns",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "a11y-project-checklist",
+   "name": "A11y Project checklist",
+   "url": "https://www.a11yproject.com/checklist/",
+   "category": "accessibility",
+   "bestFor": "Practical checklist",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "webaim-contrast-checker",
+   "name": "WebAIM contrast checker",
+   "url": "https://webaim.org/resources/contrastchecker/",
+   "category": "accessibility",
+   "bestFor": "Contrast checks",
+   "access": "free",
+   "agent": "api"
+  },
+  {
+   "id": "who-can-use",
+   "name": "Who Can Use",
+   "url": "https://www.whocanuse.com",
+   "category": "accessibility",
+   "bestFor": "Contrast by vision type",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apca-contrast",
+   "name": "APCA contrast",
+   "url": "https://apcacontrast.com",
+   "category": "accessibility",
+   "bestFor": "Perceptual contrast",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "inclusive-components",
+   "name": "Inclusive Components",
+   "url": "https://inclusive-components.design",
+   "category": "accessibility",
+   "bestFor": "Accessible component write-ups",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "stark",
+   "name": "Stark",
+   "url": "https://www.getstark.co",
+   "category": "accessibility",
+   "bestFor": "Accessibility checks in Figma",
+   "access": "freemium",
+   "agent": "figma"
+  },
+  {
+   "id": "sama-consumer-protection-and-financial-conduct",
+   "name": "SAMA consumer protection and financial conduct",
+   "url": "https://rulebook.sama.gov.sa/en/entiresection/1375",
+   "category": "regulation",
+   "bestFor": "Fair treatment, disclosure and transparency rules",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "sama-rulebook",
+   "name": "SAMA Rulebook",
+   "url": "https://rulebook.sama.gov.sa",
+   "category": "regulation",
+   "bestFor": "Full regulatory rulebook",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "cma-regulations-library",
+   "name": "CMA regulations library",
+   "url": "https://cma.gov.sa/en/RulesRegulations/Regulations/Pages/default.aspx",
+   "category": "regulation",
+   "bestFor": "Investment funds, real estate funds and offers of securities",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "cma-debt-crowdfunding-framework",
+   "name": "CMA debt crowdfunding framework",
+   "url": "https://cma.gov.sa/en/MediaCenter/NEWS/Pages/CMA_N_3862.aspx",
+   "category": "regulation",
+   "bestFor": "Sukuk and debt crowdfunding through arranging firms",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "pdpl-official-text",
+   "name": "PDPL official text",
+   "url": "https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/b7cfae89-828e-4994-b167-adaa00e37188/1",
+   "category": "regulation",
+   "bestFor": "Personal Data Protection Law: consent and privacy UX",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "fintech-saudi",
+   "name": "FinTech Saudi",
+   "url": "https://fintechsaudi.sa",
+   "category": "regulation",
+   "bestFor": "Ecosystem, sandbox and market context",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "material-3-motion",
+   "name": "Material 3 Motion",
+   "url": "https://m3.material.io/styles/motion/overview",
+   "category": "motion-icons",
+   "bestFor": "Functional motion guidance",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "apple-hig-motion",
+   "name": "Apple HIG Motion",
+   "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+   "category": "motion-icons",
+   "bestFor": "iOS motion guidance",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "lottiefiles",
+   "name": "LottieFiles",
+   "url": "https://lottiefiles.com",
+   "category": "motion-icons",
+   "bestFor": "Motion assets",
+   "access": "freemium",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "rive",
+   "name": "Rive",
+   "url": "https://rive.app",
+   "category": "motion-icons",
+   "bestFor": "Interactive motion",
+   "access": "freemium",
+   "agent": "web"
+  },
+  {
+   "id": "motion",
+   "name": "Motion",
+   "url": "https://motion.dev",
+   "category": "motion-icons",
+   "bestFor": "Web animation library",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "material-symbols",
+   "name": "Material Symbols",
+   "url": "https://fonts.google.com/icons",
+   "category": "motion-icons",
+   "bestFor": "Icon reference",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "sf-symbols",
+   "name": "SF Symbols",
+   "url": "https://developer.apple.com/sf-symbols/",
+   "category": "motion-icons",
+   "bestFor": "iOS icon reference",
+   "access": "free",
+   "agent": "none"
+  },
+  {
+   "id": "lucide",
+   "name": "Lucide",
+   "url": "https://lucide.dev",
+   "category": "motion-icons",
+   "bestFor": "Icon reference",
+   "access": "free",
+   "agent": "llms.txt"
+  },
+  {
+   "id": "phosphor",
+   "name": "Phosphor",
+   "url": "https://phosphoricons.com",
+   "category": "motion-icons",
+   "bestFor": "Icon reference",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "iconify",
+   "name": "Iconify",
+   "url": "https://iconify.design",
+   "category": "motion-icons",
+   "bestFor": "Icon search API",
+   "access": "free",
+   "agent": "api"
+  },
+  {
+   "id": "undraw",
+   "name": "unDraw",
+   "url": "https://undraw.co",
+   "category": "motion-icons",
+   "bestFor": "Illustration reference",
+   "access": "free",
+   "agent": "web"
+  },
+  {
+   "id": "storyset",
+   "name": "Storyset",
+   "url": "https://storyset.com",
+   "category": "motion-icons",
+   "bestFor": "Illustration reference",
+   "access": "free",
+   "agent": "web"
+  }
+ ]
+}

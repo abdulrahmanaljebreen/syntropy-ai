@@ -1,0 +1,446 @@
+[
+ {
+  "id": "0:1",
+  "name": "🏠 Welcome (Cover)"
+ },
+ {
+  "id": "69:876",
+  "name": "🎓 Getting Started"
+ },
+ {
+  "id": "69:877",
+  "name": "🤝 Contributing"
+ },
+ {
+  "id": "69:878",
+  "name": "📐 ─── FOUNDATIONS ───"
+ },
+ {
+  "id": "69:879",
+  "name": "🎨 Colors"
+ },
+ {
+  "id": "69:880",
+  "name": "🔤 Typography"
+ },
+ {
+  "id": "69:884",
+  "name": "📏 Layout"
+ },
+ {
+  "id": "69:881",
+  "name": "🏷️ Logos"
+ },
+ {
+  "id": "69:882",
+  "name": "✨ Icons"
+ },
+ {
+  "id": "69:883",
+  "name": "🌫️ Effects"
+ },
+ {
+  "id": "69:886",
+  "name": "🖼️ Illustrations"
+ },
+ {
+  "id": "69:887",
+  "name": "🧩 ─── COMPONENTS ───"
+ },
+ {
+  "id": "69:888",
+  "name": "🟢 02. Actions"
+ },
+ {
+  "id": "69:889",
+  "name": "02a. Button"
+ },
+ {
+  "id": "69:890",
+  "name": "02b. IconButton"
+ },
+ {
+  "id": "69:891",
+  "name": "02c. Link"
+ },
+ {
+  "id": "69:892",
+  "name": "02d. FAB"
+ },
+ {
+  "id": "69:893",
+  "name": "02e. ButtonGroup"
+ },
+ {
+  "id": "69:894",
+  "name": "02f. SocialButton"
+ },
+ {
+  "id": "69:895",
+  "name": "🟡 03. Form & Input"
+ },
+ {
+  "id": "69:896",
+  "name": "03a. Input"
+ },
+ {
+  "id": "69:897",
+  "name": "03b. OTPInput"
+ },
+ {
+  "id": "69:898",
+  "name": "03c. AmountInput"
+ },
+ {
+  "id": "69:899",
+  "name": "03d. Select"
+ },
+ {
+  "id": "69:900",
+  "name": "03e. Checkbox"
+ },
+ {
+  "id": "69:901",
+  "name": "03f. Radio"
+ },
+ {
+  "id": "69:902",
+  "name": "03g. Switch"
+ },
+ {
+  "id": "69:903",
+  "name": "03h. Slider"
+ },
+ {
+  "id": "69:904",
+  "name": "03i. FileUpload"
+ },
+ {
+  "id": "69:905",
+  "name": "03j. FormField"
+ },
+ {
+  "id": "69:906",
+  "name": "03k. DatePicker & 03l. TimePicker"
+ },
+ {
+  "id": "69:908",
+  "name": "03m. Search"
+ },
+ {
+  "id": "69:909",
+  "name": "03n. TextArea"
+ },
+ {
+  "id": "3881:3476",
+  "name": "03o. Combobox"
+ },
+ {
+  "id": "3895:4429",
+  "name": "03p. NumricStepper"
+ },
+ {
+  "id": "69:910",
+  "name": "🟪 04. Data Display"
+ },
+ {
+  "id": "69:911",
+  "name": "04a. Tag"
+ },
+ {
+  "id": "69:912",
+  "name": "04b. Status/issuance Badge"
+ },
+ {
+  "id": "69:913",
+  "name": "04c. Avatar"
+ },
+ {
+  "id": "69:914",
+  "name": "04d. Tooltip"
+ },
+ {
+  "id": "69:915",
+  "name": "04e. StatusPill"
+ },
+ {
+  "id": "69:916",
+  "name": "04f. Stat"
+ },
+ {
+  "id": "69:917",
+  "name": "04g. KeyValue"
+ },
+ {
+  "id": "69:918",
+  "name": "04h. Divider"
+ },
+ {
+  "id": "69:919",
+  "name": "04i. Timeline"
+ },
+ {
+  "id": "69:920",
+  "name": "04j. ProgressBar"
+ },
+ {
+  "id": "4092:137978",
+  "name": "04k. Chart"
+ },
+ {
+  "id": "69:921",
+  "name": "🟧 05. Feedback"
+ },
+ {
+  "id": "69:922",
+  "name": "05a. Alert"
+ },
+ {
+  "id": "69:923",
+  "name": "05b. Toast"
+ },
+ {
+  "id": "69:924",
+  "name": "05c. Banner"
+ },
+ {
+  "id": "69:925",
+  "name": "05d. EmptyState"
+ },
+ {
+  "id": "69:926",
+  "name": "05e. Skeleton"
+ },
+ {
+  "id": "69:927",
+  "name": "05f. Loader (Spinner)"
+ },
+ {
+  "id": "69:928",
+  "name": "05g. Progress"
+ },
+ {
+  "id": "69:929",
+  "name": "05h. Dialog"
+ },
+ {
+  "id": "3925:2734",
+  "name": "05i. Popover"
+ },
+ {
+  "id": "69:930",
+  "name": "🟨 06. Navigation"
+ },
+ {
+  "id": "69:931",
+  "name": "06a. AppBar"
+ },
+ {
+  "id": "69:932",
+  "name": "06b. TabBar"
+ },
+ {
+  "id": "69:933",
+  "name": "06c. BottomSheet"
+ },
+ {
+  "id": "69:934",
+  "name": "06d. Modal"
+ },
+ {
+  "id": "69:935",
+  "name": "06e. Drawer"
+ },
+ {
+  "id": "69:936",
+  "name": "06f. Breadcrumb"
+ },
+ {
+  "id": "69:937",
+  "name": "06g. Pagination"
+ },
+ {
+  "id": "69:938",
+  "name": "06h. Stepper"
+ },
+ {
+  "id": "69:939",
+  "name": "06i. BackButton"
+ },
+ {
+  "id": "69:940",
+  "name": "06j. NavigationRail/Sidebar"
+ },
+ {
+  "id": "4010:134463",
+  "name": "06k. ScrollContainer"
+ },
+ {
+  "id": "4248:150234",
+  "name": "06l. SegmentedControl"
+ },
+ {
+  "id": "69:941",
+  "name": "🟦 07. Cards & Lists"
+ },
+ {
+  "id": "69:942",
+  "name": "07a. CardDeal"
+ },
+ {
+  "id": "69:943",
+  "name": "07b. CardGoal 🥼"
+ },
+ {
+  "id": "69:944",
+  "name": "07c. CardAction"
+ },
+ {
+  "id": "69:945",
+  "name": "07d. CardInfo"
+ },
+ {
+  "id": "69:946",
+  "name": "07e. ListItem"
+ },
+ {
+  "id": "69:947",
+  "name": "07f. ActionList"
+ },
+ {
+  "id": "69:948",
+  "name": "07g. List"
+ },
+ {
+  "id": "69:949",
+  "name": "07h. Section"
+ },
+ {
+  "id": "69:950",
+  "name": "07i. Accordion"
+ },
+ {
+  "id": "69:951",
+  "name": "07j. Carousel"
+ },
+ {
+  "id": "2733:3327",
+  "name": "07k. Table "
+ },
+ {
+  "id": "3284:3605",
+  "name": "07l. HeaderCard"
+ },
+ {
+  "id": "3284:3606",
+  "name": "07m. NewsCard"
+ },
+ {
+  "id": "3944:4150",
+  "name": "07n. Menu"
+ },
+ {
+  "id": "69:952",
+  "name": "⭐ 08. Safqah-Specific"
+ },
+ {
+  "id": "69:953",
+  "name": "08a. InvestmentCalculator"
+ },
+ {
+  "id": "69:957",
+  "name": "08b. ReservationTimer"
+ },
+ {
+  "id": "3618:122305",
+  "name": "08.c Payouts list"
+ },
+ {
+  "id": "4206:147507",
+  "name": "08d. PortfolioHeader"
+ },
+ {
+  "id": "69:958",
+  "name": "08f. GoalTracker 🥼"
+ },
+ {
+  "id": "69:960",
+  "name": "08h. DealTimeline"
+ },
+ {
+  "id": "69:961",
+  "name": "08i. Sharia & CMA Disclosure"
+ },
+ {
+  "id": "69:962",
+  "name": "08j. ProvinceSelector"
+ },
+ {
+  "id": "69:963",
+  "name": "08k. RatingScale"
+ },
+ {
+  "id": "69:964",
+  "name": "08l. TierBadge"
+ },
+ {
+  "id": "69:965",
+  "name": "08m. KYCStep"
+ },
+ {
+  "id": "69:968",
+  "name": "08p. AbshirLogo"
+ },
+ {
+  "id": "69:969",
+  "name": "08q. MadaLogo"
+ },
+ {
+  "id": "69:970",
+  "name": "08r. SafqahLogo"
+ },
+ {
+  "id": "3658:126638",
+  "name": "08s. QualifiedCalculator"
+ },
+ {
+  "id": "3658:127477",
+  "name": "08t. Guarantees"
+ },
+ {
+  "id": "4050:135215",
+  "name": "08u. Issuance Row"
+ },
+ {
+  "id": "6049:2",
+  "name": "08v. Reinvest"
+ },
+ {
+  "id": "69:971",
+  "name": "⚖️ ─── GOVERNANCE ───"
+ },
+ {
+  "id": "69:972",
+  "name": "📋 Stakeholder Review"
+ },
+ {
+  "id": "69:973",
+  "name": "📝 Changelog"
+ },
+ {
+  "id": "69:974",
+  "name": "🗑️ Deprecated v1"
+ },
+ {
+  "id": "69:975",
+  "name": "🔬 ─── INTERNAL ───"
+ },
+ {
+  "id": "69:976",
+  "name": "🧰 Library Internals"
+ },
+ {
+  "id": "69:977",
+  "name": "Private page"
+ }
+]

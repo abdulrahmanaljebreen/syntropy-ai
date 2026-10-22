@@ -1,0 +1,183 @@
+{
+ "shadow": {
+  "xs": {
+   "$type": "shadow",
+   "$value": [
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": {
+      "value": 0,
+      "unit": "px"
+     },
+     "blur": "{Shadow.Blur.XS}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    },
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": "{Shadow.OffsetY.XS}",
+     "blur": "{Shadow.Blur.MD}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    }
+   ],
+   "$description": "Elevation low ramp. Ambient: Shadow/Blur/XS, y 0, 10%. Key: Shadow/Blur/XS, y Shadow/OffsetY/XS, 10%."
+  },
+  "sm": {
+   "$type": "shadow",
+   "$value": [
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": {
+      "value": 0,
+      "unit": "px"
+     },
+     "blur": "{Shadow.Blur.XS}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    },
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": "{Shadow.OffsetY.SM}",
+     "blur": "{Shadow.Blur.SM}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    }
+   ],
+   "$description": "Elevation low ramp. Ambient: Shadow/Blur/XS, y 0, 10%. Key: Shadow/Blur/SM, y Shadow/OffsetY/SM, 10%."
+  },
+  "md": {
+   "$type": "shadow",
+   "$value": [
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": {
+      "value": 0,
+      "unit": "px"
+     },
+     "blur": "{Shadow.Blur.XS}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    },
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": "{Shadow.OffsetY.MD}",
+     "blur": "{Shadow.Blur.MD}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    }
+   ],
+   "$description": "Elevation low ramp. Ambient: Shadow/Blur/XS, y 0, 10%. Key: Shadow/Blur/MD, y Shadow/OffsetY/MD, 10%."
+  },
+  "lg": {
+   "$type": "shadow",
+   "$value": [
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": {
+      "value": 0,
+      "unit": "px"
+     },
+     "blur": "{Shadow.Blur.MD}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    },
+    {
+     "color": "{Color.Alpha.Black.30}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": "{Shadow.OffsetY.LG}",
+     "blur": "{Shadow.Blur.LG}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    }
+   ],
+   "$description": "Elevation high ramp. Ambient: Shadow/Blur/MD, y 0, 10%. Key: Shadow/Blur/LG, y Shadow/OffsetY/LG, 30%."
+  },
+  "xl": {
+   "$type": "shadow",
+   "$value": [
+    {
+     "color": "{Color.Alpha.Black.10}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": {
+      "value": 0,
+      "unit": "px"
+     },
+     "blur": "{Shadow.Blur.MD}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    },
+    {
+     "color": "{Color.Alpha.Black.30}",
+     "offsetX": {
+      "value": 0,
+      "unit": "px"
+     },
+     "offsetY": "{Shadow.OffsetY.XL}",
+     "blur": "{Shadow.Blur.XL}",
+     "spread": {
+      "value": 0,
+      "unit": "px"
+     }
+    }
+   ],
+   "$description": "Elevation high ramp. Ambient: Shadow/Blur/MD, y 0, 10%. Key: Shadow/Blur/XL, y Shadow/OffsetY/XL, 30%."
+  },
+  "none": {
+   "$type": "shadow",
+   "$value": []
+  }
+ }
+}

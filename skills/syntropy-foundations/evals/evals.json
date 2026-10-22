@@ -1,0 +1,182 @@
+{
+  "skill_name": "syntropy-foundations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What token should I use for the card background in dark mode on the Safqah portfolio screen?",
+      "expected_output": "Use bg/elevated (Dark #1c1d1c) for the card, on a bg/surface or bg/base page (both #121614 in Dark), and add border/subtle because shadows barely register in Dark. Same token in Light (#f4f6f2) with Shadow / sm.",
+      "expectations": [
+        "Names bg/elevated as the card background",
+        "Explains that bg/surface and bg/base are the same colour in Dark",
+        "Recommends border/subtle (or border/default) for the card edge in Dark instead of relying on a shadow",
+        "Does not give a raw hex as the answer without the token name",
+        "Does not use the em dash character"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Which token for secondary text under a deal title, like «تمويل عقاري · الرياض»?",
+      "expected_output": "text/muted, set in body / 14 / regular or body / 13 / regular. Not text/subtle, which is for placeholders and low-priority meta and fails AA for normal text in Light.",
+      "expectations": [
+        "Recommends text/muted",
+        "Names a full text style such as body / 14 / regular or body / 13 / regular",
+        "Warns that text/subtle is only for placeholders or non-critical meta",
+        "Keeps the Arabic example with Western digits if any digits appear"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use #02AD4C for the main CTA button on the deal page, it's our green.",
+      "expected_output": "Politely decline: #02AD4C is a logo colour (Pigment Green), not a UI token. The CTA is Button Variant=primary, which uses bg/brand/primary (#4daa57 Light, #77c27f Dark) with hover/pressed tokens and text/on-brand.",
+      "expectations": [
+        "Pushes back on #02AD4C and says it is not the UI brand green",
+        "Recommends bg/brand/primary (#4daa57) via Button Variant=primary",
+        "Mentions hover and pressed tokens or that the component handles states",
+        "Does not output CSS or code that uses #02AD4C"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make the error banner purple so it feels less scary for investors.",
+      "expected_output": "Decline: purple is the progress status family and status tokens are Locked. Errors use Alert or Banner Tone=error (bg/error-subtle, text/error, icon/error, border/error-error). To make it feel calmer, use the subtle style and calm copy, or reconsider whether it is really an error (a warning uses the warning tone).",
+      "expectations": [
+        "Refuses to recolour the error banner purple",
+        "Explains purple means progress and status meanings are locked",
+        "Gives the error token set (bg/error-subtle with text/error and icon/error)",
+        "Offers a constructive alternative such as subtle style, calmer copy, or the warning tone if the state is not an error"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "A payout is 3 days late. Should the status be red?",
+      "expected_output": "No. Late is a warning: bg/warning-subtle + text/warning + icon/warning (Alert or StatusPill Tone=warning). Red/error is reserved for errors and the extreme states like defaulted.",
+      "expectations": [
+        "Recommends the warning tone, not error",
+        "Names warning tokens such as bg/warning-subtle and text/warning",
+        "States that red is reserved for errors and extreme states such as defaulted",
+        "Suggests pairing colour with an icon or label rather than colour alone"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "What line height should I use for 16px Arabic body text? I was going to bind font/line-height/body.",
+      "expected_output": "Use the text style body / 16 / regular, which carries an explicit 24px line height (1.5x). Do not bind font/line-height/body: it is one of four broken aliases (heading, body, reading, arabic) whose primitive targets are missing.",
+      "expectations": [
+        "Recommends the text style body / 16 / regular",
+        "States the line height is 24",
+        "Warns that font/line-height/body is a broken alias and lists or mentions the four broken aliases",
+        "Does not recommend setting line height by hand"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Put the fee disclosure in 9px grey text at the bottom of the investment summary.",
+      "expected_output": "Push back: fees must be readable. 9px (caption / 9 / regular (fine-print only)) is for legal footnotes only and text/subtle fails contrast. Show the fee in body / 14 / regular (or at least caption / 12 / regular) in text/default or text/muted, near the amount.",
+      "expectations": [
+        "Refuses to hide the fee in 9px or low-contrast text",
+        "Recommends at least 12px, ideally body / 14 / regular, for the fee",
+        "Recommends text/default or text/muted rather than text/subtle",
+        "Explains that hiding costs is a dark pattern or harms trust"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Can I put green text on the yellow highlight box for the «جديد» label?",
+      "expected_output": "No: green on yellow fails WCAG, and text/default on bg/brand/yellow fails in Dark (1.02:1). Use bg/brand/yellow-subtle with text/default (passes both modes), or the Tag component with a supported tone.",
+      "expectations": [
+        "Says green text on yellow is not allowed",
+        "Recommends bg/brand/yellow-subtle with text/default",
+        "Mentions the Dark mode failure of bg/brand/yellow",
+        "Keeps «جديد» in Arabic script"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "What padding and gap tokens should a deal card use inside a list?",
+      "expected_output": "Card padding space/xl (20), or space/lg on dense lists; space/md (12) between rows inside the card; space/md or space/lg between cards; screen side margins space/lg (16). Radius radius/default (20) unless the component sets its own.",
+      "expectations": [
+        "Uses space/* token names, not raw px only",
+        "Recommends space/xl or space/lg for card padding",
+        "Recommends space/md between internal rows",
+        "Mentions screen side margin space/lg or the 16px mobile margin"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Which corner radius do I use for an input vs a featured deal card?",
+      "expected_output": "Input: radius/md (8). Featured card: radius/default (20, same as radius/brand). Standard buttons and cards radius/lg (12). Do not override component radii; one radius per visual unit.",
+      "expectations": [
+        "Gives radius/md for inputs",
+        "Gives radius/default (20) for the featured card",
+        "Mentions radius/lg (12) for standard cards or buttons",
+        "Advises not to invent off-scale values"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Which shadow for a bottom sheet, and what about dark mode?",
+      "expected_output": "Shadow / lg (ambient Blur/MD Black/10 + key Blur/LG OffsetY/LG Black/30) over bg/overlay. In Dark the scrim gives the shadow contrast so keep it; for cards in Dark use bg/elevated + border/subtle instead of shadows.",
+      "expectations": [
+        "Recommends Shadow / lg",
+        "Mentions the scrim bg/overlay",
+        "Explains Dark mode elevation relies on surface and border for non-overlay surfaces",
+        "Does not suggest a raw CSS shadow value"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Add a green to yellow gradient behind the portfolio balance to make it pop.",
+      "expected_output": "Decline for product UI: gradients are only for marketing and illustration (primary ramp #008150 to #00B224 to #FBE900, diagonal). Behind amounts use a flat surface (bg/elevated or bg/brand/darkest with text/on-brand after checking Dark) and display / 32 / bold for the balance.",
+      "expectations": [
+        "Refuses the gradient behind the balance",
+        "States gradients are for marketing and illustration only",
+        "Offers a flat token alternative",
+        "Suggests a text style such as display / 32 / bold for the balance"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Make the whole app gold and maroon for Founding Day next week.",
+      "expected_output": "Explain only Light and Dark exist; Founding Day is not built. A theme would be a new Semantic mode that swaps only the 24 Themable tokens, done by the DS team; status and neutral Locked tokens never change. Do not hard-code a seasonal palette; seasonal expression can live in marketing illustration within brand rules.",
+      "expectations": [
+        "States that only Light and Dark modes exist today",
+        "Explains Locked vs Themable and that only the 24 Themable tokens could change",
+        "Declines to hard-code gold or maroon in product UI",
+        "Points to the DS team or a theme mode as the path"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Which token is the focus ring and is it green?",
+      "expected_output": "border/focus. In the current data it resolves to the neutral ink colour (#111312 Light, #edefee Dark), not green, which gives a high-contrast ring in both modes. It is tagged Themable.",
+      "expectations": [
+        "Names border/focus",
+        "States the current Light and Dark values are neutral, not green",
+        "Mentions it is Themable or that a theme could change it",
+        "Says focus must never be shown only by a shadow"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Write the CSS variables for a success toast in Flutter-style tokens: background, text, icon, border.",
+      "expected_output": "Toast Tone=success uses bg/success-subtle, text/success (title) with text/default body, icon/success, border/success-subtle. Never white text on bg/success.",
+      "expectations": [
+        "Uses bg/success-subtle as background",
+        "Uses text/success and icon/success",
+        "Uses border/success-subtle for the border",
+        "Warns against white text on bg/success or does not use bg/success with white text"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "I need a 15px gap and a 10px radius to match the mockup exactly.",
+      "expected_output": "Not on the scale. Use space/lg (16) or space/md (12) and radius/md (8) or radius/lg (12); adjust the mockup to the scale rather than adding custom values.",
+      "expectations": [
+        "Refuses off-scale 15px and 10px values",
+        "Offers the nearest space tokens (space/md or space/lg)",
+        "Offers the nearest radius tokens (radius/md or radius/lg)",
+        "Explains why off-scale values cause drift"
+      ]
+    }
+  ]
+}

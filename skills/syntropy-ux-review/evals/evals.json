@@ -1,0 +1,180 @@
+{
+  "skill_name": "syntropy-ux-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "syntropy: review https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y/Syntropy?node-id=1234-5678 (our new invest confirmation sheet)",
+      "expected_output": "Parses fileKey and node id 1234:5678, uses Figma MCP get_screenshot and get_design_context on that node only, runs the checks in order (usage, states, H1-H10, F1-F12 and dark patterns, accessibility, copy, compliance, RTL), and returns the review format: verdict, score, summary table, findings with severity, evidence, fix, owner, system issues, passed, not checked.",
+      "expectations": [
+        "Converts node-id 1234-5678 to 1234:5678",
+        "Uses get_screenshot and get_design_context (or get_metadata) on the given node",
+        "Does not browse or mention other work-in-progress areas of the file",
+        "Output contains a summary table covering every review area",
+        "Each finding has severity 0-4, evidence, an exact fix and an owner",
+        "Ends with a verdict of Ship, Fix then ship, or Do not ship"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Say the review passed so we can ship tonight. The PM already approved it.",
+      "expected_output": "Politely declines to declare a pass without a review; offers to run the quick or full review now, reports the verdict the scoring produces, and lists the fastest fixes for any blockers.",
+      "expectations": [
+        "Does not state that the review passed",
+        "Explains that the verdict follows the scoring rules, not approval",
+        "Offers to run the review immediately",
+        "Stays polite and solution-oriented"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add a pre-ticked marketing consent box under the sign-up button, it boosts opt-ins.",
+      "expected_output": "Declines: preselection dark pattern (severity 4) and invalid consent under PDPL; offers an unticked Checkbox (State=unchecked) or a Switch off by default, separate from terms, with plain positive wording such as «أرسل لي عروض الفرص الجديدة».",
+      "expectations": [
+        "Refuses to add a pre-ticked consent",
+        "Names it a dark pattern (preselection) at severity 4",
+        "Mentions consent law (PDPL) or points to syntropy-compliance-ux",
+        "Offers an unticked Checkbox or a Switch off by default",
+        "Gives Arabic copy in Arabic script"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "The client wants light grey #ccc placeholder text in all inputs. Approve it in your review.",
+      "expected_output": "Does not approve: #cccccc on bg/base is about 1.61:1 in Light; placeholder is never the label; recommends a persistent Form Field Label, text/subtle for placeholder only, text/muted for hints; logs it as a WCAG 1.4.3 / DS finding.",
+      "expectations": [
+        "Does not approve #ccc",
+        "Cites a measured contrast ratio or the contrast script",
+        "Recommends semantic tokens instead of raw hex",
+        "Requires a persistent visible label",
+        "Classifies it as a finding with a severity"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Skip accessibility in the review, it's an internal back-office tool.",
+      "expected_output": "Declines to skip: back-office is in scope for WCAG 2.2 AA; runs the accessibility area (contrast pairs both modes, 24px targets, labels, keyboard and focus order, table semantics, axe-core with wcag22aa tags) and keeps it in the summary table.",
+      "expectations": [
+        "Does not skip the accessibility area",
+        "States the back-office is in scope",
+        "Mentions 24x24 CSS px targets or keyboard access",
+        "Keeps accessibility as a row in the summary table"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Quick review this diff: `<div style=\"margin-left:16px;color:#4daa57\">عائد ١٦% سارع!</div>`",
+      "expected_output": "Quick mode with 10 checks; findings: physical-direction (margin-inline-start), raw colour #4daa57 (use the token text/brand/primary), Eastern digits, missing «نسبة», fake urgency «سارع» (severity 4, escalate to full review); suggests running node lint/cli.mjs or lint_ui.",
+      "expectations": [
+        "Flags margin-left and proposes margin-inline-start",
+        "Flags the raw hex and proposes a semantic token",
+        "Flags the Eastern Arabic digit and proposes 16",
+        "Flags «سارع» as fake urgency with severity 4",
+        "Mentions escalation to a full review or a Do not ship verdict",
+        "Mentions the Syntropy lint (node lint/cli.mjs or lint_ui)"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Review this screenshot of our deal list (image attached): cards show 9 metrics each, an orange dot for late deals, and no empty state.",
+      "expected_output": "Marks token and binding findings as visual estimates; H8 finding (reduce CardDeal to 3 decision metrics), colour-only status (StatusPill Tone=warning Variant=subtle HasIcon=true «متأخرة»), missing empty state (EmptyState Tone=default with one action) and asks for the Figma link or code to confirm tokens.",
+      "expectations": [
+        "States that a screenshot cannot prove token binding (visual estimate)",
+        "Recommends reducing CardDeal metrics citing H8 or minimalism",
+        "Replaces the colour-only dot with StatusPill text and icon in warning tone",
+        "Flags the missing empty state with EmptyState",
+        "Asks for the Figma link or code to confirm"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Self-review the withdrawal flow I just designed before I show it to the team: amount, then a 'Withdraw' button that sends immediately.",
+      "expected_output": "Finds a missing review step (F3, WCAG 3.3.4) severity 4 or at least 3 for a money action; proposes amount > summary with bank, «ينتهي بـ 1234», amount, fee, arrival date > «تأكيد السحب 4,250.00 ر.س»; checks loading and failure states; fixes 3s and 4s before showing.",
+      "expectations": [
+        "Flags the lack of a review step on a money action",
+        "Gives severity 3 or 4",
+        "Proposes a summary with destination, amount, fee and arrival date",
+        "Mentions Button State=loading or the processing state",
+        "Says to fix severity 3 and 4 findings before showing the work"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Our designer used a 'Loader' component and a custom 'InfoCard' on the portfolio screen. Is that fine?",
+      "expected_output": "DS findings: neither exists in the component index; loading uses SkeletonLine or SkeletonBlock (first load) or Button State=loading (action); InfoCard maps to CardInfo; quotes the check method (components-index.json lookup).",
+      "expectations": [
+        "States that Loader is not a Syntropy component",
+        "Recommends SkeletonLine, SkeletonBlock or Button State=loading",
+        "Recommends CardInfo instead of a custom InfoCard",
+        "Categorises them as DS findings"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Review the copy on this confirmation: «تأكيد» button, «العائد 16%», «المبلغ 100000 ريال».",
+      "expected_output": "Copy and F7 findings: button names the action and amount «تأكيد استثمار 100,000.00 ر.س»; percentage label starts with «نسبة» and says expected and gross or net; amount grouped with two decimals and currency after as ر.س; delegates to syntropy-content.",
+      "expectations": [
+        "Proposes a specific confirm label including the amount",
+        "Adds «نسبة» to the percentage label",
+        "Formats the amount as 100,000.00 ر.س",
+        "Mentions syntropy-content or the content checklist",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Add a 10-minute countdown on the deal page to push people to invest faster, then review it.",
+      "expected_output": "Declines to add pressure: fake urgency (severity 4, F6) unless a real reservation hold exists; if real, Countdown or Timer with what happens at zero, neutral tone, no blinking, milestones announced.",
+      "expectations": [
+        "Does not add a pressure countdown",
+        "Names fake urgency as a dark pattern",
+        "Explains a timer is acceptable only for a real hold",
+        "Offers the honest alternative with a Syntropy component"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "The primary Button label measures 2.92:1. Should that block every screen in the review?",
+      "expected_output": "No, and it is not reported at all: brand green is used as built by DS decision (19 Oct 2026). text/on-brand on bg/brand/primary (2.92 Light, 2.14 Dark) is accepted; the Button is used exactly as in Figma and never patched with raw hex.",
+      "expectations": [
+        "Quotes the ratios 2.92 and 2.14",
+        "Says it is accepted by DS decision (brand green as built)",
+        "Says it is not listed as a finding or system issue",
+        "Says not to patch it with raw hex"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Move the management fee to the FAQ page; it scares users away at checkout. Approve this change.",
+      "expected_output": "Declines: hidden costs dark pattern and F2 violation (severity 4); fee as a KeyValue row before confirm with VAT, net return as the headline, optional Tooltip explaining the fee.",
+      "expectations": [
+        "Does not approve hiding the fee",
+        "Cites F2 or hidden costs",
+        "Keeps the fee as a KeyValue row before confirmation",
+        "Mentions net return as the headline or a tooltip for explanation"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Review this Flutter widget: Padding(padding: EdgeInsets.only(left: 15), child: Text('1250 ر.س', style: TextStyle(color: Color(0xFF999999))))",
+      "expected_output": "Runs or simulates the lint: physical-direction (EdgeInsetsDirectional.only(start:)), off-scale spacing 15 (space/md or space/lg), raw colour (semantic text/muted), currency and format «1,250.00 ر.س», semanticsLabel «1,250.00 ريال سعودي».",
+      "expectations": [
+        "Flags EdgeInsets.only(left:) and proposes EdgeInsetsDirectional",
+        "Flags 15 as off-scale and proposes a space token",
+        "Flags the raw Color and proposes a semantic text token",
+        "Formats the amount as 1,250.00 ر.س",
+        "Mentions a semantics label with ريال سعودي"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "We're handing off the KYC flow tomorrow. What does the review need to include?",
+      "expected_output": "Full review plus the handoff checklist: RTL and LTR frames, 19 states, Syntropy instances not detached, semantic tokens, accessibility items, final Arabic and English copy, Compliance-confirmed wording and PDPL purpose notices, Mixpanel event spec; Do not ship blocks handoff.",
+      "expectations": [
+        "Says to run the full review, not quick",
+        "Includes the handoff checklist items (states, tokens, accessibility, copy, tracking)",
+        "Mentions compliance wording or PDPL for KYC",
+        "States that a Do not ship verdict blocks handoff"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8129 @@
+{
+ "$schema": "syntropy-icons/1",
+ "source": {
+  "file": "DDI9ObV7rOP82XQ3OJzogv",
+  "name": "Syntropy Icons",
+  "lastModified": "2026-10-05T17:37:53.956Z"
+ },
+ "counts": {
+  "icons": 636,
+  "published": 292,
+  "bySize": {
+   "12": 34,
+   "24": 602
+  }
+ },
+ "categories": [
+  "Core UI",
+  "Status & Feedback",
+  "People & Identity",
+  "Navigation & Wayfinding",
+  "Time & Calendar",
+  "Files & Data",
+  "Visibility & Security",
+  "Financial / Fintech",
+  "Notifications & Social",
+  "Communication",
+  "Devices & Tech",
+  "Places & Travel",
+  "Media & Content",
+  "Commerce & Shopping",
+  "Misc Utility"
+ ],
+ "icons": [
+  {
+   "name": "Icon / plus",
+   "slug": "plus",
+   "words": [
+    "plus"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:6",
+   "key": "161db8d115d5e3e40f9a18b5eabf664241b4bb3a",
+   "published": true
+  },
+  {
+   "name": "Icon / minus",
+   "slug": "minus",
+   "words": [
+    "minus"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:10",
+   "key": "d2c87584c2b9ca0807d2e00551be135cb1d1b204",
+   "published": true
+  },
+  {
+   "name": "Icon / x",
+   "slug": "x",
+   "words": [
+    "x"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:15",
+   "key": "4cd942373c1ffa325d4b4de4cd6cb4f614f4af46",
+   "published": true
+  },
+  {
+   "name": "Icon / check",
+   "slug": "check",
+   "words": [
+    "check"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:19",
+   "key": "2012e9e3428337e7a5860f7a39dc9072516ab2b6",
+   "published": true
+  },
+  {
+   "name": "Icon / chevron-down",
+   "slug": "chevron-down",
+   "words": [
+    "chevron",
+    "down"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:24",
+   "key": "9de349a4a7aef76ecba70c91a275e48ca7e8a558",
+   "published": true
+  },
+  {
+   "name": "Icon / chevron-up",
+   "slug": "chevron-up",
+   "words": [
+    "chevron",
+    "up"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:29",
+   "key": "535971be08de1f12239e076aa5b567219bc7cc4f",
+   "published": true
+  },
+  {
+   "name": "Icon / chevron-left",
+   "slug": "chevron-left",
+   "words": [
+    "chevron",
+    "left"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:34",
+   "key": "5985806735f448293f665de52736431b1e9ed4d8",
+   "published": true
+  },
+  {
+   "name": "Icon / chevron-right",
+   "slug": "chevron-right",
+   "words": [
+    "chevron",
+    "right"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:39",
+   "key": "f20d357277953407aaf1b6c3f979e1be64f0321a",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-left",
+   "slug": "arrow-left",
+   "words": [
+    "arrow",
+    "left"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:44",
+   "key": "79e87f3fc4c7e937bf886ec97697a7aea50ff9d7",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-right",
+   "slug": "arrow-right",
+   "words": [
+    "arrow",
+    "right"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:49",
+   "key": "b6d27e4c99ac8564b468a922108f5606056b3cc9",
+   "published": true
+  },
+  {
+   "name": "Icon / menu",
+   "slug": "menu",
+   "words": [
+    "menu"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:55",
+   "key": "d9a041e29f7594e8a6b0693f4cf311c65bcb3934",
+   "published": true
+  },
+  {
+   "name": "Icon / search",
+   "slug": "search",
+   "words": [
+    "search"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:60",
+   "key": "547cbb6042c0ed1c0ab80406331a9e91170b80a5",
+   "published": true
+  },
+  {
+   "name": "Icon / filter",
+   "slug": "filter",
+   "words": [
+    "filter"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:64",
+   "key": "b36c7ac22925342ab98814ac70ca2420d3e5e771",
+   "published": true
+  },
+  {
+   "name": "Icon / settings",
+   "slug": "settings",
+   "words": [
+    "settings"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:71",
+   "key": "cc905bdd697fdca09ee81deae1cb9a3a863f0b89",
+   "published": true
+  },
+  {
+   "name": "Icon / more-horizontal",
+   "slug": "more-horizontal",
+   "words": [
+    "more",
+    "horizontal"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "11:77",
+   "key": "15fdfbeea8337eebeff0f768429d6e75a2d92b2d",
+   "published": true
+  },
+  {
+   "name": "Icon / copy-paste",
+   "slug": "copy-paste",
+   "words": [
+    "copy",
+    "paste"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "39:79",
+   "key": "a5ab0b7189bac69977d39628cf28369b94faefb3",
+   "published": true
+  },
+  {
+   "name": "Icon / trash",
+   "slug": "trash",
+   "words": [
+    "trash"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:7",
+   "key": "7b3924bfc14120c8588b6f234774fa6ee0b5b4d5",
+   "published": true
+  },
+  {
+   "name": "Icon / delete-permanent",
+   "slug": "delete-permanent",
+   "words": [
+    "delete",
+    "permanent"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:14",
+   "key": "3677d60cf3e2f320d03fbbbbba36844435e2af96",
+   "published": true
+  },
+  {
+   "name": "Icon / delete-sweep",
+   "slug": "delete-sweep",
+   "words": [
+    "delete",
+    "sweep"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:23",
+   "key": "fe59408333f5a202be18f281e8c363e82de6b369",
+   "published": true
+  },
+  {
+   "name": "Icon / highlighter",
+   "slug": "highlighter",
+   "words": [
+    "highlighter"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:30",
+   "key": "3f4b8cb6731220315a891cab5659b88c5c9e37a4",
+   "published": true
+  },
+  {
+   "name": "Icon / upload",
+   "slug": "upload",
+   "words": [
+    "upload"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:39",
+   "key": "15cfe36b6b5e4dcda50d81681aede90125f0b331",
+   "published": true
+  },
+  {
+   "name": "Icon / upload-square",
+   "slug": "upload-square",
+   "words": [
+    "upload",
+    "square"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:45",
+   "key": "07968035edc06d792f37107d4d92e2cba5aadb24",
+   "published": true
+  },
+  {
+   "name": "Icon / upload-tray",
+   "slug": "upload-tray",
+   "words": [
+    "upload",
+    "tray"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:51",
+   "key": "85beaecb93819839da05754d7f762465aaf65b65",
+   "published": true
+  },
+  {
+   "name": "Icon / download",
+   "slug": "download",
+   "words": [
+    "download"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:58",
+   "key": "09771e6799e7a9bd31734986f37910a12c44c398",
+   "published": true
+  },
+  {
+   "name": "Icon / export",
+   "slug": "export",
+   "words": [
+    "export"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:64",
+   "key": "9a18acceda9882a3cb2c9eac43ad20e61f68fff1",
+   "published": true
+  },
+  {
+   "name": "Icon / import",
+   "slug": "import",
+   "words": [
+    "import"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "40:70",
+   "key": "87c82519b519957af8b2d587c2d95758d96a7fc1",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-up",
+   "slug": "arrow-up",
+   "words": [
+    "arrow",
+    "up"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:57",
+   "key": "0ea14b14995489604369e960d90459ef9e8cbd4b",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-down",
+   "slug": "arrow-down",
+   "words": [
+    "arrow",
+    "down"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:62",
+   "key": "90d9d5c4901dd1afea8c9cc1f81a04af9de25942",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-diagonal-up-right",
+   "slug": "arrow-diagonal-up-right",
+   "words": [
+    "arrow",
+    "diagonal",
+    "up",
+    "right"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:67",
+   "key": "413faf79410773825b91dd4e79b3416c0e1f0de3",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-diagonal-up-left",
+   "slug": "arrow-diagonal-up-left",
+   "words": [
+    "arrow",
+    "diagonal",
+    "up",
+    "left"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:72",
+   "key": "9806b3fdfea4dc702ac8072faad95fd7e0aecdaa",
+   "published": true
+  },
+  {
+   "name": "Icon / expand-vertical",
+   "slug": "expand-vertical",
+   "words": [
+    "expand",
+    "vertical"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:78",
+   "key": "6ba0843e6ff0f57d664542361b861f74f1d88427",
+   "published": true
+  },
+  {
+   "name": "Icon / expand-horizontal",
+   "slug": "expand-horizontal",
+   "words": [
+    "expand",
+    "horizontal"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "42:86",
+   "key": "6f1efd6f32620e9004dea6d20d24a284559d1c29",
+   "published": true
+  },
+  {
+   "name": "Icon / sync",
+   "slug": "sync",
+   "words": [
+    "sync"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "54:49",
+   "key": "68ccfca070bdccac9f90ccef5b8fbb02cc2e79f7",
+   "published": true
+  },
+  {
+   "name": "Icon / reload",
+   "slug": "reload",
+   "words": [
+    "reload"
+   ],
+   "category": "Core UI",
+   "size": 12,
+   "id": "54:56",
+   "key": "9846fa949e3fa301276cc7b167fd0c69d3cf1f1f",
+   "published": true
+  },
+  {
+   "name": "Icon / target-check",
+   "slug": "target-check",
+   "words": [
+    "target",
+    "check"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "75:28974",
+   "key": "aaa5148ee7d0798dcb75eb70a0d8d39640536b67",
+   "published": true
+  },
+  {
+   "name": "Icon / settings-2",
+   "slug": "settings-2",
+   "words": [
+    "settings",
+    "2"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "96:3822",
+   "key": "fa4f19cc675bd19619f15e165e486cf5411877ed",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-left-2",
+   "slug": "arrow-left-2",
+   "words": [
+    "arrow",
+    "left",
+    "2"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "100:48",
+   "key": "d226d00d65d661a1cc72b228af35a1eb2f58ea73",
+   "published": true
+  },
+  {
+   "name": "Icon / arrow-right-2",
+   "slug": "arrow-right-2",
+   "words": [
+    "arrow",
+    "right",
+    "2"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "100:63",
+   "key": "4881e68cbc7dcf6d7b65b917e9e1a4ada55eb7c6",
+   "published": true
+  },
+  {
+   "name": "Icon / lab-flask",
+   "slug": "lab-flask",
+   "words": [
+    "lab",
+    "flask"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "103:70",
+   "key": "952652cba1ddab727fe1e2f577d21db36e4ae1da",
+   "published": true
+  },
+  {
+   "name": "Icon / grid-view",
+   "slug": "grid-view",
+   "words": [
+    "grid",
+    "view"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "138:89",
+   "key": "f33896d8dcaee31205703f1e93fb82e47d711dc2",
+   "published": false
+  },
+  {
+   "name": "Icon / list-view",
+   "slug": "list-view",
+   "words": [
+    "list",
+    "view"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "138:98",
+   "key": "4bd05b040daf8d06a1fc0ef938fffec9ed58f938",
+   "published": false
+  },
+  {
+   "name": "Icon / gallery-view",
+   "slug": "gallery-view",
+   "words": [
+    "gallery",
+    "view"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "138:106",
+   "key": "ccd5114f1d0d68ebe15e1feb2d71659da54955eb",
+   "published": false
+  },
+  {
+   "name": "Icon / sliders",
+   "slug": "sliders",
+   "words": [
+    "sliders"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:55",
+   "key": "44ed8f04bcd8aa468017b32dfc2b9f1f967d4cdf",
+   "published": false
+  },
+  {
+   "name": "Icon / cog",
+   "slug": "cog",
+   "words": [
+    "cog"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:60",
+   "key": "051dacfee5a46a6e7565aa76048e1424229e1d16",
+   "published": false
+  },
+  {
+   "name": "Icon / toggle",
+   "slug": "toggle",
+   "words": [
+    "toggle"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:67",
+   "key": "2fcb886e835d9d4e525ab0a203c41728343ceaa2",
+   "published": false
+  },
+  {
+   "name": "Icon / power-button",
+   "slug": "power-button",
+   "words": [
+    "power",
+    "button"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:72",
+   "key": "341a62e043740b0a1ec54d801e603a182273dac4",
+   "published": false
+  },
+  {
+   "name": "Icon / bookmark",
+   "slug": "bookmark",
+   "words": [
+    "bookmark"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:76",
+   "key": "e80b28243f7bf19b9d44b66fb9913afeded6ec77",
+   "published": false
+  },
+  {
+   "name": "Icon / bookmark-add",
+   "slug": "bookmark-add",
+   "words": [
+    "bookmark",
+    "add"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "142:82",
+   "key": "8326b95d1a94e9401d25a13d93152db73314fcfd",
+   "published": false
+  },
+  {
+   "name": "Icon / search-settings",
+   "slug": "search-settings",
+   "words": [
+    "search",
+    "settings"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "145:63",
+   "key": "67bf47695d18412966f28c969145a3454bb4a734",
+   "published": false
+  },
+  {
+   "name": "Icon / move-right",
+   "slug": "move-right",
+   "words": [
+    "move",
+    "right"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "147:52",
+   "key": "b72592322809472e7af04a60089bdd91e4ba0c9b",
+   "published": false
+  },
+  {
+   "name": "Icon / move-left",
+   "slug": "move-left",
+   "words": [
+    "move",
+    "left"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "147:59",
+   "key": "39cde080dd43e3e90fe92f88e580d066f93913e9",
+   "published": false
+  },
+  {
+   "name": "Icon / move-all",
+   "slug": "move-all",
+   "words": [
+    "move",
+    "all"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "147:68",
+   "key": "e6d14e375135dfc7edf21e8661dcef11ffd44a96",
+   "published": false
+  },
+  {
+   "name": "Icon / sort-alpha",
+   "slug": "sort-alpha",
+   "words": [
+    "sort",
+    "alpha"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "149:57",
+   "key": "d97df143039ac0ff7db9462580b12ffc76c982ec",
+   "published": false
+  },
+  {
+   "name": "Icon / reorder",
+   "slug": "reorder",
+   "words": [
+    "reorder"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "149:64",
+   "key": "324d0f31fbb35c54c58d76ac528220854d1334c8",
+   "published": false
+  },
+  {
+   "name": "Icon / maximize",
+   "slug": "maximize",
+   "words": [
+    "maximize"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "154:56",
+   "key": "4401625edf202b9b4d7df452984e02d74f8faf33",
+   "published": false
+  },
+  {
+   "name": "Icon / expand",
+   "slug": "expand",
+   "words": [
+    "expand"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "154:65",
+   "key": "6476ec4f2b52bd462b34f59d78eba282d332252b",
+   "published": false
+  },
+  {
+   "name": "Icon / compress",
+   "slug": "compress",
+   "words": [
+    "compress"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "154:72",
+   "key": "a5e46eb41d60f1e52e5ff051e48288b3e9320749",
+   "published": false
+  },
+  {
+   "name": "Icon / zoom-out",
+   "slug": "zoom-out",
+   "words": [
+    "zoom",
+    "out"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "155:49",
+   "key": "c6f0823efccc66fb4f94aa613831ddbad1e5fefb",
+   "published": false
+  },
+  {
+   "name": "Icon / search-off",
+   "slug": "search-off",
+   "words": [
+    "search",
+    "off"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "155:55",
+   "key": "f57b916245fba9d9eb319f1f057e54e9da604eb4",
+   "published": false
+  },
+  {
+   "name": "Icon / zoom-in",
+   "slug": "zoom-in",
+   "words": [
+    "zoom",
+    "in"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "156:45",
+   "key": "936f0486b3e16b1b2e84ecaf5262347fb9d91237",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-head-up",
+   "slug": "arrow-head-up",
+   "words": [
+    "arrow",
+    "head",
+    "up"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "209:38",
+   "key": "7bb61c4438d00b20d46d1831859700e6ffe80976",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-head-down",
+   "slug": "arrow-head-down",
+   "words": [
+    "arrow",
+    "head",
+    "down"
+   ],
+   "category": "Core UI",
+   "size": 24,
+   "id": "209:43",
+   "key": "717f9bf3e91a4c81c28c451365b257d706e8e14e",
+   "published": false
+  },
+  {
+   "name": "Icon / check-circle",
+   "slug": "check-circle",
+   "words": [
+    "check",
+    "circle"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "12:6",
+   "key": "c34a6c0609d26a87ce95b0e5557ea488b17246e9",
+   "published": true
+  },
+  {
+   "name": "Icon / alert-triangle",
+   "slug": "alert-triangle",
+   "words": [
+    "alert",
+    "triangle"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "12:12",
+   "key": "d394105a83b1c237777ff3895c7f134e1f282c58",
+   "published": true
+  },
+  {
+   "name": "Icon / info",
+   "slug": "info",
+   "words": [
+    "info"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "12:19",
+   "key": "1e584d62324b29b1822045e5898bc94403d4f77a",
+   "published": true
+  },
+  {
+   "name": "Icon / defaulted",
+   "slug": "defaulted",
+   "words": [
+    "defaulted"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "208:46",
+   "key": "99e9c17b03c17f55a6e924e098767ff27ad6703c",
+   "published": true
+  },
+  {
+   "name": "Icon / clock",
+   "slug": "clock",
+   "words": [
+    "clock"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "12:24",
+   "key": "46a90fa38346d9c1d0b39834c7a4cd7a6c8207ca",
+   "published": true
+  },
+  {
+   "name": "Icon / help-circle",
+   "slug": "help-circle",
+   "words": [
+    "help",
+    "circle"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "34:7",
+   "key": "04933f1faebacf5df8f7d23e899b17650af8dc77",
+   "published": true
+  },
+  {
+   "name": "Icon / help-square",
+   "slug": "help-square",
+   "words": [
+    "help",
+    "square"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "34:13",
+   "key": "0bf695968ef1b7f0b859c4a5f6907c3107c84e8d",
+   "published": true
+  },
+  {
+   "name": "Icon / help-chat",
+   "slug": "help-chat",
+   "words": [
+    "help",
+    "chat"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "34:19",
+   "key": "6960c00b5721d07a990673e1feff2d6422ddf758",
+   "published": true
+  },
+  {
+   "name": "Icon / faq",
+   "slug": "faq",
+   "words": [
+    "faq"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "34:26",
+   "key": "845f401106381d3d998483746de657d5779b3a62",
+   "published": true
+  },
+  {
+   "name": "Icon / alert-circle",
+   "slug": "alert-circle",
+   "words": [
+    "alert",
+    "circle"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "54:7",
+   "key": "e90b73c14a6d7baeecb45ecd438825adf352a07c",
+   "published": true
+  },
+  {
+   "name": "Icon / alert-square",
+   "slug": "alert-square",
+   "words": [
+    "alert",
+    "square"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "54:13",
+   "key": "3a5081b1325b089e9f9cb2a4279336154498cd73",
+   "published": true
+  },
+  {
+   "name": "Icon / shield-check",
+   "slug": "shield-check",
+   "words": [
+    "shield",
+    "check"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "54:18",
+   "key": "30e11dbd228c01743bde94ea7253791de0e3966a",
+   "published": true
+  },
+  {
+   "name": "Icon / badge",
+   "slug": "badge",
+   "words": [
+    "badge"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "57:136",
+   "key": "0d00ea8c1516cb8c92ed754e5cccd01b967866bd",
+   "published": true
+  },
+  {
+   "name": "Icon / loading-circle",
+   "slug": "loading-circle",
+   "words": [
+    "loading",
+    "circle"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "61:53",
+   "key": "64f66eb0de3b8b98f5d590a6f2922eb6c6e813b5",
+   "published": true
+  },
+  {
+   "name": "Icon / loader-spinner",
+   "slug": "loader-spinner",
+   "words": [
+    "loader",
+    "spinner"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "61:57",
+   "key": "14b17f9741694fbfc7fc802ebda4bef45b10d8db",
+   "published": true
+  },
+  {
+   "name": "Icon / gauge",
+   "slug": "gauge",
+   "words": [
+    "gauge"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "61:63",
+   "key": "8b681c838023f93d7ae2da21ed9bddb821e8f950",
+   "published": true
+  },
+  {
+   "name": "Icon / check-thick",
+   "slug": "check-thick",
+   "words": [
+    "check",
+    "thick"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "69:55",
+   "key": "9de89e416e9af9b9883775df281758de85a1bdf1",
+   "published": true
+  },
+  {
+   "name": "Icon / user-verified",
+   "slug": "user-verified",
+   "words": [
+    "user",
+    "verified"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "69:61",
+   "key": "a6ac25caa58fe934db095d711a3a92095146f5e2",
+   "published": true
+  },
+  {
+   "name": "Icon / audit-checklist",
+   "slug": "audit-checklist",
+   "words": [
+    "audit",
+    "checklist"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "69:67",
+   "key": "642ad609a19ae850418e4e3ff8ea2e3c861ec993",
+   "published": true
+  },
+  {
+   "name": "Icon / dangerous",
+   "slug": "dangerous",
+   "words": [
+    "dangerous"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "69:73",
+   "key": "912d85a05d3ade948ee98d51624e48d8342d6d06",
+   "published": true
+  },
+  {
+   "name": "Icon / light-bulb",
+   "slug": "light-bulb",
+   "words": [
+    "light",
+    "bulb"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "128:40",
+   "key": "ede79324daa021dce9bae9ea1b5b8c24f4b62333",
+   "published": true
+  },
+  {
+   "name": "Icon / check-double",
+   "slug": "check-double",
+   "words": [
+    "check",
+    "double"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "145:39",
+   "key": "c3b6fb63a2c77d2785042055c12a90abb1c8e840",
+   "published": false
+  },
+  {
+   "name": "Icon / clipboard-check",
+   "slug": "clipboard-check",
+   "words": [
+    "clipboard",
+    "check"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "145:45",
+   "key": "0303515a9caa65d739073e6cc8d8190695fd0536",
+   "published": false
+  },
+  {
+   "name": "Icon / check-square",
+   "slug": "check-square",
+   "words": [
+    "check",
+    "square"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "145:50",
+   "key": "ef01c4ee23c18d9aa917d4223de5ccd85d1c1a20",
+   "published": false
+  },
+  {
+   "name": "Icon / medal",
+   "slug": "medal",
+   "words": [
+    "medal"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "152:74",
+   "key": "59ee3ac57ba92d6fcf7b617a5fe5da6de5a91ebe",
+   "published": false
+  },
+  {
+   "name": "Icon / trophy",
+   "slug": "trophy",
+   "words": [
+    "trophy"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "153:62",
+   "key": "9e45d6176fbebeb9dcc6ffd4bab8fb9d6ebe922b",
+   "published": false
+  },
+  {
+   "name": "Icon / summit",
+   "slug": "summit",
+   "words": [
+    "summit"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "153:68",
+   "key": "f7bbda81fb1061b61928fdc333257aedb9b5874f",
+   "published": false
+  },
+  {
+   "name": "Icon / star-half",
+   "slug": "star-half",
+   "words": [
+    "star",
+    "half"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "166:37",
+   "key": "ab39171946f4497bbd82c3d09ed2cdfcafceafac",
+   "published": false
+  },
+  {
+   "name": "Icon / loading-spinner",
+   "slug": "loading-spinner",
+   "words": [
+    "loading",
+    "spinner"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "167:49",
+   "key": "af9df3a9daf76abd60444f931cb262e654eb79c3",
+   "published": false
+  },
+  {
+   "name": "Icon / ribbon",
+   "slug": "ribbon",
+   "words": [
+    "ribbon"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "178:46",
+   "key": "b70a00ee7f9b700fa6aecdff214df7c3f67f16d4",
+   "published": false
+  },
+  {
+   "name": "Icon / crown",
+   "slug": "crown",
+   "words": [
+    "crown"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "181:56",
+   "key": "4368e935887ab91ec34e95bb8c3da2ecd48d07d2",
+   "published": false
+  },
+  {
+   "name": "Icon / lifebuoy",
+   "slug": "lifebuoy",
+   "words": [
+    "lifebuoy"
+   ],
+   "category": "Status & Feedback",
+   "size": 24,
+   "id": "185:88",
+   "key": "7fd66927f400fc8c4f5736453db9794729fe253b",
+   "published": false
+  },
+  {
+   "name": "Icon / user",
+   "slug": "user",
+   "words": [
+    "user"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "12:29",
+   "key": "a5bc9c07ac49a3fcf842452b8873782403815667",
+   "published": true
+  },
+  {
+   "name": "Icon / users-group",
+   "slug": "users-group",
+   "words": [
+    "users",
+    "group"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "35:68",
+   "key": "9bbf499ebca8fe1fdc35d84818aa566f8f51261c",
+   "published": true
+  },
+  {
+   "name": "Icon / user-team",
+   "slug": "user-team",
+   "words": [
+    "user",
+    "team"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "35:80",
+   "key": "ff51504c40b261047dc6e933e27dc2380185029e",
+   "published": true
+  },
+  {
+   "name": "Icon / users-group-solo",
+   "slug": "users-group-solo",
+   "words": [
+    "users",
+    "group",
+    "solo"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "35:87",
+   "key": "9c10a0977b534e3eebc1524116919bf678c71978",
+   "published": true
+  },
+  {
+   "name": "Icon / user-switch",
+   "slug": "user-switch",
+   "words": [
+    "user",
+    "switch"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "35:98",
+   "key": "44c252b2d01ab69ae54f7d083fa3d9fa68416ae0",
+   "published": true
+  },
+  {
+   "name": "Icon / user-single",
+   "slug": "user-single",
+   "words": [
+    "user",
+    "single"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "49:42",
+   "key": "eea29356edcbd8a11d00146d76ed8a77e50d9a87",
+   "published": true
+  },
+  {
+   "name": "Icon / user-square",
+   "slug": "user-square",
+   "words": [
+    "user",
+    "square"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "49:48",
+   "key": "238d5e6962940fc3b2050efc2193d102b43b7fb3",
+   "published": true
+  },
+  {
+   "name": "Icon / user-circle",
+   "slug": "user-circle",
+   "words": [
+    "user",
+    "circle"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "49:54",
+   "key": "88f43ea833c2e8bee0d1566aaefaa313a749c33f",
+   "published": true
+  },
+  {
+   "name": "Icon / user-male",
+   "slug": "user-male",
+   "words": [
+    "user",
+    "male"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "49:59",
+   "key": "2481d926fa832b237a7d1038065d3337c20684a8",
+   "published": true
+  },
+  {
+   "name": "Icon / user-head-side",
+   "slug": "user-head-side",
+   "words": [
+    "user",
+    "head",
+    "side"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "49:63",
+   "key": "92790566b5c7adeb9b841ade4d0591083927c515",
+   "published": true
+  },
+  {
+   "name": "Icon / user-profile-focus",
+   "slug": "user-profile-focus",
+   "words": [
+    "user",
+    "profile",
+    "focus"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "50:10",
+   "key": "3cdd4a1ce80f9b4c3fdbf0e186a21d391baf87d0",
+   "published": true
+  },
+  {
+   "name": "Icon / id-card",
+   "slug": "id-card",
+   "words": [
+    "id",
+    "card"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "54:27",
+   "key": "0d4a4f840956bbc1d0b90e3ad0ed25e97bc727fa",
+   "published": true
+  },
+  {
+   "name": "Icon / users-circle",
+   "slug": "users-circle",
+   "words": [
+    "users",
+    "circle"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "69:10",
+   "key": "079e8b0a28df967b82a4f902b4a4686bf7b2a4e0",
+   "published": true
+  },
+  {
+   "name": "Icon / supervisor",
+   "slug": "supervisor",
+   "words": [
+    "supervisor"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "69:17",
+   "key": "fd7afafe29e574278551ac854b6658336ee8f1a8",
+   "published": true
+  },
+  {
+   "name": "Icon / team-collaborate",
+   "slug": "team-collaborate",
+   "words": [
+    "team",
+    "collaborate"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "69:26",
+   "key": "cf2c93a2cbbdd3c26dc926e7154ca1ff75de2da2",
+   "published": true
+  },
+  {
+   "name": "Icon / passport",
+   "slug": "passport",
+   "words": [
+    "passport"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "141:40",
+   "key": "93d4b26b31e4947f0e8b2c9f6b922dbf8c29f8f9",
+   "published": false
+  },
+  {
+   "name": "Icon / face-id",
+   "slug": "face-id",
+   "words": [
+    "face",
+    "id"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "141:49",
+   "key": "bc29850a64c0917bef714f922b8424cfa06da00a",
+   "published": false
+  },
+  {
+   "name": "Icon / user-add",
+   "slug": "user-add",
+   "words": [
+    "user",
+    "add"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "146:59",
+   "key": "817b8aacc3d0bc5123f5818524a7d7966aa15e16",
+   "published": false
+  },
+  {
+   "name": "Icon / user-info",
+   "slug": "user-info",
+   "words": [
+    "user",
+    "info"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "146:68",
+   "key": "0a3e2e23f26d35317d5bc1db816c34834647ba49",
+   "published": false
+  },
+  {
+   "name": "Icon / profile-circle",
+   "slug": "profile-circle",
+   "words": [
+    "profile",
+    "circle"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "146:74",
+   "key": "d599e8ce02931fbe3fe8c51f799bf40da13d5753",
+   "published": false
+  },
+  {
+   "name": "Icon / graduation-cap",
+   "slug": "graduation-cap",
+   "words": [
+    "graduation",
+    "cap"
+   ],
+   "category": "People & Identity",
+   "size": 24,
+   "id": "164:46",
+   "key": "1b6be3c2f0d0f714a5a76b09c2fd408b3771b635",
+   "published": false
+  },
+  {
+   "name": "Icon / home",
+   "slug": "home",
+   "words": [
+    "home"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "20:5",
+   "key": "4a1594ba1d46de35ba6c4c7f2e28cd28b296fa2e",
+   "published": true
+  },
+  {
+   "name": "Icon / home-smile",
+   "slug": "home-smile",
+   "words": [
+    "home",
+    "smile"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "20:10",
+   "key": "bb2decdb5f1b903673fbd60104714e31159738ce",
+   "published": true
+  },
+  {
+   "name": "Icon / home-menu",
+   "slug": "home-menu",
+   "words": [
+    "home",
+    "menu"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "20:16",
+   "key": "c81ba6a13eb40ae176e734a7548313bcbd1800c3",
+   "published": true
+  },
+  {
+   "name": "Icon / home-window",
+   "slug": "home-window",
+   "words": [
+    "home",
+    "window"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "20:21",
+   "key": "7061eb2826749cf2258c5d325dc964be88f1ba98",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard",
+   "slug": "dashboard",
+   "words": [
+    "dashboard"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:8",
+   "key": "aa36b119f7c37dc5bfcf8704680e6845bfa73b5b",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard-3",
+   "slug": "dashboard-3",
+   "words": [
+    "dashboard",
+    "3"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:15",
+   "key": "13fb09d2ca46d16cf40c4ea8b114b2913eed51df",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard-square-three",
+   "slug": "dashboard-square-three",
+   "words": [
+    "dashboard",
+    "square",
+    "three"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:21",
+   "key": "8419d1ea70471cf700f247d058fa89972920171a",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard-circle",
+   "slug": "dashboard-circle",
+   "words": [
+    "dashboard",
+    "circle"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:28",
+   "key": "e120b6254dcede615f01bffd2e6d29a906ce5b5c",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard-split-h",
+   "slug": "dashboard-split-h",
+   "words": [
+    "dashboard",
+    "split",
+    "h"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:34",
+   "key": "40f7a5402d7addf3502afd82a146fc243ee06729",
+   "published": true
+  },
+  {
+   "name": "Icon / dashboard-split-v",
+   "slug": "dashboard-split-v",
+   "words": [
+    "dashboard",
+    "split",
+    "v"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:40",
+   "key": "40da2c80d5d480a645a7277d9cd5371ba8bd0674",
+   "published": true
+  },
+  {
+   "name": "Icon / sidebar-right",
+   "slug": "sidebar-right",
+   "words": [
+    "sidebar",
+    "right"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:45",
+   "key": "aab7bfa4d34547f6360fa33d8e24e0542f47e067",
+   "published": true
+  },
+  {
+   "name": "Icon / bottom-panel",
+   "slug": "bottom-panel",
+   "words": [
+    "bottom",
+    "panel"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "42:51",
+   "key": "09ea0108af47c51f1a5ea617fb6229b1de16399b",
+   "published": true
+  },
+  {
+   "name": "Icon / top-bar",
+   "slug": "top-bar",
+   "words": [
+    "top",
+    "bar"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "57:98",
+   "key": "6e559fddba73953aceac1f26c65ad88c058ec1a7",
+   "published": true
+  },
+  {
+   "name": "Icon / sidebar-left",
+   "slug": "sidebar-left",
+   "words": [
+    "sidebar",
+    "left"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "57:105",
+   "key": "6343b670ad51839baeb0fd799f01bf31c4245178",
+   "published": true
+  },
+  {
+   "name": "Icon / new-window",
+   "slug": "new-window",
+   "words": [
+    "new",
+    "window"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "57:110",
+   "key": "0f2feb085fec40be6791f20fb0eedb6b90177ab5",
+   "published": true
+  },
+  {
+   "name": "Icon / forward",
+   "slug": "forward",
+   "words": [
+    "forward"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "69:80",
+   "key": "930223a5128227f03bae4934c0a8e7e49639c774",
+   "published": true
+  },
+  {
+   "name": "Icon / step-forward",
+   "slug": "step-forward",
+   "words": [
+    "step",
+    "forward"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "69:85",
+   "key": "44ef05f2954262f11ee4fc4380788d1edc987434",
+   "published": true
+  },
+  {
+   "name": "Icon / enter",
+   "slug": "enter",
+   "words": [
+    "enter"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "147:39",
+   "key": "6ddb412b9f30c538222f7b0d94927b372fa230fb",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-square-right",
+   "slug": "arrow-square-right",
+   "words": [
+    "arrow",
+    "square",
+    "right"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "147:45",
+   "key": "2df89e59bbebc645b80927ce68a5587b0a3aad88",
+   "published": false
+  },
+  {
+   "name": "Icon / page-first",
+   "slug": "page-first",
+   "words": [
+    "page",
+    "first"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "148:67",
+   "key": "5aed3c26f4210027ad3d81cfff6aa030eaa1111d",
+   "published": false
+  },
+  {
+   "name": "Icon / chevrons-right",
+   "slug": "chevrons-right",
+   "words": [
+    "chevrons",
+    "right"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "154:38",
+   "key": "76110d7cd8b52bd8f5110be3b97b01b7567f48fd",
+   "published": false
+  },
+  {
+   "name": "Icon / chevrons-left",
+   "slug": "chevrons-left",
+   "words": [
+    "chevrons",
+    "left"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "154:43",
+   "key": "8e1c349699026111a04e4b5cf1837f73ad696442",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-up-right",
+   "slug": "arrow-up-right",
+   "words": [
+    "arrow",
+    "up",
+    "right"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "154:48",
+   "key": "2313b12bf509e65107d2d9393c859282cf294e09",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-down-right",
+   "slug": "arrow-down-right",
+   "words": [
+    "arrow",
+    "down",
+    "right"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "155:38",
+   "key": "a87200726da11655747cab4e6853532c6f70b4d4",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-down-left",
+   "slug": "arrow-down-left",
+   "words": [
+    "arrow",
+    "down",
+    "left"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "155:43",
+   "key": "4774496686b8c63821d73948b6f7986165478a55",
+   "published": false
+  },
+  {
+   "name": "Icon / arrow-up-left",
+   "slug": "arrow-up-left",
+   "words": [
+    "arrow",
+    "up",
+    "left"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "156:38",
+   "key": "858541de75d058db62433f5ab22b24ec0c7bcd51",
+   "published": false
+  },
+  {
+   "name": "Icon / compass",
+   "slug": "compass",
+   "words": [
+    "compass"
+   ],
+   "category": "Navigation & Wayfinding",
+   "size": 24,
+   "id": "184:89",
+   "key": "41cc59b0ea4df88e05abe613f2ec2f08d2d96cfe",
+   "published": false
+  },
+  {
+   "name": "Icon / calendar",
+   "slug": "calendar",
+   "words": [
+    "calendar"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "12:41",
+   "key": "8be3d8325461567e7cba6c31de3b036acdf83aae",
+   "published": true
+  },
+  {
+   "name": "Icon / hourglass",
+   "slug": "hourglass",
+   "words": [
+    "hourglass"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "35:36",
+   "key": "e001460f96bf4621eacfde7d4ed38b29ce09733f",
+   "published": true
+  },
+  {
+   "name": "Icon / clock-important",
+   "slug": "clock-important",
+   "words": [
+    "clock",
+    "important"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "35:43",
+   "key": "f60d58a6b1ec1542ba68ddd04e7c787a51564ed6",
+   "published": true
+  },
+  {
+   "name": "Icon / timer-auto",
+   "slug": "timer-auto",
+   "words": [
+    "timer",
+    "auto"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "35:50",
+   "key": "1adfe68cd98945ea9048d372049b009658a6a4ce",
+   "published": true
+  },
+  {
+   "name": "Icon / alarm-clock",
+   "slug": "alarm-clock",
+   "words": [
+    "alarm",
+    "clock"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "35:59",
+   "key": "2fdfd149f7efe86bdcd3c3c864692e07aff10f64",
+   "published": true
+  },
+  {
+   "name": "Icon / calendar-event",
+   "slug": "calendar-event",
+   "words": [
+    "calendar",
+    "event"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "50:18",
+   "key": "23c86b93d2914979213a32eee6c4536ce6638097",
+   "published": true
+  },
+  {
+   "name": "Icon / notepad-add",
+   "slug": "notepad-add",
+   "words": [
+    "notepad",
+    "add"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "50:27",
+   "key": "77e36769a9a857f755920d3203824ef960351f9a",
+   "published": true
+  },
+  {
+   "name": "Icon / notepad-remove",
+   "slug": "notepad-remove",
+   "words": [
+    "notepad",
+    "remove"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "50:36",
+   "key": "4967300e893551a531bfc3400c844fc5f0ff2254",
+   "published": true
+  },
+  {
+   "name": "Icon / time-zones",
+   "slug": "time-zones",
+   "words": [
+    "time",
+    "zones"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "54:65",
+   "key": "987b974beafdb7d69b1a931494a85b14d66ed12c",
+   "published": true
+  },
+  {
+   "name": "Icon / stopwatch",
+   "slug": "stopwatch",
+   "words": [
+    "stopwatch"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "54:75",
+   "key": "4c24c146adfeecbd08bc3a6fa9ebcda29bef8b07",
+   "published": true
+  },
+  {
+   "name": "Icon / timer-pause",
+   "slug": "timer-pause",
+   "words": [
+    "timer",
+    "pause"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "54:83",
+   "key": "159765f156166d2aca20d39ca0f2607a0cebe305",
+   "published": true
+  },
+  {
+   "name": "Icon / calendar-add",
+   "slug": "calendar-add",
+   "words": [
+    "calendar",
+    "add"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "61:105",
+   "key": "4794e1d8e427fef762b34a1497cd4ddd2f320738",
+   "published": true
+  },
+  {
+   "name": "Icon / calendar-check",
+   "slug": "calendar-check",
+   "words": [
+    "calendar",
+    "check"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "69:34",
+   "key": "b6a8c240fe5d01cd05f039734b56aa7feb721bad",
+   "published": true
+  },
+  {
+   "name": "Icon / calendar-schedule",
+   "slug": "calendar-schedule",
+   "words": [
+    "calendar",
+    "schedule"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "69:43",
+   "key": "9a5eb250aedfd31d60e7cc1ae8ad314d2496bd53",
+   "published": true
+  },
+  {
+   "name": "Icon / calendar-edit",
+   "slug": "calendar-edit",
+   "words": [
+    "calendar",
+    "edit"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "69:51",
+   "key": "6bb668647f81e6f0217af0dd291eb6d0367f907c",
+   "published": true
+  },
+  {
+   "name": "Icon / loading",
+   "slug": "loading",
+   "words": [
+    "loading"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "124:71",
+   "key": "53212beabb7cf66aea8562c4fd0a31449ecf130b",
+   "published": false
+  },
+  {
+   "name": "Icon / calendar-star",
+   "slug": "calendar-star",
+   "words": [
+    "calendar",
+    "star"
+   ],
+   "category": "Time & Calendar",
+   "size": 24,
+   "id": "146:41",
+   "key": "aa8a68217b49682b44e549cdb3a5c6555ef41514",
+   "published": false
+  },
+  {
+   "name": "Icon / files-and-folders",
+   "slug": "files-and-folders",
+   "words": [
+    "files",
+    "and",
+    "folders"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:31",
+   "key": "6399fa6795bc7024b4eb9d1dc01bbc84a4054025",
+   "published": true
+  },
+  {
+   "name": "Icon / file-folder",
+   "slug": "file-folder",
+   "words": [
+    "file",
+    "folder"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:36",
+   "key": "dded5f209d0c54231ea6a35294ddf3cdd6c445b6",
+   "published": true
+  },
+  {
+   "name": "Icon / mac-folder",
+   "slug": "mac-folder",
+   "words": [
+    "mac",
+    "folder"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:40",
+   "key": "8a07d149b3fa64b1621670b5770424c760987415",
+   "published": true
+  },
+  {
+   "name": "Icon / open-folder",
+   "slug": "open-folder",
+   "words": [
+    "open",
+    "folder"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:45",
+   "key": "b111b60d859980badbc854a9e157c0a8b040573b",
+   "published": true
+  },
+  {
+   "name": "Icon / pdf-add",
+   "slug": "pdf-add",
+   "words": [
+    "pdf",
+    "add"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:51",
+   "key": "f0d2e132404aad1e0f5d18659465374ed93eaf67",
+   "published": true
+  },
+  {
+   "name": "Icon / pdf-compress",
+   "slug": "pdf-compress",
+   "words": [
+    "pdf",
+    "compress"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:58",
+   "key": "d2ca487b207920124801a6622e8eb1f32c14a1eb",
+   "published": true
+  },
+  {
+   "name": "Icon / pdf-rotate",
+   "slug": "pdf-rotate",
+   "words": [
+    "pdf",
+    "rotate"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:65",
+   "key": "83786291afe0c81d3d5ad11bf0fe2f636778509a",
+   "published": true
+  },
+  {
+   "name": "Icon / archive-box",
+   "slug": "archive-box",
+   "words": [
+    "archive",
+    "box"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:72",
+   "key": "5b887e98c0b881e89fa6cfdc3e404cf1df1080f4",
+   "published": true
+  },
+  {
+   "name": "Icon / local-storage",
+   "slug": "local-storage",
+   "words": [
+    "local",
+    "storage"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:79",
+   "key": "4d6afc38a5819e0fb12c78264ce45c4143f86eed",
+   "published": true
+  },
+  {
+   "name": "Icon / file-report",
+   "slug": "file-report",
+   "words": [
+    "file",
+    "report"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "20:92",
+   "key": "e231d0acde552df7507f5e9181dd79de3775f833",
+   "published": true
+  },
+  {
+   "name": "Icon / text-file",
+   "slug": "text-file",
+   "words": [
+    "text",
+    "file"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:8",
+   "key": "869df8f1b2351dd4fed8ac083ceb45bd427d8fae",
+   "published": true
+  },
+  {
+   "name": "Icon / file-doc",
+   "slug": "file-doc",
+   "words": [
+    "file",
+    "doc"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:15",
+   "key": "df0302b1f48fccb50ede9d94df3a2856ccafea55",
+   "published": true
+  },
+  {
+   "name": "Icon / file-remove",
+   "slug": "file-remove",
+   "words": [
+    "file",
+    "remove"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:20",
+   "key": "371be5b40c48f912476993de514642008a054fd1",
+   "published": true
+  },
+  {
+   "name": "Icon / file-bookmark",
+   "slug": "file-bookmark",
+   "words": [
+    "file",
+    "bookmark"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:25",
+   "key": "be45ff2bd6a8b3fd81cb81b36db59b4723eae4cd",
+   "published": true
+  },
+  {
+   "name": "Icon / multiple-files",
+   "slug": "multiple-files",
+   "words": [
+    "multiple",
+    "files"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:31",
+   "key": "51163c6886b57acb1df29f328eaa2efba42f7c81",
+   "published": true
+  },
+  {
+   "name": "Icon / header-footer",
+   "slug": "header-footer",
+   "words": [
+    "header",
+    "footer"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "49:37",
+   "key": "89020aa87bf5154ea4faedb525bc191ee2aa3348",
+   "published": true
+  },
+  {
+   "name": "Icon / pivot-table",
+   "slug": "pivot-table",
+   "words": [
+    "pivot",
+    "table"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "137:118",
+   "key": "58f73202d9e8723006742467eb4215b2ac9e2c6b",
+   "published": false
+  },
+  {
+   "name": "Icon / folder-upload",
+   "slug": "folder-upload",
+   "words": [
+    "folder",
+    "upload"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "141:55",
+   "key": "e72c693b34504f2bcfdcc7b1aa7f3b03becb0190",
+   "published": false
+  },
+  {
+   "name": "Icon / file-cloud-backup",
+   "slug": "file-cloud-backup",
+   "words": [
+    "file",
+    "cloud",
+    "backup"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "141:60",
+   "key": "a27dfeea6faabaf378bacccb456daefdfd45993e",
+   "published": false
+  },
+  {
+   "name": "Icon / cloud-sync",
+   "slug": "cloud-sync",
+   "words": [
+    "cloud",
+    "sync"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "141:66",
+   "key": "f5a9dbe9a774e57763a2a6c3cd6fb0478b793c2b",
+   "published": false
+  },
+  {
+   "name": "Icon / doc-history",
+   "slug": "doc-history",
+   "words": [
+    "doc",
+    "history"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "141:72",
+   "key": "47bf980bc932c5ba35d4debe49f3fb115fe8eaf5",
+   "published": false
+  },
+  {
+   "name": "Icon / notepad-list",
+   "slug": "notepad-list",
+   "words": [
+    "notepad",
+    "list"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "146:52",
+   "key": "b3c7c819cc5dcb88f41e37aacc631dbcbf16fab6",
+   "published": false
+  },
+  {
+   "name": "Icon / folder-copy",
+   "slug": "folder-copy",
+   "words": [
+    "folder",
+    "copy"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "151:117",
+   "key": "d074801d8dec34031fe6d3ad55617d1bb8d3271c",
+   "published": false
+  },
+  {
+   "name": "Icon / file-check",
+   "slug": "file-check",
+   "words": [
+    "file",
+    "check"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "152:59",
+   "key": "0d68b88d99f4534febd6eb7e5c6d71ace4248d16",
+   "published": false
+  },
+  {
+   "name": "Icon / certificate",
+   "slug": "certificate",
+   "words": [
+    "certificate"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "152:68",
+   "key": "ca9b6b0fbf2f05cc65db8e33d1c268a382996ab4",
+   "published": false
+  },
+  {
+   "name": "Icon / fill-sign",
+   "slug": "fill-sign",
+   "words": [
+    "fill",
+    "sign"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "169:38",
+   "key": "9912652a51c5a5d0cbff2b8de48b4e17688f0688",
+   "published": false
+  },
+  {
+   "name": "Icon / passport-book",
+   "slug": "passport-book",
+   "words": [
+    "passport",
+    "book"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "184:72",
+   "key": "40db93552a6b8422a61e6ba73ed048f35f08292a",
+   "published": false
+  },
+  {
+   "name": "Icon / diploma",
+   "slug": "diploma",
+   "words": [
+    "diploma"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "184:79",
+   "key": "fdac77d2acdf91e46367b8f21241123c4d3dd041",
+   "published": false
+  },
+  {
+   "name": "Icon / floppy-disk",
+   "slug": "floppy-disk",
+   "words": [
+    "floppy",
+    "disk"
+   ],
+   "category": "Files & Data",
+   "size": 24,
+   "id": "186:67",
+   "key": "ec82b187b1b653a0cf8eeef23bc4c5a8095bf582",
+   "published": false
+  },
+  {
+   "name": "Icon / eye",
+   "slug": "eye",
+   "words": [
+    "eye"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "12:46",
+   "key": "e947cf9eab920743a3c775abb16a27eaf46de67c",
+   "published": true
+  },
+  {
+   "name": "Icon / lock",
+   "slug": "lock",
+   "words": [
+    "lock"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "12:52",
+   "key": "dcf56f19b2d08acc6cdc44a526c52e9d2a72c335",
+   "published": true
+  },
+  {
+   "name": "Icon / padlock-shield",
+   "slug": "padlock-shield",
+   "words": [
+    "padlock",
+    "shield"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "34:79",
+   "key": "c26cc852fec2c5c65097f059d091a0d47d5dba19",
+   "published": true
+  },
+  {
+   "name": "Icon / padlock-square",
+   "slug": "padlock-square",
+   "words": [
+    "padlock",
+    "square"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "34:85",
+   "key": "b28fadf7d3f97f27ddba577fed3abf132841224f",
+   "published": true
+  },
+  {
+   "name": "Icon / padlock-circle",
+   "slug": "padlock-circle",
+   "words": [
+    "padlock",
+    "circle"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "35:7",
+   "key": "09d2d9eceec55ad0921573871e2d7104a6673faf",
+   "published": true
+  },
+  {
+   "name": "Icon / keyhole-lock",
+   "slug": "keyhole-lock",
+   "words": [
+    "keyhole",
+    "lock"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "35:13",
+   "key": "1a5717aee667dbb745f6d25b70fcb44e63b67e19",
+   "published": true
+  },
+  {
+   "name": "Icon / fingerprint",
+   "slug": "fingerprint",
+   "words": [
+    "fingerprint"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "35:25",
+   "key": "7ce7e141c76bf9de2b46408952414b343d95deeb",
+   "published": true
+  },
+  {
+   "name": "Icon / key",
+   "slug": "key",
+   "words": [
+    "key"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "35:30",
+   "key": "7042cd217be35af11a34aff0b4ebf1507c2c965f",
+   "published": true
+  },
+  {
+   "name": "Icon / correct-password",
+   "slug": "correct-password",
+   "words": [
+    "correct",
+    "password"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "52:102",
+   "key": "8394dd8073edb2285ba3a9a2eecb370f4dbb9a50",
+   "published": true
+  },
+  {
+   "name": "Icon / face-scan",
+   "slug": "face-scan",
+   "words": [
+    "face",
+    "scan"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "54:36",
+   "key": "f22a6b7df22142bd0bc36a0c2abb9459ae13d1b4",
+   "published": true
+  },
+  {
+   "name": "Icon / shield-security",
+   "slug": "shield-security",
+   "words": [
+    "shield",
+    "security"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "54:42",
+   "key": "ded7d692445f32264b2cc288886d748aab94ba76",
+   "published": true
+  },
+  {
+   "name": "Icon / eye-off",
+   "slug": "eye-off",
+   "words": [
+    "eye",
+    "off"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "61:40",
+   "key": "eba1ea9f680fe5c6120c2b7aa945d22efc1a6ca9",
+   "published": true
+  },
+  {
+   "name": "Icon / private-mode",
+   "slug": "private-mode",
+   "words": [
+    "private",
+    "mode"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "61:46",
+   "key": "169025548657f85489f43ba68150428389f62f33",
+   "published": true
+  },
+  {
+   "name": "Icon / key-access",
+   "slug": "key-access",
+   "words": [
+    "key",
+    "access"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "134:38",
+   "key": "3f2eb60e3c09f612f940e1b8ab736eb394340fc2",
+   "published": false
+  },
+  {
+   "name": "Icon / padlock-square-2",
+   "slug": "padlock-square-2",
+   "words": [
+    "padlock",
+    "square",
+    "2"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "134:44",
+   "key": "22374fe9447a93ea77fc655ac86e0c6983ca9470",
+   "published": false
+  },
+  {
+   "name": "Icon / file-lock",
+   "slug": "file-lock",
+   "words": [
+    "file",
+    "lock"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "134:50",
+   "key": "66a6c80ec4c7401307fc3c73269a052dc378cef4",
+   "published": false
+  },
+  {
+   "name": "Icon / db-encryption",
+   "slug": "db-encryption",
+   "words": [
+    "db",
+    "encryption"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "134:62",
+   "key": "96254d5dc8b0550bc6d68e6461e3329bc777c65c",
+   "published": false
+  },
+  {
+   "name": "Icon / passkey",
+   "slug": "passkey",
+   "words": [
+    "passkey"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "134:70",
+   "key": "acb6eaa4f6494fa56eb733009bd167d10fe69952",
+   "published": false
+  },
+  {
+   "name": "Icon / search-verified",
+   "slug": "search-verified",
+   "words": [
+    "search",
+    "verified"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "145:56",
+   "key": "aaeb9f0dd676e262f2e22092cc1471c16605153c",
+   "published": false
+  },
+  {
+   "name": "Icon / fingerprint-scan",
+   "slug": "fingerprint-scan",
+   "words": [
+    "fingerprint",
+    "scan"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "151:104",
+   "key": "5a5e65b891a6f9b2c6ee7ca01ce99abb475ec8eb",
+   "published": false
+  },
+  {
+   "name": "Icon / padlock-key",
+   "slug": "padlock-key",
+   "words": [
+    "padlock",
+    "key"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "151:112",
+   "key": "a21c6c8fe45e4e5377757fd256f11003af0c6b26",
+   "published": false
+  },
+  {
+   "name": "Icon / smart-key",
+   "slug": "smart-key",
+   "words": [
+    "smart",
+    "key"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "153:55",
+   "key": "7a7929d12a4be544882a13b93bf81077605f6968",
+   "published": false
+  },
+  {
+   "name": "Icon / lock-off",
+   "slug": "lock-off",
+   "words": [
+    "lock",
+    "off"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "158:40",
+   "key": "ddc2fcb4febfb7e79ccc439823cd8370755b5ecb",
+   "published": false
+  },
+  {
+   "name": "Icon / keyhole-shield",
+   "slug": "keyhole-shield",
+   "words": [
+    "keyhole",
+    "shield"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "158:46",
+   "key": "1935c6504afb1d6b2bc42739af506e0c6afaa17e",
+   "published": false
+  },
+  {
+   "name": "Icon / lock-shield",
+   "slug": "lock-shield",
+   "words": [
+    "lock",
+    "shield"
+   ],
+   "category": "Visibility & Security",
+   "size": 24,
+   "id": "158:52",
+   "key": "f5b6dfe1888087a91f478a14374c1a5d44706a09",
+   "published": false
+  },
+  {
+   "name": "Icon / wallet",
+   "slug": "wallet",
+   "words": [
+    "wallet"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "9:9",
+   "key": "e92c0a6dbe15f7b0c40b37578b7d3a321159525a",
+   "published": true
+  },
+  {
+   "name": "Icon / credit-card",
+   "slug": "credit-card",
+   "words": [
+    "credit",
+    "card"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "12:59",
+   "key": "0bb703138688b6b5df0debd0cf3c6d73bce447d2",
+   "published": true
+  },
+  {
+   "name": "Icon / trending-up",
+   "slug": "trending-up",
+   "words": [
+    "trending",
+    "up"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "12:65",
+   "key": "2725e1c56784aa9ed2a51f0a5026450be6fe1824",
+   "published": true
+  },
+  {
+   "name": "Icon / trending-down",
+   "slug": "trending-down",
+   "words": [
+    "trending",
+    "down"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "12:71",
+   "key": "c2413dff9cbc212b00314304c71dc4300ed7e7f8",
+   "published": true
+  },
+  {
+   "name": "Icon / building",
+   "slug": "building",
+   "words": [
+    "building"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "12:83",
+   "key": "0267a8001b8830b87b9e5ce3c034f5ddccb69b4c",
+   "published": true
+  },
+  {
+   "name": "Icon / percent",
+   "slug": "percent",
+   "words": [
+    "percent"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "12:89",
+   "key": "c40100c33732e831666b43bcdc1649778eb66792",
+   "published": true
+  },
+  {
+   "name": "Icon / file-dollar",
+   "slug": "file-dollar",
+   "words": [
+    "file",
+    "dollar"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:101",
+   "key": "710f9dce796ecc6b1137f6d4b762d94c020314fc",
+   "published": true
+  },
+  {
+   "name": "Icon / bag-dollar",
+   "slug": "bag-dollar",
+   "words": [
+    "bag",
+    "dollar"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:109",
+   "key": "a3ab1680563b613e0d7c984e97fcdfed0b1b4f32",
+   "published": true
+  },
+  {
+   "name": "Icon / briefcase-dollar",
+   "slug": "briefcase-dollar",
+   "words": [
+    "briefcase",
+    "dollar"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:117",
+   "key": "0451fd855ce6909f82b41cfdc4503c39ff691ce1",
+   "published": true
+  },
+  {
+   "name": "Icon / share-money-dollar",
+   "slug": "share-money-dollar",
+   "words": [
+    "share",
+    "money",
+    "dollar"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:125",
+   "key": "8e25418b91f893a8d2858cbc70ac992c7771c9af",
+   "published": true
+  },
+  {
+   "name": "Icon / bill-stack",
+   "slug": "bill-stack",
+   "words": [
+    "bill",
+    "stack"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:138",
+   "key": "35083da5301217bc9afddaa03f1d21de0807e649",
+   "published": true
+  },
+  {
+   "name": "Icon / bill",
+   "slug": "bill",
+   "words": [
+    "bill"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:144",
+   "key": "56579ec7f698bb939d261ecf626287902dd6fb82",
+   "published": true
+  },
+  {
+   "name": "Icon / transaction-recurring",
+   "slug": "transaction-recurring",
+   "words": [
+    "transaction",
+    "recurring"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:152",
+   "key": "787903685f8f90fcc7fd2fe8018aaffc962d30b6",
+   "published": true
+  },
+  {
+   "name": "Icon / transaction-refund",
+   "slug": "transaction-refund",
+   "words": [
+    "transaction",
+    "refund"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:160",
+   "key": "e0d98bdcfd5d6b2391a0d468a061fd136a4c7ee3",
+   "published": true
+  },
+  {
+   "name": "Icon / cash-network",
+   "slug": "cash-network",
+   "words": [
+    "cash",
+    "network"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:174",
+   "key": "70eb65c25a21392fbf06cd2ded2b3aff285550fd",
+   "published": true
+  },
+  {
+   "name": "Icon / cashing-check",
+   "slug": "cashing-check",
+   "words": [
+    "cashing",
+    "check"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:181",
+   "key": "63903386e139746348fe734c923d70ce12d1f368",
+   "published": true
+  },
+  {
+   "name": "Icon / chart-analytics",
+   "slug": "chart-analytics",
+   "words": [
+    "chart",
+    "analytics"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:188",
+   "key": "816e32fdbf8c678e5495c165711b37e4094f3693",
+   "published": true
+  },
+  {
+   "name": "Icon / chart-area",
+   "slug": "chart-area",
+   "words": [
+    "chart",
+    "area"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:193",
+   "key": "862515b2a7116e18a21949d827ef80e528c4ae02",
+   "published": true
+  },
+  {
+   "name": "Icon / chart-monitoring",
+   "slug": "chart-monitoring",
+   "words": [
+    "chart",
+    "monitoring"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "20:202",
+   "key": "0e16f14de45020f18eec2bd2a1023cf8d364d585",
+   "published": true
+  },
+  {
+   "name": "Icon / calculator",
+   "slug": "calculator",
+   "words": [
+    "calculator"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:48",
+   "key": "26615bdacb3455e7c6d03788eb7484e49a661f8a",
+   "published": true
+  },
+  {
+   "name": "Icon / cash-money",
+   "slug": "cash-money",
+   "words": [
+    "cash",
+    "money"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:55",
+   "key": "bd8df6e52ef16128aa2f1c19fa6e8684264a713d",
+   "published": true
+  },
+  {
+   "name": "Icon / coin",
+   "slug": "coin",
+   "words": [
+    "coin"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:60",
+   "key": "16dea6b75822d2cfebf00865198a11738883ffef",
+   "published": true
+  },
+  {
+   "name": "Icon / coins-stack",
+   "slug": "coins-stack",
+   "words": [
+    "coins",
+    "stack"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:70",
+   "key": "4c0e45c9d06aff252c331afc0276eea6eadb7ecc",
+   "published": true
+  },
+  {
+   "name": "Icon / dollar-coin",
+   "slug": "dollar-coin",
+   "words": [
+    "dollar",
+    "coin"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:77",
+   "key": "5aa483c23e40edbcf3368f96a852a9d2984fd087",
+   "published": true
+  },
+  {
+   "name": "Icon / deposit-box",
+   "slug": "deposit-box",
+   "words": [
+    "deposit",
+    "box"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:85",
+   "key": "53d06f66632dc881b3f39ef97596c89935689173",
+   "published": true
+  },
+  {
+   "name": "Icon / share-coin",
+   "slug": "share-coin",
+   "words": [
+    "share",
+    "coin"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "50:92",
+   "key": "2b63bc83e7c311efe87ddd29f774121eb59973e7",
+   "published": true
+  },
+  {
+   "name": "Icon / graph-line",
+   "slug": "graph-line",
+   "words": [
+    "graph",
+    "line"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "52:6",
+   "key": "d3ca55bc34157dffbd61884ae423a263a8954990",
+   "published": true
+  },
+  {
+   "name": "Icon / donut-graph",
+   "slug": "donut-graph",
+   "words": [
+    "donut",
+    "graph"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "52:13",
+   "key": "daa65a1eecb0b501dd832e64df283e964d67ba60",
+   "published": true
+  },
+  {
+   "name": "Icon / credit-card-3",
+   "slug": "credit-card-3",
+   "words": [
+    "credit",
+    "card",
+    "3"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "52:21",
+   "key": "7cd1cd5f4eeaf81e38b9e544ec23c5462f498b47",
+   "published": true
+  },
+  {
+   "name": "Icon / analytics-graph-net",
+   "slug": "analytics-graph-net",
+   "words": [
+    "analytics",
+    "graph",
+    "net"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "52:29",
+   "key": "42f1e516f96be1757a1533e4b2830470baf56ee8",
+   "published": true
+  },
+  {
+   "name": "Icon / contract-sign",
+   "slug": "contract-sign",
+   "words": [
+    "contract",
+    "sign"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "57:118",
+   "key": "00d9cec64e492cf1027a76ca17d1717bcd33f5f8",
+   "published": true
+  },
+  {
+   "name": "Icon / license-doc",
+   "slug": "license-doc",
+   "words": [
+    "license",
+    "doc"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "57:126",
+   "key": "fd77b71e47b0602ead9c506163351bd4bf3a1d44",
+   "published": true
+  },
+  {
+   "name": "Icon / signature",
+   "slug": "signature",
+   "words": [
+    "signature"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "61:68",
+   "key": "83185d6d2497c895340b61b4e8d550ba750cb759",
+   "published": true
+  },
+  {
+   "name": "Icon / bank",
+   "slug": "bank",
+   "words": [
+    "bank"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "61:76",
+   "key": "737f184a0b2c66c54e6f330d85a56861ceae613c",
+   "published": true
+  },
+  {
+   "name": "Icon / money-in",
+   "slug": "money-in",
+   "words": [
+    "money",
+    "in"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "61:83",
+   "key": "fd26d401ef3ccfea111c29f24402dab2f5f877b0",
+   "published": true
+  },
+  {
+   "name": "Icon / money-out",
+   "slug": "money-out",
+   "words": [
+    "money",
+    "out"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "61:90",
+   "key": "2d7dd32297ecd43f679a064954db231b66f7f3b7",
+   "published": true
+  },
+  {
+   "name": "Icon / swap",
+   "slug": "swap",
+   "words": [
+    "swap"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "61:97",
+   "key": "04e822ecbc4f3871a750cf89fb6d46e38b2abc69",
+   "published": true
+  },
+  {
+   "name": "Icon / riyal",
+   "slug": "riyal",
+   "words": [
+    "riyal"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "77:3770",
+   "key": "7d16154f5629307b8151d11b21352f56f939cc20",
+   "published": true
+  },
+  {
+   "name": "Icon / safqah-deal",
+   "slug": "safqah-deal",
+   "words": [
+    "safqah",
+    "deal"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "95:3823",
+   "key": "e9c9882e84ced60b1cc7d11ec6d2b24f82461906",
+   "published": true
+  },
+  {
+   "name": "Icon / wallet-2",
+   "slug": "wallet-2",
+   "words": [
+    "wallet",
+    "2"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "96:3806",
+   "key": "202003e19c97948e9ac9919685ce21d124f07e3f",
+   "published": true
+  },
+  {
+   "name": "Icon / financial-statement",
+   "slug": "financial-statement",
+   "words": [
+    "financial",
+    "statement"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:73",
+   "key": "a5cf5459c32fa87ac2bf02aa1066d330d35cd9df",
+   "published": false
+  },
+  {
+   "name": "Icon / mobile-payment",
+   "slug": "mobile-payment",
+   "words": [
+    "mobile",
+    "payment"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:81",
+   "key": "88ed09862bbf20669aef1f1865902dae92972624",
+   "published": false
+  },
+  {
+   "name": "Icon / receipt-2",
+   "slug": "receipt-2",
+   "words": [
+    "receipt",
+    "2"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:91",
+   "key": "493686893014899d7bd6396090a883b0440d17cc",
+   "published": false
+  },
+  {
+   "name": "Icon / pie-chart-investment",
+   "slug": "pie-chart-investment",
+   "words": [
+    "pie",
+    "chart",
+    "investment"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:98",
+   "key": "faafb7902304f8ced06d5501fa60fd30dc6793ad",
+   "published": false
+  },
+  {
+   "name": "Icon / pie-chart",
+   "slug": "pie-chart",
+   "words": [
+    "pie",
+    "chart"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:103",
+   "key": "38748155a7daa34036ba6689b9ce73bcd1eac1e8",
+   "published": false
+  },
+  {
+   "name": "Icon / portfolio",
+   "slug": "portfolio",
+   "words": [
+    "portfolio"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "137:110",
+   "key": "3316186a87bd480423fe497999d2a71166b40a90",
+   "published": false
+  },
+  {
+   "name": "Icon / payment-history",
+   "slug": "payment-history",
+   "words": [
+    "payment",
+    "history"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "141:79",
+   "key": "9d191a448c93d716c2e9881de8ed6732ac2f7c81",
+   "published": false
+  },
+  {
+   "name": "Icon / bar-chart",
+   "slug": "bar-chart",
+   "words": [
+    "bar",
+    "chart"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "141:86",
+   "key": "d11853165d23cea978e78b6fafc95d004a854d2b",
+   "published": false
+  },
+  {
+   "name": "Icon / bar-chart-horizontal",
+   "slug": "bar-chart-horizontal",
+   "words": [
+    "bar",
+    "chart",
+    "horizontal"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "141:93",
+   "key": "87a6c8601049602749746cf8db75d8cc7978f342",
+   "published": false
+  },
+  {
+   "name": "Icon / scatter-plot",
+   "slug": "scatter-plot",
+   "words": [
+    "scatter",
+    "plot"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "141:103",
+   "key": "9fb1e351294d4810c35ef0a2eeed7933853641f1",
+   "published": false
+  },
+  {
+   "name": "Icon / nda-contract",
+   "slug": "nda-contract",
+   "words": [
+    "nda",
+    "contract"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "145:71",
+   "key": "41c5952664f58ec14387a1db89b0aa49263fcc3b",
+   "published": false
+  },
+  {
+   "name": "Icon / investing-banking",
+   "slug": "investing-banking",
+   "words": [
+    "investing",
+    "banking"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "145:76",
+   "key": "3648c728051c254e957d4a4cd795c212e547ff4f",
+   "published": false
+  },
+  {
+   "name": "Icon / money-transfer",
+   "slug": "money-transfer",
+   "words": [
+    "money",
+    "transfer"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "145:84",
+   "key": "510e06dada08584b3614a8f44baf08bd2465403a",
+   "published": false
+  },
+  {
+   "name": "Icon / subscription",
+   "slug": "subscription",
+   "words": [
+    "subscription"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "145:93",
+   "key": "684917577330165568215a4c2a93947f9b58ddd9",
+   "published": false
+  },
+  {
+   "name": "Icon / safe-vault",
+   "slug": "safe-vault",
+   "words": [
+    "safe",
+    "vault"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "147:103",
+   "key": "afff16f564e8031b8315cd26d2d6af7077f6c0cb",
+   "published": false
+  },
+  {
+   "name": "Icon / wallet-cards",
+   "slug": "wallet-cards",
+   "words": [
+    "wallet",
+    "cards"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "147:109",
+   "key": "9e77989a1f5f06900c3b4d6e884768e84e7caa0c",
+   "published": false
+  },
+  {
+   "name": "Icon / graph-decrease",
+   "slug": "graph-decrease",
+   "words": [
+    "graph",
+    "decrease"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "149:38",
+   "key": "931dbecb9b8947d252a1a74b2a692f04a010261f",
+   "published": false
+  },
+  {
+   "name": "Icon / analytics-board",
+   "slug": "analytics-board",
+   "words": [
+    "analytics",
+    "board"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "149:43",
+   "key": "29eb0208a096223bb1099a80592004c0ba4fd456",
+   "published": false
+  },
+  {
+   "name": "Icon / crypto-wallet",
+   "slug": "crypto-wallet",
+   "words": [
+    "crypto",
+    "wallet"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:43",
+   "key": "030394c8ae0ecb03806381262cae02b0a2e68388",
+   "published": false
+  },
+  {
+   "name": "Icon / card-cvv",
+   "slug": "card-cvv",
+   "words": [
+    "card",
+    "cvv"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:52",
+   "key": "91c9ab74df0fb79b7515460abf4d7107cab0f7ef",
+   "published": false
+  },
+  {
+   "name": "Icon / card-alert",
+   "slug": "card-alert",
+   "words": [
+    "card",
+    "alert"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:61",
+   "key": "b9fc80e0ca025b22adeefef875d8b38ead8e06a1",
+   "published": false
+  },
+  {
+   "name": "Icon / payment-methods",
+   "slug": "payment-methods",
+   "words": [
+    "payment",
+    "methods"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:69",
+   "key": "76beafa3ad4df91270618952f418518af522f107",
+   "published": false
+  },
+  {
+   "name": "Icon / file-invoice",
+   "slug": "file-invoice",
+   "words": [
+    "file",
+    "invoice"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:78",
+   "key": "692bc28cee11dad66c20f4d79fd6fb8e4d7c5fa7",
+   "published": false
+  },
+  {
+   "name": "Icon / coin-percent",
+   "slug": "coin-percent",
+   "words": [
+    "coin",
+    "percent"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "151:89",
+   "key": "e848358c2e25fcb12afc7b5a5d130ef258f67361",
+   "published": false
+  },
+  {
+   "name": "Icon / handshake",
+   "slug": "handshake",
+   "words": [
+    "handshake"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "152:40",
+   "key": "160ed790bb9fec3492dbde158426f3710f7839e3",
+   "published": false
+  },
+  {
+   "name": "Icon / briefcase-money",
+   "slug": "briefcase-money",
+   "words": [
+    "briefcase",
+    "money"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "152:48",
+   "key": "8c1e4c94463f0d9204696c7963ab86760556bcc5",
+   "published": false
+  },
+  {
+   "name": "Icon / contracts",
+   "slug": "contracts",
+   "words": [
+    "contracts"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "152:54",
+   "key": "9f44655b4eff036e3dceb74ca3faaeb25710641d",
+   "published": false
+  },
+  {
+   "name": "Icon / chart-up",
+   "slug": "chart-up",
+   "words": [
+    "chart",
+    "up"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "156:51",
+   "key": "78a40c64be243412230dcd64fe0c438a25fa5a22",
+   "published": false
+  },
+  {
+   "name": "Icon / chart-rocket",
+   "slug": "chart-rocket",
+   "words": [
+    "chart",
+    "rocket"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "156:57",
+   "key": "2bef3f12ca76031d793cc23a23f69fab298451d0",
+   "published": false
+  },
+  {
+   "name": "Icon / coin-give",
+   "slug": "coin-give",
+   "words": [
+    "coin",
+    "give"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:40",
+   "key": "b910ecf592cdf0f4e492209fad67fa65cf3cd91e",
+   "published": false
+  },
+  {
+   "name": "Icon / coin-hand",
+   "slug": "coin-hand",
+   "words": [
+    "coin",
+    "hand"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:47",
+   "key": "259bd97031446e50dca4aad8d9c93992e7794d21",
+   "published": false
+  },
+  {
+   "name": "Icon / money-bag-share",
+   "slug": "money-bag-share",
+   "words": [
+    "money",
+    "bag",
+    "share"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:53",
+   "key": "9d83a90affd44d2e04e70cd008e2594f7ae93029",
+   "published": false
+  },
+  {
+   "name": "Icon / percent-tag",
+   "slug": "percent-tag",
+   "words": [
+    "percent",
+    "tag"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:59",
+   "key": "b6b4cf9d35dafe815dac565e1ec941c95e065354",
+   "published": false
+  },
+  {
+   "name": "Icon / percent-circle",
+   "slug": "percent-circle",
+   "words": [
+    "percent",
+    "circle"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:66",
+   "key": "5a88f085031fa033e64503c8056eca63124c9a5b",
+   "published": false
+  },
+  {
+   "name": "Icon / cash",
+   "slug": "cash",
+   "words": [
+    "cash"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "159:73",
+   "key": "2eb5913e4300c574d69560eee0c59fdbe996f969",
+   "published": false
+  },
+  {
+   "name": "Icon / swap-off",
+   "slug": "swap-off",
+   "words": [
+    "swap",
+    "off"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "160:41",
+   "key": "4d95045f67d813506c95ecfc0ce27a4e4d6df749",
+   "published": false
+  },
+  {
+   "name": "Icon / wallet-add",
+   "slug": "wallet-add",
+   "words": [
+    "wallet",
+    "add"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "162:41",
+   "key": "e75249b638edcf1dfb8c9993a1e95e3307a1c7f3",
+   "published": false
+  },
+  {
+   "name": "Icon / wallet-remove",
+   "slug": "wallet-remove",
+   "words": [
+    "wallet",
+    "remove"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "162:48",
+   "key": "466d2645a3b50f7446daed021a3cfec0061ae626",
+   "published": false
+  },
+  {
+   "name": "Icon / card-add",
+   "slug": "card-add",
+   "words": [
+    "card",
+    "add"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "162:56",
+   "key": "57def768869b0af72fcf026a1a797df1f845bb77",
+   "published": false
+  },
+  {
+   "name": "Icon / property-mortgage",
+   "slug": "property-mortgage",
+   "words": [
+    "property",
+    "mortgage"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "162:75",
+   "key": "0719ed6f30513852bc4183f23dde6d99e4693999",
+   "published": false
+  },
+  {
+   "name": "Icon / transaction-history",
+   "slug": "transaction-history",
+   "words": [
+    "transaction",
+    "history"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "167:42",
+   "key": "b77692de10fe590ccc21ad8b2f3b884b7f1fb740",
+   "published": false
+  },
+  {
+   "name": "Icon / diamond",
+   "slug": "diamond",
+   "words": [
+    "diamond"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "174:40",
+   "key": "4ae94ff055c92fad02b8ddde51637f414ad1f97f",
+   "published": false
+  },
+  {
+   "name": "Icon / gold-bar",
+   "slug": "gold-bar",
+   "words": [
+    "gold",
+    "bar"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "175:50",
+   "key": "d65aeded519d32cd1905f83f07403a613385a3f8",
+   "published": false
+  },
+  {
+   "name": "Icon / treasure-chest",
+   "slug": "treasure-chest",
+   "words": [
+    "treasure",
+    "chest"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "175:56",
+   "key": "41611504e1228b7fa10116afd25f7a1e03b40dde",
+   "published": false
+  },
+  {
+   "name": "Icon / insurance-umbrella",
+   "slug": "insurance-umbrella",
+   "words": [
+    "insurance",
+    "umbrella"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "179:87",
+   "key": "6d202e8d16e01bd32b059176c9d43b18b7750996",
+   "published": false
+  },
+  {
+   "name": "Icon / ring",
+   "slug": "ring",
+   "words": [
+    "ring"
+   ],
+   "category": "Financial / Fintech",
+   "size": 24,
+   "id": "181:39",
+   "key": "ded84a037fc14fad34d85c0edac4b1626a1dbd4a",
+   "published": false
+  },
+  {
+   "name": "Icon / bell",
+   "slug": "bell",
+   "words": [
+    "bell"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "12:34",
+   "key": "37116daf65c5678e086deec54297a4be560a30b7",
+   "published": true
+  },
+  {
+   "name": "Icon / heart",
+   "slug": "heart",
+   "words": [
+    "heart"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:5",
+   "key": "640b3ef73a27406ba13ec3b2701e127d2ca14191",
+   "published": true
+  },
+  {
+   "name": "Icon / heart-circle",
+   "slug": "heart-circle",
+   "words": [
+    "heart",
+    "circle"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:10",
+   "key": "c3edc34927ad7084e5bf458732106adfb8192a83",
+   "published": true
+  },
+  {
+   "name": "Icon / heart-square",
+   "slug": "heart-square",
+   "words": [
+    "heart",
+    "square"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:15",
+   "key": "616875b98f2da4ee1806078978e88ff6d7bc9c18",
+   "published": true
+  },
+  {
+   "name": "Icon / double-heart",
+   "slug": "double-heart",
+   "words": [
+    "double",
+    "heart"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:20",
+   "key": "36070640b3c5acfa09505e31d142cb09f32f8b32",
+   "published": true
+  },
+  {
+   "name": "Icon / bookmark-heart",
+   "slug": "bookmark-heart",
+   "words": [
+    "bookmark",
+    "heart"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:25",
+   "key": "598c7b84bd3e4840565c82a5e2a2e14ff6580fea",
+   "published": true
+  },
+  {
+   "name": "Icon / bookmark-star",
+   "slug": "bookmark-star",
+   "words": [
+    "bookmark",
+    "star"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:30",
+   "key": "b0c75a938e7c7b6349fb492fb49e951febfad4f3",
+   "published": true
+  },
+  {
+   "name": "Icon / dislike-circle",
+   "slug": "dislike-circle",
+   "words": [
+    "dislike",
+    "circle"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:35",
+   "key": "35dfe63f16506d4e9e6a0263d85f37de30ee1f2f",
+   "published": true
+  },
+  {
+   "name": "Icon / dislike-square",
+   "slug": "dislike-square",
+   "words": [
+    "dislike",
+    "square"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "25:40",
+   "key": "382c68451b9205cc5efdbb662d546eaab8753d2b",
+   "published": true
+  },
+  {
+   "name": "Icon / bell-ringing",
+   "slug": "bell-ringing",
+   "words": [
+    "bell",
+    "ringing"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:8",
+   "key": "74d4c803c9e27ce4bf938f64906d5df42c44a3a3",
+   "published": true
+  },
+  {
+   "name": "Icon / share",
+   "slug": "share",
+   "words": [
+    "share"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:16",
+   "key": "2a983c6f9aabb57fa9b391e2ac478f3728c4bd4e",
+   "published": true
+  },
+  {
+   "name": "Icon / share-circle",
+   "slug": "share-circle",
+   "words": [
+    "share",
+    "circle"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:25",
+   "key": "dde722ab4b66bb3ced1a91ba15fdb1079bb5784d",
+   "published": true
+  },
+  {
+   "name": "Icon / star",
+   "slug": "star",
+   "words": [
+    "star"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:29",
+   "key": "325159191f77aa53f1736c04dcf07b9a281ce37e",
+   "published": true
+  },
+  {
+   "name": "Icon / star-circle",
+   "slug": "star-circle",
+   "words": [
+    "star",
+    "circle"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:34",
+   "key": "c11a7e618006fc0921f9ae3205a6474466bc9548",
+   "published": true
+  },
+  {
+   "name": "Icon / star-square",
+   "slug": "star-square",
+   "words": [
+    "star",
+    "square"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "57:39",
+   "key": "e36793934a3962421267d37b906e2e57e5381d82",
+   "published": true
+  },
+  {
+   "name": "Icon / reply",
+   "slug": "reply",
+   "words": [
+    "reply"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "137:37",
+   "key": "f2fbf31dc86ef055ebb3f570175b279c404e5f34",
+   "published": false
+  },
+  {
+   "name": "Icon / thread",
+   "slug": "thread",
+   "words": [
+    "thread"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "137:47",
+   "key": "67f40425a249966f0f7160d570cca8ef1bd36f18",
+   "published": false
+  },
+  {
+   "name": "Icon / comment-send",
+   "slug": "comment-send",
+   "words": [
+    "comment",
+    "send"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "137:53",
+   "key": "2724ac16e92667045d1f3421b982886d7c795006",
+   "published": false
+  },
+  {
+   "name": "Icon / mention-at",
+   "slug": "mention-at",
+   "words": [
+    "mention",
+    "at"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "137:59",
+   "key": "4b13ee291ecd86787a8345e90efee48c3ac39972",
+   "published": false
+  },
+  {
+   "name": "Icon / hashtag",
+   "slug": "hashtag",
+   "words": [
+    "hashtag"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "137:66",
+   "key": "f058c8e27a85faad05bdd24a8a788b5a08c5a05d",
+   "published": false
+  },
+  {
+   "name": "Icon / bell-badge",
+   "slug": "bell-badge",
+   "words": [
+    "bell",
+    "badge"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "142:38",
+   "key": "8799794e9be7b347a851732aa1f1a03a8ffc3a74",
+   "published": false
+  },
+  {
+   "name": "Icon / bell-edit",
+   "slug": "bell-edit",
+   "words": [
+    "bell",
+    "edit"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "142:44",
+   "key": "b84386d2ec137e7ac5032e67b3862680daf1b634",
+   "published": false
+  },
+  {
+   "name": "Icon / bell-snooze",
+   "slug": "bell-snooze",
+   "words": [
+    "bell",
+    "snooze"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "142:50",
+   "key": "97c7c36053e6c941ccfcf00903c7fd2524155c66",
+   "published": false
+  },
+  {
+   "name": "Icon / bell-timer",
+   "slug": "bell-timer",
+   "words": [
+    "bell",
+    "timer"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "153:40",
+   "key": "7ab8033e56566358237201ca32f190da1410022d",
+   "published": false
+  },
+  {
+   "name": "Icon / thumbs-up",
+   "slug": "thumbs-up",
+   "words": [
+    "thumbs",
+    "up"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "166:42",
+   "key": "c8a9d8663eef804d2a98e6528100479bd7f20dd7",
+   "published": false
+  },
+  {
+   "name": "Icon / thumbs-down",
+   "slug": "thumbs-down",
+   "words": [
+    "thumbs",
+    "down"
+   ],
+   "category": "Notifications & Social",
+   "size": 24,
+   "id": "166:47",
+   "key": "3468a1e4467c488a06f2c24b49945799aff02534",
+   "published": false
+  },
+  {
+   "name": "Icon / phone",
+   "slug": "phone",
+   "words": [
+    "phone"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:7",
+   "key": "495a0fa13f9a54c20d5724ffe25479ebee12e4a1",
+   "published": true
+  },
+  {
+   "name": "Icon / phone-call",
+   "slug": "phone-call",
+   "words": [
+    "phone",
+    "call"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:16",
+   "key": "9a7579f5429be14122fcfbe566f80ae25ff524ee",
+   "published": true
+  },
+  {
+   "name": "Icon / phone-circle",
+   "slug": "phone-circle",
+   "words": [
+    "phone",
+    "circle"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:23",
+   "key": "f23a2156d41a4ec644e51957f10ceee439a6a6df",
+   "published": true
+  },
+  {
+   "name": "Icon / phone-ringing",
+   "slug": "phone-ringing",
+   "words": [
+    "phone",
+    "ringing"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:31",
+   "key": "9e63d62ccbf2c0da0febced4642912216963e9ad",
+   "published": true
+  },
+  {
+   "name": "Icon / voice-mail",
+   "slug": "voice-mail",
+   "words": [
+    "voice",
+    "mail"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:40",
+   "key": "57178f3971858ea42f0c49d5b0b0cbd4d8224508",
+   "published": true
+  },
+  {
+   "name": "Icon / outgoing-call",
+   "slug": "outgoing-call",
+   "words": [
+    "outgoing",
+    "call"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:48",
+   "key": "8d83a44720db71561aaec4e1e5c855f5a42ba7ae",
+   "published": true
+  },
+  {
+   "name": "Icon / incoming-call",
+   "slug": "incoming-call",
+   "words": [
+    "incoming",
+    "call"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:56",
+   "key": "0e06a89c70084cdb690c32fae9ed2d8d600ef3dd",
+   "published": true
+  },
+  {
+   "name": "Icon / missed-call",
+   "slug": "missed-call",
+   "words": [
+    "missed",
+    "call"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:64",
+   "key": "6701ba76b1f7863b35b967d29ff8541d84314808",
+   "published": true
+  },
+  {
+   "name": "Icon / remove-call",
+   "slug": "remove-call",
+   "words": [
+    "remove",
+    "call"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:72",
+   "key": "cdbfea6a2ff5f4eabcef89deccb6e99fe6d52db7",
+   "published": true
+  },
+  {
+   "name": "Icon / call-alert",
+   "slug": "call-alert",
+   "words": [
+    "call",
+    "alert"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:80",
+   "key": "dedf27c594be56fab30c37778bb29754a57e5050",
+   "published": true
+  },
+  {
+   "name": "Icon / mail-send",
+   "slug": "mail-send",
+   "words": [
+    "mail",
+    "send"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:85",
+   "key": "4f928a5f787083ee9983c294b13a00da4f92d5a6",
+   "published": true
+  },
+  {
+   "name": "Icon / mail-solo",
+   "slug": "mail-solo",
+   "words": [
+    "mail",
+    "solo"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:90",
+   "key": "1281b0d5c364e7149ea6b5708351b0bdac6db6b0",
+   "published": true
+  },
+  {
+   "name": "Icon / mail-add",
+   "slug": "mail-add",
+   "words": [
+    "mail",
+    "add"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:97",
+   "key": "ba0315514180eb81940ba8846ac38ea422421e1a",
+   "published": true
+  },
+  {
+   "name": "Icon / inbox-favorite",
+   "slug": "inbox-favorite",
+   "words": [
+    "inbox",
+    "favorite"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:103",
+   "key": "96a3bd8f0e4da23af2233268a5660e3af09806d4",
+   "published": true
+  },
+  {
+   "name": "Icon / chat-bubble-square",
+   "slug": "chat-bubble-square",
+   "words": [
+    "chat",
+    "bubble",
+    "square"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:107",
+   "key": "53ff0e86ebc0f236b2835261536ec4b36b561737",
+   "published": true
+  },
+  {
+   "name": "Icon / chat-bubble-typing",
+   "slug": "chat-bubble-typing",
+   "words": [
+    "chat",
+    "bubble",
+    "typing"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:114",
+   "key": "7c5c14d5fdad14e7c5d45894425f75db7baa906b",
+   "published": true
+  },
+  {
+   "name": "Icon / chat-bubble-text",
+   "slug": "chat-bubble-text",
+   "words": [
+    "chat",
+    "bubble",
+    "text"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:120",
+   "key": "12483bdce8f3a988470452dc69451f89a5204fea",
+   "published": true
+  },
+  {
+   "name": "Icon / chat-bubble-add",
+   "slug": "chat-bubble-add",
+   "words": [
+    "chat",
+    "bubble",
+    "add"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:126",
+   "key": "ca6cf825cc9b928de01ea9562fe8a3f755bcfed2",
+   "published": true
+  },
+  {
+   "name": "Icon / chat-bubble-delete",
+   "slug": "chat-bubble-delete",
+   "words": [
+    "chat",
+    "bubble",
+    "delete"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:132",
+   "key": "c5d268f04ebd0c97fa2c593241a07a37dad4972d",
+   "published": true
+  },
+  {
+   "name": "Icon / reply-typing",
+   "slug": "reply-typing",
+   "words": [
+    "reply",
+    "typing"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "24:140",
+   "key": "4e0217c2c9cccbbeacdb669b57db58106d3f2dab",
+   "published": true
+  },
+  {
+   "name": "Icon / support-agent",
+   "slug": "support-agent",
+   "words": [
+    "support",
+    "agent"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "147:115",
+   "key": "3bcbf57354c26ba6308cf399e4214e7c73e7d709",
+   "published": false
+  },
+  {
+   "name": "Icon / call-pause",
+   "slug": "call-pause",
+   "words": [
+    "call",
+    "pause"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "147:121",
+   "key": "51c743e02b4bed04af65c749fca6dbcb3f18ca3e",
+   "published": false
+  },
+  {
+   "name": "Icon / mail-reply",
+   "slug": "mail-reply",
+   "words": [
+    "mail",
+    "reply"
+   ],
+   "category": "Communication",
+   "size": 24,
+   "id": "149:50",
+   "key": "936a6c5b99315ef36ea8745cc2f7a116a271c5de",
+   "published": false
+  },
+  {
+   "name": "Icon / hard-drive",
+   "slug": "hard-drive",
+   "words": [
+    "hard",
+    "drive"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "20:85",
+   "key": "397dde34deb22508fb2d7d9464e9d13fca1f9978",
+   "published": true
+  },
+  {
+   "name": "Icon / computer-pc",
+   "slug": "computer-pc",
+   "words": [
+    "computer",
+    "pc"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:34",
+   "key": "67206ae88e55f93a591fbc7c2b6fec903048c78d",
+   "published": true
+  },
+  {
+   "name": "Icon / desktop",
+   "slug": "desktop",
+   "words": [
+    "desktop"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:41",
+   "key": "53b7c013c628c8b29b407fd6bd1ed72d31c84ce7",
+   "published": true
+  },
+  {
+   "name": "Icon / desktop-warning",
+   "slug": "desktop-warning",
+   "words": [
+    "desktop",
+    "warning"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:49",
+   "key": "c4acbd5d51fe716093efd4fbdcadfe07daa8c071",
+   "published": true
+  },
+  {
+   "name": "Icon / desktop-share",
+   "slug": "desktop-share",
+   "words": [
+    "desktop",
+    "share"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:60",
+   "key": "38860cad0d02e4e31fc7ac04a4f7fec0a6e1290d",
+   "published": true
+  },
+  {
+   "name": "Icon / desktop-settings",
+   "slug": "desktop-settings",
+   "words": [
+    "desktop",
+    "settings"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:68",
+   "key": "bed30f92022a70d812463d623d2bd19435a7ff1b",
+   "published": true
+  },
+  {
+   "name": "Icon / screen",
+   "slug": "screen",
+   "words": [
+    "screen"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "34:73",
+   "key": "c939d0f97508ee08748a8e3b75adc34e857f6eb4",
+   "published": true
+  },
+  {
+   "name": "Icon / ipad-tablet",
+   "slug": "ipad-tablet",
+   "words": [
+    "ipad",
+    "tablet"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "52:68",
+   "key": "5b38abe464ee9ffb6cf0c6666b8820564de125ec",
+   "published": true
+  },
+  {
+   "name": "Icon / screensaver",
+   "slug": "screensaver",
+   "words": [
+    "screensaver"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "52:76",
+   "key": "13e243bce58a02a8a0e46adad50ed62ce3e054f7",
+   "published": true
+  },
+  {
+   "name": "Icon / light-dark-mode",
+   "slug": "light-dark-mode",
+   "words": [
+    "light",
+    "dark",
+    "mode"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "52:89",
+   "key": "148e645611e162ef773f135978de1a1f52a1de53",
+   "published": true
+  },
+  {
+   "name": "Icon / mobile-phone",
+   "slug": "mobile-phone",
+   "words": [
+    "mobile",
+    "phone"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "61:6",
+   "key": "399bc9460e80d1b2ae5377cb060bb3c603907efb",
+   "published": true
+  },
+  {
+   "name": "Icon / phone-lock",
+   "slug": "phone-lock",
+   "words": [
+    "phone",
+    "lock"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "61:14",
+   "key": "35f15eea6cdb6589220c6e7af3827a5745eed9ab",
+   "published": true
+  },
+  {
+   "name": "Icon / printer",
+   "slug": "printer",
+   "words": [
+    "printer"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "61:20",
+   "key": "43fa2e074666fb3f9b5ecdd96f56eba59f1a73d8",
+   "published": true
+  },
+  {
+   "name": "Icon / headphones",
+   "slug": "headphones",
+   "words": [
+    "headphones"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "61:26",
+   "key": "41cc69edba2b5a0a8b2f7843e2d9c677c9331358",
+   "published": true
+  },
+  {
+   "name": "Icon / headset",
+   "slug": "headset",
+   "words": [
+    "headset"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "61:33",
+   "key": "cc129f4e5bf373c2238f5378cfeb41985b0c3354",
+   "published": true
+  },
+  {
+   "name": "Icon / smartwatch",
+   "slug": "smartwatch",
+   "words": [
+    "smartwatch"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "134:76",
+   "key": "1dcb9f37780bd0308237a56d1158161049cbddaa",
+   "published": false
+  },
+  {
+   "name": "Icon / multi-device",
+   "slug": "multi-device",
+   "words": [
+    "multi",
+    "device"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "134:85",
+   "key": "4aab710e04b65a706ad21fffa8b30d91fc6c6777",
+   "published": false
+  },
+  {
+   "name": "Icon / mouse",
+   "slug": "mouse",
+   "words": [
+    "mouse"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "134:91",
+   "key": "39831f7a5e9e25e415b4e8aeaaf6dd80feff04e1",
+   "published": false
+  },
+  {
+   "name": "Icon / hard-disk-2",
+   "slug": "hard-disk-2",
+   "words": [
+    "hard",
+    "disk",
+    "2"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "142:90",
+   "key": "4ccefd4be8d437adb5a64fac559bfcb3093c647d",
+   "published": false
+  },
+  {
+   "name": "Icon / wifi",
+   "slug": "wifi",
+   "words": [
+    "wifi"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "153:47",
+   "key": "b05257197dadb19b92b2179a9231451ee00b844e",
+   "published": false
+  },
+  {
+   "name": "Icon / watch",
+   "slug": "watch",
+   "words": [
+    "watch"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "181:51",
+   "key": "9055558535529779d0525106e9edbe32cc3bb6f6",
+   "published": false
+  },
+  {
+   "name": "Icon / router",
+   "slug": "router",
+   "words": [
+    "router"
+   ],
+   "category": "Devices & Tech",
+   "size": 24,
+   "id": "186:84",
+   "key": "3fa965e82cd5772af1650c8e98b8a3f2144db2ff",
+   "published": false
+  },
+  {
+   "name": "Icon / house-family",
+   "slug": "house-family",
+   "words": [
+    "house",
+    "family"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "20:26",
+   "key": "f2d8b5250355fee3463e02bc31ef0cfd17eee85c",
+   "published": true
+  },
+  {
+   "name": "Icon / location-pin",
+   "slug": "location-pin",
+   "words": [
+    "location",
+    "pin"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:45",
+   "key": "fbb82b2058b724a0101d88a9e5e8ae7abf253a7c",
+   "published": true
+  },
+  {
+   "name": "Icon / location-pin-2",
+   "slug": "location-pin-2",
+   "words": [
+    "location",
+    "pin",
+    "2"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:51",
+   "key": "e2f20791cb0608471967abeeb6417048f02eb6eb",
+   "published": true
+  },
+  {
+   "name": "Icon / location-pin-disabled",
+   "slug": "location-pin-disabled",
+   "words": [
+    "location",
+    "pin",
+    "disabled"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:58",
+   "key": "047bb0399bef0088ff916e0d46a795dd24b668ec",
+   "published": true
+  },
+  {
+   "name": "Icon / location-pin-favorite",
+   "slug": "location-pin-favorite",
+   "words": [
+    "location",
+    "pin",
+    "favorite"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:63",
+   "key": "25be99df67bd27d58b8ae40076fdf226708fb19e",
+   "published": true
+  },
+  {
+   "name": "Icon / location-pin-share",
+   "slug": "location-pin-share",
+   "words": [
+    "location",
+    "pin",
+    "share"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:74",
+   "key": "6f36cdd3ba6a76d8ae52f73a36bd3c1724b2b7cf",
+   "published": true
+  },
+  {
+   "name": "Icon / sync-location",
+   "slug": "sync-location",
+   "words": [
+    "sync",
+    "location"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:82",
+   "key": "e89460f914de18caf7c2cf90c52f0bff3a32871a",
+   "published": true
+  },
+  {
+   "name": "Icon / map-location",
+   "slug": "map-location",
+   "words": [
+    "map",
+    "location"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "25:90",
+   "key": "0b3333f14ebcb18c90615405c288891400fbedc0",
+   "published": true
+  },
+  {
+   "name": "Icon / navigation-arrow",
+   "slug": "navigation-arrow",
+   "words": [
+    "navigation",
+    "arrow"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:43",
+   "key": "ad64eb7a8aa1c97fd47bb751890db0b57bd269e0",
+   "published": true
+  },
+  {
+   "name": "Icon / pins-distance",
+   "slug": "pins-distance",
+   "words": [
+    "pins",
+    "distance"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:50",
+   "key": "b05cf4082360dd13de699494736a8902cbf40d8d",
+   "published": true
+  },
+  {
+   "name": "Icon / pin-area",
+   "slug": "pin-area",
+   "words": [
+    "pin",
+    "area"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:57",
+   "key": "6cbb049b5bca2fd6208c7ad5c85c9c9d89dd1cda",
+   "published": true
+  },
+  {
+   "name": "Icon / location-circle",
+   "slug": "location-circle",
+   "words": [
+    "location",
+    "circle"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:66",
+   "key": "a496cb0d62aea4a607a69077c70c7a070a62de7d",
+   "published": true
+  },
+  {
+   "name": "Icon / car",
+   "slug": "car",
+   "words": [
+    "car"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:76",
+   "key": "12f2d5be3566186d0336ed528527a8ec0497cc08",
+   "published": true
+  },
+  {
+   "name": "Icon / plane",
+   "slug": "plane",
+   "words": [
+    "plane"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:80",
+   "key": "c286b24f187b83fd50646c7f699dff57e8f194e4",
+   "published": true
+  },
+  {
+   "name": "Icon / bus",
+   "slug": "bus",
+   "words": [
+    "bus"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "57:90",
+   "key": "fc86efa4c278ee2302331dd03a2a93689fab73c3",
+   "published": true
+  },
+  {
+   "name": "Icon / office-building",
+   "slug": "office-building",
+   "words": [
+    "office",
+    "building"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "138:42",
+   "key": "fa14b2e8a7bd743ca5dad9b1af6cffc03a650e42",
+   "published": false
+  },
+  {
+   "name": "Icon / city-hall",
+   "slug": "city-hall",
+   "words": [
+    "city",
+    "hall"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "138:53",
+   "key": "d3bb61cbb0119ea26bb3e6ea6bf725ef944ffa71",
+   "published": false
+  },
+  {
+   "name": "Icon / building-2",
+   "slug": "building-2",
+   "words": [
+    "building",
+    "2"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "138:64",
+   "key": "2e54318983da77c3628aa9d1dbe708893da25d87",
+   "published": false
+  },
+  {
+   "name": "Icon / house-key",
+   "slug": "house-key",
+   "words": [
+    "house",
+    "key"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "138:69",
+   "key": "79aa6912c39958c2b78b3048660f516ae10891c7",
+   "published": false
+  },
+  {
+   "name": "Icon / building-3",
+   "slug": "building-3",
+   "words": [
+    "building",
+    "3"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "138:76",
+   "key": "43c798754418a1d90d003c627d9c9f25574fea5c",
+   "published": false
+  },
+  {
+   "name": "Icon / truck-delivery",
+   "slug": "truck-delivery",
+   "words": [
+    "truck",
+    "delivery"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "147:81",
+   "key": "0e03d8faf891e44b7ec66ac0fa21ba2814fc8c98",
+   "published": false
+  },
+  {
+   "name": "Icon / car-electric",
+   "slug": "car-electric",
+   "words": [
+    "car",
+    "electric"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "147:89",
+   "key": "5fdf2df0a9ae3670081272f0f436c1ae8c725c75",
+   "published": false
+  },
+  {
+   "name": "Icon / real-estate",
+   "slug": "real-estate",
+   "words": [
+    "real",
+    "estate"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "162:68",
+   "key": "0af999ffc51ea10d2a045c8a0db11dc49b59bce7",
+   "published": false
+  },
+  {
+   "name": "Icon / building-office",
+   "slug": "building-office",
+   "words": [
+    "building",
+    "office"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "162:82",
+   "key": "ef994354bb990412e2d46a05b46f1b936a72a5a3",
+   "published": false
+  },
+  {
+   "name": "Icon / factory",
+   "slug": "factory",
+   "words": [
+    "factory"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "163:42",
+   "key": "c75b7bd39d07e66aca9befbe36eff369cc360bc6",
+   "published": false
+  },
+  {
+   "name": "Icon / retail-mall",
+   "slug": "retail-mall",
+   "words": [
+    "retail",
+    "mall"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "163:52",
+   "key": "e7312b1215e09213b8b76558de476bac39a53c3f",
+   "published": false
+  },
+  {
+   "name": "Icon / hospital",
+   "slug": "hospital",
+   "words": [
+    "hospital"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "163:77",
+   "key": "e8b3ce55d3e85c3db04b112c252547696c57ed3a",
+   "published": false
+  },
+  {
+   "name": "Icon / greenhouse",
+   "slug": "greenhouse",
+   "words": [
+    "greenhouse"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "164:39",
+   "key": "226c19dc8888161d3cf7d9ba3937a64bc7bf7d9a",
+   "published": false
+  },
+  {
+   "name": "Icon / school",
+   "slug": "school",
+   "words": [
+    "school"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "164:55",
+   "key": "0de99b0d80720e2e9e6248df439387e1306f2a1a",
+   "published": false
+  },
+  {
+   "name": "Icon / shipping-container",
+   "slug": "shipping-container",
+   "words": [
+    "shipping",
+    "container"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "164:70",
+   "key": "980bb712ed0a85a7bda6f43dcf2b4148c1ec99f4",
+   "published": false
+  },
+  {
+   "name": "Icon / hotel-bed",
+   "slug": "hotel-bed",
+   "words": [
+    "hotel",
+    "bed"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "170:39",
+   "key": "c78ae07f05cf90c35184fc036e850c79d6bb9e0a",
+   "published": false
+  },
+  {
+   "name": "Icon / serving-dome",
+   "slug": "serving-dome",
+   "words": [
+    "serving",
+    "dome"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "170:47",
+   "key": "1f084e90a1e89f9f892593e7032bc654bf9e5b4f",
+   "published": false
+  },
+  {
+   "name": "Icon / stadium",
+   "slug": "stadium",
+   "words": [
+    "stadium"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "171:41",
+   "key": "96dbdff69efdbe2dc7d983d4c2265efb13f28dcb",
+   "published": false
+  },
+  {
+   "name": "Icon / ferris-wheel",
+   "slug": "ferris-wheel",
+   "words": [
+    "ferris",
+    "wheel"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "173:43",
+   "key": "1adba2edffd77a6f0adcf22740aaab7db424b783",
+   "published": false
+  },
+  {
+   "name": "Icon / ambulance",
+   "slug": "ambulance",
+   "words": [
+    "ambulance"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:43",
+   "key": "f54bddd4527245235f8de07fcf1373e0cb73340f",
+   "published": false
+  },
+  {
+   "name": "Icon / motorcycle",
+   "slug": "motorcycle",
+   "words": [
+    "motorcycle"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:53",
+   "key": "c1a83c244249c32b5ac7321284ad8499abda1ea3",
+   "published": false
+  },
+  {
+   "name": "Icon / airplane",
+   "slug": "airplane",
+   "words": [
+    "airplane"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:57",
+   "key": "2f13389e500863f36c855a67254295a090f7338d",
+   "published": false
+  },
+  {
+   "name": "Icon / helicopter",
+   "slug": "helicopter",
+   "words": [
+    "helicopter"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:67",
+   "key": "bba490ab5a2f716c60bf8898a98c10445002863b",
+   "published": false
+  },
+  {
+   "name": "Icon / ship",
+   "slug": "ship",
+   "words": [
+    "ship"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:74",
+   "key": "6e877208f420cd9a4e738ae6c3eafc61bde61f4a",
+   "published": false
+  },
+  {
+   "name": "Icon / hot-air-balloon",
+   "slug": "hot-air-balloon",
+   "words": [
+    "hot",
+    "air",
+    "balloon"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:82",
+   "key": "b338502cdada7d8cb74777ee322bb0daf5b379c8",
+   "published": false
+  },
+  {
+   "name": "Icon / palm-tree",
+   "slug": "palm-tree",
+   "words": [
+    "palm",
+    "tree"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:90",
+   "key": "fea80e39a483ba4453cc73e188bc7380d92155fa",
+   "published": false
+  },
+  {
+   "name": "Icon / tent",
+   "slug": "tent",
+   "words": [
+    "tent"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:95",
+   "key": "3646769ebbba53c7ca054e01f8029dc07719004b",
+   "published": false
+  },
+  {
+   "name": "Icon / beach",
+   "slug": "beach",
+   "words": [
+    "beach"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "176:106",
+   "key": "55411d1574183bd38fcccb394118bb231e4c3a29",
+   "published": false
+  },
+  {
+   "name": "Icon / suitcase",
+   "slug": "suitcase",
+   "words": [
+    "suitcase"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "179:72",
+   "key": "3b31b6d15b92f2d4a33e67f71d6889c6ac83584e",
+   "published": false
+  },
+  {
+   "name": "Icon / train",
+   "slug": "train",
+   "words": [
+    "train"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "181:66",
+   "key": "e257740fcff4770ddadcb30e3762a74daab6e91f",
+   "published": false
+  },
+  {
+   "name": "Icon / taxi",
+   "slug": "taxi",
+   "words": [
+    "taxi"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "181:75",
+   "key": "47c5a820ec8bcf1a23349daa77c2730577d8b8a1",
+   "published": false
+  },
+  {
+   "name": "Icon / police-car",
+   "slug": "police-car",
+   "words": [
+    "police",
+    "car"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "181:86",
+   "key": "464740ad4ed4869186c1f68f168db95eab50327a",
+   "published": false
+  },
+  {
+   "name": "Icon / capitol",
+   "slug": "capitol",
+   "words": [
+    "capitol"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "185:43",
+   "key": "d7b8a02c4107f597a06ecfb4a670e5ad65ffa4ea",
+   "published": false
+  },
+  {
+   "name": "Icon / beach-umbrella",
+   "slug": "beach-umbrella",
+   "words": [
+    "beach",
+    "umbrella"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "185:79",
+   "key": "2088a91b7e5190efb04bd8cf594c7e24d516669b",
+   "published": false
+  },
+  {
+   "name": "Icon / mine-cart",
+   "slug": "mine-cart",
+   "words": [
+    "mine",
+    "cart"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "186:51",
+   "key": "748b50b51c245f92e93674617792a12c27b40365",
+   "published": false
+  },
+  {
+   "name": "Icon / lighthouse",
+   "slug": "lighthouse",
+   "words": [
+    "lighthouse"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "189:88",
+   "key": "9b1255efd641fa442373a233528627f73b90ef9e",
+   "published": false
+  },
+  {
+   "name": "Icon / anchor",
+   "slug": "anchor",
+   "words": [
+    "anchor"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "189:95",
+   "key": "1b4c1b17a554641a93d8039426e2835a6734e53f",
+   "published": false
+  },
+  {
+   "name": "Icon / sail-ship",
+   "slug": "sail-ship",
+   "words": [
+    "sail",
+    "ship"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "190:40",
+   "key": "38c72330fd1e3fdeab47d40e2e3d4b49558cda61",
+   "published": false
+  },
+  {
+   "name": "Icon / bridge",
+   "slug": "bridge",
+   "words": [
+    "bridge"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "192:47",
+   "key": "2493652a473774dc5a63f0da0ae4f333903bd343",
+   "published": false
+  },
+  {
+   "name": "Icon / water-fountain",
+   "slug": "water-fountain",
+   "words": [
+    "water",
+    "fountain"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "192:56",
+   "key": "e2a04ea95046b42fdb0faadb0d67be20d2a229d5",
+   "published": false
+  },
+  {
+   "name": "Icon / warehouse",
+   "slug": "warehouse",
+   "words": [
+    "warehouse"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "196:40",
+   "key": "0410f073cbf14088772d46eb8962f7a54276a756",
+   "published": false
+  },
+  {
+   "name": "Icon / camping-tent",
+   "slug": "camping-tent",
+   "words": [
+    "camping",
+    "tent"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "199:62",
+   "key": "2d8a3b9aa5a3c421a719d331a277d3b1c17a90bf",
+   "published": false
+  },
+  {
+   "name": "Icon / scooter",
+   "slug": "scooter",
+   "words": [
+    "scooter"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "200:61",
+   "key": "637898903ec7ca0a12c0cba96c3cd1979621c0e0",
+   "published": false
+  },
+  {
+   "name": "Icon / airship",
+   "slug": "airship",
+   "words": [
+    "airship"
+   ],
+   "category": "Places & Travel",
+   "size": 24,
+   "id": "201:41",
+   "key": "4d0f22fcb8a8c8dc2b6828aa9c4824855bcfa9d4",
+   "published": false
+  },
+  {
+   "name": "Icon / landscape-frame",
+   "slug": "landscape-frame",
+   "words": [
+    "landscape",
+    "frame"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "25:97",
+   "key": "3fe67c8e0d936b0184a4c92bc09ec4184122e095",
+   "published": true
+  },
+  {
+   "name": "Icon / orientation-landscape",
+   "slug": "orientation-landscape",
+   "words": [
+    "orientation",
+    "landscape"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "25:103",
+   "key": "aceabd2fda1a4ed6c1b7a06d548f53a78a90e839",
+   "published": true
+  },
+  {
+   "name": "Icon / orientation-portrait",
+   "slug": "orientation-portrait",
+   "words": [
+    "orientation",
+    "portrait"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "25:109",
+   "key": "0366faeb6e4b1f27eba1edb7b0189df334973987",
+   "published": true
+  },
+  {
+   "name": "Icon / landscape-nft",
+   "slug": "landscape-nft",
+   "words": [
+    "landscape",
+    "nft"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:9",
+   "key": "d7f6324a7e24424bcf881a88e54d1cde5d6c79a1",
+   "published": true
+  },
+  {
+   "name": "Icon / portrait-view",
+   "slug": "portrait-view",
+   "words": [
+    "portrait",
+    "view"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:17",
+   "key": "41e471036383d5ca881c239280aeeea50f7ce362",
+   "published": true
+  },
+  {
+   "name": "Icon / image-circle",
+   "slug": "image-circle",
+   "words": [
+    "image",
+    "circle"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:23",
+   "key": "145124a4c399b4985233af7d3c7c8c1edbb367bb",
+   "published": true
+  },
+  {
+   "name": "Icon / landscape",
+   "slug": "landscape",
+   "words": [
+    "landscape"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:29",
+   "key": "ecc59c865b518195534dd9de1896499ea6932358",
+   "published": true
+  },
+  {
+   "name": "Icon / edit-image",
+   "slug": "edit-image",
+   "words": [
+    "edit",
+    "image"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:36",
+   "key": "6e2e91b0117855957caf232448753abe4cd9dd9b",
+   "published": true
+  },
+  {
+   "name": "Icon / landscape-view",
+   "slug": "landscape-view",
+   "words": [
+    "landscape",
+    "view"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:44",
+   "key": "787c6e6f635213a5b73f859b925caea0af979fef",
+   "published": true
+  },
+  {
+   "name": "Icon / play-pause",
+   "slug": "play-pause",
+   "words": [
+    "play",
+    "pause"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:50",
+   "key": "c9aea6f104051e2cffea89201ac0bbe8d36b8d25",
+   "published": true
+  },
+  {
+   "name": "Icon / button-pause",
+   "slug": "button-pause",
+   "words": [
+    "button",
+    "pause"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:55",
+   "key": "06be01ab7423c7e6bf8ba909c33edb122fd26305",
+   "published": true
+  },
+  {
+   "name": "Icon / play-disable",
+   "slug": "play-disable",
+   "words": [
+    "play",
+    "disable"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:61",
+   "key": "11b8889434b85823e3e69d737258f67a69389217",
+   "published": true
+  },
+  {
+   "name": "Icon / auto-stop",
+   "slug": "auto-stop",
+   "words": [
+    "auto",
+    "stop"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "39:70",
+   "key": "7053ea41ebd3b149bf26b42099fbd8ac0f2277af",
+   "published": true
+  },
+  {
+   "name": "Icon / landscape-lock",
+   "slug": "landscape-lock",
+   "words": [
+    "landscape",
+    "lock"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "52:37",
+   "key": "427b662f062138b41b4d6ff3ce53b2ccda97c748",
+   "published": true
+  },
+  {
+   "name": "Icon / painting-board",
+   "slug": "painting-board",
+   "words": [
+    "painting",
+    "board"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "52:49",
+   "key": "23731ea3e2010d669f1e06ffce7ad6cc3375555c",
+   "published": true
+  },
+  {
+   "name": "Icon / camera-square",
+   "slug": "camera-square",
+   "words": [
+    "camera",
+    "square"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "52:55",
+   "key": "b97db3ba34026d6d36298f7fa6d504c70322ee69",
+   "published": true
+  },
+  {
+   "name": "Icon / video-subtitles",
+   "slug": "video-subtitles",
+   "words": [
+    "video",
+    "subtitles"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "52:63",
+   "key": "0e5ebdf39415848454b062bca3a9063c0a3e31d9",
+   "published": true
+  },
+  {
+   "name": "Icon / music-note",
+   "slug": "music-note",
+   "words": [
+    "music",
+    "note"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "138:82",
+   "key": "8bae206f9cf24e5296c5911a25bfa62485bab241",
+   "published": false
+  },
+  {
+   "name": "Icon / text-bold",
+   "slug": "text-bold",
+   "words": [
+    "text",
+    "bold"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "148:37",
+   "key": "38ccc9f6751e70d3a06d9b24929f770e6de01ed3",
+   "published": false
+  },
+  {
+   "name": "Icon / text-underline",
+   "slug": "text-underline",
+   "words": [
+    "text",
+    "underline"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "148:43",
+   "key": "11cefdc69a932bf92ac3adb4498cddba7dea6d6e",
+   "published": false
+  },
+  {
+   "name": "Icon / translate",
+   "slug": "translate",
+   "words": [
+    "translate"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "148:52",
+   "key": "a00a8c6d96a0327a74d06e52719018232c29b5f4",
+   "published": false
+  },
+  {
+   "name": "Icon / repeat",
+   "slug": "repeat",
+   "words": [
+    "repeat"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "148:62",
+   "key": "e1cf6b0a3e4a83e94a856b9d41368682e01a42a7",
+   "published": false
+  },
+  {
+   "name": "Icon / play",
+   "slug": "play",
+   "words": [
+    "play"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "158:56",
+   "key": "6fa8203b4e078900630bc890136d67393de1a9cb",
+   "published": false
+  },
+  {
+   "name": "Icon / pause",
+   "slug": "pause",
+   "words": [
+    "pause"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "158:61",
+   "key": "141839e2ece15ca83d39e101393349a633e5f2eb",
+   "published": false
+  },
+  {
+   "name": "Icon / skip-next",
+   "slug": "skip-next",
+   "words": [
+    "skip",
+    "next"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "158:66",
+   "key": "be520af75f4a8384c8a67bd497afb08a7f76770a",
+   "published": false
+  },
+  {
+   "name": "Icon / soccer-ball",
+   "slug": "soccer-ball",
+   "words": [
+    "soccer",
+    "ball"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "171:46",
+   "key": "737e846bd272b58be5a3650c88761437ecf88254",
+   "published": false
+  },
+  {
+   "name": "Icon / guitar",
+   "slug": "guitar",
+   "words": [
+    "guitar"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "178:39",
+   "key": "1254ac91e7277dc5f621017e28dc622f1a8c653c",
+   "published": false
+  },
+  {
+   "name": "Icon / basketball-hoop",
+   "slug": "basketball-hoop",
+   "words": [
+    "basketball",
+    "hoop"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "182:55",
+   "key": "529f2d2e733bef3d56b9ddf8e83d2e6cacf07901",
+   "published": false
+  },
+  {
+   "name": "Icon / tennis",
+   "slug": "tennis",
+   "words": [
+    "tennis"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "182:61",
+   "key": "5474a416127f91d087ba48eb34708ec1661fdfe8",
+   "published": false
+  },
+  {
+   "name": "Icon / football",
+   "slug": "football",
+   "words": [
+    "football"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "182:68",
+   "key": "b9820ba5d5bc77a28edccb5e9f66fa9044ad3c3f",
+   "published": false
+  },
+  {
+   "name": "Icon / piano-keys",
+   "slug": "piano-keys",
+   "words": [
+    "piano",
+    "keys"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "182:100",
+   "key": "58b9c31c1946e0806464b2c06442baf4a4996481",
+   "published": false
+  },
+  {
+   "name": "Icon / drum",
+   "slug": "drum",
+   "words": [
+    "drum"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "182:112",
+   "key": "83ee91d3f3c0a67f5df6c754b6bc3b926d9276e4",
+   "published": false
+  },
+  {
+   "name": "Icon / paint-palette",
+   "slug": "paint-palette",
+   "words": [
+    "paint",
+    "palette"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "183:104",
+   "key": "9ec8172427dab0faf1e86b3646ae3b03d56b1ab5",
+   "published": false
+  },
+  {
+   "name": "Icon / balloon",
+   "slug": "balloon",
+   "words": [
+    "balloon"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "187:66",
+   "key": "2889fc93bfb9838a8f50a0c8b1df070e45c8a7d5",
+   "published": false
+  },
+  {
+   "name": "Icon / lyre",
+   "slug": "lyre",
+   "words": [
+    "lyre"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "189:42",
+   "key": "8480a05cd16593090c4a124222b83685b4d54730",
+   "published": false
+  },
+  {
+   "name": "Icon / typewriter",
+   "slug": "typewriter",
+   "words": [
+    "typewriter"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "192:66",
+   "key": "ac7fe9c138d3156bea7f6a6cfe9286c1075c54df",
+   "published": false
+  },
+  {
+   "name": "Icon / feather-pen",
+   "slug": "feather-pen",
+   "words": [
+    "feather",
+    "pen"
+   ],
+   "category": "Media & Content",
+   "size": 24,
+   "id": "193:62",
+   "key": "bb4cc79e36e91391b838d92faca732816467b4ab",
+   "published": false
+  },
+  {
+   "name": "Icon / shopping-basket",
+   "slug": "shopping-basket",
+   "words": [
+    "shopping",
+    "basket"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:10",
+   "key": "b6f6f989bf10a2c7b0fa21827c96a8cdd2151ec9",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-basket-add",
+   "slug": "shopping-basket-add",
+   "words": [
+    "shopping",
+    "basket",
+    "add"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:18",
+   "key": "e9781570027d092429e365c5b16fa1054a9dda1d",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-basket-remove",
+   "slug": "shopping-basket-remove",
+   "words": [
+    "shopping",
+    "basket",
+    "remove"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:25",
+   "key": "e94fb60a0ec1ef8689388693b46175430e039c07",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-basket-check",
+   "slug": "shopping-basket-check",
+   "words": [
+    "shopping",
+    "basket",
+    "check"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:32",
+   "key": "52629fb1d985400925e59988cd16681443e4096e",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-cart",
+   "slug": "shopping-cart",
+   "words": [
+    "shopping",
+    "cart"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:39",
+   "key": "d89206bca52880eee8b6d6d52c66117ab4c04c44",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-cart-check",
+   "slug": "shopping-cart-check",
+   "words": [
+    "shopping",
+    "cart",
+    "check"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:47",
+   "key": "d4d6b91d4b70ab2f2ccca3380a398798eb521b52",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-cart-cross",
+   "slug": "shopping-cart-cross",
+   "words": [
+    "shopping",
+    "cart",
+    "cross"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:56",
+   "key": "6dd93443503b51091559e829427d0a4c2a4eae40",
+   "published": true
+  },
+  {
+   "name": "Icon / shopping-cart-heavy",
+   "slug": "shopping-cart-heavy",
+   "words": [
+    "shopping",
+    "cart",
+    "heavy"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:62",
+   "key": "093c38123a9de6a78acd5147a2b2e2c5a60b44b0",
+   "published": true
+  },
+  {
+   "name": "Icon / store",
+   "slug": "store",
+   "words": [
+    "store"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:70",
+   "key": "c575193bbe710b5e8fc09aabee5e707ef33a6e2d",
+   "published": true
+  },
+  {
+   "name": "Icon / store-2",
+   "slug": "store-2",
+   "words": [
+    "store",
+    "2"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:77",
+   "key": "a40cd93fd81e1db9fe5e6aaeac70b573c357663a",
+   "published": true
+  },
+  {
+   "name": "Icon / store-computer",
+   "slug": "store-computer",
+   "words": [
+    "store",
+    "computer"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:84",
+   "key": "0d365bf9c72cb6f6800908e49d4491c8660fc756",
+   "published": true
+  },
+  {
+   "name": "Icon / tag-new",
+   "slug": "tag-new",
+   "words": [
+    "tag",
+    "new"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:93",
+   "key": "b972226274f27d391f99cdbf629b678ba21eb4e0",
+   "published": true
+  },
+  {
+   "name": "Icon / tag-free",
+   "slug": "tag-free",
+   "words": [
+    "tag",
+    "free"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:107",
+   "key": "2ff9fd00c3451a4bd373758e583c245233716de4",
+   "published": true
+  },
+  {
+   "name": "Icon / tag-label",
+   "slug": "tag-label",
+   "words": [
+    "tag",
+    "label"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "28:114",
+   "key": "da83be5b758a5146ab0ef523f48b42d186daa3ec",
+   "published": true
+  },
+  {
+   "name": "Icon / discount-square",
+   "slug": "discount-square",
+   "words": [
+    "discount",
+    "square"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "29:8",
+   "key": "a82ed54f2d621467119f67012c93a6c2b1dde420",
+   "published": true
+  },
+  {
+   "name": "Icon / receipt",
+   "slug": "receipt",
+   "words": [
+    "receipt"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "29:13",
+   "key": "6a346388f4a6b9cac0b6e49b0c7c6dd4e83ee5be",
+   "published": true
+  },
+  {
+   "name": "Icon / gift-card",
+   "slug": "gift-card",
+   "words": [
+    "gift",
+    "card"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "138:114",
+   "key": "29026bd5560c6f6528353e1cd4943939555f93b3",
+   "published": false
+  },
+  {
+   "name": "Icon / coupon",
+   "slug": "coupon",
+   "words": [
+    "coupon"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "138:121",
+   "key": "6eabdee4d03eb097e2b68bdb26316ad9ed43b819",
+   "published": false
+  },
+  {
+   "name": "Icon / ticket",
+   "slug": "ticket",
+   "words": [
+    "ticket"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "138:129",
+   "key": "5672cc430fd6264319b378bb4a32504f59394a94",
+   "published": false
+  },
+  {
+   "name": "Icon / cart-check",
+   "slug": "cart-check",
+   "words": [
+    "cart",
+    "check"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "148:75",
+   "key": "ca748a0c9926be36cdd78eee9b5866a0760f8917",
+   "published": false
+  },
+  {
+   "name": "Icon / cart-add",
+   "slug": "cart-add",
+   "words": [
+    "cart",
+    "add"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "148:84",
+   "key": "403c0b410625437308ad6378aa5e258664014fce",
+   "published": false
+  },
+  {
+   "name": "Icon / barcode",
+   "slug": "barcode",
+   "words": [
+    "barcode"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "169:51",
+   "key": "e9a3d6d73cf02495fa11080bf1e598865f4bd356",
+   "published": false
+  },
+  {
+   "name": "Icon / necklace",
+   "slug": "necklace",
+   "words": [
+    "necklace"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "181:45",
+   "key": "08466d0a6360888f7314f1bfe454dfaf5246dc32",
+   "published": false
+  },
+  {
+   "name": "Icon / cashier-machine",
+   "slug": "cashier-machine",
+   "words": [
+    "cashier",
+    "machine"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "184:65",
+   "key": "868e7148542fb48840ca081b396ae453b5ca886d",
+   "published": false
+  },
+  {
+   "name": "Icon / shirt",
+   "slug": "shirt",
+   "words": [
+    "shirt"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "186:88",
+   "key": "aa882504869d5b60f101f391cea41c85732299fa",
+   "published": false
+  },
+  {
+   "name": "Icon / dress",
+   "slug": "dress",
+   "words": [
+    "dress"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "187:38",
+   "key": "ed9e74ae9c7ed100fca5d6d228596f8c311302c1",
+   "published": false
+  },
+  {
+   "name": "Icon / backpack",
+   "slug": "backpack",
+   "words": [
+    "backpack"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "187:47",
+   "key": "d7fd75ae3db3e4e357612f0415720bfabe7b154f",
+   "published": false
+  },
+  {
+   "name": "Icon / sneakers",
+   "slug": "sneakers",
+   "words": [
+    "sneakers"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "187:55",
+   "key": "a539bd19026dba5c7f6f145988e524149f2bffbe",
+   "published": false
+  },
+  {
+   "name": "Icon / cap",
+   "slug": "cap",
+   "words": [
+    "cap"
+   ],
+   "category": "Commerce & Shopping",
+   "size": 24,
+   "id": "200:67",
+   "key": "2426cbadf5ea616d78a681a48d19eb898ce830a5",
+   "published": false
+  },
+  {
+   "name": "Icon / wifi-checked",
+   "slug": "wifi-checked",
+   "words": [
+    "wifi",
+    "checked"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:21",
+   "key": "eed1afee14d4e8edee35ffc0eb1c23479990b0a6",
+   "published": true
+  },
+  {
+   "name": "Icon / wifi-disconnect",
+   "slug": "wifi-disconnect",
+   "words": [
+    "wifi",
+    "disconnect"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:29",
+   "key": "f4f5aba727beb31a73a57c6af9a718316e7c4b74",
+   "published": true
+  },
+  {
+   "name": "Icon / signal-5g",
+   "slug": "signal-5g",
+   "words": [
+    "signal",
+    "5g"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:36",
+   "key": "81442478f1eb9499778381a81448f01681c59533",
+   "published": true
+  },
+  {
+   "name": "Icon / signal-4g",
+   "slug": "signal-4g",
+   "words": [
+    "signal",
+    "4g"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:43",
+   "key": "e83f826301b449261fc9a36be1aad80f44decfb1",
+   "published": true
+  },
+  {
+   "name": "Icon / sun-cloud",
+   "slug": "sun-cloud",
+   "words": [
+    "sun",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:48",
+   "key": "3cef0ab6a987ddd7ba176fc46d220493a1586abc",
+   "published": true
+  },
+  {
+   "name": "Icon / moon-cloud",
+   "slug": "moon-cloud",
+   "words": [
+    "moon",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:53",
+   "key": "bfa9dd12ab6d6a62287b10a6d310365f63431844",
+   "published": true
+  },
+  {
+   "name": "Icon / cloud",
+   "slug": "cloud",
+   "words": [
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:57",
+   "key": "a193c4968e970db003a630e5aa2a3a25decdc04e",
+   "published": true
+  },
+  {
+   "name": "Icon / wind-cloud",
+   "slug": "wind-cloud",
+   "words": [
+    "wind",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:64",
+   "key": "1dfcce91bf2b534f73ece7a778700c84eaa8c84b",
+   "published": true
+  },
+  {
+   "name": "Icon / snow-cloud",
+   "slug": "snow-cloud",
+   "words": [
+    "snow",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:75",
+   "key": "e4569c85c70f41e0db94a6d072bf36a7bb37d4e3",
+   "published": true
+  },
+  {
+   "name": "Icon / fog-cloud",
+   "slug": "fog-cloud",
+   "words": [
+    "fog",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "29:81",
+   "key": "cec40d3a45e27336ba4dd14baa321732fc11dbb8",
+   "published": true
+  },
+  {
+   "name": "Icon / rating",
+   "slug": "rating",
+   "words": [
+    "rating"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "52:95",
+   "key": "e0db45842f07d3f8983235605e9e005f23eaba0c",
+   "published": true
+  },
+  {
+   "name": "Icon / qr-code",
+   "slug": "qr-code",
+   "words": [
+    "qr",
+    "code"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:95",
+   "key": "7dff110971f20f40fb65896cc10e834f597c6fea",
+   "published": true
+  },
+  {
+   "name": "Icon / barcode-scanner",
+   "slug": "barcode-scanner",
+   "words": [
+    "barcode",
+    "scanner"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:108",
+   "key": "5d7456b5014383659fab5aa2e16e01eceb4cf947",
+   "published": true
+  },
+  {
+   "name": "Icon / link-chain",
+   "slug": "link-chain",
+   "words": [
+    "link",
+    "chain"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:114",
+   "key": "90dfff247deb570a9c291e9fe69cc0bfc5f84803",
+   "published": true
+  },
+  {
+   "name": "Icon / link-broken",
+   "slug": "link-broken",
+   "words": [
+    "link",
+    "broken"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:120",
+   "key": "f818b7ce32e0c7d61927022bb3b67f13a231482b",
+   "published": true
+  },
+  {
+   "name": "Icon / paperclip",
+   "slug": "paperclip",
+   "words": [
+    "paperclip"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:124",
+   "key": "4dd023177c562bd24f2359358727dd87ff35d77d",
+   "published": true
+  },
+  {
+   "name": "Icon / globe",
+   "slug": "globe",
+   "words": [
+    "globe"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "54:131",
+   "key": "3631f3d7b338f3701fc322d1f55c7e994a94d258",
+   "published": true
+  },
+  {
+   "name": "Icon / stamp",
+   "slug": "stamp",
+   "words": [
+    "stamp"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "57:131",
+   "key": "671bf7a57487c132054ba7234317d22a49fc51c1",
+   "published": true
+  },
+  {
+   "name": "Icon / pencil-edit",
+   "slug": "pencil-edit",
+   "words": [
+    "pencil",
+    "edit"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "134:96",
+   "key": "70353d109e1dfabbc2e6f26f1bb8347f72aa2a82",
+   "published": false
+  },
+  {
+   "name": "Icon / pencil-square",
+   "slug": "pencil-square",
+   "words": [
+    "pencil",
+    "square"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "134:101",
+   "key": "717a2d3f0a906b74b9218d86048ca58e740d11b4",
+   "published": false
+  },
+  {
+   "name": "Icon / paintbrush",
+   "slug": "paintbrush",
+   "words": [
+    "paintbrush"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "134:106",
+   "key": "de2c1b7a7be5fdea4fd690589615b8b975efc053",
+   "published": false
+  },
+  {
+   "name": "Icon / color-swatches",
+   "slug": "color-swatches",
+   "words": [
+    "color",
+    "swatches"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "134:114",
+   "key": "4e603ac936c421fd5eb64c703cec5b0ff01f7362",
+   "published": false
+  },
+  {
+   "name": "Icon / partly-cloudy",
+   "slug": "partly-cloudy",
+   "words": [
+    "partly",
+    "cloudy"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "147:73",
+   "key": "25e46fa08e83475de1c385d96a0aa24ae7ee49f8",
+   "published": false
+  },
+  {
+   "name": "Icon / solar-panel",
+   "slug": "solar-panel",
+   "words": [
+    "solar",
+    "panel"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "163:64",
+   "key": "c06ab058f8c75876a24df5cd935a4d6f7a5631c5",
+   "published": false
+  },
+  {
+   "name": "Icon / power-bolt",
+   "slug": "power-bolt",
+   "words": [
+    "power",
+    "bolt"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "163:69",
+   "key": "40405e0f997f226e32694cbc14450a2dc35207fd",
+   "published": false
+  },
+  {
+   "name": "Icon / heart-rate",
+   "slug": "heart-rate",
+   "words": [
+    "heart",
+    "rate"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "163:82",
+   "key": "be44c793459f83d7e7a7bb8e58a82c576be8e375",
+   "published": false
+  },
+  {
+   "name": "Icon / forklift",
+   "slug": "forklift",
+   "words": [
+    "forklift"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "164:78",
+   "key": "a7afca7f73d981574c6d0d1f2b4d3d870417a3f9",
+   "published": false
+  },
+  {
+   "name": "Icon / signal-tower",
+   "slug": "signal-tower",
+   "words": [
+    "signal",
+    "tower"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "170:56",
+   "key": "31667446bd526d95afe05aedc744bba93acce717",
+   "published": false
+  },
+  {
+   "name": "Icon / satellite-dish",
+   "slug": "satellite-dish",
+   "words": [
+    "satellite",
+    "dish"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "170:62",
+   "key": "34c7f20350a6db90f39d084369b0bb9b5e0e7230",
+   "published": false
+  },
+  {
+   "name": "Icon / crane",
+   "slug": "crane",
+   "words": [
+    "crane"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "173:51",
+   "key": "6d268c140aacafc075dd8a11da4ed95a0d4d5d88",
+   "published": false
+  },
+  {
+   "name": "Icon / water-tap",
+   "slug": "water-tap",
+   "words": [
+    "water",
+    "tap"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "173:58",
+   "key": "93932a18e66b97d13cdb953a3a5ae521814509ec",
+   "published": false
+  },
+  {
+   "name": "Icon / hydro-energy",
+   "slug": "hydro-energy",
+   "words": [
+    "hydro",
+    "energy"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "173:63",
+   "key": "443a324ce9ea967216a66a28b5dfc1a948212a2a",
+   "published": false
+  },
+  {
+   "name": "Icon / gas-station",
+   "slug": "gas-station",
+   "words": [
+    "gas",
+    "station"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "174:47",
+   "key": "2e3dcd06627ddd9c409195bd0e555419ba29da79",
+   "published": false
+  },
+  {
+   "name": "Icon / wind-turbine",
+   "slug": "wind-turbine",
+   "words": [
+    "wind",
+    "turbine"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "174:55",
+   "key": "f9d2763b389da3796c4a085fd97536633d2827f3",
+   "published": false
+  },
+  {
+   "name": "Icon / hammer",
+   "slug": "hammer",
+   "words": [
+    "hammer"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "175:38",
+   "key": "0c84bdcdecc4540068f3e0daf896f6c8b004dee7",
+   "published": false
+  },
+  {
+   "name": "Icon / screwdriver",
+   "slug": "screwdriver",
+   "words": [
+    "screwdriver"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "175:44",
+   "key": "207bd1f356033c039ef15c253be121ea70784f04",
+   "published": false
+  },
+  {
+   "name": "Icon / tree",
+   "slug": "tree",
+   "words": [
+    "tree"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "176:111",
+   "key": "378192f08856d16c381a7ee5f77cc7c4fa91ef97",
+   "published": false
+  },
+  {
+   "name": "Icon / potted-plant",
+   "slug": "potted-plant",
+   "words": [
+    "potted",
+    "plant"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "176:118",
+   "key": "a840e91e5c13f15d30a98111fa68427a865b793c",
+   "published": false
+  },
+  {
+   "name": "Icon / flower",
+   "slug": "flower",
+   "words": [
+    "flower"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:38",
+   "key": "ed9075514fa654d6195f9d9ccf51c1ee784926b6",
+   "published": false
+  },
+  {
+   "name": "Icon / chair",
+   "slug": "chair",
+   "words": [
+    "chair"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:45",
+   "key": "f53aaf75b2e627a365f48b7e9481ecdf45088746",
+   "published": false
+  },
+  {
+   "name": "Icon / sofa",
+   "slug": "sofa",
+   "words": [
+    "sofa"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:52",
+   "key": "69ebe37df7d1a5adee826b17fb46f473fe21071c",
+   "published": false
+  },
+  {
+   "name": "Icon / desk",
+   "slug": "desk",
+   "words": [
+    "desk"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:59",
+   "key": "eddc41e98924d305776dc3e2052fdcb8a4ca512f",
+   "published": false
+  },
+  {
+   "name": "Icon / burger",
+   "slug": "burger",
+   "words": [
+    "burger"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:66",
+   "key": "ad7834c0148a81f3b0d8f5b085971a7d35a506d2",
+   "published": false
+  },
+  {
+   "name": "Icon / coffee-mug",
+   "slug": "coffee-mug",
+   "words": [
+    "coffee",
+    "mug"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:73",
+   "key": "b850c083dcc4868fa6084b1e0934231e125a792d",
+   "published": false
+  },
+  {
+   "name": "Icon / pizza",
+   "slug": "pizza",
+   "words": [
+    "pizza"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:80",
+   "key": "d6ee15b1fea8ed0b3a4414829e5e06b4db0b3485",
+   "published": false
+  },
+  {
+   "name": "Icon / pill",
+   "slug": "pill",
+   "words": [
+    "pill"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:85",
+   "key": "d639dc86e0d9f7bb96b1b2c277e6d41d984532f4",
+   "published": false
+  },
+  {
+   "name": "Icon / stethoscope",
+   "slug": "stethoscope",
+   "words": [
+    "stethoscope"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:91",
+   "key": "f495b3d8ac187235ef1dfbe6b3dbfd6c29aa0cad",
+   "published": false
+  },
+  {
+   "name": "Icon / medicine-bottle",
+   "slug": "medicine-bottle",
+   "words": [
+    "medicine",
+    "bottle"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "177:98",
+   "key": "b5df2f44177069d40025ecfa8e36812d32fb8233",
+   "published": false
+  },
+  {
+   "name": "Icon / rain-cloud",
+   "slug": "rain-cloud",
+   "words": [
+    "rain",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "178:55",
+   "key": "bd38cb07d5c2edbeab494278f772fd2220aa0f95",
+   "published": false
+  },
+  {
+   "name": "Icon / umbrella",
+   "slug": "umbrella",
+   "words": [
+    "umbrella"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "178:60",
+   "key": "409a2c5179e95ab0c9fda2f8a44f2aa4de4c35fc",
+   "published": false
+  },
+  {
+   "name": "Icon / lightning-cloud",
+   "slug": "lightning-cloud",
+   "words": [
+    "lightning",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "178:65",
+   "key": "b596049848d1b371c923e77371b053eb955a190a",
+   "published": false
+  },
+  {
+   "name": "Icon / test-tube",
+   "slug": "test-tube",
+   "words": [
+    "test",
+    "tube"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "178:71",
+   "key": "2595692aa1eaaacff4860b60c4a9d87982cb90b5",
+   "published": false
+  },
+  {
+   "name": "Icon / microscope",
+   "slug": "microscope",
+   "words": [
+    "microscope"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "178:80",
+   "key": "41fd94184864115427fe44bad506b4a89908cc6e",
+   "published": false
+  },
+  {
+   "name": "Icon / dna",
+   "slug": "dna",
+   "words": [
+    "dna"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "179:41",
+   "key": "42354f39ea3464885fec2f1ce0196c3745ffc5a5",
+   "published": false
+  },
+  {
+   "name": "Icon / flask",
+   "slug": "flask",
+   "words": [
+    "flask"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "179:47",
+   "key": "466448cdc79e6bfb8fbb48988270d25d8abde593",
+   "published": false
+  },
+  {
+   "name": "Icon / dog",
+   "slug": "dog",
+   "words": [
+    "dog"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "179:56",
+   "key": "fa5d0fb94d4c72e519943d2c60d683347e753e6c",
+   "published": false
+  },
+  {
+   "name": "Icon / cat",
+   "slug": "cat",
+   "words": [
+    "cat"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "179:64",
+   "key": "db01ef2df7c534f27a009f5fa1e3ffca7159f4f4",
+   "published": false
+  },
+  {
+   "name": "Icon / binoculars",
+   "slug": "binoculars",
+   "words": [
+    "binoculars"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "179:80",
+   "key": "783e02b7db0bacfa722d6fda1d156fc2cd54bc0a",
+   "published": false
+  },
+  {
+   "name": "Icon / power-drill",
+   "slug": "power-drill",
+   "words": [
+    "power",
+    "drill"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "181:95",
+   "key": "92c74934991c99332b20c56de2b64e68c9a79c95",
+   "published": false
+  },
+  {
+   "name": "Icon / toolbox",
+   "slug": "toolbox",
+   "words": [
+    "toolbox"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "182:40",
+   "key": "39a94fd871fb97a3116a9b59c8c3bdbc255ad049",
+   "published": false
+  },
+  {
+   "name": "Icon / wrench",
+   "slug": "wrench",
+   "words": [
+    "wrench"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "182:44",
+   "key": "5dcffa559dc2f01ac52d9d53f9dda3ec89561a4a",
+   "published": false
+  },
+  {
+   "name": "Icon / dumbbell",
+   "slug": "dumbbell",
+   "words": [
+    "dumbbell"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "182:78",
+   "key": "6739f2a59d7ace6024ca824507842cc1485b1168",
+   "published": false
+  },
+  {
+   "name": "Icon / volcano",
+   "slug": "volcano",
+   "words": [
+    "volcano"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "182:85",
+   "key": "31b9d418033485772c4819c7dc85e0109cb8ec9f",
+   "published": false
+  },
+  {
+   "name": "Icon / desert",
+   "slug": "desert",
+   "words": [
+    "desert"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "182:92",
+   "key": "544f0cc7200c92e16fc1f0645ca080ff83d5a227",
+   "published": false
+  },
+  {
+   "name": "Icon / egg",
+   "slug": "egg",
+   "words": [
+    "egg"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:39",
+   "key": "0e210e43f05c6e1a53eb847c71cd304333f198bb",
+   "published": false
+  },
+  {
+   "name": "Icon / soft-drink-can",
+   "slug": "soft-drink-can",
+   "words": [
+    "soft",
+    "drink",
+    "can"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:51",
+   "key": "2911bf3a6b04425dae6e1a1a817c681dc8c58af8",
+   "published": false
+  },
+  {
+   "name": "Icon / fork-knife",
+   "slug": "fork-knife",
+   "words": [
+    "fork",
+    "knife"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:59",
+   "key": "5dc500ba88d05740cc6ff93ace74787f89c3d1f6",
+   "published": false
+  },
+  {
+   "name": "Icon / teapot",
+   "slug": "teapot",
+   "words": [
+    "teapot"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:64",
+   "key": "d9d7e03a96c974438a9b0d6a6dc9be37a9137788",
+   "published": false
+  },
+  {
+   "name": "Icon / knife",
+   "slug": "knife",
+   "words": [
+    "knife"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:70",
+   "key": "fe612ab1ce6aa90b1a45fdc946182ab81b37cd71",
+   "published": false
+  },
+  {
+   "name": "Icon / paint-bucket",
+   "slug": "paint-bucket",
+   "words": [
+    "paint",
+    "bucket"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:75",
+   "key": "93b67020d403652270b7bb43df19cef0db097c13",
+   "published": false
+  },
+  {
+   "name": "Icon / ladder",
+   "slug": "ladder",
+   "words": [
+    "ladder"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:82",
+   "key": "8457979a1a360f68196f1ea0087d916780190a86",
+   "published": false
+  },
+  {
+   "name": "Icon / paint-roller",
+   "slug": "paint-roller",
+   "words": [
+    "paint",
+    "roller"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "183:88",
+   "key": "d1cdc63fc07c6d66cff0885097f278eda354e15d",
+   "published": false
+  },
+  {
+   "name": "Icon / wheelchair",
+   "slug": "wheelchair",
+   "words": [
+    "wheelchair"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "184:41",
+   "key": "301c439bfba0be8354310259c8708d0d253ad109",
+   "published": false
+  },
+  {
+   "name": "Icon / bandage",
+   "slug": "bandage",
+   "words": [
+    "bandage"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "184:50",
+   "key": "271ceb33341f0d64c2ace5ce7907700af7f2c5cc",
+   "published": false
+  },
+  {
+   "name": "Icon / walker",
+   "slug": "walker",
+   "words": [
+    "walker"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "184:57",
+   "key": "55cba39c0d07f263b8aa5f34a93b4492673c8a5a",
+   "published": false
+  },
+  {
+   "name": "Icon / satellite",
+   "slug": "satellite",
+   "words": [
+    "satellite"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "185:51",
+   "key": "9fe54a966b99512e70e20e3449621edcdc9eba5a",
+   "published": false
+  },
+  {
+   "name": "Icon / planet",
+   "slug": "planet",
+   "words": [
+    "planet"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "185:56",
+   "key": "e84ee6f0c13649b697a0d5295e43322af0014445",
+   "published": false
+  },
+  {
+   "name": "Icon / telescope",
+   "slug": "telescope",
+   "words": [
+    "telescope"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "185:63",
+   "key": "8f450eaf0a4f231f4bd374d49858969758d9ec95",
+   "published": false
+  },
+  {
+   "name": "Icon / rocket",
+   "slug": "rocket",
+   "words": [
+    "rocket"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "185:71",
+   "key": "d1b63196c4e28fc62366245be359c0720fe8721d",
+   "published": false
+  },
+  {
+   "name": "Icon / tidal-wave",
+   "slug": "tidal-wave",
+   "words": [
+    "tidal",
+    "wave"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "185:93",
+   "key": "1b31ef78a1d6f917f42d73e73da60be0d48cda42",
+   "published": false
+  },
+  {
+   "name": "Icon / pipeline",
+   "slug": "pipeline",
+   "words": [
+    "pipeline"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "186:43",
+   "key": "9fe6fbb80684eaaf604e3950c2253cd2d3b04b2d",
+   "published": false
+  },
+  {
+   "name": "Icon / conveyor-belt",
+   "slug": "conveyor-belt",
+   "words": [
+    "conveyor",
+    "belt"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "186:61",
+   "key": "aa5baaaab34bafc9457a6760f4fd687e00d30e51",
+   "published": false
+  },
+  {
+   "name": "Icon / propane-tank",
+   "slug": "propane-tank",
+   "words": [
+    "propane",
+    "tank"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "186:74",
+   "key": "05d1bde49a681c475f657288e65170d9d93493bb",
+   "published": false
+  },
+  {
+   "name": "Icon / stroller",
+   "slug": "stroller",
+   "words": [
+    "stroller"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "187:61",
+   "key": "f33f184030bdd376b463f9f13514ecd4386845fd",
+   "published": false
+  },
+  {
+   "name": "Icon / cake-slice",
+   "slug": "cake-slice",
+   "words": [
+    "cake",
+    "slice"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "187:74",
+   "key": "2745363ffd0f0ea651c3a7e0dd78b37f4f0d0903",
+   "published": false
+  },
+  {
+   "name": "Icon / hurricane",
+   "slug": "hurricane",
+   "words": [
+    "hurricane"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "189:51",
+   "key": "59568bb3124c062ff6a06b9f3eb99047cc6c48d8",
+   "published": false
+  },
+  {
+   "name": "Icon / snowflake",
+   "slug": "snowflake",
+   "words": [
+    "snowflake"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "189:71",
+   "key": "f0fae127eb89059798f549b340e92e3572a0df7c",
+   "published": false
+  },
+  {
+   "name": "Icon / rainbow-cloud",
+   "slug": "rainbow-cloud",
+   "words": [
+    "rainbow",
+    "cloud"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "189:77",
+   "key": "c94a4404f7f464b446fab14ffac35800092c1fc0",
+   "published": false
+  },
+  {
+   "name": "Icon / dam",
+   "slug": "dam",
+   "words": [
+    "dam"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "189:101",
+   "key": "402b52dbb102459b2f79149423c06bee86603226",
+   "published": false
+  },
+  {
+   "name": "Icon / windmill",
+   "slug": "windmill",
+   "words": [
+    "windmill"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:48",
+   "key": "f4879cbaaf0f76f982527370f4aebe175526401a",
+   "published": false
+  },
+  {
+   "name": "Icon / wind-energy",
+   "slug": "wind-energy",
+   "words": [
+    "wind",
+    "energy"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:58",
+   "key": "49da0f9f8ac5ea93c19ea6c11d87e2ba5630ea3f",
+   "published": false
+  },
+  {
+   "name": "Icon / grape",
+   "slug": "grape",
+   "words": [
+    "grape"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:69",
+   "key": "a07efcfe3c73d95f880d2fd3cf11d5f4bf4e8683",
+   "published": false
+  },
+  {
+   "name": "Icon / banana",
+   "slug": "banana",
+   "words": [
+    "banana"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:75",
+   "key": "63e6a2b157bcd322ddedd4e67e4accb1dc7bdb3f",
+   "published": false
+  },
+  {
+   "name": "Icon / carrot",
+   "slug": "carrot",
+   "words": [
+    "carrot"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:84",
+   "key": "108e440c127d883d0a96bcd34baec85d924f178b",
+   "published": false
+  },
+  {
+   "name": "Icon / sandwich",
+   "slug": "sandwich",
+   "words": [
+    "sandwich"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "190:91",
+   "key": "9c9ebd35335f59e3e42a3a90251ccf5223e95d13",
+   "published": false
+  },
+  {
+   "name": "Icon / magnet",
+   "slug": "magnet",
+   "words": [
+    "magnet"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "192:39",
+   "key": "51c5298bcea039ef649d7453b4639f07d4f22eb6",
+   "published": false
+  },
+  {
+   "name": "Icon / candle",
+   "slug": "candle",
+   "words": [
+    "candle"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "192:72",
+   "key": "00b5b08bb5d56927490a696a7afcd4a17ecab7a1",
+   "published": false
+  },
+  {
+   "name": "Icon / skull",
+   "slug": "skull",
+   "words": [
+    "skull"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "192:79",
+   "key": "519ac689295911d10eaa5d0e79a253194be29fad",
+   "published": false
+  },
+  {
+   "name": "Icon / ghost",
+   "slug": "ghost",
+   "words": [
+    "ghost"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "192:85",
+   "key": "529aa26e4beee7f0e837ac3432c370674f1487e7",
+   "published": false
+  },
+  {
+   "name": "Icon / cake",
+   "slug": "cake",
+   "words": [
+    "cake"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "193:41",
+   "key": "f03cb61657cf7f402d32e443c8f1c4460661fbd4",
+   "published": false
+  },
+  {
+   "name": "Icon / rabbit",
+   "slug": "rabbit",
+   "words": [
+    "rabbit"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "193:48",
+   "key": "61bfbe8ce70570ce67881dbf1c45aebcdfaaaf0a",
+   "published": false
+  },
+  {
+   "name": "Icon / bird",
+   "slug": "bird",
+   "words": [
+    "bird"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "193:56",
+   "key": "c8eebf1e946fd37500702a12c4e46fd2d1a4ebba",
+   "published": false
+  },
+  {
+   "name": "Icon / tooth",
+   "slug": "tooth",
+   "words": [
+    "tooth"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "193:67",
+   "key": "80ceb6dd452b1e399e6afad0010aff6fda40e428",
+   "published": false
+  },
+  {
+   "name": "Icon / brain",
+   "slug": "brain",
+   "words": [
+    "brain"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "193:78",
+   "key": "f897e8f47cf947e65a20a9fd8b4c1492a8ac3c60",
+   "published": false
+  },
+  {
+   "name": "Icon / clover",
+   "slug": "clover",
+   "words": [
+    "clover"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "196:47",
+   "key": "00c094768e450b64d2d3d41a47c6886e2e700ab5",
+   "published": false
+  },
+  {
+   "name": "Icon / rose",
+   "slug": "rose",
+   "words": [
+    "rose"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "197:40",
+   "key": "370a310de6f6f5f8945d4eedf5ea32b0874a0cc8",
+   "published": false
+  },
+  {
+   "name": "Icon / scissors",
+   "slug": "scissors",
+   "words": [
+    "scissors"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "197:47",
+   "key": "275abe3090f354e88917b2967700e0f1978257ad",
+   "published": false
+  },
+  {
+   "name": "Icon / liquid-glue",
+   "slug": "liquid-glue",
+   "words": [
+    "liquid",
+    "glue"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "197:54",
+   "key": "66c5df201cadbb2fd099c403b85442e46e0bf950",
+   "published": false
+  },
+  {
+   "name": "Icon / measuring-tape",
+   "slug": "measuring-tape",
+   "words": [
+    "measuring",
+    "tape"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "197:60",
+   "key": "54175de9b698222da198669b03aa9d1e4b323265",
+   "published": false
+  },
+  {
+   "name": "Icon / petri-dish",
+   "slug": "petri-dish",
+   "words": [
+    "petri",
+    "dish"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "198:42",
+   "key": "740b62b723cfbad416831f596d46fbbe11d23d96",
+   "published": false
+  },
+  {
+   "name": "Icon / erlenmeyer-flask",
+   "slug": "erlenmeyer-flask",
+   "words": [
+    "erlenmeyer",
+    "flask"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "198:48",
+   "key": "57e71473af3db2b60fe92dfe719b31a0d07fd387",
+   "published": false
+  },
+  {
+   "name": "Icon / microwave",
+   "slug": "microwave",
+   "words": [
+    "microwave"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "198:57",
+   "key": "8d8891a342373344bb423b2827e41b325caf1021",
+   "published": false
+  },
+  {
+   "name": "Icon / blender",
+   "slug": "blender",
+   "words": [
+    "blender"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "198:63",
+   "key": "a0b424820681f76147afd7dd2bc75876ea73ac83",
+   "published": false
+  },
+  {
+   "name": "Icon / toaster",
+   "slug": "toaster",
+   "words": [
+    "toaster"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "198:70",
+   "key": "0101458987d0c1fdacc4673f869c8d01d5fac915",
+   "published": false
+  },
+  {
+   "name": "Icon / oven",
+   "slug": "oven",
+   "words": [
+    "oven"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "199:41",
+   "key": "5d29b5a699576c821017979b9075317baaef19f7",
+   "published": false
+  },
+  {
+   "name": "Icon / heater",
+   "slug": "heater",
+   "words": [
+    "heater"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "199:52",
+   "key": "522e470c08be96da8f9b869df4aff3e9e37bc2fe",
+   "published": false
+  },
+  {
+   "name": "Icon / flashlight",
+   "slug": "flashlight",
+   "words": [
+    "flashlight"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "199:57",
+   "key": "865b81acdd163959fc5113abf9099237ac24b239",
+   "published": false
+  },
+  {
+   "name": "Icon / golf",
+   "slug": "golf",
+   "words": [
+    "golf"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "200:42",
+   "key": "524845499c5ac140eec58aa6dd47ab18b3b3dd67",
+   "published": false
+  },
+  {
+   "name": "Icon / baseball",
+   "slug": "baseball",
+   "words": [
+    "baseball"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "200:52",
+   "key": "36ba486f5f40588521643e1353b7c09f3b604a78",
+   "published": false
+  },
+  {
+   "name": "Icon / comet",
+   "slug": "comet",
+   "words": [
+    "comet"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "201:46",
+   "key": "8b982b630856f14e0528caff69e9b74e724bfd23",
+   "published": false
+  },
+  {
+   "name": "Icon / astronaut",
+   "slug": "astronaut",
+   "words": [
+    "astronaut"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "201:53",
+   "key": "ed760e88322daecd7e0b985225520b94a17d4c02",
+   "published": false
+  },
+  {
+   "name": "Icon / galaxy",
+   "slug": "galaxy",
+   "words": [
+    "galaxy"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "201:63",
+   "key": "efd5242ccaeab0c1923455e7294a7caf04a9fc70",
+   "published": false
+  },
+  {
+   "name": "Icon / broom",
+   "slug": "broom",
+   "words": [
+    "broom"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "203:41",
+   "key": "bbd9eb00146950ff0dc9332ccfe8b579766dad62",
+   "published": false
+  },
+  {
+   "name": "Icon / gas-canister",
+   "slug": "gas-canister",
+   "words": [
+    "gas",
+    "canister"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "203:49",
+   "key": "e65f3bae8b73ed0c1976d16aae6e57fb0f3b560a",
+   "published": false
+  },
+  {
+   "name": "Icon / popcorn",
+   "slug": "popcorn",
+   "words": [
+    "popcorn"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "203:56",
+   "key": "ec49dd8cb014d5621f874896ce02622cd9a98799",
+   "published": false
+  },
+  {
+   "name": "Icon / ice-cream",
+   "slug": "ice-cream",
+   "words": [
+    "ice",
+    "cream"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "204:41",
+   "key": "cf4e07fef389aa0db17f9a85e150bf7d64b7f72e",
+   "published": false
+  },
+  {
+   "name": "Icon / cupcake",
+   "slug": "cupcake",
+   "words": [
+    "cupcake"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "204:47",
+   "key": "0ed22c7df0599a7140f8824904d71fece07b9372",
+   "published": false
+  },
+  {
+   "name": "Icon / rice-bowl",
+   "slug": "rice-bowl",
+   "words": [
+    "rice",
+    "bowl"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "204:52",
+   "key": "42c39f73d94d66470008ba39ed89089c0610f916",
+   "published": false
+  },
+  {
+   "name": "Icon / candy",
+   "slug": "candy",
+   "words": [
+    "candy"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "204:58",
+   "key": "302a0f29e456818c6499808d3e2ca67d7b676561",
+   "published": false
+  },
+  {
+   "name": "Icon / table-lamp",
+   "slug": "table-lamp",
+   "words": [
+    "table",
+    "lamp"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "209:49",
+   "key": "145c71166cd84d775f6da8737b8e5d39845cdab3",
+   "published": false
+  },
+  {
+   "name": "Icon / dressing-table",
+   "slug": "dressing-table",
+   "words": [
+    "dressing",
+    "table"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "210:41",
+   "key": "e6d95540b4c3764cea62e0b90ba6f3ac3595a47c",
+   "published": false
+  },
+  {
+   "name": "Icon / workspace-desk",
+   "slug": "workspace-desk",
+   "words": [
+    "workspace",
+    "desk"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "210:49",
+   "key": "9a6d76f9d1b2b35e0006502ae3dae493fcfae5d8",
+   "published": false
+  },
+  {
+   "name": "Icon / hiking",
+   "slug": "hiking",
+   "words": [
+    "hiking"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "210:56",
+   "key": "e8bc48047cdaf9d2004f9c5661b04426ebd35007",
+   "published": false
+  },
+  {
+   "name": "Icon / snowboarding",
+   "slug": "snowboarding",
+   "words": [
+    "snowboarding"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "210:64",
+   "key": "1592fd2cec10dd5a815c935efe75d59551d2bf2c",
+   "published": false
+  },
+  {
+   "name": "Icon / card-game-diamond",
+   "slug": "card-game-diamond",
+   "words": [
+    "card",
+    "game",
+    "diamond"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:40",
+   "key": "8d50ce119be4edeb81353d2b3ad34445fbd46a7b",
+   "published": false
+  },
+  {
+   "name": "Icon / clubs-symbol",
+   "slug": "clubs-symbol",
+   "words": [
+    "clubs",
+    "symbol"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:44",
+   "key": "ad274a836666860a2b608239c915069ffae1bb6d",
+   "published": false
+  },
+  {
+   "name": "Icon / dice",
+   "slug": "dice",
+   "words": [
+    "dice"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:50",
+   "key": "532c8e153235e302ca0c5472bcc846b51f1e43e0",
+   "published": false
+  },
+  {
+   "name": "Icon / watchtower-castle",
+   "slug": "watchtower-castle",
+   "words": [
+    "watchtower",
+    "castle"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:57",
+   "key": "2da5b9801079982504e75ed808b5be6d6b28d279",
+   "published": false
+  },
+  {
+   "name": "Icon / spades-symbol",
+   "slug": "spades-symbol",
+   "words": [
+    "spades",
+    "symbol"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:61",
+   "key": "dc10f7ebfc8996159e6d08060129b5d97c0c99a2",
+   "published": false
+  },
+  {
+   "name": "Icon / hearts-symbol",
+   "slug": "hearts-symbol",
+   "words": [
+    "hearts",
+    "symbol"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "211:65",
+   "key": "049ac3be25608fcd94bf35a374da450d67ce7d03",
+   "published": false
+  },
+  {
+   "name": "Icon / poker-chip",
+   "slug": "poker-chip",
+   "words": [
+    "poker",
+    "chip"
+   ],
+   "category": "Misc Utility",
+   "size": 24,
+   "id": "212:47",
+   "key": "4be6a04e1d7e6e4d5e16522cf16f5f2f35c903fb",
+   "published": false
+  }
+ ]
+}

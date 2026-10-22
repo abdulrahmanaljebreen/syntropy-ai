@@ -1,0 +1,21 @@
+{
+  "name": "@syntropy/mcp",
+  "version": "0.1.0",
+  "description": "Syntropy MCP server: the Safqah design system served live to any MCP-capable agent.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "private": true,
+  "bin": { "syntropy-mcp": "./server.mjs" },
+  "main": "./core.mjs",
+  "exports": { ".": "./core.mjs", "./http": "./http.mjs" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "start:http": "node http.mjs",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.31.0",
+    "zod": "4.6.5"
+  }
+}

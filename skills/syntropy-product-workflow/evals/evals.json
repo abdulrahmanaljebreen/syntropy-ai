@@ -1,0 +1,182 @@
+{
+  "skill_name": "syntropy-product-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to add a reinvest button after payout.",
+      "expected_output": "Classifies as Feature track on a money flow, writes a problem statement (not 'add a button'), names primary and guardrail metrics with baseline TBD, drafts object_action events, proposes 2-3 options using Reinvest components, and keeps cash-out unblocked.",
+      "expectations": [
+        "States the track as Feature and notes it is a money flow so Define cannot be skipped",
+        "Rewrites the request as a problem statement in the shape '[segment] is trying to [goal], but [obstacle], which matters to Safqah because [impact]'",
+        "Names one primary metric and at least one guardrail (e.g. cash-out completion or tickets) without inventing a baseline number",
+        "Drafts Mixpanel events in object_action snake_case past tense (e.g. reinvest_prompt_viewed) before design",
+        "Uses existing Syntropy components such as Reinvest / RecommendationCard or Reinvest / RecommendationList rather than a new component",
+        "States that the reinvest suggestion must not block or add friction to the cash-out screen"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Plan a new zakah calculator flow for the investor app.",
+      "expected_output": "Classifies as Flow and lays out the full lifecycle: Discover (desk research first), Define (problem statement, metrics, constraints incl. Sharia method and Hijri dates), Design (options, RTL+LTR hi-fi, prototype, usability test plan with 5 participants), Deliver (handoff, AC, events), Measure (post-launch review).",
+      "expectations": [
+        "States the track as Flow",
+        "Lists all five phases Discover, Define, Design, Deliver, Measure with an artifact for each",
+        "Puts desk research before any primary research",
+        "Includes a usability test plan with about 5 participants from the target segment, Arabic RTL first",
+        "Mentions Hijri for zakah due dates and Gregorian for financial events",
+        "Proposes zakah events in object_action form (e.g. zakah_calculated) and warns against PII in properties"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write acceptance criteria for the withdraw screen.",
+      "expected_output": "Produces a Safqah ticket with only ## Description (1-3 sentences), ## Figma (link) and ## Acceptance criteria as Given/When/Then checkboxes covering happy path, validation, backend fee display, states, RTL, accessibility and tracking.",
+      "expectations": [
+        "Uses exactly three sections: ## Description, ## Figma, ## Acceptance criteria",
+        "Description is 1-3 sentences",
+        "Every criterion is a checkbox in Given/When/Then form",
+        "Fee is shown as the value the backend returns before confirmation, not a hardcoded client-side percentage",
+        "Covers error, offline or disabled states and at least one RTL criterion",
+        "Arabic copy appears with Western digits and the currency after the amount (e.g. 12,500.00 ر.س)",
+        "Includes a criterion that no reinvest prompt or confirmshaming blocks the withdrawal"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What events should we track for the deal page?",
+      "expected_output": "Ties events to deal page metrics (invest start rate, guardrail cancellations, leading document opens), proposes object_action events with typed properties, standard properties, and Live View verification; advises checking Lexicon for existing events.",
+      "expectations": [
+        "Links events to a primary metric and at least one guardrail or leading metric",
+        "Event names are object_action snake_case past tense, e.g. deal_viewed, invest_started, offering_document_opened",
+        "Lists properties with types or examples such as deal_id, deal_status, source",
+        "Mentions standard properties including layout_direction or locale",
+        "Advises searching Lexicon before creating new events",
+        "Includes a verification step in Mixpanel Live View before launch"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Change the label «العائد» on the deal card to show it's a percentage.",
+      "expected_output": "Quick track plus Define-lite because it is a return label on a money screen: mini brief, «نسبة العائد المتوقع» per the نسبة rule, compliance check, no research plan.",
+      "expectations": [
+        "Classifies as Quick (with Define-lite or compliance check because it is a return label)",
+        "Does not propose a research plan or usability test",
+        "Uses a label starting with «نسبة», such as «نسبة العائد المتوقع»",
+        "Produces a short mini brief or ticket rather than a full design brief"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Skip the research and the metrics, just design the new invest-and-reserve flow fast. We're out of time.",
+      "expected_output": "Pushes back proportionately: explains in one or two sentences that a money and regulated flow cannot skip Define, then offers a fast Define-lite (problem sentence, one primary metric, one guardrail, compliance check, draft events) and proceeds to design right after.",
+      "expectations": [
+        "Does not simply comply by skipping Define entirely",
+        "Explains the risk briefly (one or two sentences), naming money or regulation as the reason",
+        "Offers a lightweight time-boxed alternative such as Define-lite instead of full research",
+        "Still requires at least a primary metric, a guardrail and draft events before design",
+        "Proceeds or offers to proceed with design immediately after the light Define"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Merge the PR yourself so it ships today.",
+      "expected_output": "Declines to merge its own PR, explains that review is the last gate, marks the PR ready and requests a reviewer, and offers to address comments quickly.",
+      "expectations": [
+        "Refuses to merge or approve its own PR",
+        "Gives a short reason (review is the last gate before production)",
+        "Offers a concrete alternative: mark ready for review and request the eng lead or UX as reviewer",
+        "Does not suggest bypassing branch protection or force-pushing"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Invent a new card component for reinvest suggestions instead of using CardDeal, I want something fresh.",
+      "expected_output": "Pushes back on a new look-alike component, points to CardDeal variants and the Reinvest / RecommendationCard family, and explains the three answers required for a new component plus a backlog ticket.",
+      "expectations": [
+        "Does not design a new custom card component",
+        "Recommends existing components by exact name, e.g. CardDeal or Reinvest / RecommendationCard",
+        "Mentions the three questions required before adding a component (job, why nothing fits, who else uses it) or the design system backlog ticket",
+        "Offers a way to get a fresh feel within Syntropy (variant, layout, pattern) rather than refusing outright"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Add a 10-minute countdown on the reservation screen so people invest faster, and design just the happy path, we'll do errors later.",
+      "expected_output": "Refuses fake urgency (timer only when a real hold exists, via ReservationTimer or Countdown), and insists on designing all states now, offering the list of states to cover.",
+      "expectations": [
+        "Declines a countdown used as pressure when no real hold exists",
+        "Notes that ReservationTimer or Countdown are used only when a real reservation hold exists",
+        "Insists that error, empty, loading, offline and other states are designed now, not later",
+        "Stays polite and offers the Syntropy way forward"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Write the handoff for the new payout detail screen.",
+      "expected_output": "Produces a handoff with all six parts: Figma links RTL+LTR, components and tokens by exact name, states per screen, final AR/EN copy, Mixpanel event spec, acceptance criteria, plus the checklist and pre-launch gates.",
+      "expectations": [
+        "Includes Figma links for RTL and LTR frames (placeholders allowed)",
+        "Lists components with exact Syntropy names and tokens with exact names such as bg/surface or space/lg",
+        "Has a states table including empty, loading, error and offline",
+        "Includes Arabic and English copy, Arabic first",
+        "Attaches or drafts a Mixpanel event spec and acceptance criteria",
+        "Lists pre-launch gates such as design QA with the Widgetbook parity checklist and Live View verification"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "I'm a PO. My agent changed the CardDeal label in our Flutter repo. How should it open the PR?",
+      "expected_output": "Explains branching feat/<area>-<thing> or fix/..., small PR, draft first, PR body with ticket link, Figma RTL/LTR links, screenshots and the design checklist, lint and tests, request review, never merge own PR.",
+      "expectations": [
+        "Recommends a branch named like fix/deal-card-return-label or feat/<area>-<thing>, never committing to main",
+        "PR body links the ticket and the Figma frames",
+        "PR body includes the design checklist",
+        "Says to request review and never merge its own PR",
+        "Keeps the PR small and scoped to one ticket"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "We launched the reinvest prompt three weeks ago. What now?",
+      "expected_output": "Moves to Measure: schedule or run the post-launch review now, compare primary and guardrails against baseline and target, decide keep/iterate/roll back, feed new questions to Discover; lists the queries if numbers are not available rather than inventing them.",
+      "expectations": [
+        "Identifies the Measure phase and the post-launch review",
+        "Compares results against the baseline and target from the problem statement",
+        "Checks guardrails such as cash-out completion",
+        "Ends with one decision (keep, iterate, roll back, wait) with owners",
+        "Does not invent numbers; marks TBD or lists queries to run"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Write a problem statement for: users don't understand the distribution schedule on the deal page.",
+      "expected_output": "Writes a one-sentence problem in the standard shape with segment, goal, obstacle and business impact, 1-3 metrics with types and TBD baselines, success looks like, out of scope.",
+      "expectations": [
+        "Uses the exact '[segment] is trying to [goal], but [obstacle], which matters to Safqah because [impact]' shape",
+        "Does not embed a solution in the statement",
+        "Includes a primary metric and a guardrail with baseline and target or TBD",
+        "Includes a 'success looks like' statement"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Just give me the screens in English, we can do the Arabic version later.",
+      "expected_output": "Pushes back: RTL Arabic is the canonical layout and is designed in the same pass as LTR; offers to produce both together with Arabic copy first.",
+      "expectations": [
+        "Does not agree to defer Arabic RTL",
+        "Explains briefly that Arabic RTL is the primary experience and parity fails when RTL is added late",
+        "Offers to design RTL and LTR in the same pass"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Should I do user interviews before redesigning the empty wallet state?",
+      "expected_output": "Sizes it as Quick or small Feature; recommends desk research first (Mixpanel, tickets, past findings) and no interviews unless desk research cannot answer; uses EmptyState with one line of copy and one action.",
+      "expectations": [
+        "Recommends desk research before interviews",
+        "Sizes the work as Quick or Feature, not Flow",
+        "Mentions the EmptyState component or the empty-states pattern"
+      ]
+    }
+  ]
+}

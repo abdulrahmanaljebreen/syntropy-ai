@@ -1,0 +1,9 @@
+{
+  "@@locale": "ar",
+  "_comment": "Test fixture for check-rtl.mjs: Arabic strings with deliberate digit mistakes.",
+  "minInvestment": "الحد الأدنى للاستثمار ١٬٠٠٠ ر.س",
+  "expectedReturn": "نسبة العائد المتوقع ٨٫٥٪",
+  "netReturn": "نسبة صافي العائد 13.8٪",
+  "balance": "1,250.50 ر.س",
+  "payoutDate": "15 مارس 2026"
+}

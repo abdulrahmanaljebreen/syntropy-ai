@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<meta charset="utf-8">
+<title>Syntropy for AI</title>
+<style>html,body{margin:0;background:#f9faf9}canvas{display:block}</style>
+<canvas id="c"></canvas>
+<script src="core.js"></script>
+<script>
+'use strict';
+/* Syntropy for AI · launch and how-to film
+ * One canvas, deterministic: window.__seek(t) draws frame t. No music, no voice:
+ * Arabic captions on screen, interface sound effects from window.__events,
+ * subtitles from window.__captions (render.mjs writes the .srt files and the audio).
+ */
+const q = new URLSearchParams(location.search);
+const META = { fps: 30, duration: 186, width: +q.get('w') || 1920, height: +q.get('h') || 1080 };
+const cv = document.getElementById('c'); cv.width = META.width; cv.height = META.height;
+setFrame(cv.getContext('2d'), META.width, META.height, META.fps);
+const S = W / 1920;                       // everything is laid out on a 1920 x 1080 grid
+const EV = [];                            // sound events {t, type, gain}
+const CAPS = [];                          // captions {t0, t1, ar, en, draw}
+const SCENES = [];
+const ev = (t, type, gain = 1) => EV.push({ t, type, gain });
+const cap = (t0, t1, ar, en, draw = true) => CAPS.push({ t0, t1, ar, en, draw });
+function scene(name, t0, t1, chapter, setup) { SCENES.push({ name, t0, t1, chapter, draw: setup(t0, t1) }); }
+
+/* ── shared pieces ─────────────────────────────────────────────────────── */
+const EX = '../knowledge/examples/components/';
+const CROPS = {
+  appbar:  { img: 'appbar',  crop: [980, 160, 253, 120], name: 'AppBar' },
+  carddeal:{ img: 'carddeal',crop: [46, 786, 348, 77],   name: 'CardDeal' },
+  stat:    { img: 'stat',    crop: [205, 478, 140, 85],  name: 'Stat' },
+  payouts: { img: 'payouts', crop: [8, 94, 186, 50],     name: 'Payouts cell' },
+  button:  { img: 'button',  crop: [382, 1398, 212, 58], name: 'Button' },
+};
+
+function chapterLabel(n, label, a) {
+  withAlpha(a, () => {
+    const x = W - M, y = M;
+    circle(x - 22, y + 22, 22, { fill: C.brand });
+    text(String(n), x - 22, y + 23, { size: 24, weight: 600, color: C.base, align: 'center', baseline: 'middle', dir: 'ltr' });
+    text(label, x - 58, y + 33, { size: 32, weight: 600, color: C.ink });
+  });
+}
+
+function phone(x, y, w, h) {
+  rr(x, y, w, h, 54, { fill: C.ink, shadow: 40 });
+  rr(x + 12, y + 12, w - 24, h - 24, 44, { fill: C.surface });
+}
+
+/* the Syntropy payout screen, local coordinates, screen width 356 */
+const SW = 356;
+const SLOT = {
+  appbar: { x: 0, y: 40, w: 356, h: 64 },
+  carddeal: { x: 16, y: 112, w: 324, h: 80 },
+  stat: { x: 16, y: 208, w: 324, h: 96 },
+  payouts: { x: 16, y: 352, w: 324, h: 244 },
+  button: { x: 16, y: 668, w: 324, h: 56 },
+};
+const ROWS = [
+  { t: 'توزيع دوري 1', d: '15 أبريل 2026', a: '1,210.00 ر.س', s: 'تم الاستلام', ok: true },
+  { t: 'توزيع دوري 2', d: '15 يوليو 2026', a: '1,210.00 ر.س', s: 'تم الاستلام', ok: true },
+  { t: 'توزيع دوري 3', d: '15 يناير 2027', a: '1,210.00 ر.س', s: 'متوقع', ok: false },
+];
+function payoutScreen(P) {
+  const R = SW - 16;
+  withAlpha(P.chrome ?? 1, () => text('9:41', R - 8, 30, { size: 15, weight: 600, dir: 'ltr' }));
+  withAlpha(P.appbar ?? 0, () => {
+    arrow(R - 10, 72, 20, 1, { lw: 2.4 });
+    text('تفاصيل التوزيعات', SW / 2, 80, { size: 22, weight: 600, align: 'center' });
+  });
+  withAlpha(P.carddeal ?? 0, () => {
+    const s = SLOT.carddeal;
+    rr(s.x, s.y, s.w, s.h, 16, { fill: C.base, stroke: C.border, lw: 1.5 });
+    rr(s.x + s.w - 68, s.y + 12, 56, 56, 12, { fill: C.lg200 });
+    for (let i = 0; i < 4; i++) rr(s.x + s.w - 58 + i * 10, s.y + 30 - i * 3, 7, 30 + i * 3, 1.5, { fill: C.brandDark, alpha: 0.55 });
+    text('بروج الرياض', s.x + s.w - 80, s.y + 34, { size: 19, weight: 600 });
+    text(`نسبة العائد ${L('12.0%')} · 12 شهرًا`, s.x + s.w - 80, s.y + 60, { size: 14, color: C.muted });
+    arrow(s.x + 22, s.y + 40, 14, -1, { lw: 2, color: C.muted });
+  });
+  withAlpha(P.stat ?? 0, () => {
+    const s = SLOT.stat;
+    text('إجمالي التوزيعات المستلمة', R, s.y + 18, { size: 16, color: C.muted });
+    text('2,420.00 ر.س', R, s.y + 62, { size: 34, weight: 700 });
+    text(`نسبة صافي العائد المتوقع ${L('12.5%')}`, R, s.y + 90, { size: 14, color: C.subtle });
+  });
+  withAlpha(P.section ?? 0, () => {
+    text('الدفعات', R, 336, { size: 18, weight: 600 });
+    text('3 دفعات', 16, 336, { size: 14, color: C.subtle, align: 'left' });
+  });
+  ROWS.forEach((r, i) => withAlpha((P.rows || [0, 0, 0])[i], () => {
+    const y = 352 + i * 84;
+    rr(16, y, 324, 76, 16, { fill: C.elevated });
+    if (r.ok) { circle(R - 22, y + 38, 13, { fill: C.successBg }); check(R - 22, y + 38, 14, { color: C.successIcon, lw: 2.2 }); }
+    else { circle(R - 22, y + 38, 12, { stroke: C.borderStrong, lw: 1.8 }); line(R - 22, y + 38, R - 22, y + 31, { color: C.muted, lw: 1.8 }); line(R - 22, y + 38, R - 17, y + 41, { color: C.muted, lw: 1.8 }); }
+    text(r.t, R - 46, y + 33, { size: 17, weight: 600 });
+    text(r.d, R - 46, y + 57, { size: 13, color: C.muted });
+    text(r.a, 32, y + 33, { size: 17, weight: 600, align: 'left', color: r.ok ? C.success : C.ink });
+    text(r.s, 32, y + 57, { size: 13, align: 'left', color: r.ok ? C.success : C.subtle });
+  }));
+  withAlpha(P.note ?? 0, () => text('العوائد المتوقعة غير مضمونة', SW / 2, 632, { size: 13, color: C.subtle, align: 'center' }));
+  withAlpha(P.button ?? 0, () => {
+    const s = SLOT.button;
+    rr(s.x, s.y, s.w, s.h, 12, { fill: C.brand });
+    text('إعادة الاستثمار', SW / 2, s.y + 36, { size: 19, weight: 600, color: C.base, align: 'center' });
+  });
+}
+/* the off-brand screen an agent makes without Syntropy (deliberately wrong colors) */
+function offBrandScreen() {
+  const serif = 'Georgia, serif';
+  text('9:41', 24, 30, { size: 15, weight: 600, dir: 'ltr', align: 'left', family: 'Helvetica' });
+  text('Payouts', 20, 86, { size: 32, weight: 700, dir: 'ltr', align: 'left', family: serif, color: '#1e1b4b' });
+  ctx.save();
+  const g = ctx.createLinearGradient(16, 110, 340, 240); g.addColorStop(0, '#7c3aed'); g.addColorStop(1, '#2563eb');
+  rrPath(16, 110, 324, 130, 6); ctx.globalAlpha = A; ctx.fillStyle = g; ctx.fill(); ctx.restore();
+  text('Total earned', 34, 148, { size: 15, dir: 'ltr', align: 'left', family: 'Helvetica', color: '#e9d5ff' });
+  text('$2,420', 34, 200, { size: 40, weight: 700, dir: 'ltr', align: 'left', family: serif, color: '#ffffff' });
+  rr(196, 254, 144, 30, 15, { fill: '#ef4444' });
+  text('Only 2 days left!', 268, 274, { size: 13, weight: 700, dir: 'ltr', align: 'center', family: 'Helvetica', color: '#fff' });
+  for (let i = 0; i < 4; i++) {
+    const y = 306 + i * 74;
+    rr(16, y, 324, 62, 4, { fill: '#ffffff', stroke: '#d4d4d8', lw: 1 });
+    circle(42, y + 31, 12, { fill: '#c4b5fd' });
+    rr(64, y + 18, 120, 10, 3, { fill: '#a1a1aa' }); rr(64, y + 36, 80, 8, 3, { fill: '#d4d4d8' });
+    rr(270, y + 22, 54, 14, 3, { fill: '#6366f1' });
+  }
+  rr(16, 668, 324, 56, 4, { fill: '#2563eb' });
+  text('Reinvest now!', 178, 703, { size: 19, weight: 700, dir: 'ltr', align: 'center', family: 'Helvetica', color: '#fff' });
+}
+function inScreen(x, y, w, fn) {   // draw local screen content into a phone screen at x,y of width w
+  const k = w / SW;
+  ctx.save(); ctx.translate(x, y); ctx.scale(k, k); fn(); ctx.restore();
+}
+function terminal(x, y, w, h, title) {
+  rr(x, y, w, h, 20, { fill: C.ink, shadow: 30 });
+  [0, 1, 2].forEach(i => circle(x + 32 + i * 26, y + 30, 7, { fill: C.dBorder }));
+  text(title, x + w / 2, y + 37, { size: 20, color: C.dSubtle, align: 'center', dir: 'ltr', family: MONO });
+  line(x, y + 60, x + w, y + 60, { color: C.dBorder, lw: 1.5 });
+}
+function prompt(str, x, y, o = {}) {
+  const { size = 30, t = 0, caret = false, color = C.dInk, sign = '>' } = o;
+  text(sign, x, y, { size, family: MONO, dir: 'ltr', align: 'left', color: C.dBrand, weight: 600 });
+  const off = tw(sign + ' ', size, 400, MONO, 'ltr');
+  const w = text(str, x + off, y, { size, family: MONO, dir: 'ltr', align: 'left', color });
+  if (caret && caretOn(t)) rr(x + off + w + 4, y - size * 0.8, size * 0.55, size, 2, { fill: C.dInk, alpha: 0.85 });
+}
+
+/* ═════════ 1 · opening 0-8 ═════════ */
+scene('open', 0, 8, null, (t0, t1) => {
+  ev(0.25, 'whoosh', 0.55); ev(1.85, 'chime', 0.7);
+  cap(1.6, 7.6, 'سينتروبي للذكاء الاصطناعي\nنظام تصميم صفقة، داخل أي وكيل ذكاء اصطناعي', 'Syntropy for AI\nThe Safqah design system, inside any AI agent.', false);
+  return t => {
+    const p = ein(t, 0.4, 1.1);
+    const size = 176, word = 'Syntropy';
+    const ww = tw(word, size, 600, AR, 'ltr');
+    withAlpha(p, () => text(word, W / 2, 470 + (1 - p) * 24, { size, weight: 600, align: 'center', dir: 'ltr' }));
+    const rp = easeInOutCubic(span(t, 0.7, 1.9));
+    if (rp > 0) {
+      ctx.save();
+      const g = ctx.createLinearGradient(W / 2 - ww / 2, 0, W / 2 + ww / 2, 0);
+      g.addColorStop(0, RAMP[0]); g.addColorStop(0.5, RAMP[1]); g.addColorStop(1, RAMP[2]);
+      rrPath(W / 2 - ww / 2, 512, ww * rp, 12, 6); ctx.globalAlpha = A; ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    }
+    withAlpha(ein(t, 1.6, 0.6), () => text('سينتروبي للذكاء الاصطناعي', W / 2, 640, { size: 64, weight: 600, align: 'center' }));
+    withAlpha(ein(t, 2.6, 0.6), () => text('نظام تصميم صفقة، داخل أي وكيل ذكاء اصطناعي', W / 2, 724, { size: 46, color: C.muted, align: 'center' }));
+  };
+});
+
+/* ═════════ 2 · the idea 8-23 ═════════ */
+scene('idea', 8, 23, null, (t0, t1) => {
+  cap(8.5, 13.4, 'الوكلاء يصمّمون بسرعة، لكن بعيدًا عن صفقة.', 'Agents design fast, but far from Safqah.');
+  cap(14.2, 22.5, 'الآن يعرف كل وكيل سينتروبي: الرموز والمكوّنات وقواعد التجربة.', 'Now every agent knows Syntropy: tokens, components and UX rules.');
+  const issues = ['ألوان وخطوط عشوائية', 'اتجاه من اليسار إلى اليمين', 'استعجال مصطنع'];
+  issues.forEach((_, i) => ev(10.0 + i * 0.6, 'blip', 0.5));
+  ev(13.75, 'whoosh', 0.4);
+  const tiles = [['346', 'رمز تصميم'], ['320', 'مجموعة مكوّنات'], ['85', 'دليل مكوّن'], ['636', 'أيقونة']];
+  tiles.forEach((_, i) => ev(15.2 + i * 0.45, 'pop', 0.6));
+  const PX = 380, PY = 104, PW = 380, PH = 772;
+  return t => {
+    const pa = ein(t, 8.4, 0.6);
+    withAlpha(pa, () => {
+      ctx.save(); ctx.translate(0, (1 - pa) * 30);
+      phone(PX, PY, PW, PH);
+      const sx = PX + 12, sy = PY + 12, sw = PW - 24, sh = PH - 24;
+      const wp = easeInOutCubic(span(t, 13.8, 14.9));     // RTL wipe: Syntropy comes in from the right
+      ctx.save(); rrPath(sx, sy, sw, sh, 44); ctx.clip();
+      if (wp < 1) { ctx.save(); ctx.beginPath(); ctx.rect(sx, sy, sw * (1 - wp), sh); ctx.clip(); rr(sx, sy, sw, sh, 0, { fill: '#ffffff' }); inScreen(sx, sy, sw, offBrandScreen); ctx.restore(); }
+      if (wp > 0) {
+        ctx.save(); ctx.beginPath(); ctx.rect(sx + sw * (1 - wp), sy, sw * wp, sh); ctx.clip();
+        rr(sx, sy, sw, sh, 0, { fill: C.surface });
+        inScreen(sx, sy, sw, () => payoutScreen({ appbar: 1, carddeal: 1, stat: 1, section: 1, rows: [1, 1, 1], note: 1, button: 1 }));
+        ctx.restore();
+        if (wp < 1) line(sx + sw * (1 - wp), sy, sx + sw * (1 - wp), sy + sh, { color: C.brand, lw: 4 });
+      }
+      ctx.restore(); ctx.restore();
+    });
+    const R = W - M;
+    // phase 1: the problem
+    withAlpha(ein(t, 9.0) * eout(t, 14.2), () => {
+      chip('بعيد عن صفقة', R, 196, { size: 32, fill: C.warnBg, stroke: C.warnBorder, color: C.warnText, weight: 600 });
+      issues.forEach((s, i) => withAlpha(ein(t, 10.0 + i * 0.6), () => {
+        const y = 360 + i * 110;
+        circle(R - 26, y - 12, 26, { fill: C.errorBg });
+        line(R - 35, y - 21, R - 17, y - 3, { color: C.error, lw: 3 }); line(R - 17, y - 21, R - 35, y - 3, { color: C.error, lw: 3 });
+        text(s, R - 76, y, { size: 44, weight: 500 });
+      }));
+    });
+    // phase 2: Syntropy inside
+    withAlpha(ein(t, 14.4), () => {
+      chip('بنظام سينتروبي', R, 196, { size: 32, fill: C.lg100, stroke: C.lg300, color: C.brandDark, weight: 600 });
+      tiles.forEach(([n, l], i) => {
+        const a = ein(t, 15.2 + i * 0.45, 0.5);
+        const col = i % 2, row = Math.floor(i / 2);
+        const x1 = R - col * 474, y0 = 320 + row * 204;
+        withAlpha(a, () => {
+          rr(x1 - 450, y0 + (1 - a) * 20, 450, 180, 20, { fill: C.base, stroke: C.border });
+          text(n, x1 - 36, y0 + 96 + (1 - a) * 20, { size: 80, weight: 700, dir: 'ltr' });
+          text(l, x1 - 36, y0 + 148 + (1 - a) * 20, { size: 32, color: C.muted });
+        });
+      });
+    });
+  };
+});
+
+/* ═════════ 3 · connect 23-48 ═════════ */
+scene('connect', 23, 48, [1, 'اتصل'], (t0, t1) => {
+  const T1 = typer('/plugin marketplace add abdulrahmanaljebreen/syntropy-ai', 24.7, 20, 11, EV);
+  const o1 = T1.t1 + 0.6; ev(T1.t1 + 0.25, 'enter'); ev(o1, 'tick', 0.7);
+  const T2 = typer('/plugin install syntropy@syntropy-ai', o1 + 0.9, 19, 12, EV);
+  const o2 = T2.t1 + 0.6; ev(T2.t1 + 0.25, 'enter'); ev(o2, 'chime', 0.55);
+  const T3 = typer('npx skills add abdulrahmanaljebreen/syntropy-ai', 35.4, 21, 13, EV);
+  ev(T3.t1 + 0.25, 'enter');
+  const AG = ['Claude.ai', 'Cursor', 'Codex', 'ChatGPT', 'Gemini'];
+  const cT = 38.6; AG.forEach((_, i) => ev(cT + i * 0.32, 'pop', 0.55));
+  cap(23.6, 33.2, `في ${L('Claude Code')}: أمران فقط للتثبيت.`, 'In Claude Code: just two commands to install.');
+  cap(34.0, 40.4, 'وفي الوكلاء الأخرى: أمر واحد.', 'In other agents: one command.');
+  cap(41.0, 47.5, `ثم ابدأ رسالتك بكلمة ${L('syntropy:')}`, 'Then start your message with syntropy:');
+  return t => {
+    const shrink = easeInOutCubic(span(t, 33.4, 34.4));
+    const TW = 1388, TH = 400;
+    const k = lerp(1, 0.62, shrink);
+    const tx = W / 2 - TW * k / 2, ty = lerp(200, 150, shrink);
+    withAlpha(ein(t, 23.5, 0.6), () => {
+      ctx.save(); ctx.translate(tx, ty); ctx.scale(k, k);
+      terminal(0, 0, TW, TH, 'Claude Code');
+      const x = 48;
+      prompt(T1.at(t), x, 132, { t, caret: t < T1.t1 + 0.2 });
+      withAlpha(ein(t, o1, 0.3), () => { check(x + 14, 182, 22, { color: C.dBrand, lw: 3, p: span(t, o1, o1 + 0.3) }); text('syntropy-ai marketplace added', x + 46, 192, { size: 28, family: MONO, dir: 'ltr', align: 'left', color: C.dMuted }); });
+      if (t >= T2.t1 - 10 && t >= o1 + 0.9) prompt(T2.at(t), x, 262, { t, caret: t < T2.t1 + 0.2 });
+      withAlpha(ein(t, o2, 0.3), () => { check(x + 14, 312, 22, { color: C.dBrand, lw: 3, p: span(t, o2, o2 + 0.3) }); text('syntropy installed · /syntropy is ready', x + 46, 322, { size: 28, family: MONO, dir: 'ltr', align: 'left', color: C.dMuted }); });
+      ctx.restore();
+    });
+    // other agents
+    withAlpha(ein(t, 34.6), () => {
+      text('في الوكلاء الأخرى', W / 2, 482, { size: 32, color: C.muted, align: 'center', weight: 500 });
+      const str = T3.at(t), size = 32, full = tw(T3.str, size, 400, MONO, 'ltr');
+      const pw = full + 120, px = W / 2 - pw / 2;
+      rr(px, 506, pw, 76, 38, { fill: C.base, stroke: C.border });
+      text('$', px + 40, 556, { size, family: MONO, dir: 'ltr', align: 'left', color: C.brand, weight: 600 });
+      const w = text(str, px + 76, 556, { size, family: MONO, dir: 'ltr', align: 'left' });
+      if (t < T3.t1 + 0.3 && caretOn(t)) rr(px + 80 + w, 530, 16, 32, 2, { fill: C.ink, alpha: 0.8 });
+    });
+    const cw = 300, gap = 24, total = AG.length * cw + (AG.length - 1) * gap, x0 = W / 2 + total / 2;
+    AG.forEach((name, i) => {
+      const a = ein(t, cT + i * 0.32, 0.5);
+      withAlpha(a, () => {
+        const x = x0 - (i + 1) * cw - i * gap, y = 640 + (1 - a) * 24;
+        const hl = ein(t, 41.2 + i * 0.25, 0.4);
+        rr(x, y, cw, 140, 20, { fill: C.base, stroke: hl > 0.01 ? C.lg300 : C.border, lw: 2 });
+        text(name, x + cw / 2, y + 62, { size: 38, weight: 600, align: 'center', dir: 'ltr' });
+        withAlpha(hl, () => text('syntropy: …', x + cw / 2, y + 108, { size: 24, family: MONO, align: 'center', dir: 'ltr', color: C.brandDark }));
+      });
+    });
+  };
+});
+
+/* ═════════ 4 · ask 48-83 ═════════ */
+scene('ask', 48, 83, [2, 'اطلب'], (t0, t1) => {
+  const REQ = '/syntropy شاشة جديدة لتفاصيل التوزيعات، الهدف: أقل تذاكر دعم';
+  ev(49.1, 'click', 0.6);
+  const TR = typer(REQ, 49.7, 17, 21, EV);
+  const sendT = TR.t1 + 0.35; ev(sendT, 'enter');
+  const STEPS = ['ماذا', 'لمن', 'أين', 'الهدف', 'الموجود', 'المخاطر'];
+  const fromReq = [0, 3, 4];
+  const reqT = sendT + 0.9; fromReq.forEach((s, i) => ev(reqT + i * 0.3, 'tick', 0.55));
+  const QS = [
+    { step: 1, q: 'لمن هذه الشاشة؟', chips: ['مستثمر فرد', 'مستثمر مؤهّل', 'مطوّر أو مُصدِر', 'فريق داخلي'], pick: 0 },
+    { step: 2, q: 'أين ستظهر؟', chips: ['التطبيق، هاتف', 'التطبيق، جهاز لوحي', 'الويب', 'لوحة الإدارة'], pick: 0 },
+    { step: 5, q: 'ما الذي على المحك؟', chips: ['حركة أموال', 'بيانات شخصية', 'إفصاح منظَّم', 'موعد نهائي', 'لا شيء'], pick: 0 },
+  ];
+  let qt = reqT + 1.4;
+  QS.forEach(Q => { Q.in = qt; Q.sel = qt + 2.2; Q.done = Q.sel + 0.5; Q.out = Q.sel + 0.95; ev(Q.in, 'pop', 0.5); ev(Q.sel, 'click', 0.7); ev(Q.done, 'tick', 0.6); qt = Q.out + 0.4; });
+  const stepDone = {}; fromReq.forEach((s, i) => stepDone[s] = { t: reqT + i * 0.3, req: true });
+  QS.forEach(Q => stepDone[Q.step] = { t: Q.done, req: false });
+  const briefT = qt + 0.1; ev(briefT, 'whoosh', 0.3);
+  const BRIEF = [['ماذا:', 'شاشة جديدة لتفاصيل التوزيعات'], ['لمن:', 'المستثمر الفرد'], ['أين:', 'التطبيق على الهاتف'], ['الهدف:', 'أقل تذاكر دعم عن التوزيعات'], ['المخاطر:', 'حركة أموال، والإفصاح بجانب كل رقم']];
+  BRIEF.forEach((_, i) => ev(briefT + 0.5 + i * 0.45, 'pop', 0.4));
+  const okIn = 74.6, okT = 76.6; ev(okIn, 'pop', 0.5); ev(okT, 'click', 0.7); ev(okT + 0.35, 'chime', 0.6);
+  cap(53.6, 58.6, 'سؤال واحد في كل مرة، ويتخطّى ما أجبت عنه.', 'One question at a time, skipping what you already answered.');
+  cap(59.2, 65.8, 'اختر بنقرة، أو اكتب إجابتك.', 'Tap a choice, or type your own answer.');
+  cap(67.0, 74.2, 'ثم موجز من خمسة أسطر لتؤكّده.', 'Then a five-line brief for you to confirm.');
+  cap(75.0, 82.4, 'لا تصميم قبل أن يتّضح المطلوب.', 'No design until the ask is clear.');
+  const PX0 = 216, PX1 = 1704, PR = 1656, PL = 264;
+  return t => {
+    withAlpha(ein(t, 48.4, 0.6), () => rr(PX0, 160, PX1 - PX0, 700, 28, { fill: C.base, stroke: C.border, shadow: 24 }));
+    // input row, which becomes the person's message once sent
+    withAlpha(ein(t, 48.7), () => {
+      const sent = easeInOutCubic(span(t, sendT, sendT + 0.5));
+      const size = 32, str = TR.at(t), fullW = tw(REQ, size, 400, AR, 'ltr');
+      const attW = tw('ملف Figma مرفق', 24, 500) + 44;
+      const contentW = fullW + attW + 72;
+      const w = lerp(PR - PL, contentW, sent), x = PR - w;
+      rr(x, 192, w, 84, 42, { fill: sent > 0.5 ? C.lg100 : C.elevated, stroke: sent > 0.5 ? C.lg300 : C.border });
+      withAlpha(ein(t, 49.1, 0.3), () => chip('ملف Figma مرفق', PR - 20, 212, { size: 24, h: 44, fill: C.base, stroke: C.border, color: C.muted }));
+      const tx = sent > 0 ? lerp(PL + 32, x + 32, sent) : PL + 32;
+      const tw2 = text(str, tx, 245, { size, dir: 'ltr', align: 'left' });
+      if (t < sendT && t > 49.6 && caretOn(t)) rr(tx + tw2 + 4, 218, 3, 36, 1, { fill: C.ink });
+      if (t < 49.7) text('اكتب طلبك…', PR - attW - 40, 245, { size, color: C.subtle, alpha: ein(t, 48.8) });
+    });
+    // steps strip
+    withAlpha(ein(t, sendT + 0.5), () => {
+      const sw = (PR - PL) / 6;
+      line(PR - sw / 2, 326, PL + sw / 2, 326, { color: C.border, lw: 2 });
+      STEPS.forEach((s, i) => {
+        const cx = PR - sw / 2 - i * sw, d = stepDone[i];
+        const done = d ? span(t, d.t, d.t + 0.3) : 0;
+        const Q = QS.find(q => q.step === i);
+        const active = Q ? ein(t, Q.in, 0.3) * (1 - span(t, Q.done, Q.done + 0.2)) : 0;
+        circle(cx, 326, 24, { fill: C.base, stroke: active > 0.01 ? C.brand : C.border, lw: active > 0.01 ? 3 : 2 });
+        if (done > 0) {
+          circle(cx, 326, 24, { fill: d.req ? C.lg100 : C.brand, alpha: done });
+          check(cx, 326, 22, { color: d.req ? C.brandDark : C.base, lw: 3, p: done });
+        } else text(String(i + 1), cx, 327, { size: 22, weight: 600, color: C.subtle, align: 'center', baseline: 'middle', dir: 'ltr' });
+        text(s, cx, 388, { size: 28, weight: 500, align: 'center', color: done > 0.5 || active > 0.5 ? C.ink : C.muted });
+        if (d && d.req) withAlpha(span(t, d.t, d.t + 0.4), () => text('من طلبك', cx, 424, { size: 22, color: C.subtle, align: 'center' }));
+      });
+    });
+    // one question at a time
+    QS.forEach(Q => {
+      const a = ein(t, Q.in, 0.45) * eout(t, Q.out + 0.35, 0.35);
+      if (a <= 0) return;
+      withAlpha(a, () => {
+        ctx.save(); ctx.translate(-(span(t, Q.out, Q.out + 0.35)) * 40, (1 - ein(t, Q.in, 0.45)) * 24);
+        circle(PR - 14, 482, 14, { fill: C.brand });
+        text('سينتروبي', PR - 40, 492, { size: 26, weight: 600, color: C.brandDark });
+        text(Q.q, PR, 572, { size: 52, weight: 600 });
+        let x = PR;
+        Q.chips.forEach((c, i) => {
+          const picked = i === Q.pick ? span(t, Q.sel, Q.sel + 0.15) : 0;
+          const press = i === Q.pick ? 1 - 0.05 * Math.sin(Math.PI * span(t, Q.sel - 0.1, Q.sel + 0.2)) : 1;
+          const w = chip(c, x, 622, { size: 32, fill: picked > 0.5 ? C.brand : C.base, stroke: picked > 0.5 ? C.brand : C.border, color: picked > 0.5 ? C.base : C.ink, scale: press });
+          x -= w + 16;
+        });
+        text('أو اكتب إجابتك', PR, 760, { size: 28, color: C.subtle });
+        ctx.restore();
+      });
+    });
+    // the brief
+    withAlpha(ein(t, briefT, 0.5), () => {
+      const y0 = 460 + (1 - ein(t, briefT, 0.5)) * 24;
+      rr(PL, y0, PR - PL, 376, 24, { fill: C.lg50, stroke: C.brand, lw: 2.5 });
+      text('الموجز', PR - 40, y0 + 62, { size: 38, weight: 700 });
+      BRIEF.forEach(([l, v], i) => withAlpha(ein(t, briefT + 0.5 + i * 0.45, 0.4), () => {
+        const y = y0 + 124 + i * 54;
+        const lw = text(l, PR - 40, y, { size: 34, weight: 600, color: C.brandDark });
+        text(v, PR - 40 - lw - 14, y, { size: 34 });
+      }));
+      withAlpha(ein(t, okIn), () => {
+        const on = span(t, okT, okT + 0.15);
+        const press = 1 - 0.05 * Math.sin(Math.PI * span(t, okT - 0.1, okT + 0.2));
+        const w = chip('نعم، تابع', PL + 36, y0 + 30, { size: 32, anchor: 'left', fill: on > 0.5 ? C.brand : C.base, stroke: C.brand, color: on > 0.5 ? C.base : C.brandDark, weight: 600, scale: press });
+        text('هل هو صحيح؟', PL + 36 + w + 24, y0 + 72, { size: 32, color: C.muted, align: 'left' });
+      });
+    });
+  };
+});
+
+/* ═════════ 5 · research 83-108 ═════════ */
+scene('research', 83, 108, [3, 'ابحث'], (t0, t1) => {
+  const TQ = typer('/syntropy research توزيعات الأرباح', 84.2, 15, 31, EV);
+  const goT = TQ.t1 + 0.3; ev(goT, 'enter');
+  const REF = [
+    { src: 'Lazyweb', title: 'ملخّص ثم قائمة', comp: 'Stat', kind: 0 },
+    { src: 'Refero', title: 'بطاقة لكل دفعة', comp: 'ListItem', kind: 1 },
+    { src: 'Mobbin', title: 'الصفقة أولًا', comp: 'CardDeal', kind: 2 },
+  ];
+  const cardT = goT + 0.8; REF.forEach((_, i) => ev(cardT + i * 0.7, 'pop', 0.55));
+  const mapT = 91.2; REF.forEach((_, i) => ev(mapT + i * 0.9 + 0.5, 'tick', 0.5));
+  const recT = 98.0; ev(recT, 'chime', 0.5);
+  cap(84.0, 90.4, 'البحث يبدأ بمراجع حقيقية، السعودية والخليج أولًا.', 'Research starts from real references, Saudi and GCC first.');
+  cap(91.0, 97.4, 'كل نهج يُربط بمكوّنات سينتروبي.', 'Each approach is mapped to Syntropy components.');
+  cap(98.0, 107.4, 'ثم توصية واحدة واضحة.', 'Then one clear recommendation.');
+  function wire(kind, x, y, w, h) {
+    const g1 = '#d3d9d6', g2 = '#e6eae8', R = x + w - 24;
+    if (kind === 0) {
+      rr(R - 170, y + 26, 170, 14, 7, { fill: g2 }); rr(R - 230, y + 52, 230, 34, 8, { fill: g1 });
+      for (let i = 0; i < 4; i++) { const yy = y + 110 + i * 32; circle(R - 10, yy + 8, 9, { fill: g1 }); rr(R - 150, yy + 2, 125, 12, 6, { fill: g1 }); rr(x + 24, yy + 2, 70, 12, 6, { fill: g2 }); }
+    } else if (kind === 1) {
+      for (let i = 0; i < 3; i++) { const yy = y + 20 + i * 70; rr(x + 20, yy, w - 40, 58, 12, { fill: C.base }); circle(R - 18, yy + 29, 10, { fill: i < 2 ? C.lg300 : g1 }); rr(R - 150, yy + 16, 110, 11, 5, { fill: g1 }); rr(R - 120, yy + 34, 80, 9, 4, { fill: g2 }); rr(x + 40, yy + 22, 70, 13, 6, { fill: g1 }); }
+    } else {
+      rr(x + 20, y + 18, w - 40, 92, 12, { fill: g1 });
+      for (let i = 0; i < 3; i++) { const cx = x + 20 + (w - 40) * (i + 0.5) / 3; rr(cx - 36, y + 126, 72, 18, 6, { fill: g1 }); rr(cx - 26, y + 152, 52, 9, 4, { fill: g2 }); }
+      for (let i = 0; i < 2; i++) { const yy = y + 182 + i * 26; rr(R - 160, yy, 160, 11, 5, { fill: g2 }); rr(x + 24, yy, 60, 11, 5, { fill: g2 }); }
+    }
+  }
+  return t => {
+    withAlpha(ein(t, 83.4), () => {
+      const pw = 1000, px = W / 2 - pw / 2;
+      rr(px, 156, pw, 84, 42, { fill: C.base, stroke: C.border });
+      const w = text(TQ.at(t), px + 40, 210, { size: 34, dir: 'ltr', align: 'left' });
+      if (t < goT && caretOn(t)) rr(px + 44 + w, 182, 3, 38, 1, { fill: C.ink });
+    });
+    withAlpha(ein(t, goT + 0.3), () => chip('السعودية والخليج أولًا', W / 2, 262, { size: 26, anchor: 'center', fill: C.lg100, stroke: C.lg100, color: C.brandDark, weight: 600 }));
+    REF.forEach((r, i) => {
+      const a = ein(t, cardT + i * 0.7, 0.5);
+      if (a <= 0) return;
+      const cx = 1450 - i * 490, x0 = cx - 220, y0 = 350 + (1 - a) * 24;
+      const rec = i === 0 ? ein(t, recT, 0.4) : 0;
+      const dim = 1 - 0.35 * (i === 0 ? 0 : ein(t, recT, 0.6));
+      withAlpha(a * dim, () => {
+        rr(x0, y0, 440, 400, 24, { fill: C.base, stroke: rec > 0.01 ? C.brand : C.border, lw: rec > 0.01 ? 3 : 2 });
+        rr(x0 + 24, y0 + 24, 392, 236, 16, { fill: C.elevated });
+        wire(r.kind, x0 + 24, y0 + 24, 392, 236);
+        text(r.src, x0 + 416, y0 + 304, { size: 24, color: C.subtle, dir: 'ltr', weight: 500 });
+        text(r.title, x0 + 416, y0 + 356, { size: 36, weight: 600 });
+        const m = easeOutCubic(span(t, mapT + i * 0.9, mapT + i * 0.9 + 0.5));
+        line(cx, y0 + 400, cx, y0 + 436, { color: C.brand, lw: 2.5, p: m, dash: [6, 6] });
+        withAlpha(ein(t, mapT + i * 0.9 + 0.45, 0.35), () => chip(r.comp, cx, y0 + 440, { size: 28, anchor: 'center', family: MONO, dir: 'ltr', fill: C.lg50, stroke: C.brand, color: C.brandDark, weight: 600 }));
+      });
+      if (rec > 0) withAlpha(rec, () => {
+        const w = tw('موصى به', 26, 600) + 76;
+        rr(x0 + 24, y0 - 24, w, 48, 24, { fill: C.yellowSubtle, stroke: C.yellow, lw: 2 });
+        circle(x0 + 24 + w - 26, y0, 8, { fill: C.yellow });
+        text('موصى به', x0 + 24 + w - 44, y0 + 9, { size: 26, weight: 600 });
+      });
+    });
+  };
+});
+
+/* ═════════ 6 · build 108-138 ═════════ */
+scene('build', 108, 138, [4, 'ابنِ'], (t0, t1) => {
+  const ORDER = ['appbar', 'carddeal', 'stat', 'payouts', 'button'];
+  const TS = [110.2, 113.4, 116.6, 119.8, 123.0];
+  TS.forEach(ts => { ev(ts, 'click', 0.45); ev(ts + 0.4, 'whoosh', 0.22); ev(ts + 1.3, 'pop', 0.6); });
+  const TAGS = [
+    { tok: 'text/default', y: 80 },
+    { tok: 'radius/default', y: 152 },
+    { tok: 'bg/elevated', y: 390 },
+    { tok: 'space/lg', y: 474 },
+    { tok: 'bg/brand/primary', y: 696 },
+  ];
+  const tagT = 126.2; TAGS.forEach((_, i) => ev(tagT + i * 0.6, 'tick', 0.45));
+  ev(131.2, 'chime', 0.5);
+  cap(109.0, 116.8, 'يبني من مكوّنات سينتروبي الحقيقية فقط.', 'It builds only from real Syntropy components.');
+  cap(117.4, 125.2, 'من اليمين إلى اليسار، بالأرقام الغربية.', 'Right to left, with Western digits.');
+  cap(125.8, 137.4, 'وكل لون ومسافة يأتي من رموز التصميم.', 'Every color and spacing comes from the design tokens.');
+  const PX = 1150, PY = 100, PW = 380, PH = 772, SX = PX + 12, SY = PY + 12;
+  const shelfR = 860, shelfL = 140, cardH = 116;
+  const shelfCard = i => ({ x: shelfL, y: 196 + i * 132, w: shelfR - shelfL, h: cardH });
+  const imgBox = i => { const c = shelfCard(i); return { x: c.x + c.w - 24 - 420, y: c.y + 12, w: 420, h: c.h - 24 }; };
+  function fitted(k, box) { const [, , sw, sh] = CROPS[k].crop; const s = Math.min(box.w / sw, box.h / sh); return { x: box.x + box.w - sw * s, y: box.y + (box.h - sh * s) / 2, w: sw * s, h: sh * s }; }
+  return t => {
+    withAlpha(ein(t, 108.4), () => text('من مكتبة سينتروبي', shelfR, 164, { size: 32, weight: 600, color: C.muted }));
+    ORDER.forEach((k, i) => withAlpha(ein(t, 108.6 + i * 0.18, 0.5), () => {
+      const c = shelfCard(i), ts = TS[i];
+      const hl = ein(t, ts, 0.25) * (1 - span(t, ts + 1.6, ts + 2.0));
+      const used = span(t, ts + 1.3, ts + 1.7);
+      rr(c.x, c.y, c.w, c.h, 18, { fill: C.base, stroke: hl > 0.05 ? C.brand : C.border, lw: hl > 0.05 ? 3 : 2 });
+      imgCrop(CROPS[k].img, CROPS[k].crop, imgBox(i).x, imgBox(i).y, 420, imgBox(i).h, { align: 'right', alpha: 1 - 0.45 * used });
+      text(CROPS[k].name, c.x + 28, c.y + c.h / 2 + 10, { size: 28, family: MONO, dir: 'ltr', align: 'left', weight: 600, color: used > 0.5 ? C.brandDark : C.ink });
+      if (used > 0) { circle(c.x + 28 + tw(CROPS[k].name, 28, 600, MONO, 'ltr') + 28, c.y + c.h / 2, 14, { fill: C.brand, alpha: used }); check(c.x + 28 + tw(CROPS[k].name, 28, 600, MONO, 'ltr') + 28, c.y + c.h / 2, 14, { color: C.base, lw: 2.5, p: used }); }
+    }));
+    // phone and the screen being assembled
+    withAlpha(ein(t, 108.5, 0.6), () => {
+      phone(PX, PY, PW, PH);
+      const P = { chrome: 1 };
+      P.appbar = ein(t, TS[0] + 1.0, 0.6);
+      P.carddeal = ein(t, TS[1] + 1.0, 0.6);
+      P.stat = ein(t, TS[2] + 1.0, 0.6);
+      P.section = ein(t, TS[3] + 1.0, 0.5);
+      P.rows = [0, 1, 2].map(j => ein(t, TS[3] + 1.0 + j * 0.25, 0.5));
+      P.note = ein(t, TS[3] + 1.9, 0.5);
+      P.button = ein(t, TS[4] + 1.0, 0.6);
+      ctx.save(); rrPath(SX, SY, SW, PH - 24, 44); ctx.clip();
+      inScreen(SX, SY, SW, () => payoutScreen(P));
+      ctx.restore();
+    });
+    // flights: the reference image travels from the shelf into its slot
+    ORDER.forEach((k, i) => {
+      const ts = TS[i], f = span(t, ts + 0.4, ts + 1.3);
+      if (f <= 0 || f >= 1) return;
+      const e = easeInOutCubic(f), from = fitted(k, imgBox(i)), s = SLOT[k];
+      const to = { x: SX + s.x, y: SY + s.y, w: s.w, h: s.h };
+      const [, , sw, sh] = CROPS[k].crop, ks = Math.min(to.w / sw, to.h / sh);
+      const tw2 = sw * ks, th2 = sh * ks, tx2 = to.x + (to.w - tw2) / 2, ty2 = to.y + (to.h - th2) / 2;
+      const x = lerp(from.x, tx2, e), y = lerp(from.y, ty2, e), w = lerp(from.w, tw2, e), h = lerp(from.h, th2, e);
+      withAlpha(1 - span(f, 0.6, 1), () => {
+        rr(x - 6, y - 6, w + 12, h + 12, 12, { fill: C.base, stroke: C.brand, lw: 2, shadow: 24 });
+        imgCrop(CROPS[k].img, CROPS[k].crop, x, y, w, h);
+      });
+    });
+    // token tags on the trailing side of the phone
+    TAGS.forEach((g, i) => {
+      const a = ein(t, tagT + i * 0.6, 0.4);
+      if (a <= 0) return;
+      withAlpha(a, () => {
+        const y = SY + g.y, tx = 1568;
+        let px = SX + SW - 16;
+        if (g.tok === 'space/lg') { px = SX + SW - 8; rr(SX + SW - 16, SY + 436, 16, 76, 2, { fill: C.yellow, alpha: 0.7 }); }
+        if (g.tok === 'radius/default') px = SX + SW - 18;
+        if (g.tok === 'text/default') px = SX + 268;
+        if (g.tok === 'bg/brand/primary') px = SX + SW - 26;
+        line(px, y, tx, y, { color: C.brandDark, lw: 2, p: easeOutCubic(span(t, tagT + i * 0.6, tagT + i * 0.6 + 0.35)) });
+        circle(px, y, 5, { fill: C.brandDark });
+        chip(g.tok, tx, y - 24, { size: 22, h: 48, padX: 16, anchor: 'left', family: MONO, dir: 'ltr', fill: C.base, stroke: C.brandDark, color: C.brandDark, weight: 600 });
+      });
+    });
+  };
+});
+
+/* ═════════ 7 · review 138-163 ═════════ */
+scene('review', 138, 163, [5, 'راجع'], (t0, t1) => {
+  const L2 = [
+    '  .payout-header { background: #4daa57; margin-left: 16px; }',
+    '  .payout-header { background: var(--bg-brand-primary); margin-left: 16px; }',
+    '  .payout-header { background: var(--bg-brand-primary); margin-inline-start: 16px; }',
+    '  .payout-header { background: var(--bg-brand-primary); margin-inline-start: var(--space-lg); }',
+  ];
+  /* real output of: node lint/cli.mjs payouts.html (see README) */
+  const OUT = [
+    'payouts.html:2:32 error no-raw-color raw color #4daa57: use token bg/brand/primary (fix: var(--bg-brand-primary))',
+    'payouts.html:2:41 error physical-direction physical direction "margin-left": use margin-inline-start (fix: margin-inline-start)',
+    'payouts.html:2:54 warning no-raw-spacing raw spacing 16px: use token space/lg (fix: var(--space-lg))',
+    'payouts.html:4:37 error no-em-dash em dash (U+2014): rewrite with a comma, colon or full stop (fix: replace with ", " or ": ")',
+  ];
+  const SUM1 = '3 error(s), 1 warning(s) in 1 file(s)', SUM2 = '0 error(s), 0 warning(s) in 1 file(s)';
+  const CMD = 'node lint/cli.mjs payouts.html';
+  const R1 = typer(CMD, 140.2, 18, 41, EV);
+  const r1 = R1.t1 + 0.3; ev(r1, 'enter');
+  const oT = OUT.map((_, i) => r1 + 0.45 + i * 0.42); oT.forEach((tt, i) => ev(tt, i === 2 ? 'blip' : 'blip', 0.45));
+  const sumT = r1 + 0.45 + 4 * 0.42 + 0.2;
+  const FX = [147.0, 147.7, 148.4, 149.1]; FX.forEach(tt => ev(tt, 'click', 0.55));
+  const R2 = typer(CMD, 149.9, 22, 42, EV);
+  const r2 = R2.t1 + 0.3; ev(r2, 'enter'); const okT = r2 + 0.45; ev(okT, 'chime', 0.65);
+  const CL = [
+    ['الحالات', 'فارغة، تحميل، خطأ، نجاح، تعطيل'],
+    ['التباين', 'WCAG 2.2 AA'],
+    ['الاتجاه', 'من اليمين إلى اليسار'],
+    ['النص', 'قصير وواضح، بلا شَرطة طويلة'],
+    ['الامتثال', 'المخاطر والرسوم قبل التأكيد'],
+  ];
+  const clT = 154.6; CL.forEach((_, i) => ev(clT + i * 1.0, 'tick', 0.6)); ev(clT + 5 * 1.0 + 0.2, 'chime', 0.6);
+  ev(153.0, 'whoosh', 0.3);
+  cap(139.0, 146.6, `قبل التسليم، يفحص ${L('syntropy-lint')} الشيفرة والنصوص.`, 'Before hand-off, syntropy-lint checks code and copy.');
+  cap(147.0, 152.6, 'يقترح الإصلاح، ثم يعيد الفحص.', 'It suggests the fix, then checks again.');
+  cap(153.4, 162.5, 'ومراجعة ذاتية: الحالات، التباين، الاتجاه، النص، الامتثال.', 'And a self-review: states, contrast, direction, copy, compliance.');
+  const CS = 26, CX = 180;
+  function codeLines(t) {
+    const st = FX.filter(f => t >= f).length;
+    const l2 = L2[Math.min(st, 3)];
+    const ys = [244, 286, 328, 370];
+    const plain = (s, y, color = C.ink) => text(s, CX, y, { size: CS, family: MONO, dir: 'ltr', align: 'left', color });
+    ['1', '2', '3', '4'].forEach((n, i) => text(n, 140, ys[i], { size: CS, family: MONO, dir: 'ltr', color: C.subtle }));
+    plain('<style>', ys[0]); plain('</style>', ys[2]);
+    plain(l2, ys[1]);
+    // flash where a fix just landed
+    FX.forEach((f, i) => { const fl = span(t, f, f + 0.25) * (1 - span(t, f + 0.6, f + 1.2)); if (fl > 0 && i < 3) rr(CX - 10, ys[1] - 30, tw(l2, CS, 400, MONO, 'ltr') + 20, 42, 8, { fill: C.brand, alpha: 0.12 * fl }); });
+    // underline the issues that the lint reported and are still present
+    const mark = (needle, k, color) => {
+      const at = l2.indexOf(needle); if (at < 0 || t < oT[k]) return;
+      const x = CX + tw(l2.slice(0, at), CS, 400, MONO, 'ltr'), w = tw(needle, CS, 400, MONO, 'ltr');
+      rr(x, ys[1] + 8, w, 4, 2, { fill: color, alpha: ein(t, oT[k], 0.25) });
+    };
+    mark('#4daa57', 0, C.error); mark('margin-left', 1, C.error); mark('16px', 2, C.warnText);
+    // line 4: Arabic heading text; the em dash is shown as a marked gap, never as the character
+    const pre = '<h2 class="payout-header">', y = ys[3];
+    let x = CX + plain(pre, y);
+    const ar = (s) => { const w = text(s, x, y, { size: CS, family: MONO, dir: 'rtl', align: 'left' }); x += w; };
+    if (st < 4) {
+      ar('الربع الثالث'); x += 10;
+      const flag = t >= oT[3];
+      rr(x, y - 26, 92, 34, 6, { fill: flag ? C.errorBg : C.elevated, stroke: flag ? C.error : C.border, lw: 2 });
+      text('U+2014', x + 46, y - 3, { size: 16, family: MONO, dir: 'ltr', align: 'center', color: flag ? C.error : C.subtle, weight: 600 });
+      x += 102; ar('التوزيعات');
+    } else ar('التوزيعات، الربع الثالث');
+    text('</h2>', x, y, { size: CS, family: MONO, dir: 'ltr', align: 'left' });
+  }
+  function outLine(s, x, y, size) {
+    const m = s.match(/^(\S+:\d+:\d+) (error|warning) (\S+) (.*)$/);
+    if (!m) return text(s, x, y, { size, family: MONO, dir: 'ltr', align: 'left', color: C.dInk });
+    const seg = [[m[1] + ' ', C.dSubtle], [m[2] + ' ', m[2] === 'error' ? C.dError : C.dWarn], [m[3] + ' ', C.dInk], [m[4], C.dMuted]];
+    for (const [str, col] of seg) x += text(str, x, y, { size, family: MONO, dir: 'ltr', align: 'left', color: col });
+  }
+  return t => {
+    const mv = easeInOutCubic(span(t, 153.0, 154.0));
+    const k = lerp(1, 0.5, mv);
+    ctx.save(); ctx.translate(lerp(0, 48, mv), lerp(0, 250, mv)); ctx.translate(96, 150); ctx.scale(k, k); ctx.translate(-96, -150);
+    withAlpha(ein(t, 138.4) * (1 - 0.25 * mv), () => {
+      rr(96, 150, 1728, 256, 20, { fill: C.base, stroke: C.border });
+      text('payouts.html', 140, 196, { size: 22, family: MONO, dir: 'ltr', align: 'left', color: C.muted, weight: 600 });
+      line(96, 212, 1824, 212, { color: C.borderSubtle, lw: 1.5 });
+      codeLines(t);
+    });
+    withAlpha(ein(t, 139.0) * (1 - 0.25 * mv), () => {
+      rr(96, 432, 1728, 420, 20, { fill: C.ink });
+      prompt(R1.at(t), 136, 492, { t, size: 26, sign: '$', caret: t < r1 });
+      OUT.forEach((s, i) => withAlpha(ein(t, oT[i], 0.25), () => outLine(s, 136, 546 + i * 42, 20)));
+      withAlpha(ein(t, sumT, 0.25), () => text(SUM1, 136, 546 + 4 * 42 + 6, { size: 20, family: MONO, dir: 'ltr', align: 'left', color: C.dError, weight: 600 }));
+      if (t >= 149.8) prompt(R2.at(t), 136, 772, { t, size: 26, sign: '$', caret: t < r2 });
+      withAlpha(ein(t, okT, 0.3), () => { check(150, 812, 20, { color: C.dBrand, lw: 3, p: span(t, okT, okT + 0.3) }); text(SUM2, 180, 820, { size: 22, family: MONO, dir: 'ltr', align: 'left', color: C.dBrand, weight: 600 }); });
+    });
+    ctx.restore();
+    // self-review checklist
+    withAlpha(ein(t, 153.6, 0.5), () => {
+      const x0 = 1094, x1 = 1824, y0 = 150 + (1 - ein(t, 153.6, 0.5)) * 24;
+      rr(x0, y0, x1 - x0, 700, 24, { fill: C.base, stroke: C.border, shadow: 24 });
+      text('مراجعة ذاتية', x1 - 44, y0 + 66, { size: 34, weight: 700 });
+      CL.forEach(([l, sub], i) => {
+        const y = y0 + 150 + i * 112, d = span(t, clT + i * 1.0, clT + i * 1.0 + 0.3);
+        circle(x1 - 70, y - 12, 26, { fill: d > 0 ? C.brand : C.base, stroke: d > 0 ? C.brand : C.border, lw: 2 });
+        check(x1 - 70, y - 12, 24, { color: C.base, lw: 3.2, p: d });
+        text(l, x1 - 120, y, { size: 40, weight: 600, color: d > 0.5 ? C.ink : C.muted });
+        text(sub, x1 - 120, y + 42, { size: 26, color: C.muted, dir: /^[A-Z]/.test(sub) ? 'ltr' : 'rtl' });
+      });
+    });
+  };
+});
+
+/* ═════════ 8 · where to find things 163-178 ═════════ */
+scene('where', 163, 178, null, (t0, t1) => {
+  const STATS = [['14', 'مهارة'], ['10', `أدوات ${L('MCP')}`], ['13', 'قاعدة فحص'], ['636', 'أيقونة']];
+  STATS.forEach((_, i) => ev(163.6 + i * 0.3, 'pop', 0.5));
+  const CARDS = [
+    { title: `مركز ${L('Notion')}`, sub: 'الأدلة والقرارات وخطة الإطلاق', foot: 'ابدأ من هنا', icon: 0 },
+    { title: 'مركز الروابط', big: '181', sub: 'رابطًا: أدوات بحث ومعايير وتنظيمات', icon: 1 },
+    { title: 'أبلغ عن نقص', sub: 'لم تجد مكوّنًا؟ افتح طلبًا في المستودع.', mono: 'syntropy-ai/issues', icon: 2 },
+  ];
+  CARDS.forEach((_, i) => ev(165.4 + i * 0.5, 'pop', 0.6));
+  ev(171.0, 'click', 0.5);
+  cap(163.6, 170.4, 'كل ما تحتاجه في مكان واحد.', 'Everything you need, in one place.');
+  cap(171.0, 177.5, 'وإن لم تجد مكوّنًا، أبلغ عن النقص.', "Can't find a component? Report the gap.");
+  function icon(kind, x, y) {
+    rr(x - 64, y, 64, 64, 16, { fill: C.lg100 });
+    const cx = x - 32, cy = y + 32;
+    if (kind === 0) { rr(cx - 16, cy - 18, 32, 36, 4, { stroke: C.brandDark, lw: 3 }); line(cx - 8, cy - 6, cx + 8, cy - 6, { color: C.brandDark, lw: 3 }); line(cx - 8, cy + 4, cx + 8, cy + 4, { color: C.brandDark, lw: 3 }); }
+    else if (kind === 1) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(-Math.PI / 4); rr(-20, -8, 24, 16, 8, { stroke: C.brandDark, lw: 3 }); rr(-4, -8, 24, 16, 8, { stroke: C.brandDark, lw: 3 }); ctx.restore(); }
+    else { line(cx - 12, cy - 18, cx - 12, cy + 20, { color: C.brandDark, lw: 3 }); ctx.save(); ctx.globalAlpha = A; ctx.fillStyle = C.brandDark; ctx.beginPath(); ctx.moveTo(cx - 12, cy - 18); ctx.lineTo(cx + 16, cy - 10); ctx.lineTo(cx - 12, cy - 2); ctx.closePath(); ctx.fill(); ctx.restore(); }
+  }
+  return t => {
+    const tw4 = 408, g = 32;
+    STATS.forEach(([n, l], i) => withAlpha(ein(t, 163.6 + i * 0.3, 0.5), () => {
+      const x1 = W - M - i * (tw4 + g), y0 = 150;
+      rr(x1 - tw4, y0, tw4, 170, 20, { fill: C.elevated });
+      text(n, x1 - 36, y0 + 92, { size: 72, weight: 700, dir: 'ltr' });
+      text(l, x1 - 36, y0 + 140, { size: 32, color: C.muted });
+    }));
+    const cw = 544, cg = 48;
+    CARDS.forEach((c, i) => {
+      const a = ein(t, 165.4 + i * 0.5, 0.5);
+      withAlpha(a, () => {
+        const x1 = W - M - i * (cw + cg), y0 = 364 + (1 - a) * 24;
+        const hl = i === 2 ? ein(t, 171.0, 0.4) : 0;
+        rr(x1 - cw, y0, cw, 470, 24, { fill: C.base, stroke: hl > 0.01 ? C.brand : C.border, lw: hl > 0.01 ? 3 : 2 });
+        icon(c.icon, x1 - 40, y0 + 40);
+        text(c.title, x1 - 40, y0 + 176, { size: 44, weight: 700 });
+        let y = y0 + 236;
+        if (c.big) { text(c.big, x1 - 40, y + 50, { size: 88, weight: 700, color: C.brandDark, dir: 'ltr' }); y += 108; }
+        text(c.sub, x1 - 40, y, { size: 30, color: C.muted });
+        if (c.foot) { text(c.foot, x1 - 40, y0 + 420, { size: 30, weight: 600, color: C.brandDark }); arrow(x1 - 40 - tw(c.foot, 30, 600) - 30, y0 + 410, 22, -1, { color: C.brandDark }); }
+        if (c.mono) chip(c.mono, x1 - 40, y0 + 380, { size: 24, h: 52, family: MONO, dir: 'ltr', fill: C.elevated, stroke: C.elevated, color: C.ink });
+      });
+    });
+  };
+});
+
+/* ═════════ 9 · close 178-186 ═════════ */
+scene('close', 178, 186, null, (t0, t1) => {
+  ev(178.6, 'chime', 0.6);
+  cap(178.6, 185.6, `ابدأ بكتابة ${L('/syntropy')}\n${L('github.com/abdulrahmanaljebreen/syntropy-ai')}`, 'Start by typing /syntropy\ngithub.com/abdulrahmanaljebreen/syntropy-ai', false);
+  return t => {
+    const p = ein(t, 178.4, 0.8);
+    const word = 'Syntropy', size = 120, ww = tw(word, size, 600, AR, 'ltr');
+    withAlpha(p, () => text(word, W / 2, 400 + (1 - p) * 20, { size, weight: 600, align: 'center', dir: 'ltr' }));
+    const rp = easeInOutCubic(span(t, 178.6, 179.6));
+    if (rp > 0) { ctx.save(); const g = ctx.createLinearGradient(W / 2 - ww / 2, 0, W / 2 + ww / 2, 0); g.addColorStop(0, RAMP[0]); g.addColorStop(0.5, RAMP[1]); g.addColorStop(1, RAMP[2]); rrPath(W / 2 - ww / 2, 432, ww * rp, 10, 5); ctx.globalAlpha = A; ctx.fillStyle = g; ctx.fill(); ctx.restore(); }
+    withAlpha(ein(t, 179.4, 0.6), () => {
+      const arS = 'ابدأ بكتابة', aw = tw(arS, 64, 600), pw = tw('/syntropy', 52, 600, MONO, 'ltr') + 64;
+      const total = aw + 28 + pw, rx = W / 2 + total / 2;
+      text(arS, rx, 620, { size: 64, weight: 600 });
+      chip('/syntropy', rx - aw - 28, 562, { size: 52, h: 92, padX: 32, family: MONO, dir: 'ltr', fill: C.ink, stroke: C.ink, color: C.base, weight: 600 });
+    });
+    withAlpha(ein(t, 180.2, 0.6), () => text('github.com/abdulrahmanaljebreen/syntropy-ai', W / 2, 740, { size: 34, family: MONO, dir: 'ltr', align: 'center', color: C.muted }));
+  };
+});
+
+/* scene boundary whooshes */
+SCENES.slice(1).forEach(s => ev(s.t0 - 0.12, 'whoosh', 0.45));
+
+/* ── frame ─────────────────────────────────────────────────────────────── */
+function drawCaption(t) {
+  if (q.get('caps') === '0') return; // clean frames for stills and teasers
+  for (const c of CAPS) {
+    if (!c.draw || t < c.t0 - 0.05 || t > c.t1 + 0.05) continue;
+    const a = ein(t, c.t0, 0.35) * eout(t, c.t1, 0.35);
+    withAlpha(a, () => text(c.ar, W / 2, H - 118 + (1 - ein(t, c.t0, 0.35)) * 10, { size: 50, weight: 500, align: 'center' }));
+  }
+}
+function renderFrame(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 1; ctx.fillStyle = C.surface; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.setTransform(S, 0, 0, S, 0, 0);
+  for (const s of SCENES) {
+    if (t < s.t0 || t >= s.t1) continue;
+    const a = ein(t, s.t0, 0.5) * eout(t, s.t1, 0.5);
+    withAlpha(a, () => {
+      if (s.chapter) chapterLabel(s.chapter[0], s.chapter[1], 1);
+      s.draw(t);
+    });
+  }
+  drawCaption(t);
+}
+
+window.__meta = META;
+window.__events = EV.slice().sort((a, b) => a.t - b.t);
+window.__captions = CAPS.slice().sort((a, b) => a.t0 - b.t0);
+window.__seek = t => renderFrame(t);
+Promise.all([
+  ...['400', '500', '600', '700'].map(w => document.fonts.load(`${w} 40px "IBM Plex Sans Arabic"`)),
+  document.fonts.load('400 30px Menlo'),
+  loadImages({
+    appbar: EX + 'app-bar/app-bar.png', carddeal: EX + 'card-deal/card-deal.png', stat: EX + 'stat/stat.png',
+    payouts: EX + 'payouts-list/payouts-cell.png', button: EX + 'button/reference.png',
+  }),
+]).then(() => { renderFrame(0); window.__ready = true; }, e => { console.error(String(e)); });
+</script>
+</html>

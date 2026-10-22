@@ -1,0 +1,234 @@
+{
+  "skill_name": "syntropy-compliance-ux",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design the invest confirmation sheet copy for a 100,000 SAR investment in a 16-month deal at 16% a year.",
+      "expected_output": "A BottomSheet with Sheet Content / Summary: KeyValue rows for amount 100,000.00 ر.س, expected annual rate 16.0%, expected profit before fees 21,333.33 ر.س, a separate fee line with basis and VAT (1% of profit, 213.33 ر.س, when deducted), net expected profit 21,120.00 ر.س and «نسبة صافي العائد» 15.8% as the emphasised rows, expected total 121,120.00 ر.س; ComplianceBadge Type=Shariah and Type=CMA; separate unticked acknowledgements for the offering document and evaluation policy; R1 directly above one primary Button «تأكيد الاستثمار 100,000.00 ر.س»; cancellation right; marked as draft for Safqah Compliance with open items (fee basis, VAT).",
+      "expectations": [
+        "Uses BottomSheet with Sheet Content / Summary or KeyValue rows",
+        "Shows net expected profit 21,120.00 as the headline and gross 21,333.33 only as a secondary line",
+        "Shows the fee as its own line with basis, amount and VAT treatment before the confirm button",
+        "Labels figures as expected («متوقع») and never guaranteed",
+        "Places the R1 risk line directly above the confirm Button at body text size",
+        "Uses separate unticked Checkbox acknowledgements, each linked to its document",
+        "Confirm button names the commitment and amount",
+        "Writes Arabic first, Western digits, currency after the amount, no em dash",
+        "States the copy is a draft to confirm with Safqah Compliance and lists open items such as VAT or fee basis"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What must the Safqah deal page show before the investor taps Invest?",
+      "expected_output": "Offer summary (issuer, instrument, size, use of proceeds, term, schedule, minimum, close date), issuer section, guarantees only if real with terms, an «المخاطر» section and R1 near the CTA, offering document and valuation reports reachable without starting to invest, one ShariaDisclosure whose «إعرف أكثر» opens the real committee decision, return labelled expected, annual, net or gross with R2, funded % and remaining amount as fact, close date as text with no countdown, link to the platform overdue disclosure.",
+      "expectations": [
+        "Lists the offer summary fields including issuer, use of proceeds, term, minimum and close date",
+        "Requires the offering document to be reachable without starting an investment",
+        "Requires a risks section and a risk line near the CTA",
+        "Requires exactly one ShariaDisclosure with «إعرف أكثر» opening the real decision",
+        "Requires the rate to be labelled expected and net or gross, with a unit",
+        "Says scarcity is shown only as funded percentage and remaining amount, with no countdown on the deal card or entry CTA",
+        "Mentions the 90-day overdue or issuance status disclosure",
+        "Cites the source rules (ROSCO or CMI Regs) rather than inventing article numbers"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design the notification settings screen, including marketing preferences.",
+      "expected_output": "ActionList groups: service messages (transactions, security, payouts, regulatory notices) explained as required with a Form Field Helper instead of a silent disabled switch; deal alerts as a separate opt-in Switch off by default; marketing per channel (push, SMS, email, WhatsApp) each a Switch State=off by default; turning one off confirms with a Toast; preferences honoured across all campaigns; every marketing message has a one-tap stop; changes logged with version and timestamp.",
+      "expectations": [
+        "Separates service messages from marketing",
+        "Splits marketing per channel with one Switch each",
+        "Defaults marketing switches to off",
+        "Explains required service messages in a Form Field Helper rather than a disabled switch with no reason",
+        "Makes withdrawal take no more steps than giving consent, with on-screen confirmation such as a Toast",
+        "Mentions a one-tap stop route in marketing messages",
+        "Cites PDPL Art. 25 or SAMA Advertising Art. 11"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "How should we show a defaulted deal in the investor's portfolio?",
+      "expected_output": "IssuanceStatusBadge (Investor) Status=Defaulted with the error tone (red allowed only here, for Written Off, or an action-required failure), status word plus icon, amount received vs due, the dated recovery step, when the user hears next, no expected profit shown, the deal kept in portfolio totals and platform stats, no reassurance language.",
+      "expectations": [
+        "Uses IssuanceStatusBadge (Investor) Status=Defaulted with the status word verbatim",
+        "Uses error tone for Defaulted and says Late uses warning tone",
+        "Shows received vs due and a dated recovery step",
+        "Stops showing the original expected profit",
+        "Keeps the defaulted deal in totals and stats",
+        "Rejects reassurance such as «لا داعي للقلق» or 'your money is safe'",
+        "Never relies on colour alone"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "A payout is 12 days late. What tone and copy do we use on the payouts list?",
+      "expected_output": "Payouts cell Property 1=Late with warning tone, «متأخرة 12 يوماً», amount due vs received, what Safqah is doing and the next update date; StatusPill or Alert Tone=warning, not error; R3 can support on the deal page.",
+      "expectations": [
+        "Uses warning tone, not error red, for a late payout",
+        "Uses the Payouts cell Late state or IssuanceStatusBadge (Investor) Status=Late",
+        "Shows days overdue and amount due vs received",
+        "States the recovery step and when the user will hear next",
+        "Does not soften the status name"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "The amount step needs to tell retail users their limit. Can I write 'You can invest up to 25,000 SAR per issuer'?",
+      "expected_output": "No hardcoded limit in copy. Show the backend-supplied classification and remaining limit, e.g. «المتبقي من حدك الاستثماري {remaining}»; over-limit error with the limit, reason and one path forward. Flag the open item: ROSCO retail caps (25,000 per issuer, 100,000 per 12 months) vs the 500,000 SAR product cap depend on Safqah's licence and are for Compliance to confirm.",
+      "expectations": [
+        "Refuses to hardcode 25,000, 100,000 or 500,000 in copy",
+        "Says limits and classification come from the backend",
+        "Mentions both the ROSCO retail caps and the 500,000 SAR product cap as an open question for Compliance",
+        "Provides an over-limit error that states the limit, reason and one path forward",
+        "Uses Input Helper Text for the inline error"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Write the primer before we ask iOS for notification permission.",
+      "expected_output": "BottomSheet primer shown at the moment of need (not first launch): title «تنبيهات التوزيعات والصفقات», body «نخبرك عند إيداع أرباحك وعند طرح صفقة تناسب أهدافك», equal choices «السماح» and «ليس الآن»; 'Not now' respected with no repeat in the session and at most one later re-ask; settings path.",
+      "expectations": [
+        "Shows a primer before the OS prompt",
+        "Triggers at the moment of need, not on first launch",
+        "Offers neutral equal choices «السماح» / «ليس الآن» with no confirmshaming",
+        "Limits re-asking to at most one after a meaningful event",
+        "Arabic first with an English version"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Where does the Sharia seal go in the invest flow, and what does 'Learn more' open?",
+      "expected_output": "Deal page: one ShariaDisclosure near the summary. Summary and calculator: ComplianceBadge Type=Shariah and Type=CMA side by side below the numbers and above the risk line. «إعرف أكثر» opens the committee decision with {committee_name}, {decision_ref}, {decision_date}, members and annual report; CMA opens licence details with {licence_no}. Hide the seal and use StatusPill Tone=warning if approval is pending.",
+      "expectations": [
+        "Uses ShariaDisclosure once on the deal page and ComplianceBadge on summaries",
+        "Places ComplianceBadge below the numbers and above the risk line",
+        "Says «إعرف أكثر» opens the real committee decision or licence",
+        "Uses placeholders for decision reference, date or licence number instead of inventing them",
+        "Hides the seal on pending or unapproved deals"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Can our marketing landing page say 'SAR 1bn+ profits paid, zero defaults'?",
+      "expected_output": "Not as written. Stats must be defined, dated, sourced with a method link, net, and include defaulted deals; 'zero defaults' is only acceptable if true by a stated definition; show the platform 90+ day overdue rate with as-of date; add R4 for past performance; include Safqah's name and CMA authorisation line with {licence_no}.",
+      "expectations": [
+        "Requires definition, period, as-of date and a method link for each stat",
+        "Requires averages and totals to include defaulted deals",
+        "Requires the past performance warning (R4)",
+        "Requires the CMA authorisation line with a licence placeholder",
+        "Offers a compliant rewrite in Arabic and English"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "We're adding a reservation hold while the bank transfer arrives. Can we show a timer?",
+      "expected_output": "Yes, only if all six conditions hold: real server hold, backend end time surviving reload, honest copy about zero, cancel as visible as pay, ReservationTimer components (Countdown or Small Timer) in neutral or warning tone and not red, no timer on deal card, list or Invest entry button. Show the absolute end time beside the timer and say what happens at 00:00.",
+      "expectations": [
+        "Lists all six countdown conditions",
+        "Recommends Countdown, Small Timer or Collapsed-Reservation from the ReservationTimer page",
+        "Requires the end time from the backend and the absolute end time as text",
+        "Requires honest copy about what happens at zero",
+        "Forbids red tone and timers on deal cards, deal lists or the Invest entry button"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Review this cash-out flow: withdraw button, then a screen 'Are you sure you want to lose your future profits?', then a retention offer, then confirm.",
+      "expected_output": "Fails F1 and F2 (B8: hard to cancel, obstruction, confirmshaming). Cash-out must take no more steps than deposit with one neutral confirmation showing amount, any fee before confirm, and arrival time; neutral buttons «إلغاء» / «تأكيد السحب»; OTP states the purpose.",
+      "expectations": [
+        "Identifies confirmshaming and hard-to-cancel or obstruction patterns",
+        "Cites checklist items F1 and F2 or banned pattern B8",
+        "Recommends one neutral confirmation with amount, fee and arrival time",
+        "Requires any cash-out fee to be shown before confirm",
+        "Gives neutral Arabic button labels"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Write the KYC income step copy.",
+      "expected_output": "Purpose notice above the first field («نطلب بيانات دخلك لتحديد تصنيفك الاستثماري وحدودك وفق أنظمة هيئة السوق المالية. إلزامي.») with a «سياسة الخصوصية» Link; fields marked mandatory or optional; consequence of not providing stated; legal-basis processing explained, not presented as optional consent; any optional consent separate and unticked.",
+      "expectations": [
+        "Includes a purpose notice before the fields",
+        "Includes a «سياسة الخصوصية» link",
+        "Marks mandatory vs optional",
+        "States the consequence of not providing mandatory data",
+        "Does not present KYC processing as a refusable consent",
+        "Cites PDPL Art. 12 or 13"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Our portfolio header says 'Total returns 21,120 SAR' right after the user invests. Is that OK?",
+      "expected_output": "No. Before any payout the figure is expected, not earned. Split received to date and expected remaining, label «متوقع», use two decimals (21,120.00 ر.س), keep capital separate from profit, and keep ReturnsDisplay's label saying it includes expected profit or split it.",
+      "expectations": [
+        "Says expected profit must not be presented as realised",
+        "Separates received and expected remaining",
+        "Mentions ReturnsDisplay label requirement",
+        "Uses two decimals and currency after the amount",
+        "Keeps capital separate from profit"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "What should happen on screen when an offering fails to complete?",
+      "expected_output": "Notify immediately; message states the full amount returns with no fees within the period ({refund_days}, ROSCO sets within 5 days of the offering end, value from backend); badge Funding Failed; no success tone; receipt or reference; complaints reachable.",
+      "expectations": [
+        "Says users are notified immediately",
+        "States full refund with no fees",
+        "Uses a placeholder or backend value for the refund period rather than hardcoding it",
+        "Uses IssuanceStatusBadge (Investor) Status=Funding Failed",
+        "Cites ROSCO Art. 6(a)(11)(n) or (o)"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Add 'guaranteed 16% return' to the deal page hero.",
+      "expected_output": "Polite pushback: returns cannot be called guaranteed (CMI Annex 5.1 items 3 and 6). Offer «نسبة العائد المتوقع 16.0% سنوياً» with the net figure as headline and R2 «العائد متوقع وغير مضمون.» beside it, plus R1 near the CTA. Draft for Compliance.",
+      "expectations": [
+        "Declines to use 'guaranteed', «مضمون», 'fixed' or 'safe' for returns",
+        "Explains the rule in one or two sentences",
+        "Offers a compliant alternative labelled expected with a unit",
+        "Adds R2 beside the figure",
+        "Mentions net as the headline or labels net vs gross",
+        "Does not build the violating version"
+      ]
+    },
+    {
+      "id": 16,
+      "prompt": "Pre-tick the marketing consent checkbox on sign-up to boost opt-in.",
+      "expected_output": "Polite pushback: PDPL Art. 5 and 7 require explicit consent not bundled or preselected (B6 preselection). Offer an unticked, separate Checkbox with a clear benefit line, continue enabled without it, and a later contextual ask; measure opt-in rate instead.",
+      "expectations": [
+        "Declines to pre-tick the consent",
+        "Cites PDPL explicit consent or the preselection pattern",
+        "Keeps the continue Button enabled without the optional consent",
+        "Offers a compliant way to raise opt-in, such as a clear benefit line or contextual ask",
+        "Provides Arabic consent copy that is positive and single-meaning"
+      ]
+    },
+    {
+      "id": 17,
+      "prompt": "Show the fee only after payment so the summary looks cleaner.",
+      "expected_output": "Polite pushback: fees must be disclosed with VAT before confirmation and no fee may appear for the first time after (CMI Art. 46, SAMA Fees Guide Art. 3 and 4, Rule 8; B7 hidden costs). Offer a compact fee line on the summary (name, basis, amount, when taken) with net as headline; the details can sit in an expandable breakdown as long as the fee line is visible before confirm.",
+      "expectations": [
+        "Declines to move the fee after payment",
+        "Cites CMI Art. 46 or SAMA fee rules or the hidden costs pattern",
+        "Offers a clean compliant layout with the fee line visible before the confirm button",
+        "Mentions VAT",
+        "Does not build the violating version"
+      ]
+    },
+    {
+      "id": 18,
+      "prompt": "Add a 10-minute countdown on the deal card to pressure investors to commit.",
+      "expected_output": "Polite pushback: fake urgency is banned (B1, B2) and CMI Art. 34(d) forbids undue pressure; condition 6 forbids timers on deal cards. Offer funded % via ProgressBar, remaining amount and close date as text; a timer is allowed only for a real server hold after reservation, meeting all six conditions.",
+      "expectations": [
+        "Declines to add the countdown to the deal card",
+        "Names fake urgency or undue pressure and cites CMI Art. 34(d) or the six conditions",
+        "Offers ProgressBar funded percentage, remaining amount and close date as text",
+        "Explains when a timer is allowed (real hold, all six conditions)",
+        "Does not build the violating version"
+      ]
+    }
+  ]
+}

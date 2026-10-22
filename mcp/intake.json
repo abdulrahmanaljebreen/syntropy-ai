@@ -1,0 +1,77 @@
+{
+  "$schema": "syntropy-intake/1",
+  "intro": "Ask one question at a time. Skip anything the request already answers. Keep it short.",
+  "questions": [
+    {
+      "id": "kind",
+      "ask": "What are you making?",
+      "type": "choice",
+      "choices": [
+        { "value": "new-screen", "label": "A new screen", "keywords": ["new screen", "screen", "page", "شاشة", "صفحة"] },
+        { "value": "new-flow", "label": "A new flow", "keywords": ["flow", "journey", "onboarding", "wizard", "steps", "رحلة", "تدفق"] },
+        { "value": "change-live", "label": "A change to something live", "keywords": ["change", "update", "redesign", "improve", "fix", "tweak", "existing", "تعديل", "تحسين", "تحديث"] },
+        { "value": "review", "label": "A review", "keywords": ["review", "audit", "critique", "check", "lint", "feedback on", "مراجعة", "تدقيق"] },
+        { "value": "explanation", "label": "An explanation", "keywords": ["explain", "how does", "what is", "why", "اشرح", "ما هو", "كيف"] }
+      ]
+    },
+    {
+      "id": "audience",
+      "ask": "Who is it for?",
+      "type": "choice",
+      "choices": [
+        { "value": "retail-investor", "label": "Retail investor", "keywords": ["retail", "investor", "investors", "user", "users", "customer", "customers", "مستثمر", "عميل", "أفراد"] },
+        { "value": "qualified-investor", "label": "Qualified investor", "keywords": ["qualified", "accredited", "مؤهل", "محترف"] },
+        { "value": "developer-issuer", "label": "Developer or issuer", "keywords": ["developer", "issuer", "fundraiser", "مطور", "مصدر", "المصدر"] },
+        { "value": "internal-team", "label": "Internal team", "keywords": ["internal", "back-office", "backoffice", "admin", "ops", "compliance team", "داخلي", "الإدارة"] }
+      ]
+    },
+    {
+      "id": "surface",
+      "ask": "Where does it live?",
+      "type": "choice",
+      "choices": [
+        { "value": "app-compact", "label": "App, compact (phone)", "keywords": ["mobile", "app", "ios", "android", "phone", "تطبيق", "جوال"] },
+        { "value": "app-regular", "label": "App, regular (tablet or foldable inner)", "keywords": ["tablet", "ipad", "foldable", "regular", "duo", "لوحي"] },
+        { "value": "web", "label": "Web", "keywords": ["web", "website", "browser", "desktop", "landing", "موقع", "ويب"] },
+        { "value": "back-office", "label": "Back-office", "keywords": ["back-office", "backoffice", "back office", "admin", "console", "dashboard", "لوحة التحكم"] }
+      ]
+    },
+    {
+      "id": "job",
+      "ask": "What job should it do, and how will we know it worked? Name a Mixpanel event or metric if you have one.",
+      "type": "text",
+      "keywords": ["so that", "in order to", "to help", "metric", "mixpanel", "event", "conversion", "success", "kpi", "لكي", "حتى", "مؤشر", "نسبة التحويل"]
+    },
+    {
+      "id": "existing",
+      "ask": "What exists already? Share a Figma link, a screenshot or a ticket, or say none.",
+      "type": "text",
+      "patterns": ["figma\\.com", "linear\\.app", "\\bSAF-\\d+", "screenshot", "\\.png", "\\.jpg", "ticket", "لقطة", "تذكرة"]
+    },
+    {
+      "id": "stakes",
+      "ask": "What is at stake? Pick all that apply.",
+      "type": "multi",
+      "choices": [
+        { "value": "money-movement", "label": "Money movement", "keywords": ["payment", "pay", "invest", "withdraw", "deposit", "transfer", "payout", "wallet", "refund", "دفع", "سحب", "إيداع", "تحويل", "محفظة", "استثمار"] },
+        { "value": "personal-data", "label": "Personal data", "keywords": ["kyc", "identity", "national id", "iban", "personal", "phone number", "address", "nafath", "نفاذ", "هوية", "آيبان", "بيانات شخصية"] },
+        { "value": "regulated-disclosure", "label": "Regulated disclosure", "keywords": ["disclosure", "cma", "sharia", "shariah", "risk", "prospectus", "offering", "terms", "إفصاح", "هيئة السوق", "شرعي", "مخاطر", "نشرة"] },
+        { "value": "deadline", "label": "A deadline", "keywords": ["deadline", "urgent", "asap", "by friday", "this week", "موعد", "عاجل"] },
+        { "value": "none", "label": "None of these", "keywords": [] }
+      ]
+    }
+  ],
+  "nextSteps": {
+    "new-screen": ["research_plan", "get_pattern", "search_components", "get_component", "find_tokens", "search_icons", "lint_ui"],
+    "new-flow": ["research_plan", "get_pattern", "get_guideline", "search_components", "find_tokens", "lint_ui"],
+    "change-live": ["get_component", "get_guideline", "find_tokens", "lint_ui"],
+    "review": ["lint_ui", "get_guideline", "get_component", "find_tokens"],
+    "explanation": ["get_component", "get_guideline", "get_pattern", "find_links"]
+  },
+  "stakeGuidelines": {
+    "money-movement": "money movement, confirmation, fees",
+    "personal-data": "personal data, KYC, privacy",
+    "regulated-disclosure": "disclosure, risk, CMA",
+    "deadline": ""
+  }
+}

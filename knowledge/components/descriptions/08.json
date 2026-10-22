@@ -1,0 +1,2066 @@
+{
+  "3442:5756": {
+    "name": "_ROI",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Hidden figure atom that renders the large green expected-return amount at the top of the legacy Investment Calculator, with one variant per sample amount. It is an internal building block of Investment-amount, not a placeable component.",
+    "useWhen": [
+      "Inside Investment-amount or Investment Calculator when the headline expected-return figure must update with the amount preset",
+      "When reproducing the legacy calculator state for a given sample amount (1K, 4K, 20K, 300K, 400K, 2M)"
+    ],
+    "dontUseWhen": [
+      "Never place it on its own in a screen; use Investment Calculator or Calculator / Results card",
+      "For any other riyal amount use MoneyAmount"
+    ],
+    "partOf": [
+      "Investment-amount",
+      "Investment Calculator"
+    ],
+    "contains": [],
+    "keyProps": "Value=20K/4K/1K/10k/Value5/300k/400k/2M · Direction=LTR/RTL",
+    "a11y": "Read the figure with its label and currency (for example «العائد المتوقع 23,974 ريال»), never as a bare number.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "medium"
+  },
+  "3442:6279": {
+    "name": "_Gross-profit",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Hidden figure atom for the gross profit amount in the legacy calculator breakdown, one variant per sample amount. Always shown alongside net profit so fees are visible.",
+    "useWhen": [
+      "Inside Investment-amount or Calculator-list-item breakdowns of the legacy calculator",
+      "When a gross figure must sit next to the matching _Net-profit atom"
+    ],
+    "dontUseWhen": [
+      "Never show gross without net; pair it with _Net-profit, or use Calculator / Metric row in Calculator v2",
+      "For a standalone amount use MoneyAmount"
+    ],
+    "partOf": [
+      "Investment-amount",
+      "Investment Calculator"
+    ],
+    "contains": [],
+    "keyProps": "value=1k/20k/4k/300K/400K/2M · Direction=LTR/RTL",
+    "a11y": "Announce as «إجمالي الربح» plus amount and currency.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "medium"
+  },
+  "3442:6600": {
+    "name": "_Net-profit",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Hidden figure atom for net profit after the investment agency fee in the legacy calculator, one variant per sample amount. It is the figure investors actually receive as profit.",
+    "useWhen": [
+      "Inside Investment-amount to show «صافي الأرباح» after fees",
+      "Beside _Gross-profit so the fee deduction is explicit"
+    ],
+    "dontUseWhen": [
+      "Do not place on its own; use Investment-amount or Calculator / Results card",
+      "For other amounts use MoneyAmount"
+    ],
+    "partOf": [
+      "Investment-amount",
+      "Investment Calculator"
+    ],
+    "contains": [],
+    "keyProps": "Value=1k/20k/4k · Direction=LTR/RTL",
+    "a11y": "Announce as «صافي الأرباح» plus amount and currency.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "medium"
+  },
+  "3442:6739": {
+    "name": "Promo-code",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Promo-code entry row in the invest flow: a grey «إضافة رمز ترويجي» add row, or once applied a green chip with the code, the discount it gives (for example 50% off the investment agency fee) and a remove ×.",
+    "useWhen": [
+      "Letting an investor add a promo code before checkout in the Investment Calculator flow",
+      "Showing an applied code and its fee discount with a way to remove it"
+    ],
+    "dontUseWhen": [
+      "For generic text entry use Input",
+      "For a static discount label use Tag"
+    ],
+    "partOf": [
+      "Investment Calculator"
+    ],
+    "contains": [],
+    "keyProps": "Has Headling (boolean) · State=Added/Not-added · Direction=LTR/RTL",
+    "a11y": "The remove × needs an accessible name such as «إزالة الرمز الترويجي»; announce the discount when a code is applied.",
+    "compliance": "State the discount exactly as the offer applies (it reduces the agency fee on profit), never as a boost to the return rate.",
+    "confidence": "high"
+  },
+  "3442:5172": {
+    "name": "Distribution-schedule",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Collapsible payout schedule for the legacy calculator: a «جدول التوزيعات» header with a count and toggle that opens a list of expected distribution dates and amounts, or a single «توزيع الأرباح: نهاية المدة» line when profit is paid at maturity.",
+    "useWhen": [
+      "Showing the expected payout dates and amounts before an investor commits",
+      "Showing a single end-of-term payout with Property 1=No-Schedule",
+      "As the footer of Calculator / Results card (No-Schedule)"
+    ],
+    "dontUseWhen": [
+      "For actual paid or late distributions after investing use Payouts cell",
+      "For the Calculator v2 amount step use Calculator / Distributions accordion",
+      "For the deal lifecycle use DealTimeline"
+    ],
+    "partOf": [
+      "Investment Calculator",
+      "Calculator / Results card"
+    ],
+    "contains": [],
+    "keyProps": "Property 1=Full list/Less-list/No-Schedule · Direction=LTR/RTL",
+    "a11y": "The toggle is a button with expanded/collapsed state; read each row as date then amount.",
+    "compliance": "Dates are expected: keep the line «تحدد التواريخ الدقيقة بعد إكتمال عملية التمويل» and mark amounts as projected.",
+    "confidence": "high"
+  },
+  "3442:6812": {
+    "name": "Checkout",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Payment-method picker at the end of the invest flow: three tiles (bank transfer, payment card, Apple Pay) with one selected and a «أفضل خيار» badge; card selection reveals card number, expiry and CVV fields.",
+    "useWhen": [
+      "Choosing how to pay for an investment after the amount is set",
+      "Showing card fields only when Method=Credit-card"
+    ],
+    "dontUseWhen": [
+      "For non-payment single choice use Radio Group or SegmentedTabs",
+      "For a wallet balance deduction summary use Payment-details"
+    ],
+    "partOf": [
+      "Investment Calculator"
+    ],
+    "contains": [
+      "Input"
+    ],
+    "keyProps": "Method=ApplePay/Bank-transfer/Credit-card · Direction=LTR/RTL",
+    "a11y": "Tiles behave as a radiogroup with one checked tile; card fields need visible labels, not placeholder-only.",
+    "compliance": "Show any method fee before confirmation; the «أفضل خيار» badge must reflect a real cost or speed advantage, not a nudge.",
+    "confidence": "high"
+  },
+  "3442:6746": {
+    "name": "Investment-amount",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "The amount block of the legacy calculator: big editable riyal amount, then a breakdown of return on investment, gross profit, investment agency fee (incl. 15% VAT), optional fee discount from a promo, and net profit. Variants cover regular, qualified and read-only users.",
+    "useWhen": [
+      "Showing the profit breakdown for the amount an investor typed",
+      "Reflecting an applied promo with Promo=Adedd (discounted agency fee)",
+      "Read-only summary with User=Without-edit"
+    ],
+    "dontUseWhen": [
+      "For the Calculator v2 flow use Calculator / Amount card and Calculator / Results card",
+      "For a single label-value pair use KeyValue"
+    ],
+    "partOf": [
+      "Investment Calculator"
+    ],
+    "contains": [
+      "_ROI",
+      "_Gross-profit",
+      "_Net-profit",
+      "Calculator-list-item"
+    ],
+    "keyProps": "Has Content (boolean) · User=Regular/Qualifide/Without-edit · Promo=Not-adedd/No-PROMO/Adedd · Direction=LTR/RTL",
+    "a11y": "The edit pencil needs a label («تعديل المبلغ»); announce net profit when the amount changes.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return. The agency fee line includes 15% VAT; keep that hint.",
+    "confidence": "high"
+  },
+  "3448:7619": {
+    "name": "Payment-details",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Payment summary rows before paying: total amount, wallet balance deducted (green), and the remaining amount to pay.",
+    "useWhen": [
+      "Before checkout when part of the investment is paid from the Safqah wallet",
+      "Showing exactly what is left to pay by the chosen method"
+    ],
+    "dontUseWhen": [
+      "For profit breakdowns use Investment-amount",
+      "For generic label-value rows use KeyValue"
+    ],
+    "partOf": [
+      "Investment Calculator"
+    ],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Read rows as label then amount; the remaining total is the last, emphasised row.",
+    "compliance": "Never hide the total to pay: amount, wallet deduction and remaining amount must all be visible before confirming.",
+    "confidence": "medium"
+  },
+  "3442:5240": {
+    "name": "Investment Calculator",
+    "page": "investment-calculator",
+    "level": "organism",
+    "description": "Legacy deal-page calculator organism: expected return headline, gross/net breakdown and distribution schedule, then step 1 pick the term and annual return (closed terms marked fully funded), and step 2 set the amount on a slider (retail range 1,000 to 20,000) or by typing for qualified investors.",
+    "useWhen": [
+      "On a deal's invest flow when a retail investor models amount and term",
+      "Qualified investors with Value=Qualified-user (typed amount, no 20,000 cap)",
+      "Showing the upgrade prompt to qualified status for amounts above 20,000"
+    ],
+    "dontUseWhen": [
+      "For the newer qualified deal-page flow use Calculator / Duration picker, Calculator / Amount card and Calculator / Results card",
+      "For a full-screen keypad entry use QualifiedCalculator or Keypad / Amount input"
+    ],
+    "partOf": [],
+    "contains": [
+      "Investment-amount",
+      "Distribution-schedule",
+      "Promo-code",
+      "Checkout",
+      "Payment-details",
+      "_ROI",
+      "_Gross-profit",
+      "_Net-profit"
+    ],
+    "keyProps": "Value=1/4/20/Qualified-user · Direction=LTR/RTL",
+    "a11y": "Keep slider and amount text in sync; the slider needs a label and min/max values announced.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return. The upgrade prompt must not promise returns, only higher limits.",
+    "confidence": "high"
+  },
+  "3456:9742": {
+    "name": "Calculator-list-item",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Single label-plus-amount row used in calculator breakdowns, with optional description (for example «Incl. 15% VAT»), strike-through original amount for discounts, a green highlighted form, and an emoji badge type.",
+    "useWhen": [
+      "One line of a calculator breakdown (gross profit, agency fee, net profit)",
+      "Showing a discounted fee with the original struck through",
+      "Highlighting the key line with Color=Green"
+    ],
+    "dontUseWhen": [
+      "For generic key-value lines use KeyValue",
+      "For Calculator v2 rows use Calculator / Metric row"
+    ],
+    "partOf": [
+      "Investment-amount"
+    ],
+    "contains": [],
+    "keyProps": "Title, Description, Number, Discount value, Percentage, emoji (text) · Has Description, Has Number, Has Discount, Has Icon (boolean) · Color=Black/Green · Wight=Bold/Light · Size=Lg/Sm · Type=Default/with emoji · Direction=LTR/RTL",
+    "a11y": "Read the struck-through amount as «بدلاً من» plus the original, not as a second value.",
+    "compliance": "Green is for profit values only (total received, ROI, payout day); duration and annual rate stay neutral.",
+    "confidence": "medium"
+  },
+  "5994:5888": {
+    "name": "Calculator / Info label",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Muted metric label with a trailing info icon (for example «نسبة العائد السنوي ⓘ», «إجمالي الربح ⓘ»), used for every metric name in Calculator v2.",
+    "useWhen": [
+      "Labelling a metric in Calculator / Stat tile or Calculator / Metric row",
+      "When the metric needs a one-tap explanation"
+    ],
+    "dontUseWhen": [
+      "For field labels in forms use Form Field Label",
+      "For a free-floating explanation bubble use Tooltip"
+    ],
+    "partOf": [
+      "Calculator / Stat tile",
+      "Calculator / Metric row"
+    ],
+    "contains": [],
+    "keyProps": "Has info (boolean) · Size=Sm/Md · Direction=RTL/LTR",
+    "a11y": "The info icon needs a label naming the metric it explains and a 44 px tap target.",
+    "compliance": "Arabic labels for a % return start with «نسبة» (نسبة صافي العائد).",
+    "confidence": "high"
+  },
+  "5994:5949": {
+    "name": "Calculator / Stat tile",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Value over Info label tile, one third of the Stat strip; Tone=Success colours the value green for profit metrics such as ROI.",
+    "useWhen": [
+      "Showing duration, annual rate or net return in the Calculator / Stat strip",
+      "Tone=Success only for profit values (ROI, net return)"
+    ],
+    "dontUseWhen": [
+      "For a standalone KPI elsewhere use Stat",
+      "For a reinvest match tile use Reinvest / MatchStat"
+    ],
+    "partOf": [
+      "Calculator / Stat strip"
+    ],
+    "contains": [
+      "Calculator / Info label"
+    ],
+    "keyProps": "Tone=Default/Success · Direction=RTL/LTR",
+    "a11y": "Read value with its label; keep % in its own text node so it never flips in Arabic.",
+    "compliance": "Green is for profit values only (total received, ROI, payout day); duration and annual rate stay neutral. Arabic labels for a % return start with «نسبة» (نسبة صافي العائد).",
+    "confidence": "high"
+  },
+  "5994:5976": {
+    "name": "Calculator / Duration option",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "One term in the duration carousel: months on top with its annual rate below; Selected is large with a green rate, Available is muted, Closed shows «مكتمل».",
+    "useWhen": [
+      "Each term inside Calculator / Duration carousel",
+      "Marking a fully funded term as Closed"
+    ],
+    "dontUseWhen": [
+      "For generic single choice use Radio Group or SegmentedTabs",
+      "For the underline style use Calculator / Underline option"
+    ],
+    "partOf": [
+      "Calculator / Duration carousel"
+    ],
+    "contains": [],
+    "keyProps": "State=Selected/Available/Closed · Direction=RTL/LTR",
+    "a11y": "Closed terms are announced as closed and cannot be selected.",
+    "compliance": "The rate is an annual projected rate; do not colour it green unless it is the selected term per the v2 colour rule.",
+    "confidence": "high"
+  },
+  "5994:6001": {
+    "name": "Calculator / Swipe arrow",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "20 px chevron that steps the duration carousel to the previous or next term; Disabled at the first and last term.",
+    "useWhen": [
+      "On either side of the selected term in Calculator / Duration carousel",
+      "Disabled at the ends so the end of the list is clear"
+    ],
+    "dontUseWhen": [
+      "For page-level back navigation use BackButton",
+      "For a general icon action use IconButton"
+    ],
+    "partOf": [
+      "Calculator / Duration carousel"
+    ],
+    "contains": [],
+    "keyProps": "Point=Left/Right · State=Default/Disabled",
+    "a11y": "Give a 44 px tap target and a label (المدة السابقة / التالية); disabled arrows are not focusable.",
+    "confidence": "high"
+  },
+  "5994:6008": {
+    "name": "Calculator / Funded label",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Small «78% ممول» funded-percentage caption shown under the selected term.",
+    "useWhen": [
+      "Under the selected term in Calculator / Duration carousel",
+      "Under the green rate in Calculator / Underline carousel"
+    ],
+    "dontUseWhen": [
+      "For a visual funding bar use ProgressBar",
+      "Never use it to fake urgency; show the real funded share only"
+    ],
+    "partOf": [
+      "Calculator / Duration carousel",
+      "Calculator / Underline carousel"
+    ],
+    "contains": [],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "Read as a full phrase, «ممول بنسبة 78%».",
+    "compliance": "Funded percentage must come from live data; no rounded-up or invented urgency.",
+    "confidence": "high"
+  },
+  "5994:6041": {
+    "name": "Calculator / Disclosure toggle",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "«مؤشرات إضافية» row with a chevron that expands the extra indicators (IRR, agency fee) in the results card.",
+    "useWhen": [
+      "Expanding IRR and agency fee rows in Calculator / Results card",
+      "Any calculator card that keeps secondary indicators collapsed by default"
+    ],
+    "dontUseWhen": [
+      "For a general collapsible section use AccordionItem",
+      "For the distributions list use Calculator / Distributions header"
+    ],
+    "partOf": [
+      "Calculator / Results card"
+    ],
+    "contains": [],
+    "keyProps": "State=Closed/Open · Direction=RTL/LTR",
+    "a11y": "Button with aria-expanded; announce the revealed metrics.",
+    "confidence": "high"
+  },
+  "5994:6048": {
+    "name": "Calculator / Date tile",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Small green-tinted month plus approximate day tile («فبر ~15») marking when a distribution is expected.",
+    "useWhen": [
+      "Leading each Calculator / Installment row",
+      "Marking the approximate day of an expected distribution"
+    ],
+    "dontUseWhen": [
+      "For full date entry use Date Input",
+      "For past paid payouts use Payouts cell"
+    ],
+    "partOf": [
+      "Calculator / Installment row"
+    ],
+    "contains": [],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "Read as «حوالي 15 فبراير»; the ~ means approximate and must be spoken.",
+    "compliance": "The day is approximate until funding completes; keep the ~ marker.",
+    "confidence": "high"
+  },
+  "5996:5988": {
+    "name": "Calculator / Metric row",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Info label on one side and a money or percent value on the other; used for total profit, net profit after fees, IRR and agency fee rows.",
+    "useWhen": [
+      "Profit and fee lines in Calculator / Results card",
+      "Value=Percent for IRR, Tone=Muted for secondary rows such as the agency fee"
+    ],
+    "dontUseWhen": [
+      "For generic label-value pairs use KeyValue",
+      "For the legacy calculator use Calculator-list-item"
+    ],
+    "partOf": [
+      "Calculator / Results card"
+    ],
+    "contains": [
+      "Calculator / Info label",
+      "MoneyAmount"
+    ],
+    "keyProps": "Value=Money/Percent · Tone=Default/Muted · Direction=RTL/LTR",
+    "a11y": "Read label then value with currency or percent.",
+    "compliance": "Agency fee is 1% of profit, never of capital; label it «رسوم الوكالة (1% من الربح)».",
+    "confidence": "high"
+  },
+  "5996:6083": {
+    "name": "Calculator / Stat strip",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Bordered strip of three Stat tiles split by vertical dividers: duration, annual rate and net return (ROI, green).",
+    "useWhen": [
+      "Headline metrics row in Calculator / Results card",
+      "Showing duration, annual rate and net return together for one term"
+    ],
+    "dontUseWhen": [
+      "For a dashboard KPI row use Chart / KPI strip or Stat",
+      "For reinvest comparisons use Reinvest / RecommendationCard"
+    ],
+    "partOf": [
+      "Calculator / Results card"
+    ],
+    "contains": [
+      "Calculator / Stat tile",
+      "Divider"
+    ],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "Expose as a list of three metrics in reading order.",
+    "compliance": "Green is for profit values only (total received, ROI, payout day); duration and annual rate stay neutral. Arabic labels for a % return start with «نسبة» (نسبة صافي العائد).",
+    "confidence": "high"
+  },
+  "5996:6300": {
+    "name": "Calculator / Duration carousel",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Swipeable row of Duration options with swipe arrows around the selected term, plus the funded caption and «اسحب لتغيير المدة» hint.",
+    "useWhen": [
+      "Step 1 of Calculator v2, picking the term and its annual rate",
+      "Position First/Last to disable the matching arrow"
+    ],
+    "dontUseWhen": [
+      "Inside a full step use Calculator / Duration picker",
+      "For few fixed options use SegmentedTabs"
+    ],
+    "partOf": [
+      "Calculator / Duration picker"
+    ],
+    "contains": [
+      "Calculator / Duration option",
+      "Calculator / Swipe arrow",
+      "Calculator / Funded label"
+    ],
+    "keyProps": "Position=First/Middle/Last · Direction=RTL/LTR",
+    "a11y": "Must work without swiping (arrows); announce the new rate when the term changes.",
+    "confidence": "high"
+  },
+  "5996:6364": {
+    "name": "Calculator / Amount display",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Large typed riyal amount with an IconButton that opens the amount keypad.",
+    "useWhen": [
+      "Top of Calculator / Amount card showing the chosen ticket",
+      "When tapping the amount should open the amount keypad"
+    ],
+    "dontUseWhen": [
+      "For direct keyboard entry use Input Amount",
+      "For the full-screen keypad use Keypad / Amount hero"
+    ],
+    "partOf": [
+      "Calculator / Amount card"
+    ],
+    "contains": [
+      "MoneyAmount",
+      "IconButton"
+    ],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "The button needs a label such as «تعديل المبلغ».",
+    "confidence": "high"
+  },
+  "5996:6441": {
+    "name": "Calculator / Installment row",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "One expected distribution: date tile, «توزيع أرباح» or «التوزيع الأخير + رأس المال», payout index and year, and the amount.",
+    "useWhen": [
+      "Each expected payout inside Calculator / Distributions accordion",
+      "Type=Final for the last payout that returns capital plus profit"
+    ],
+    "dontUseWhen": [
+      "For actual paid/late payouts after investing use Payouts cell",
+      "For lifecycle milestones use DealTimeline"
+    ],
+    "partOf": [
+      "Calculator / Distributions accordion"
+    ],
+    "contains": [
+      "Calculator / Date tile",
+      "MoneyAmount"
+    ],
+    "keyProps": "Type=Profit/Final · Direction=RTL/LTR",
+    "a11y": "Read as one item: date, title, payout N of M, amount.",
+    "compliance": "Amounts and dates are projections until funding completes.",
+    "confidence": "high"
+  },
+  "5996:6558": {
+    "name": "Calculator / Distributions header",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Calendar icon, distribution count («4 توزيعات») with subtitle, total distributed amount and a chevron.",
+    "useWhen": [
+      "Collapsed summary of the payout plan in Calculator / Amount card",
+      "Showing distribution count and total before the list is opened"
+    ],
+    "dontUseWhen": [
+      "For the legacy calculator use Distribution-schedule",
+      "For a generic disclosure use AccordionItem"
+    ],
+    "partOf": [
+      "Calculator / Distributions accordion"
+    ],
+    "contains": [
+      "MoneyAmount"
+    ],
+    "keyProps": "State=Closed/Open · Direction=RTL/LTR",
+    "a11y": "Button with aria-expanded and the count plus total in its name.",
+    "compliance": "Total shown is expected profit distributions, not guaranteed.",
+    "confidence": "high"
+  },
+  "5996:6893": {
+    "name": "Calculator / Distributions accordion",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Distributions header that opens a stack of Installment rows showing the expected payout plan.",
+    "useWhen": [
+      "Showing the expected payout plan under the amount in Calculator v2",
+      "Letting the investor open payout dates only on demand"
+    ],
+    "dontUseWhen": [
+      "For actual payouts history use Payouts cell",
+      "For generic FAQ-style disclosure use Accordion"
+    ],
+    "partOf": [
+      "Calculator / Amount card"
+    ],
+    "contains": [
+      "Calculator / Distributions header",
+      "Calculator / Installment row"
+    ],
+    "keyProps": "State=Closed/Open · Direction=RTL/LTR",
+    "a11y": "Opening moves focus to the first installment or announces the count.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "high"
+  },
+  "5998:6718": {
+    "name": "Calculator / Duration picker",
+    "page": "investment-calculator",
+    "level": "organism",
+    "description": "Step 1 organism of Calculator v2: title «1. اختر العائد والمدة المناسبة لاستثمارك» over the Duration carousel.",
+    "useWhen": [
+      "Deal page, qualified investor choosing term and annual rate",
+      "Position=First/Middle/Last to reflect where the selected term sits"
+    ],
+    "dontUseWhen": [
+      "For retail slider flow use Investment Calculator",
+      "For the underline style use Calculator / Duration picker · Underline"
+    ],
+    "partOf": [],
+    "contains": [
+      "Calculator / Duration carousel"
+    ],
+    "keyProps": "Position=First/Middle/Last · Direction=RTL/LTR",
+    "a11y": "Arrow buttons and swipe both work; announce rate and total on change.",
+    "compliance": "Closed terms stay visible but disabled; no urgency copy unless backed by data.",
+    "confidence": "high"
+  },
+  "5998:7155": {
+    "name": "Calculator / Amount card",
+    "page": "investment-calculator",
+    "level": "organism",
+    "description": "Step 2 organism of Calculator v2: amount display with keypad button, divider, and the distributions accordion.",
+    "useWhen": [
+      "Step 2 of Calculator v2: setting the ticket on the deal page",
+      "Previewing the payout plan with Distributions=Open"
+    ],
+    "dontUseWhen": [
+      "For typed entry with rule validation use Keypad / Amount input",
+      "For the legacy calculator use Investment-amount"
+    ],
+    "partOf": [],
+    "contains": [
+      "Calculator / Amount display",
+      "Calculator / Distributions accordion",
+      "Divider"
+    ],
+    "keyProps": "Distributions=Closed/Open · Direction=RTL/LTR",
+    "a11y": "Amount and accordion are separate focus stops.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "high"
+  },
+  "5998:7821": {
+    "name": "Calculator / Results card",
+    "page": "investment-calculator",
+    "level": "organism",
+    "description": "Step 3 organism of Calculator v2, «ناتج الاستثمار المتوقع»: what you receive after fees (large green amount), the stat strip, total and net profit rows, expandable indicators (IRR, agency fee) and the payout footer.",
+    "useWhen": [
+      "Showing what a qualified investor receives after fees for the chosen term and amount",
+      "Indicators=Open to show IRR and the 1% agency fee"
+    ],
+    "dontUseWhen": [
+      "For portfolio-level returns use ReturnsDisplay",
+      "For a recap after maturity use Reinvest / MaturityRecap"
+    ],
+    "partOf": [],
+    "contains": [
+      "Calculator / Stat strip",
+      "Calculator / Metric row",
+      "Calculator / Disclosure toggle",
+      "Distribution-schedule",
+      "MoneyAmount"
+    ],
+    "keyProps": "Indicators=Closed/Open · Direction=RTL/LTR",
+    "a11y": "Announce the received total when inputs change.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return. Green is for profit values only (total received, ROI, payout day); duration and annual rate stay neutral. Example: 100,000 for 16 months at 16% = profit 21,333, fee 213, received 121,120.",
+    "confidence": "high"
+  },
+  "6102:9914": {
+    "name": "Calculator / Underline option",
+    "page": "investment-calculator",
+    "level": "atom",
+    "description": "Term label for the underline-style picker: Selected is large with a green underline, Adjacent and Far fade with distance, Closed is lightest.",
+    "useWhen": [
+      "Each term inside Calculator / Underline carousel",
+      "Showing distance from the selected term with Adjacent and Far"
+    ],
+    "dontUseWhen": [
+      "For the card style use Calculator / Duration option",
+      "For tabs use SegmentedTabs"
+    ],
+    "partOf": [
+      "Calculator / Underline carousel"
+    ],
+    "contains": [],
+    "keyProps": "State=Selected/Adjacent/Closed/Far · Direction=RTL/LTR",
+    "a11y": "Selected must be conveyed by more than the underline (announce selected).",
+    "confidence": "high"
+  },
+  "6102:10044": {
+    "name": "Calculator / Underline carousel",
+    "page": "investment-calculator",
+    "level": "molecule",
+    "description": "Underline-style term carousel: row of Underline options, green annual rate «16.00% سنوياً», funded caption and swipe hint.",
+    "useWhen": [
+      "Step 1 when the underline picker style is chosen",
+      "Position=First/Last at the ends of the term list"
+    ],
+    "dontUseWhen": [
+      "For the card style use Calculator / Duration carousel"
+    ],
+    "partOf": [
+      "Calculator / Duration picker · Underline"
+    ],
+    "contains": [
+      "Calculator / Underline option",
+      "Calculator / Funded label"
+    ],
+    "keyProps": "Position=First/Middle/Last · Direction=RTL/LTR",
+    "a11y": "Provide next/previous actions so it never depends on swiping.",
+    "confidence": "high"
+  },
+  "6102:10234": {
+    "name": "Calculator / Duration picker · Underline",
+    "page": "investment-calculator",
+    "level": "organism",
+    "description": "Step 1 organism in the underline style: step title over the Underline carousel.",
+    "useWhen": [
+      "Deal-page term selection in the underline visual style",
+      "As a drop-in replacement for Calculator / Duration picker in A/B layouts"
+    ],
+    "dontUseWhen": [
+      "For the arrow-and-card style use Calculator / Duration picker"
+    ],
+    "partOf": [],
+    "contains": [
+      "Calculator / Underline carousel"
+    ],
+    "keyProps": "Position=First/Middle/Last · Direction=RTL/LTR",
+    "a11y": "Same as Duration picker: announce new term and rate.",
+    "confidence": "high"
+  },
+  "3448:7623": {
+    "name": "Numbers",
+    "page": "reservation-timer",
+    "level": "atom",
+    "description": "Flip-digit two-digit atom (00 to 59) used inside each Timer unit of the reservation countdown.",
+    "useWhen": [
+      "Digits inside Timer for days, hours, minutes or seconds",
+      "Any flip-digit countdown that needs a value from 00 to 59"
+    ],
+    "dontUseWhen": [
+      "For a compact MM:SS readout use Small-Numbers",
+      "For amounts use MoneyAmount"
+    ],
+    "partOf": [
+      "Timer"
+    ],
+    "contains": [],
+    "keyProps": "Numbers=00 to 59 (plus Numbers61)",
+    "a11y": "Do not announce every tick; the parent timer announces remaining time politely.",
+    "confidence": "high"
+  },
+  "3448:7746": {
+    "name": "Small-Numbers",
+    "page": "reservation-timer",
+    "level": "atom",
+    "description": "Compact MM:SS readout (00:00 to 01:59) tinted by urgency, used in Small Timer and Collapsed-Reservation.",
+    "useWhen": [
+      "The time inside Small Timer or the reservation banner",
+      "Color=Yellow as time runs low"
+    ],
+    "dontUseWhen": [
+      "For the large unit countdown use Numbers inside Timer"
+    ],
+    "partOf": [
+      "Small Timer",
+      "Collapsed-Reservation"
+    ],
+    "contains": [],
+    "keyProps": "Numbers=00:00 to 01:59 · Color=White/Green/Yellow",
+    "a11y": "Colour is never the only urgency cue; pair with the text label.",
+    "confidence": "high"
+  },
+  "3448:8465": {
+    "name": "Timer-type",
+    "page": "reservation-timer",
+    "level": "atom",
+    "description": "Unit label under the flip digits (default «دقيقة»).",
+    "useWhen": [
+      "Labelling a Timer unit (يوم، ساعة، دقيقة، ثانية)",
+      "Translating unit labels for LTR (day, hr, min, sec)"
+    ],
+    "dontUseWhen": [
+      "For other captions use text styles directly"
+    ],
+    "partOf": [
+      "Timer"
+    ],
+    "contains": [],
+    "keyProps": "Type (text)",
+    "a11y": "Expose with the number as one phrase («59 دقيقة»).",
+    "confidence": "high"
+  },
+  "3448:8467": {
+    "name": "Timer",
+    "page": "reservation-timer",
+    "level": "molecule",
+    "description": "One countdown unit: flip digits over a unit label (day, hr, min, sec).",
+    "useWhen": [
+      "Building Countdown from day, hour and minute units",
+      "Type=sec when the window is shorter and seconds matter"
+    ],
+    "dontUseWhen": [
+      "For inline compact urgency use Small Timer"
+    ],
+    "partOf": [
+      "Countdown"
+    ],
+    "contains": [
+      "Numbers",
+      "Timer-type"
+    ],
+    "keyProps": "Type=Day/hr/min/sec · Direction=LTR/RTL",
+    "a11y": "Group units into one live region on the parent.",
+    "confidence": "high"
+  },
+  "3448:8480": {
+    "name": "Small Timer",
+    "page": "reservation-timer",
+    "level": "molecule",
+    "description": "Pill chip with alarm icon, MM:SS and «Deal reservation ends in:» description; Black default, Yellow when low, Green variant.",
+    "useWhen": [
+      "Inline reservation time left on a deal card, checkout or sticky footer",
+      "Yellow as the window nears its end"
+    ],
+    "dontUseWhen": [
+      "For the large multi-unit countdown use Countdown",
+      "For status labels with no time use StatusPill"
+    ],
+    "partOf": [
+      "Collapsed-Reservation"
+    ],
+    "contains": [
+      "Small-Numbers"
+    ],
+    "keyProps": "Description (text) · Has Icon (boolean) · Property 1=Black/Yellow/Green · Direction=LTR/RTL",
+    "a11y": "Keep the readable label and icon; announce remaining time on change at minute granularity.",
+    "compliance": "Show only a real reservation window from the server expiry; never fake or reset urgency, and say what happens at 00:00.",
+    "confidence": "high"
+  },
+  "3481:3031": {
+    "name": "Countdown",
+    "page": "reservation-timer",
+    "level": "organism",
+    "description": "Multi-unit countdown (days, hours, minutes) with an optional green label such as «أولوية الاستثمار تنتهي بعد», for a priority or reservation window measured in days.",
+    "useWhen": [
+      "Deal detail showing when an investment priority or reservation window closes",
+      "Windows longer than a few minutes"
+    ],
+    "dontUseWhen": [
+      "For short MM:SS holds use Small Timer",
+      "For a sticky collapsed bar use Collapsed-Reservation"
+    ],
+    "partOf": [],
+    "contains": [
+      "Timer"
+    ],
+    "keyProps": "Has Lable (boolean) · Direction=RTL/LTR",
+    "a11y": "Use a polite live region; read as «تنتهي بعد يومين و59 ساعة».",
+    "compliance": "Show only a real reservation window from the server expiry; never fake or reset urgency, and say what happens at 00:00.",
+    "confidence": "high"
+  },
+  "3448:8514": {
+    "name": "Collapsed-Reservation",
+    "page": "reservation-timer",
+    "level": "organism",
+    "description": "Sticky collapsed reservation bar: headline and description with a Small Timer pill and expand chevron; one tone is brand green, the other orange for urgency, and it can represent several reserved deals.",
+    "useWhen": [
+      "Keeping an active hold visible while the investor browses",
+      "Has Multi-deals when more than one deal is reserved"
+    ],
+    "dontUseWhen": [
+      "For inline time only use Small Timer",
+      "For general announcements use Banner"
+    ],
+    "partOf": [],
+    "contains": [
+      "Small Timer",
+      "Small-Numbers"
+    ],
+    "keyProps": "Headline, Description (text, the prop name has a trailing space) · Has Multi-deals (boolean, trailing space in name) · Property 1=Default/Variant2 · Direction=LTR/RTL",
+    "a11y": "Expand chevron is a button with aria-expanded; announce release at 00:00 with a next step.",
+    "compliance": "Show only a real reservation window from the server expiry; never fake or reset urgency, and say what happens at 00:00.",
+    "confidence": "medium"
+  },
+  "3481:3102": {
+    "name": "Reservation-Calculater",
+    "page": "reservation-timer",
+    "level": "organism",
+    "description": "Reservation summary: «عائد الاستثمار 12%» expected return amount, investment amount with a «عرض تفاصيل حاسبة الاستثمار» link, and wallet balance row.",
+    "useWhen": [
+      "Summarising a held reservation before payment",
+      "Linking back to the full calculator details"
+    ],
+    "dontUseWhen": [
+      "For the full calculator use Investment Calculator",
+      "For payment remaining use Payment-details"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "The link needs a clear name; read return as expected.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "medium"
+  },
+  "3618:122684": {
+    "name": "Payouts cell",
+    "page": "payouts-list",
+    "level": "molecule",
+    "description": "One distribution row in a payouts list: amount and date, project name and distribution type with status suffix, and a state icon; ten states cover upcoming, received, early paid, skipped, late, defaulted and partial repayments.",
+    "useWhen": [
+      "Payouts list, deal page or wallet rows grouped by year with running totals",
+      "Late and Defaulted distributions with day counts",
+      "Partial repayments as nested accordions; Disabled Early paid with an explanatory Alert"
+    ],
+    "dontUseWhen": [
+      "For the deal lifecycle use DealTimeline",
+      "For expected pre-investment payouts use Calculator / Installment row or Distribution-schedule",
+      "Never wrap each row in its own card; stack rows with dividers"
+    ],
+    "partOf": [],
+    "contains": [
+      "Alert"
+    ],
+    "keyProps": "Show Subtitle, Show alert (boolean) · Property 1=Upcoming/Done - Captial/Done - Payout/Early paid/Disabled Early paid/Late/Defaulted/Partially repaid/Partially repaid closed/Partial principal · Direction=rtl/ltr",
+    "a11y": "State is icon plus text suffix plus colour, never colour alone; accordions expose expanded state.",
+    "compliance": "Show defaulted and late honestly (text/error for Defaulted only); keep skipped rows visible and explain early repayment profit was settled.",
+    "confidence": "high"
+  },
+  "4235:1681": {
+    "name": "BalanceToggle",
+    "page": "portfolio-header",
+    "level": "atom",
+    "description": "32 px circular eye button that shows or masks the wallet balance.",
+    "useWhen": [
+      "Inside UserGreeting to hide or show balances",
+      "Wherever wallet or portfolio amounts need a privacy toggle"
+    ],
+    "dontUseWhen": [
+      "For password reveal use Input's own affordance",
+      "For general icon actions use IconButton"
+    ],
+    "partOf": [
+      "UserGreeting"
+    ],
+    "contains": [],
+    "keyProps": "State=Show/Hide",
+    "a11y": "Label switches between «إظهار الرصيد» and «إخفاء الرصيد»; toggle button with pressed state.",
+    "confidence": "high"
+  },
+  "4240:1642": {
+    "name": "MoneyAmount",
+    "page": "portfolio-header",
+    "level": "atom",
+    "description": "Number plus Saudi riyal symbol atom; the symbol trails in LTR and leads in RTL. Reused across the whole product for every riyal amount.",
+    "useWhen": [
+      "Any SAR amount: balances, profits, payout totals",
+      "Size=lg Tone=brand for headline received or returns amounts"
+    ],
+    "dontUseWhen": [
+      "Never write the word ريال beside a number; use this",
+      "For percentages use plain text styles or Calculator / Stat tile"
+    ],
+    "partOf": [
+      "WalletChip",
+      "ReturnsDisplay",
+      "Calculator / Metric row",
+      "Calculator / Amount display",
+      "Reinvest / MaturityRecap",
+      "Keypad / Amount hero"
+    ],
+    "contains": [],
+    "keyProps": "Amount (text) · Size=sm/lg · Tone=default/brand/muted · Direction=LTR/RTL",
+    "a11y": "Expose as «5,000 ريال سعودي» for screen readers; Western digits.",
+    "compliance": "Tone=brand (green) only for profit or money received.",
+    "confidence": "high"
+  },
+  "4241:1280": {
+    "name": "UserGreeting",
+    "page": "portfolio-header",
+    "level": "molecule",
+    "description": "Qualified-investor badge, «Hello Abrar» greeting and BalanceToggle in one row.",
+    "useWhen": [
+      "Top row of PortfolioHeader",
+      "Greeting a qualified investor with Show qualified badge on"
+    ],
+    "dontUseWhen": [
+      "For profile chips use Avatar"
+    ],
+    "partOf": [
+      "PortfolioHeader"
+    ],
+    "contains": [
+      "BalanceToggle"
+    ],
+    "keyProps": "Name (text) · Show qualified badge, Show eye (boolean) · Direction=LTR/RTL",
+    "a11y": "Badge needs a label («مستثمر مؤهل»).",
+    "confidence": "high"
+  },
+  "4241:1317": {
+    "name": "WalletChip",
+    "page": "portfolio-header",
+    "level": "molecule",
+    "description": "Green «Wallet» label with icon over a chip showing the wallet balance.",
+    "useWhen": [
+      "Top row of PortfolioHeader",
+      "Wallet balance in Keypad / Title row"
+    ],
+    "dontUseWhen": [
+      "For a generic stat use Stat"
+    ],
+    "partOf": [
+      "PortfolioHeader",
+      "Keypad / Title row"
+    ],
+    "contains": [
+      "MoneyAmount"
+    ],
+    "keyProps": "Wallet label (text) · Direction=LTR/RTL",
+    "a11y": "When masked, announce «الرصيد مخفي», never the dots.",
+    "confidence": "high"
+  },
+  "4241:1368": {
+    "name": "ReturnsDisplay",
+    "page": "portfolio-header",
+    "level": "molecule",
+    "description": "«Total returns and expected profit» label with large green amount and, opposite, amount invested.",
+    "useWhen": [
+      "Portfolio summary of total returns and expected profit vs amount invested",
+      "Show invested off when only the returns figure is needed"
+    ],
+    "dontUseWhen": [
+      "For a single deal's results use Calculator / Results card",
+      "For a lone KPI use Stat"
+    ],
+    "partOf": [
+      "PortfolioHeader"
+    ],
+    "contains": [
+      "MoneyAmount"
+    ],
+    "keyProps": "Returns label, Invested label (text) · Show invested (boolean) · Direction=LTR/RTL",
+    "a11y": "Read label with amount.",
+    "compliance": "Label must say it includes expected profit; do not present expected profit as realised.",
+    "confidence": "high"
+  },
+  "4243:1823": {
+    "name": "PortfolioHeader",
+    "page": "portfolio-header",
+    "level": "organism",
+    "description": "Top of the Portfolio page: greeting, maskable wallet balance, total returns and expected profit vs amount invested, and a «View payouts list» button.",
+    "useWhen": [
+      "Once, at the top of Portfolio",
+      "Balance=Masked when the user hides balances"
+    ],
+    "dontUseWhen": [
+      "For a stat elsewhere use Stat or KeyValue",
+      "For deal heroes use Base card"
+    ],
+    "partOf": [],
+    "contains": [
+      "UserGreeting",
+      "WalletChip",
+      "ReturnsDisplay",
+      "Button"
+    ],
+    "keyProps": "Show wallet, Show returns, Show payouts table (boolean) · Direction=LTR/RTL · Balance=Shown/Masked",
+    "a11y": "Logical reading order: greeting, wallet, returns, button.",
+    "compliance": "Returns include expected profit; label it so.",
+    "confidence": "high"
+  },
+  "3488:48634": {
+    "name": "Goal-Card",
+    "page": "goal-tracker",
+    "level": "organism",
+    "description": "Legacy investment-goal card (unpublished) with ROI, currency and progress message texts: covers no-goal CTA with map illustration, goal start, outline variants and in-progress plan states in Arabic and English.",
+    "useWhen": [
+      "Reproducing legacy goal screens that need editable ROI or message text",
+      "Reference when migrating to GoalActivate / GoalTracker"
+    ],
+    "dontUseWhen": [
+      "For new work use GoalActivate before a goal exists and GoalTracker after"
+    ],
+    "partOf": [],
+    "contains": [
+      "GoalChart"
+    ],
+    "keyProps": "RIO, Currency, Message (text) · Show CTA (boolean) · State=No-goal/Property 210/Property 211/Property 212/Goal start outline/No-goal - outline/Goal start · Language=Arabic/English",
+    "a11y": "CTA button needs a clear label (حدد هدفك). Status wip with no doc page; prefer GoalActivate and GoalTracker (07b CardGoal).",
+    "compliance": "Projected plan lines are illustrative; never promise reaching the goal.",
+    "confidence": "medium"
+  },
+  "3488:49761": {
+    "name": "Goal card",
+    "page": "goal-tracker",
+    "level": "organism",
+    "description": "Legacy goal card with three phases: Begining (map illustration with «حدد هدفك الاستثماري» CTA), Started (investment plan chart, period chips and target), Static.",
+    "useWhen": [
+      "Legacy goal entry (Begining) and plan (Started) cards",
+      "Mapping legacy phases onto GoalActivate"
+    ],
+    "dontUseWhen": [
+      "Use GoalActivate (its phases mirror this Property 1) and GoalTracker"
+    ],
+    "partOf": [],
+    "contains": [
+      "GoalChart"
+    ],
+    "keyProps": "Property 1=Begining/Started/Static · Language=Arabic/English",
+    "a11y": "Status wip with no doc page; prefer GoalActivate and GoalTracker (07b CardGoal).",
+    "compliance": "Show the comparison with and without investment as projected.",
+    "confidence": "medium"
+  },
+  "3519:2731": {
+    "name": "GoalCard",
+    "page": "goal-tracker",
+    "level": "organism",
+    "description": "Published copy of the legacy Goal-Card state set (no-goal, goal start, outline, plan states) without editable text props.",
+    "useWhen": [
+      "Legacy screens that already instance it",
+      "Reference for goal states during migration"
+    ],
+    "dontUseWhen": [
+      "For new screens use GoalActivate / GoalTracker"
+    ],
+    "partOf": [],
+    "contains": [
+      "GoalChart"
+    ],
+    "keyProps": "State=Property 210/No-goal/Property 211/Property 212/Goal start/No-goal - outline/Goal start outline · Language=English/Arabic",
+    "a11y": "Status wip with no doc page; prefer GoalActivate and GoalTracker (07b CardGoal).",
+    "compliance": "Projections must be labelled as such.",
+    "confidence": "medium"
+  },
+  "3521:3470": {
+    "name": "GoalChart",
+    "page": "goal-tracker",
+    "level": "molecule",
+    "description": "Stepped area chart comparing growth with Safqah investment (green) against without investment (grey) over months.",
+    "useWhen": [
+      "Inside GoalPlan or Goal card Started",
+      "Showing with and without investment growth paths side by side"
+    ],
+    "dontUseWhen": [
+      "For general charts use Chart / Area or Chart / Line"
+    ],
+    "partOf": [
+      "GoalPlan",
+      "Goal card",
+      "Goal-Card",
+      "GoalCard"
+    ],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Provide a text summary of the two end values; chart is otherwise decorative.",
+    "compliance": "Illustrative projection only.",
+    "confidence": "medium"
+  },
+  "3569:2394": {
+    "name": "GoalPlan",
+    "page": "goal-tracker",
+    "level": "organism",
+    "description": "Legacy «خطتك الاستثمارية» plan card: chart, period selector (3M to 5Y), with and without investment legend, goal amount and progress chip, and target details link; also begining and static states.",
+    "useWhen": [
+      "Legacy goal plan screens with period chips",
+      "Reference for the plan layout when extending GoalTracker"
+    ],
+    "dontUseWhen": [
+      "For new work use GoalTracker"
+    ],
+    "partOf": [],
+    "contains": [
+      "GoalChart"
+    ],
+    "keyProps": "Property 1=Started/Begining/Static · Language=English/Arabic",
+    "a11y": "Period chips act as a radiogroup. Status wip with no doc page; prefer GoalActivate and GoalTracker (07b CardGoal).",
+    "compliance": "Projected values; no guarantees.",
+    "confidence": "medium"
+  },
+  "3663:2618": {
+    "name": "DealTimeline",
+    "page": "deal-timeline",
+    "level": "organism",
+    "description": "Vertical deal lifecycle: funded, started, first distribution, settlement in progress, next distribution, final repayment plus profit; amounts only on money moments and exactly one active stage.",
+    "useWhen": [
+      "Deal page or investment detail showing where the deal is",
+      "Money moments with amounts and expected dates"
+    ],
+    "dontUseWhen": [
+      "For paid/late status of individual payouts use Payouts cell or StatusPill",
+      "For process steps the user completes use Stepper"
+    ],
+    "partOf": [],
+    "contains": [
+      "TimelineRow",
+      "TimelineNode"
+    ],
+    "keyProps": "Direction=LTR/RTL (stages fed by instance-swapped TimelineNode states)",
+    "a11y": "Ordered list; announce completed/active/upcoming state per stage.",
+    "compliance": "Future stages show «متوقع»; never present expected dates or amounts as confirmed.",
+    "confidence": "high"
+  },
+  "3673:2408": {
+    "name": "ComplianceBadge",
+    "page": "sharia-cma-disclosure",
+    "level": "atom",
+    "description": "Official seal with label and learn-more arrow: Shariah «متوافق مع الشريعة الإسلامية» or CMA «مصرحة من هيئة السوق المالية».",
+    "useWhen": [
+      "Calculator or pre-checkout summaries needing a compact compliance mark",
+      "Type=CMA to show the Capital Market Authority licence",
+      "Type=Shariah to show Sharia committee approval"
+    ],
+    "dontUseWhen": [
+      "On deal pages prefer ShariaDisclosure banner",
+      "Never as decoration or for a product not actually approved"
+    ],
+    "partOf": [
+      "ShariaDisclosure"
+    ],
+    "contains": [],
+    "keyProps": "Type=CMA/Shariah · Direction=RTL/LTR",
+    "a11y": "Seal image needs alt text naming the authority; link names the target document.",
+    "compliance": "Legal claim: exact wording from Legal/Sharia, and «إعرف أكثر» must open the real licence or fatwa.",
+    "confidence": "high"
+  },
+  "3681:2658": {
+    "name": "ShariaDisclosure",
+    "page": "sharia-cma-disclosure",
+    "level": "molecule",
+    "description": "Brand-green banner stating «جميع الصفقات المطروحة معتمدة من اللجنة الشرعية» with seal and learn-more.",
+    "useWhen": [
+      "Deal pages and deal listings where investment decisions happen",
+      "Onboarding or about screens that state Sharia approval"
+    ],
+    "dontUseWhen": [
+      "For compact contexts use ComplianceBadge",
+      "For generic info use Banner"
+    ],
+    "partOf": [],
+    "contains": [
+      "ComplianceBadge"
+    ],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "Whole banner is one link with a descriptive name.",
+    "compliance": "Must link to the real Sharia board approval; never reword loosely.",
+    "confidence": "high"
+  },
+  "3719:232568": {
+    "name": "ProvinceSelector",
+    "page": "province-selector",
+    "level": "organism",
+    "description": "Titled group of wrapping RegionChips for the investor's preferred Saudi region (Western, Eastern, Northern, Southern, Central); single select by default.",
+    "useWhen": [
+      "Goal setup or preferences: which region to invest in",
+      "Selection=Multi when several regions apply"
+    ],
+    "dontUseWhen": [
+      "Beyond about 8 options use Select",
+      "For static labels use Tag"
+    ],
+    "partOf": [],
+    "contains": [
+      "RegionChip"
+    ],
+    "keyProps": "Selection=Single/Multi · Direction=RTL/LTR",
+    "a11y": "Single = radiogroup, Multi = toggle buttons; label the group.",
+    "confidence": "high"
+  },
+  "3718:190": {
+    "name": "RegionChip",
+    "page": "province-selector",
+    "level": "atom",
+    "description": "44 px selectable chip; Selected is brand-filled with inverse text, Default is outlined.",
+    "useWhen": [
+      "Options in ProvinceSelector",
+      "Any short single or multi choice-chip pattern (up to about 8 options)"
+    ],
+    "dontUseWhen": [
+      "For non-interactive labels use Tag",
+      "For list selection use SelectRow"
+    ],
+    "partOf": [
+      "ProvinceSelector"
+    ],
+    "contains": [],
+    "keyProps": "Label (text) · State=Selected/Default · Direction=RTL/LTR",
+    "a11y": "Expose checked/pressed state, not only colour.",
+    "confidence": "high"
+  },
+  "3756:260": {
+    "name": "RatingScale",
+    "page": "rating-scale",
+    "level": "organism",
+    "description": "0 to 10 NPS question with zone-tinted cells and min/max anchors («غير محتمل إطلاقاً» / «محتمل جداً»).",
+    "useWhen": [
+      "Asking how likely the investor is to recommend Safqah",
+      "Post-investment or post-payout feedback"
+    ],
+    "dontUseWhen": [
+      "For star ratings or satisfaction scales outside NPS, this is the wrong component",
+      "For single choice text options use Radio Group"
+    ],
+    "partOf": [],
+    "contains": [
+      "RatingCell"
+    ],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "Radiogroup with one selection; anchors linked as descriptions.",
+    "confidence": "high"
+  },
+  "3755:216": {
+    "name": "RatingCell",
+    "page": "rating-scale",
+    "level": "atom",
+    "description": "One tappable NPS value tinted by zone: Detractor 0 to 6 red, Passive 7 to 8 warning, Promoter 9 to 10 green; Selected adds a border.",
+    "useWhen": [
+      "Each 0 to 10 value inside RatingScale",
+      "Selected state to confirm the chosen score"
+    ],
+    "dontUseWhen": [
+      "For generic toggles use RegionChip"
+    ],
+    "partOf": [
+      "RatingScale"
+    ],
+    "contains": [],
+    "keyProps": "Value (text) · Tone=Detractor/Passive/Promoter · State=Default/Selected",
+    "a11y": "Radio role; number is the accessible name.",
+    "confidence": "high"
+  },
+  "3023:39526": {
+    "name": "dealTags",
+    "page": "tier-badge",
+    "level": "atom",
+    "description": "Deal image overlay pill (Deal_Tags, the TierBadge): guarantee tier «مضمونة برهن», qualified-only «فرصة حصرية للمؤهلين», ROI plus tenor, and «مغلقة بنجاح» closed status.",
+    "useWhen": [
+      "On CardDeal and Base card deal images, one or two per deal",
+      "Type=pros on light surfaces"
+    ],
+    "dontUseWhen": [
+      "For deal status in lists use StatusPill",
+      "For neutral labels use Tag"
+    ],
+    "partOf": [
+      "CardDeal",
+      "Base card"
+    ],
+    "contains": [],
+    "keyProps": "Type=Premium/RIO/White/RIO/Black/Closed/Basic/pros/Type7/Type8/ClosedWhite",
+    "a11y": "Overlay variants need a dark image behind white text for contrast.",
+    "compliance": "Guarantee and ROI tags are claims: show only when the deal's offering documents back them; ROI is projected.",
+    "confidence": "high"
+  },
+  "3786:470": {
+    "name": "KYCTaskRow",
+    "page": "kyc-step",
+    "level": "molecule",
+    "description": "One verification task: step indicator, task name with hint, and StatusPill (Verified, Action needed, Waiting).",
+    "useWhen": [
+      "Rows of KYCChecklist",
+      "State=Current for the task blocking the investor"
+    ],
+    "dontUseWhen": [
+      "For generic list rows use ListItem"
+    ],
+    "partOf": [
+      "KYCChecklist"
+    ],
+    "contains": [
+      "StepIndicator",
+      "Content",
+      "StatusPill"
+    ],
+    "keyProps": "State=Completed/Current/Upcoming · Direction=LTR/RTL",
+    "a11y": "Status is text in the pill, not only colour.",
+    "confidence": "high"
+  },
+  "3796:551": {
+    "name": "KYCChecklist",
+    "page": "kyc-step",
+    "level": "organism",
+    "description": "Verification hub «أكمل توثيق حسابك» with progress line and a KYCTaskRow per requirement (ID via Nafath, documents, bank account, final review).",
+    "useWhen": [
+      "Verification hub showing done vs remaining KYC tasks",
+      "Surfacing the blocking task (Action needed) so users jump straight to it"
+    ],
+    "dontUseWhen": [
+      "For a single step screen use KYCStep"
+    ],
+    "partOf": [],
+    "contains": [
+      "KYCTaskRow"
+    ],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "List semantics; blocking rows reachable first.",
+    "compliance": "Explain why bank name must match ID (payouts are held otherwise).",
+    "confidence": "high"
+  },
+  "3789:363": {
+    "name": "KYCStep",
+    "page": "kyc-step",
+    "level": "organism",
+    "description": "One KYC screen: Stepper (Identity, Documents, Bank, Review), section title, the step input (IBAN), inline name-match Alert, Back and Continue.",
+    "useWhen": [
+      "Each step of KYC onboarding",
+      "Bank step with IBAN name-match warning before submit"
+    ],
+    "dontUseWhen": [
+      "For the overview use KYCChecklist"
+    ],
+    "partOf": [],
+    "contains": [
+      "Stepper",
+      "Section",
+      "Input",
+      "Alert",
+      "Button"
+    ],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Stepper exposes current step; Alert announced before submit.",
+    "compliance": "KYC is a regulatory requirement; explain data use plainly.",
+    "confidence": "high"
+  },
+  "3809:377": {
+    "name": "AbshirLogo",
+    "page": "abshir-logo",
+    "level": "atom",
+    "description": "Vector Absher mark (2:3, mark only) to signal Absher/Nafath identity verification.",
+    "useWhen": [
+      "Verify identity via Absher/Nafath buttons or steps",
+      "Tone=Inverse on dark surfaces or photography"
+    ],
+    "dontUseWhen": [
+      "Never as a generic verified or lock icon; use a Syntropy icon"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=16/24/32/48/64 · Tone=Brand/Mono/Inverse",
+    "a11y": "Alt text «أبشر»; decorative when next to the text name.",
+    "confidence": "high"
+  },
+  "3822:332": {
+    "name": "MadaLogo",
+    "page": "mada-logo",
+    "level": "atom",
+    "description": "Official mada bilingual lockup for card payments.",
+    "useWhen": [
+      "Checkout card options where mada is accepted",
+      "Payment method lists that name mada as the rail"
+    ],
+    "dontUseWhen": [
+      "Never as decoration or for other rails (Apple Pay, bank transfer)"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Size=16/24/32/48/64 · Tone=Brand/Mono/Inverse",
+    "a11y": "Alt text «مدى»; prefer 24 px or larger.",
+    "confidence": "high"
+  },
+  "3831:301": {
+    "name": "SafqahLogo",
+    "page": "safqah-logo",
+    "level": "atom",
+    "description": "Safqah master brand mark, stacked Main or inline Variant, in seven brand colours.",
+    "useWhen": [
+      "Splash, headers and marketing (Form=Main)",
+      "App bars, footers and email signatures (Form=Variant)"
+    ],
+    "dontUseWhen": [
+      "For loading states use SpinnerSafqahBrand",
+      "Never recolour outside the seven Color values"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Form=Main/Variant · Color=Black/White/Dark/Offwhite/PigmentGreen/RoyalGreen/Yellow",
+    "a11y": "Alt text «صفقة المالية».",
+    "confidence": "high"
+  },
+  "3839:2274": {
+    "name": "QualifiedCalculator Header",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Result header above the keypad: projected total with +% delta, net profit, duration and annual rate line, and the typed investment amount; wallet types show balance and annual top-up cap.",
+    "useWhen": [
+      "Top of QualifiedCalculator",
+      "Type=wallet for wallet top-up/withdraw"
+    ],
+    "dontUseWhen": [
+      "Never alone without an input; use QualifiedCalculator"
+    ],
+    "partOf": [
+      "QualifiedCalculator"
+    ],
+    "contains": [
+      "ProgressBar",
+      "Button"
+    ],
+    "keyProps": "Has Icon, Has fee, Has button (boolean) · Value=10K/300K/400K/2M/regular user/qualified users/transaction · Type=wallet/Investment-cal",
+    "a11y": "Announce updated projection while typing (polite).",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "medium"
+  },
+  "3839:2910": {
+    "name": "QualifiedCalculator",
+    "page": "qualified-calculator",
+    "level": "organism",
+    "description": "Full-screen qualified investor calculator: result header pinned over a numeric keypad, plus Wallet mode with remaining annual cap and quick-amount chips.",
+    "useWhen": [
+      "Qualified investors entering large tickets",
+      "Value=Wallet for top-up within the annual cap"
+    ],
+    "dontUseWhen": [
+      "For the newer keypad flow use Keypad / Amount input",
+      "For retail use Investment Calculator"
+    ],
+    "partOf": [],
+    "contains": [
+      "QualifiedCalculator Header",
+      "Alert",
+      "Button"
+    ],
+    "keyProps": "Has Alert (boolean) · Value=10K/300K/400K/2M/Wallet",
+    "a11y": "Keypad keys need labels (حذف); header in a live region.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "high"
+  },
+  "5548:94341": {
+    "name": "Sheet Content / Amount keypad",
+    "page": "qualified-calculator",
+    "level": "organism",
+    "description": "BottomSheet content slot with amount hero and the product keypad, used in qualified calculator flow J.",
+    "useWhen": [
+      "Amount entry inside a BottomSheet (qualified calculator flow J)",
+      "When the deal page must stay visible behind the keypad"
+    ],
+    "dontUseWhen": [
+      "For a full-screen entry use Keypad / Amount input"
+    ],
+    "partOf": [
+      "BottomSheet"
+    ],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Focus moves into the sheet.",
+    "compliance": "Amounts in multiples of 1,000 up to 500,000 per payment; explain every rejection and show the wallet shortfall while typing, not at checkout.",
+    "confidence": "medium"
+  },
+  "6035:901": {
+    "name": "Keypad / Hint",
+    "page": "qualified-calculator",
+    "level": "atom",
+    "description": "Single-line rule hint under the amount: Muted «بمضاعفات 1,000 · حتى 500,000» or Warning when the amount breaks a rule.",
+    "useWhen": [
+      "Under Keypad / Amount hero to state the amount rule",
+      "Tone=Warning when the amount is not a multiple of 1,000 or above a limit"
+    ],
+    "dontUseWhen": [
+      "Form field helpers use Input Helper Text"
+    ],
+    "partOf": [
+      "Keypad / Amount hero"
+    ],
+    "contains": [],
+    "keyProps": "Tone=Muted/Warning · Direction=RTL/LTR",
+    "a11y": "Announce when tone changes; warning text always explains.",
+    "compliance": "Amounts in multiples of 1,000 up to 500,000 per payment; explain every rejection and show the wallet shortfall while typing, not at checkout.",
+    "confidence": "high"
+  },
+  "6035:976": {
+    "name": "Keypad / Title row",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "«مبلغ الاستثمار» title with WalletChip balance on the opposite side.",
+    "useWhen": [
+      "Top of Keypad / Amount hero",
+      "Showing the wallet balance beside the amount title"
+    ],
+    "dontUseWhen": [
+      "For generic section titles use Section"
+    ],
+    "partOf": [
+      "Keypad / Amount hero"
+    ],
+    "contains": [
+      "WalletChip"
+    ],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "Title is a heading; wallet balance read with its label.",
+    "confidence": "high"
+  },
+  "6035:1065": {
+    "name": "Keypad / Summary row",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Label-value row: expected total profit with +%, APR · duration, available in wallet, deposit needed (warning).",
+    "useWhen": [
+      "Lines inside Keypad / Summary card",
+      "Type=Deposit for the wallet shortfall in warning colour"
+    ],
+    "dontUseWhen": [
+      "For generic label-value rows use KeyValue"
+    ],
+    "partOf": [
+      "Keypad / Summary card"
+    ],
+    "contains": [
+      "MoneyAmount"
+    ],
+    "keyProps": "Type=Profit/Rate/Available/Deposit · Direction=RTL/LTR",
+    "a11y": "Read label then value; deposit-needed row announced as a warning in text.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "high"
+  },
+  "6035:1171": {
+    "name": "Keypad / Summary card",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Card under a valid amount: Projection (expected profit, APR and duration) or Ledger (wallet available vs deposit needed).",
+    "useWhen": [
+      "Type=Projection under a valid amount",
+      "Type=Ledger when the wallet is short of the amount"
+    ],
+    "dontUseWhen": [
+      "For full post-term results use Calculator / Results card"
+    ],
+    "partOf": [
+      "Keypad / Amount input"
+    ],
+    "contains": [
+      "Keypad / Summary row"
+    ],
+    "keyProps": "Type=Projection/Ledger · Direction=RTL/LTR",
+    "a11y": "Group as one region with a heading.",
+    "compliance": "Figures are projections: label them expected (متوقع), show net after the agency fee (1% of profit, never of capital) beside gross, and never imply a guaranteed return.",
+    "confidence": "high"
+  },
+  "6035:1189": {
+    "name": "Keypad / Presets",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Quick-amount pills «كامل المحفظة» and «المتبقي في الصفقة» with the rule hint.",
+    "useWhen": [
+      "Empty state of the amount keypad",
+      "Offering full wallet or remaining-in-deal as one tap"
+    ],
+    "dontUseWhen": [
+      "For filter chips use Tag Group"
+    ],
+    "partOf": [
+      "Keypad / Amount input"
+    ],
+    "contains": [
+      "Tag",
+      "Keypad / Hint"
+    ],
+    "keyProps": "Type=Default · Direction=RTL/LTR",
+    "a11y": "Pills read the full amount they set.",
+    "confidence": "high"
+  },
+  "6035:1289": {
+    "name": "Keypad / Quick action",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Fix buttons: Pair of nearest valid amounts (100,000 / 101,000) or Single action (Go to deposit, invest the maximum).",
+    "useWhen": [
+      "Type=Pair offering the nearest valid amounts after an invalid entry",
+      "Type=Single for go to deposit or invest the maximum"
+    ],
+    "dontUseWhen": [
+      "For the primary CTA use Button directly"
+    ],
+    "partOf": [
+      "Keypad / Amount input"
+    ],
+    "contains": [
+      "Button"
+    ],
+    "keyProps": "Type=Pair/Single · Direction=RTL/LTR",
+    "a11y": "Buttons say the full amount they set.",
+    "compliance": "Amounts in multiples of 1,000 up to 500,000 per payment; explain every rejection and show the wallet shortfall while typing, not at checkout.",
+    "confidence": "high"
+  },
+  "6035:1605": {
+    "name": "Keypad / Amount hero",
+    "page": "qualified-calculator",
+    "level": "molecule",
+    "description": "Title row, large typed amount with caret and hint; Invalid turns warning, Thousands greys auto-completed zeros.",
+    "useWhen": [
+      "Top of the amount keypad",
+      "State=Thousands when the investor types thousands and zeros are auto-completed"
+    ],
+    "dontUseWhen": [
+      "For inline form amount entry use Input Amount"
+    ],
+    "partOf": [
+      "Keypad / Amount input"
+    ],
+    "contains": [
+      "Keypad / Title row",
+      "MoneyAmount",
+      "Keypad / Hint"
+    ],
+    "keyProps": "State=Empty/Valid/Invalid/Thousands · Direction=RTL/LTR",
+    "a11y": "",
+    "compliance": "Amounts in multiples of 1,000 up to 500,000 per payment; explain every rejection and show the wallet shortfall while typing, not at checkout.",
+    "confidence": "high"
+  },
+  "6036:3480": {
+    "name": "Keypad / Amount input",
+    "page": "qualified-calculator",
+    "level": "organism",
+    "description": "Full amount keypad screen for qualified investors: hero, one context block (presets, projection, fixes, ledger), keypad and a CTA whose label tracks the amount.",
+    "useWhen": [
+      "Qualified investor entering a ticket with live validation",
+      "Wallet shortfall state with «أودع {gap} وأكمل» CTA",
+      "Snap or Not multiple states offering corrected amounts"
+    ],
+    "dontUseWhen": [
+      "For retail slider entry use Investment Calculator",
+      "For a BottomSheet version use Sheet Content / Amount keypad"
+    ],
+    "partOf": [],
+    "contains": [
+      "Keypad / Amount hero",
+      "Keypad / Presets",
+      "Keypad / Summary card",
+      "Keypad / Quick action"
+    ],
+    "keyProps": "State=Empty/Valid/Not multiple/Snap/Above cap/Above remaining/Wallet shortfall/Thousands · Direction=RTL/LTR",
+    "a11y": "CTA label stays in sync (استثمر {amount}); hint announced.",
+    "compliance": "Amounts in multiples of 1,000 up to 500,000 per payment; explain every rejection and show the wallet shortfall while typing, not at checkout.",
+    "confidence": "high"
+  },
+  "3658:127481": {
+    "name": "Guarantees (legacy source)",
+    "page": "guarantees",
+    "level": "organism",
+    "description": "Original guarantee coverage component kept as the source for the rebuild (Empty and Full only).",
+    "useWhen": [
+      "Reference only when comparing against the rebuild",
+      "Auditing legacy screens that still instance it"
+    ],
+    "dontUseWhen": [
+      "For any new screen use Guarantees"
+    ],
+    "partOf": [],
+    "contains": [],
+    "keyProps": "Value=Empty/Full",
+    "a11y": "Provide coverage as text, not only bar width.",
+    "compliance": "Guarantee values must match the offering documents.",
+    "confidence": "medium"
+  },
+  "3859:1071": {
+    "name": "GuaranteeBar",
+    "page": "guarantees",
+    "level": "molecule",
+    "description": "Track with brand-gradient fill whose width encodes guarantee value on a millions axis; value label inside at High/Full.",
+    "useWhen": [
+      "Inside Guarantees",
+      "Coverage=High/Full when the in-bar value fits"
+    ],
+    "dontUseWhen": [
+      "For task progress use ProgressBar"
+    ],
+    "partOf": [
+      "Guarantees"
+    ],
+    "contains": [],
+    "keyProps": "Value (text) · Coverage=Empty/Low/Mid/High/Full · Direction=RTL/LTR",
+    "a11y": "Expose value as text, not only width.",
+    "compliance": "Coverage must reflect the real ratio.",
+    "confidence": "high"
+  },
+  "3861:1216": {
+    "name": "Guarantees",
+    "page": "guarantees",
+    "level": "organism",
+    "description": "Guarantee coverage chart: program funding size title with coverage % badge, GuaranteeBar and millions axis.",
+    "useWhen": [
+      "Deal page guarantee section",
+      "Showing guarantee value relative to program funding size"
+    ],
+    "dontUseWhen": [
+      "For general bar charts use Chart / Bar"
+    ],
+    "partOf": [],
+    "contains": [
+      "GuaranteeBar",
+      "AxisTick"
+    ],
+    "keyProps": "Coverage=Empty/Low/Mid/High/Full · Direction=RTL/LTR",
+    "a11y": "Provide text equivalent: coverage % and guarantee value.",
+    "compliance": "Guarantee is a regulated claim: values from the offering file; do not imply capital is risk-free.",
+    "confidence": "high"
+  },
+  "3859:1042": {
+    "name": "AxisTick",
+    "page": "guarantees",
+    "level": "atom",
+    "description": "One axis marker: tick plus value label («30 مليون»).",
+    "useWhen": [
+      "Millions axis of Guarantees",
+      "Any guarantee scale marker needing «N مليون» labels"
+    ],
+    "dontUseWhen": [
+      "For chart axes use Chart / Axis"
+    ],
+    "partOf": [
+      "Guarantees"
+    ],
+    "contains": [],
+    "keyProps": "Value (text)",
+    "a11y": "Decorative when the value is in text.",
+    "confidence": "high"
+  },
+  "4054:1147": {
+    "name": "Issuance Status Icon",
+    "page": "issuance-row",
+    "level": "atom",
+    "description": "32 px colour-coded isometric icon per issuance status (nine statuses).",
+    "useWhen": [
+      "Leading slot of Issuance Row via the Status Icon swap",
+      "Visual status key in portfolio summaries"
+    ],
+    "dontUseWhen": [
+      "For status text badges use IssuanceStatusBadge (Investor)"
+    ],
+    "partOf": [
+      "Issuance Row",
+      "Issuance Row · Arabic"
+    ],
+    "contains": [],
+    "keyProps": "Status=Defaulted/Partially Repaid/Late/Repayment Due/Matured/Active/Funded/Raising/Reserved",
+    "a11y": "Decorative; status name is in row text.",
+    "confidence": "high"
+  },
+  "4059:117428": {
+    "name": "Issuance Row",
+    "page": "issuance-row",
+    "level": "molecule",
+    "description": "Portfolio row grouping investments by status: icon, status with count, total amount and chevron; Open expands the underlying investments with amount and maturity and a see-all link.",
+    "useWhen": [
+      "Portfolio holdings grouped by status (Matured, Late, Active...)",
+      "State=Open to list the underlying investments with amounts and maturity"
+    ],
+    "dontUseWhen": [
+      "For individual payouts use Payouts cell"
+    ],
+    "partOf": [
+      "Issuance List"
+    ],
+    "contains": [
+      "Issuance Status Icon"
+    ],
+    "keyProps": "Status, Count, Amount (text) · Status Icon (instance swap) · State=Default/Open/Focus · Language=LTR/RTL",
+    "a11y": "Expandable button with aria-expanded.",
+    "compliance": "Only the icon carries status colour; show defaulted/late without softening.",
+    "confidence": "high"
+  },
+  "4089:2079": {
+    "name": "Issuance Row · Arabic",
+    "page": "issuance-row",
+    "level": "molecule",
+    "description": "Standalone Arabic collapsed Issuance Row (e.g. «مستحقة · ٤ استثمارات»).",
+    "useWhen": [
+      "Arabic-only contexts needing the collapsed row",
+      "Legacy screens that instance this standalone copy"
+    ],
+    "dontUseWhen": [
+      "For new screens use Issuance Row with Language=RTL"
+    ],
+    "partOf": [],
+    "contains": [
+      "Issuance Status Icon"
+    ],
+    "keyProps": "Status Icon (instance swap) · Status, Count, Amount (text)",
+    "a11y": "Same as Issuance Row.",
+    "confidence": "medium"
+  },
+  "4093:2406": {
+    "name": "Issuance List",
+    "page": "issuance-row",
+    "level": "organism",
+    "description": "Stack of Issuance Rows, one per status.",
+    "useWhen": [
+      "Portfolio overview by status",
+      "When any one status row should expand in place"
+    ],
+    "dontUseWhen": [
+      "For payout history use Payouts cell"
+    ],
+    "partOf": [],
+    "contains": [
+      "Issuance Row"
+    ],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "List semantics.",
+    "confidence": "high"
+  },
+  "6049:3": {
+    "name": "Reinvest / MatchStat",
+    "page": "reinvest",
+    "level": "atom",
+    "description": "Value-first green tile (duration, annual return, ROI) on bg/success-subtle.",
+    "useWhen": [
+      "Three per Reinvest / RecommendationCard",
+      "Showing duration, annual return or ROI of a matched deal"
+    ],
+    "dontUseWhen": [
+      "For calculator metrics use Calculator / Stat tile"
+    ],
+    "partOf": [
+      "Reinvest / RecommendationCard"
+    ],
+    "contains": [],
+    "keyProps": "Value, Label (text)",
+    "a11y": "Read value then label as one phrase.",
+    "compliance": "Arabic labels for a % return start with «نسبة» (نسبة صافي العائد).",
+    "confidence": "high"
+  },
+  "5922:245709": {
+    "name": "Reinvest / Illustration · Orbit",
+    "page": "reinvest",
+    "level": "atom",
+    "description": "120 px isometric dashed-orbit illustration for capital recycling.",
+    "useWhen": [
+      "Top of Reinvest / MaturityRecap",
+      "Other capital-recycling surfaces that need the orbit motif"
+    ],
+    "dontUseWhen": [
+      "For empty states use EmptyState"
+    ],
+    "partOf": [
+      "Reinvest / MaturityRecap"
+    ],
+    "contains": [],
+    "keyProps": "No properties",
+    "a11y": "Decorative, hidden from screen readers.",
+    "confidence": "high"
+  },
+  "6049:298": {
+    "name": "Reinvest / RecommendationRow",
+    "page": "reinvest",
+    "level": "molecule",
+    "description": "Recommended deal row: thumb, title, because line, three-factor meta and chevron.",
+    "useWhen": [
+      "Inside Reinvest / RecommendationList",
+      "Showing why a deal matches with the because line"
+    ],
+    "dontUseWhen": [
+      "For generic rows use ListItem"
+    ],
+    "partOf": [
+      "Reinvest / RecommendationList"
+    ],
+    "contains": [
+      "CardDeal / Media",
+      "Content"
+    ],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "One button: title, because line, factors.",
+    "compliance": "Matches are behavioural, never advice: never say «مناسبة لك» or «recommended for you» (CMA); keep the not-advice disclaimer and keep Reinvest and Keep equal.",
+    "confidence": "high"
+  },
+  "6049:299": {
+    "name": "Reinvest / RecommendationCard",
+    "page": "reinvest",
+    "level": "molecule",
+    "description": "Card with deal image, name and three MatchStat tiles.",
+    "useWhen": [
+      "Inside Reinvest / RecommendationCarousel",
+      "Visual comparison of a matched deal on three factors"
+    ],
+    "dontUseWhen": [
+      "For deal browsing use CardDeal"
+    ],
+    "partOf": [
+      "Reinvest / RecommendationCarousel"
+    ],
+    "contains": [
+      "CardDeal / Media",
+      "Content",
+      "Reinvest / MatchStat"
+    ],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "",
+    "compliance": "Matches are behavioural, never advice: never say «مناسبة لك» or «recommended for you» (CMA); keep the not-advice disclaimer and keep Reinvest and Keep equal.",
+    "confidence": "high"
+  },
+  "6054:1667": {
+    "name": "Reinvest / MaturityRecap",
+    "page": "reinvest",
+    "level": "organism",
+    "description": "BottomSheet content after the final payout: orbit, «اكتمل استثمارك في مدماك», returned amount, capital/profit/realised return breakdown, and equal Reinvest and Keep buttons (optional withdraw).",
+    "useWhen": [
+      "First visit after a deal's final payout",
+      "Show withdraw on for investors who prefer to cash out"
+    ],
+    "dontUseWhen": [
+      "For pre-investment projections use Calculator / Results card"
+    ],
+    "partOf": [
+      "BottomSheet"
+    ],
+    "contains": [
+      "Reinvest / Illustration · Orbit",
+      "MoneyAmount",
+      "KeyValue",
+      "Button"
+    ],
+    "keyProps": "Show withdraw (boolean) · Direction=RTL/LTR",
+    "a11y": "Both actions equal; Keep never a small link.",
+    "compliance": "Matches are behavioural, never advice: never say «مناسبة لك» or «recommended for you» (CMA); keep the not-advice disclaimer and keep Reinvest and Keep equal. Prefill with capital only.",
+    "confidence": "high"
+  },
+  "6054:1668": {
+    "name": "Reinvest / RecommendationList",
+    "page": "reinvest",
+    "level": "organism",
+    "description": "BottomSheet content: compared-to deal, intro line, up to 3 RecommendationRows, not-advice disclaimer.",
+    "useWhen": [
+      "Reinvest choice, list version A",
+      "Showing up to 3 matches with reasons and the disclaimer"
+    ],
+    "dontUseWhen": [
+      "For general deal browsing use a list of CardDeal"
+    ],
+    "partOf": [
+      "BottomSheet"
+    ],
+    "contains": [
+      "Reinvest / ComparedTo",
+      "Reinvest / RecommendationRow"
+    ],
+    "keyProps": "Direction=RTL/LTR",
+    "a11y": "List semantics.",
+    "compliance": "Matches are behavioural, never advice: never say «مناسبة لك» or «recommended for you» (CMA); keep the not-advice disclaimer and keep Reinvest and Keep equal.",
+    "confidence": "high"
+  },
+  "6054:1669": {
+    "name": "Reinvest / RecommendationCarousel",
+    "page": "reinvest",
+    "level": "organism",
+    "description": "Swipe version B: centred RecommendationCard, scaled neighbours, PageIndicator.",
+    "useWhen": [
+      "Reinvest choice, carousel version B",
+      "When deal imagery should lead the comparison"
+    ],
+    "dontUseWhen": [
+      "For generic slide strips use Carousel"
+    ],
+    "partOf": [
+      "BottomSheet"
+    ],
+    "contains": [
+      "Reinvest / RecommendationCard",
+      "PageIndicator"
+    ],
+    "keyProps": "State=Card 1/Card 2 · Direction=RTL/LTR",
+    "a11y": "Announce «صفقة 1 من 3» with next/previous actions.",
+    "compliance": "Matches are behavioural, never advice: never say «مناسبة لك» or «recommended for you» (CMA); keep the not-advice disclaimer and keep Reinvest and Keep equal.",
+    "confidence": "high"
+  },
+  "6255:7960": {
+    "name": "Reinvest / ComparedTo",
+    "page": "reinvest",
+    "level": "molecule",
+    "description": "The matured deal being compared: thumb, «استثمارك المكتمل» overline, name and its duration, annual and net.",
+    "useWhen": [
+      "Above the intro line in list, carousel and deck sheets",
+      "Anchoring which matured deal the matches are compared with"
+    ],
+    "dontUseWhen": [
+      "For generic rows use ListItem"
+    ],
+    "partOf": [
+      "Reinvest / RecommendationList"
+    ],
+    "contains": [
+      "CardDeal / Media",
+      "Content"
+    ],
+    "keyProps": "Direction=LTR/RTL",
+    "a11y": "Read overline, deal name, then its three factors.",
+    "compliance": "Arabic labels for a % return start with «نسبة» (نسبة صافي العائد).",
+    "confidence": "high"
+  }
+}

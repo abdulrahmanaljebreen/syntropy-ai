@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "syntropy": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/mcp/dist/server.mjs"
+      ],
+      "env": {
+        "SYNTROPY_FALLBACK_ROOT": "${CLAUDE_PLUGIN_ROOT}"
+      }
+    }
+  }
+}

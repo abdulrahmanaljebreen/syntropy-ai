@@ -1,0 +1,22 @@
+[
+ {
+  "collection": "Semantic",
+  "token": "font/line-height/heading",
+  "issue": "alias target missing in Figma: Primitive / Typography::Font/LineHeight/Snug"
+ },
+ {
+  "collection": "Semantic",
+  "token": "font/line-height/body",
+  "issue": "alias target missing in Figma: Primitive / Typography::Font/LineHeight/Normal"
+ },
+ {
+  "collection": "Semantic",
+  "token": "font/line-height/reading",
+  "issue": "alias target missing in Figma: Primitive / Typography::Font/LineHeight/Relaxed"
+ },
+ {
+  "collection": "Semantic",
+  "token": "font/line-height/arabic",
+  "issue": "alias target missing in Figma: Primitive / Typography::Font/LineHeight/Arabic"
+ }
+]

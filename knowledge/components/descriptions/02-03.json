@@ -1,0 +1,1250 @@
+{
+ "417:2": {
+  "name": "Button",
+  "page": "button",
+  "level": "organism",
+  "description": "The labelled action control that every transactional moment in Safqah routes through (invest, reserve, withdraw, confirm, cancel). Six variants encode how loud and how risky the action is.",
+  "useWhen": [
+   "The single main action of a screen or sheet, such as «استثمر الآن» on a deal page or «تأكيد» in an investment confirmation: Variant=primary, Size=lg",
+   "The escape or alternative action next to a primary (Cancel, Back): Variant=secondary",
+   "Irreversible actions such as withdrawing before maturity or deleting an account, always behind a confirmation: Variant=destructive",
+   "Submit blocked by validation errors or a Retry after a failed request: Variant=error"
+  ],
+  "dontUseWhen": [
+   "The click moves the user to another route or URL (terms, Learn more, Forgot password as navigation): use Link",
+   "The action is a universally understood icon with no label (close, share, copy): use IconButton",
+   "Two or three related actions must sit together with set spacing and order: wrap them in ButtonGroup",
+   "Signing in with Nafath, Apple or Google: use SocialButton",
+   "A persistent screen-level action floating over scroll content: use FAB / Standard or FAB / Extended"
+  ],
+  "partOf": [
+   "ButtonGroup"
+  ],
+  "contains": [],
+  "keyProps": "Variant (primary, secondary, tertiary, destructive, error, text), Size (lg, md, sm), State (loading for async), Label, Has icon leading / Has icon trailing with Icon leading / Icon trailing; Direction is documentation only, runtime follows locale.",
+  "a11y": "At most one primary per screen; sm (32px) is below the 44pt touch target, so keep lg or md on mobile and block taps while State=loading to avoid duplicate investment submissions.",
+  "confidence": "high"
+ },
+ "502:729": {
+  "name": "IconButton",
+  "page": "icon-button",
+  "level": "organism",
+  "description": "A square, label-less button carrying one centered icon, with the same six variants and states as Button. Used for compact, unambiguous actions such as closing a sheet, copying an IBAN or opening a more menu.",
+  "useWhen": [
+   "Close X on a BottomSheet, Modal or Toast: Variant=text",
+   "Copy, share or bookmark actions on a deal card or list row: Variant=tertiary",
+   "Retry next to a failed upload or network error: Variant=error with a refresh icon",
+   "A trash icon to delete a draft or remove a document, followed by confirmation: Variant=destructive"
+  ],
+  "dontUseWhen": [
+   "The icon meaning is not universal (filter, sort, Sukuk, Sharia, KYC concepts): use Button with a leading icon and a label",
+   "A back arrow in the app header: use BackButton",
+   "The single main floating action of a screen: use FAB / Standard",
+   "Navigating to another page with text: use Link"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Icon (instance swap from the Syntropy icon set), Variant (primary, secondary, tertiary, destructive, error, text), Size (lg 48, md 40, sm 32), State; no Direction axis, swap directional icons per locale instead.",
+  "a11y": "Every instance needs a verb-object semantic label (for example «نسخ رقم الآيبان»), and md/sm need parent padding to reach a 44pt tap target.",
+  "confidence": "high"
+ },
+ "516:2": {
+  "name": "Link",
+  "page": "link",
+  "level": "organism",
+  "description": "Inline underlined text that navigates to another route, URL or document. It moves the user somewhere else and never changes state in the current context.",
+  "useWhen": [
+   "Opening terms, the CMA disclosure, the Sharia board page or a glossary entry from body copy: Variant=info or default",
+   "Downloading an offering file or statement PDF: leading document icon",
+   "External destinations such as safqah.co: trailing arrow-up-right icon",
+   "Low-priority paths like «لاحقاً» or Skip this step: Variant=muted"
+  ],
+  "dontUseWhen": [
+   "The click submits, saves, confirms or deletes in place: use Button (Variant=text for an inline-looking action)",
+   "Async work with a loading state is needed: use Button",
+   "A row in a settings list that opens a detail screen: use ListItem with a chevron"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Variant (default, info, danger, inverse, primary, muted), Size (lg, md, sm) matched to surrounding text, Underline, Has icon leading / Has icon trailing, Href, State; not yet in the published library.",
+  "a11y": "Keep Underline on (the default green fails AA contrast in light mode without it) and announce it as a link, with a hint when it opens outside the app.",
+  "confidence": "high"
+ },
+ "640:701": {
+  "name": "FAB / Standard",
+  "page": "fab",
+  "level": "organism",
+  "description": "A circular floating action button anchored to the bottom-trailing corner, above scroll content, holding the one most important action of a view as an icon.",
+  "useWhen": [
+   "A persistent jump back to the deals feed or a new-investment entry on a long scrolling screen: Variant=primary, Size=default",
+   "A quiet persistent help or support entry point: Variant=secondary"
+  ],
+  "dontUseWhen": [
+   "The action needs a word to be understood (first-time users, unfamiliar action): use FAB / Extended",
+   "A screen needs more than one persistent action: use IconButton or a FAB speed-dial",
+   "The main action belongs in the page or sheet footer (Invest, Confirm): use Button",
+   "Cancelling an investment on a primary surface: keep destructive actions inside a Dialog with Button Variant=destructive"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Icon (instance swap), Variant (primary, secondary, destructive), Size (small 40, default 56, large 96), State; elevation comes from Shadow effect styles.",
+  "a11y": "Never ship Size=small as the only touch action on mobile (40dp fails the target size) and give the icon-only FAB a semantic label.",
+  "confidence": "high"
+ },
+ "738:1944": {
+  "name": "FAB / Extended",
+  "page": "fab",
+  "level": "organism",
+  "description": "A pill-shaped floating action button with a leading icon and a label, used when the single floating screen action needs words to be clear.",
+  "useWhen": [
+   "A labelled new-investment action on the portfolio screen, for example «استثمار جديد»",
+   "First-time or unfamiliar actions where an icon alone would be ambiguous"
+  ],
+  "dontUseWhen": [
+   "The icon alone is universally clear: use FAB / Standard",
+   "Support or chat entry points that should not compete with the main action: use FAB / Standard with Variant=secondary",
+   "The action belongs in a form or sheet footer: use Button"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Label, Icon (instance swap), Variant (primary, secondary, destructive), State; single fixed size (56dp high), Direction follows locale so the label leads in Arabic.",
+  "a11y": "One FAB per view at most, and keep the label short so it does not cover content near the bottom-trailing corner.",
+  "confidence": "high"
+ },
+ "792:290": {
+  "name": "ButtonGroup",
+  "page": "button-group",
+  "level": "organism",
+  "description": "A chromeless layout container that places two or three Button instances with consistent orientation, spacing, alignment and reading-order direction.",
+  "useWhen": [
+   "Dialog and BottomSheet footers with Confirm plus Cancel",
+   "Card-level CTAs on a deal card (Invest plus Details)",
+   "Onboarding Skip plus Continue: Alignment=space-between",
+   "Narrow mobile sheets where actions must stack: Orientation=vertical"
+  ],
+  "dontUseWhen": [
+   "There is only one action: use a single Button",
+   "Four or more actions: keep one primary Button and move the rest into a Menu",
+   "Buttons that share edges to switch a view or a value: use SegmentedControl_2 (or _3/_4/_5)",
+   "Selectable filter chips: use Tag Group"
+  ],
+  "partOf": [],
+  "contains": [
+   "Button"
+  ],
+  "keyProps": "Orientation (horizontal, vertical), Spacing (tight, default, loose), Alignment (start, center, end, space-between), Show Button 1/2/3 with Button 1/2/3 swaps, Direction.",
+  "a11y": "Button 1 is the primary in reading order, so the visual flip in Arabic keeps the same screen-reader order; switch to vertical rather than truncating labels.",
+  "confidence": "high"
+ },
+ "805:249": {
+  "name": "SocialButton",
+  "page": "social-button",
+  "level": "organism",
+  "description": "A neutral, brand-agnostic button for third-party identity and sign-in providers, where the provider logo carries the brand. On Safqah it is mainly the «تسجيل الدخول عبر نفاذ» entry for Nafath identity verification.",
+  "useWhen": [
+   "Nafath sign-in or KYC identity verification",
+   "Continue with Apple or Google on sign-up and login screens",
+   "Re-authentication from settings: Size=sm with an extended tap area"
+  ],
+  "dontUseWhen": [
+   "A normal in-app action like Invest or Continue: use Button",
+   "Linking a bank account or IBAN: use Button inside the form flow",
+   "Showing a provider logo without an action: use AbshirLogo, MadaLogo or the relevant logo component"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Label, Icon (provider logo swap), Show Icon, Size (lg, md, sm), State (loading during auth), Direction; not yet in the published library.",
+  "a11y": "Switch to State=loading immediately on tap to prevent duplicate auth requests, and do not use sm (32dp) as the only sign-in control.",
+  "confidence": "high"
+ },
+ "828:705": {
+  "name": "Input",
+  "page": "input",
+  "level": "organism",
+  "description": "The standard bordered single-line text field with label above and helper or error text below. Used across sign-up, KYC questionnaires, beneficiary details and settings.",
+  "useWhen": [
+   "Free text such as full name, email, national ID or IBAN in KYC and bank forms",
+   "Any labelled single-line field in a standard bordered form",
+   "Fields that need inline validation messages under the field"
+  ],
+  "dontUseWhen": [
+   "Phone numbers: use Input Phone",
+   "SAR amounts to invest or withdraw: use Input Amount",
+   "Picking from a closed list: use Select (or Combobox for long lists)",
+   "Multi-line text: use TextArea",
+   "Verification codes: use OTP Input",
+   "Search: use Search Input"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Input Field",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size (lg, md, sm), Show Label, Label text, Show Helper, Helper text, Direction; not yet in the published library.",
+  "a11y": "Errors go in the helper under the field (linked to it) with a specific message; never mark required in the placeholder.",
+  "confidence": "high"
+ },
+ "859:2214": {
+  "name": "Input Underline",
+  "page": "input",
+  "level": "organism",
+  "description": "A minimal single-line text field with only a bottom line (and a leading accent on focus) instead of a full border. Used on registration, sign-in and onboarding screens.",
+  "useWhen": [
+   "Sign-up and sign-in screens where the form should feel light",
+   "Onboarding steps with one or two fields"
+  ],
+  "dontUseWhen": [
+   "Standard dense forms such as KYC or bank details: use Input",
+   "Mixing styles in one form: pick Input or Input Underline for the whole form",
+   "Phone number entry: use Input Phone"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Input Underline Field",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Show Label, Label text, Helper text, Direction; not yet in the published library.",
+  "a11y": "With no box, the focus accent and red error underline are the only state cues, so always pair error with helper text.",
+  "confidence": "high"
+ },
+ "821:17": {
+  "name": "Input Label",
+  "page": "input",
+  "level": "atom",
+  "description": "The text label atom placed above input fields, with an optional red asterisk for required fields.",
+  "useWhen": [
+   "Building a custom field layout that needs the standard input label",
+   "Group labels inside Radio Group"
+  ],
+  "dontUseWhen": [
+   "New form layouts that need a tooltip icon or direction-aware label: use Form Field Label",
+   "A full labelled field: use Input or Form Field instead of assembling atoms"
+  ],
+  "partOf": [
+   "Input",
+   "Input Underline",
+   "Input Phone",
+   "Input Amount",
+   "Select",
+   "Select Underline",
+   "Slider Field",
+   "Radio Group"
+  ],
+  "contains": [],
+  "keyProps": "Label text, Size (lg, md, sm), Required (false, true).",
+  "a11y": "Use Required=true for the visual asterisk and also mark the field required in code.",
+  "confidence": "high"
+ },
+ "822:6": {
+  "name": "Input Helper Text",
+  "page": "input",
+  "level": "atom",
+  "description": "The small text atom under a field for a hint or a validation error message.",
+  "useWhen": [
+   "Hints such as «الحد الأدنى للاستثمار 1,000 ر.س» under a field",
+   "Field-level validation errors: Tone=error"
+  ],
+  "dontUseWhen": [
+   "Success or info messages with icons: use Form Field Helper",
+   "Form-level or system errors: use Alert or Banner",
+   "Brief confirmations after an action: use Toast"
+  ],
+  "partOf": [
+   "Input",
+   "Input Underline",
+   "Input Phone",
+   "Input Amount",
+   "Select",
+   "Select Underline",
+   "Slider Field",
+   "Radio Group"
+  ],
+  "contains": [],
+  "keyProps": "Text, Tone (neutral, error).",
+  "a11y": "Associate the helper with its field so the error is read when the field gets focus.",
+  "confidence": "high"
+ },
+ "823:14": {
+  "name": "Input Value",
+  "page": "input",
+  "level": "atom",
+  "description": "The text atom inside a field that shows either the muted placeholder or the typed value.",
+  "useWhen": [
+   "Inside Input Field or Input Underline Field (swapped through their Value prop)",
+   "Custom inline edit cells that need the standard value typography"
+  ],
+  "dontUseWhen": [
+   "Phone numbers with country code: use Input Phone Value",
+   "SAR amounts: use Input Amount Value",
+   "Select placeholders with a chevron: use Select Value"
+  ],
+  "partOf": [
+   "Input Field",
+   "Input Underline Field"
+  ],
+  "contains": [],
+  "keyProps": "Text, Size (lg, md, sm), State (placeholder, value).",
+  "a11y": "Placeholder is not a label; the field still needs Input Label or Form Field Label.",
+  "confidence": "high"
+ },
+ "876:2229": {
+  "name": "Input Phone Value",
+  "page": "input",
+  "level": "atom",
+  "description": "The value atom for phone fields: a bold country code (default +966) with a chevron and separator, followed by the phone number area.",
+  "useWhen": [
+   "Inside Input Phone for Saudi mobile numbers (5X XXX XXXX)",
+   "Hiding the country chunk when the market is fixed: Show Country=false"
+  ],
+  "dontUseWhen": [
+   "Any non-phone text: use Input Value",
+   "A complete labelled phone field: use Input Phone"
+  ],
+  "partOf": [
+   "Input Phone"
+  ],
+  "contains": [],
+  "keyProps": "Country code, Phone text, Show Country, Show Dropdown, Size, State (placeholder, value), Direction.",
+  "a11y": "The country picker opened from the chevron is app-level; give the country chunk its own accessible name if it is tappable.",
+  "confidence": "high"
+ },
+ "826:579": {
+  "name": "Input Field",
+  "page": "input",
+  "level": "molecule",
+  "description": "The bare bordered input box (value plus optional leading or trailing icon) without label or helper. It is the default slot inside Form Field and the control for inline edit cells.",
+  "useWhen": [
+   "The input slot of Form Field",
+   "Inline edit cells or table filters where the column header acts as the label",
+   "Fields with a leading icon (lock, mail) or trailing action (clear, eye toggle): Icon=leading or trailing"
+  ],
+  "dontUseWhen": [
+   "A normal labelled form field: use Input or Form Field",
+   "Search boxes: use Search Input",
+   "Minimal underline style: use Input Underline Field"
+  ],
+  "partOf": [
+   "Input",
+   "Form Field"
+  ],
+  "contains": [
+   "Input Value"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Icon (none, leading, trailing), Value / Leading icon / Trailing icon swaps, Direction.",
+  "a11y": "Without its own label it must get an accessible name from the surrounding label or column header.",
+  "confidence": "high"
+ },
+ "857:2088": {
+  "name": "Input Underline Field",
+  "page": "input",
+  "level": "molecule",
+  "description": "The bare underline-style input box (bottom stroke, leading accent on focus) without label or helper, used inside Input Underline.",
+  "useWhen": [
+   "Inside Input Underline",
+   "Custom light-weight sign-in layouts that compose their own label"
+  ],
+  "dontUseWhen": [
+   "Bordered forms or Form Field slots: use Input Field",
+   "A complete labelled field: use Input Underline"
+  ],
+  "partOf": [
+   "Input Underline"
+  ],
+  "contains": [
+   "Input Value"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Icon (none, leading, trailing), Value swap, Direction.",
+  "a11y": "Needs an external label; focus is shown only by the 2dp accent and darker underline.",
+  "confidence": "high"
+ },
+ "878:2355": {
+  "name": "Input Phone",
+  "page": "input",
+  "level": "organism",
+  "description": "A labelled phone number field with a country code prefix (default +966) and the number area. Used for sign-up, KYC, account recovery and beneficiary contacts.",
+  "useWhen": [
+   "Sign-up and login by mobile number, for example label «رقم الجوال»",
+   "Recovery contact and KYC contact details"
+  ],
+  "dontUseWhen": [
+   "Verifying the SMS code sent to that number: use OTP Input",
+   "Other free text: use Input"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Input Phone Value",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Show Label, Label text, Helper text, Direction; country code is overridden on the nested Input Phone Value; not yet in the published library.",
+  "a11y": "Use a numeric phone keyboard and keep digits Western (0-9) and left-to-right inside the RTL field.",
+  "confidence": "high"
+ },
+ "923:77": {
+  "name": "OTP Input",
+  "page": "otp-input",
+  "level": "organism",
+  "description": "A row of 4 or 6 square digit boxes for one-time codes, with a clear focus ring on the active box. Used for SMS login OTP, Nafath, 2FA and confirming high-value investments or withdrawals.",
+  "useWhen": [
+   "SMS OTP after login or phone change: Length=4",
+   "Authenticator or 6-digit codes: Length=6 (Size=md on narrow phones)",
+   "Confirming a withdrawal to IBAN or a large investment"
+  ],
+  "dontUseWhen": [
+   "Phone number entry: use Input Phone",
+   "Passwords or longer codes: use Input",
+   "Small quantities: use NumericStepper"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Length (4, 6), State (empty, partial, complete, error, disabled), Size (lg, md), OTP code (design-time only), Direction; not yet in the published library.",
+  "a11y": "Keep digits visible on error instead of clearing them, and set State=disabled during verification to stop duplicate submissions.",
+  "confidence": "high"
+ },
+ "946:480": {
+  "name": "Input Amount Value",
+  "page": "amount-input",
+  "level": "atom",
+  "description": "The SAR amount display atom: Riyal symbol, a large bold integer and small muted decimals, so the figure reads first.",
+  "useWhen": [
+   "Inside Input Amount and Amount Stepper",
+   "Custom amount fields that must match the Safqah amount typography"
+  ],
+  "dontUseWhen": [
+   "Read-only balances and returns outside a field: use MoneyAmount",
+   "Plain text values: use Input Value"
+  ],
+  "partOf": [
+   "Input Amount",
+   "Amount Stepper"
+  ],
+  "contains": [],
+  "keyProps": "Amount, Decimals (default .00), Size (lg, md, sm), State (placeholder, value), Direction.",
+  "a11y": "Read the amount and currency as one phrase (for example «1,000 ريال») rather than the symbol glyph alone.",
+  "confidence": "high"
+ },
+ "952:636": {
+  "name": "Input Amount",
+  "page": "amount-input",
+  "level": "organism",
+  "description": "A labelled, taller bordered field for typing a free-form SAR amount, with the amount as the hero and a helper for limits. Used for investment amount, top-up, withdrawal and income fields.",
+  "useWhen": [
+   "Entering the investment amount on a deal page: Size=lg, helper «الحد الأدنى للاستثمار 1,000 ر.س»",
+   "Withdrawal or wallet top-up amounts",
+   "Showing a locked amount during confirmation: State=disabled"
+  ],
+  "dontUseWhen": [
+   "Amounts that change in fixed steps (for example 1,000 SAR units): use Amount Stepper",
+   "Approximate values along a range: use Slider Field",
+   "Small integer counts: use NumericStepper",
+   "Non-money text: use Input"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Input Amount Value",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Show Label, Label text, Helper text, Direction; not yet in the published library.",
+  "a11y": "On validation failure keep the typed amount visible with a specific error in the helper, never reset to 0.",
+  "confidence": "high"
+ },
+ "1010:1401": {
+  "name": "Amount Stepper",
+  "page": "amount-input",
+  "level": "organism",
+  "description": "A bordered SAR amount with minus and plus buttons on either side, for amounts that move in fixed steps. With Show Actions=false it becomes a read-only amount box.",
+  "useWhen": [
+   "Adjusting an investment in fixed units (each step 1,000 SAR)",
+   "Recurring contribution levels or tiered amounts",
+   "Read-only amount summaries that match stepper rhythm: Show Actions=false"
+  ],
+  "dontUseWhen": [
+   "Free-form amounts the user types: use Input Amount",
+   "Plain integer counts without currency: use NumericStepper"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Amount Value"
+  ],
+  "keyProps": "Show Actions, State (default, active, focus, error, disabled), Size (lg, md, sm), Direction (plus and minus swap sides in RTL).",
+  "a11y": "Give the minus and plus chunks accessible names and disable them at the min and max rather than ignoring taps.",
+  "confidence": "high"
+ },
+ "1065:1128": {
+  "name": "Select Underline",
+  "page": "select",
+  "level": "organism",
+  "description": "A Select with only a bottom underline instead of a full border; same behavior and Dropdown Menu, lighter chrome for dense forms.",
+  "useWhen": [
+   "Dense settings or admin forms with many fields",
+   "Forms already using Input Underline"
+  ],
+  "dontUseWhen": [
+   "Standard bordered forms: use Select",
+   "Long lists that need typing: use Combobox Field with Combobox Menu",
+   "Two to five options visible at once: use Radio Group"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Select Value",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Show Label, Label text, Helper text, Direction; not yet in the published library.",
+  "a11y": "Announce it as a collapsed or expanded popup button, same as Select.",
+  "confidence": "high"
+ },
+ "1022:57": {
+  "name": "Select Value",
+  "page": "select",
+  "level": "atom",
+  "description": "The value atom inside a Select: placeholder or chosen value plus the trailing chevron.",
+  "useWhen": [
+   "Inside Select and Select Underline (exposed so the shown text can be overridden)"
+  ],
+  "dontUseWhen": [
+   "Typed text values: use Input Value",
+   "A complete picker field: use Select"
+  ],
+  "partOf": [
+   "Select",
+   "Select Underline"
+  ],
+  "contains": [],
+  "keyProps": "Text, Show Icon, Size, State (placeholder, value), Direction.",
+  "a11y": "The chevron rotation for the open state is runtime; expose expanded state in code.",
+  "confidence": "high"
+ },
+ "1026:183": {
+  "name": "Dropdown Item",
+  "page": "select",
+  "level": "atom",
+  "description": "One option row in a dropdown list, with a check mark when selected. Shared by Select and Combobox so options look identical.",
+  "useWhen": [
+   "Option rows inside Dropdown Menu or Combobox Menu",
+   "A disabled option the user cannot pick: State=disabled"
+  ],
+  "dontUseWhen": [
+   "Action rows in an overflow menu: use MenuItem",
+   "Search results with subtitles or icons: use Search Result Item",
+   "Selectable rows on a full screen: use SelectRow"
+  ],
+  "partOf": [
+   "Dropdown Menu",
+   "Combobox Menu"
+  ],
+  "contains": [],
+  "keyProps": "Label, Size (lg, md, sm), State (default, hover, selected, disabled), Direction.",
+  "a11y": "Expose as an option with selected state; selection must not rely on the green check alone.",
+  "confidence": "high"
+ },
+ "1028:279": {
+  "name": "Dropdown Menu",
+  "page": "select",
+  "level": "organism",
+  "description": "The floating list of Dropdown Item options that opens from a Select (rendered in an overlay at runtime).",
+  "useWhen": [
+   "The open state of Select or Select Underline",
+   "Simple single-choice lists anchored to a field"
+  ],
+  "dontUseWhen": [
+   "Overflow or action menus: use Menu",
+   "Filtering by typing: use Combobox Menu",
+   "Mobile pickers with many options or rich content: use BottomSheet"
+  ],
+  "partOf": [],
+  "contains": [
+   "Dropdown Item"
+  ],
+  "keyProps": "Size (lg, md, sm), Direction; override the Label on each nested Dropdown Item.",
+  "a11y": "Move focus into the list on open, support arrow keys, and return focus to the Select on close.",
+  "confidence": "high"
+ },
+ "1024:183": {
+  "name": "Select",
+  "page": "select",
+  "level": "organism",
+  "description": "A bordered picker field that opens a Dropdown Menu to choose one value from a closed list. Used for country, region, payment method, contribution frequency and language.",
+  "useWhen": [
+   "Choosing one value from a fixed list of about 6 or more options (country, payment method, frequency)",
+   "KYC fields like employment status or income band",
+   "Locked choices during processing: State=disabled"
+  ],
+  "dontUseWhen": [
+   "Long lists where typing helps (banks, cities, sectors): use Combobox Field with Combobox Menu",
+   "Two to five options that fit on screen: use Radio Group",
+   "Free text: use Input",
+   "Picking dates: use Date Input",
+   "Picking a Saudi region with chips: use ProvinceSelector"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Select Value",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, active, focus, error, disabled), Size, Show Label, Label text, Helper text, Direction; not yet in the published library.",
+  "a11y": "Required Selects left empty on submit show State=error with «يرجى اختيار خيار» in the helper, not only a toast.",
+  "confidence": "high"
+ },
+ "1041:57": {
+  "name": "Checkbox Indicator",
+  "page": "checkbox",
+  "level": "atom",
+  "description": "The square box atom of a checkbox with checked, indeterminate and disabled visuals.",
+  "useWhen": [
+   "Inside Checkbox",
+   "Select-all cells in table headers or rows where the row is the label"
+  ],
+  "dontUseWhen": [
+   "A labelled choice: use Checkbox",
+   "Exclusive choices: use Radio Indicator inside Radio"
+  ],
+  "partOf": [
+   "Checkbox"
+  ],
+  "contains": [],
+  "keyProps": "Size (lg, md, sm), State (unchecked, hover, focus, checked, indeterminate, disabled-unchecked, disabled-checked); no Direction, it is symmetric.",
+  "a11y": "Standalone use needs an accessible name and a 24dp+ tap region; sm is 16dp.",
+  "confidence": "high"
+ },
+ "1043:93": {
+  "name": "Checkbox",
+  "page": "checkbox",
+  "level": "organism",
+  "description": "A labelled checkbox for independent yes or no choices applied on submit, such as accepting terms or multi-select filters.",
+  "useWhen": [
+   "Accepting terms, risk disclosure or Sharia terms before investing",
+   "Multi-select filters (Residential, Commercial, Industrial)",
+   "Select-all with partial selection: State=indeterminate"
+  ],
+  "dontUseWhen": [
+   "Only one option may be chosen: use Radio inside Radio Group",
+   "The setting applies instantly on tap: use Switch",
+   "Several related checkboxes under one label: use Checkbox Group"
+  ],
+  "partOf": [
+   "Checkbox Group"
+  ],
+  "contains": [
+   "Checkbox Indicator"
+  ],
+  "keyProps": "State (unchecked, hover, focus, checked, indeterminate, disabled-unchecked, disabled-checked), Size, Label text, Show Helper, Helper text, Direction.",
+  "a11y": "The whole label is the tap target; avoid sm on touch screens and never pre-check consent boxes.",
+  "confidence": "high"
+ },
+ "3921:241732": {
+  "name": "Checkbox Group",
+  "page": "checkbox",
+  "level": "organism",
+  "description": "A group label, a vertical stack of Checkbox items and a helper line for multi-select questions.",
+  "useWhen": [
+   "Multi-select KYC questions such as investment goals or sources of income",
+   "Notification topics (new deals, payouts, account updates) chosen together and saved on submit"
+  ],
+  "dontUseWhen": [
+   "Exactly one answer: use Radio Group",
+   "Instant on/off settings: use Switch rows in an ActionList",
+   "Long option lists: use Multi-select field"
+  ],
+  "partOf": [],
+  "contains": [
+   "Checkbox",
+   "Checkbox Indicator"
+  ],
+  "keyProps": "Size (lg, md, sm), Direction; override labels and states on the nested Checkbox items.",
+  "a11y": "Expose the group label as the group name so each option is announced in context.",
+  "confidence": "medium"
+ },
+ "1086:177": {
+  "name": "Radio Group",
+  "page": "radio",
+  "level": "organism",
+  "description": "A group label with 2 to 6 stacked Radio items where exactly one is selected.",
+  "useWhen": [
+   "Choosing one payment method or one payout destination",
+   "Investor type or contribution frequency questions in KYC",
+   "Showing a locked option the user can unlock later: disabled-unselected item"
+  ],
+  "dontUseWhen": [
+   "Several answers allowed: use Checkbox Group",
+   "More than about 6 options: use Select",
+   "A single on/off: use Switch",
+   "Rich selectable cards or rows on a full screen: use SelectionList"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Radio",
+   "Input Helper Text"
+  ],
+  "keyProps": "Group label text, Show Helper, Helper text, Size (lg, md, sm), Direction; ships 4 items, add or edit the nested Radio items; not yet in the published library.",
+  "a11y": "Arrow keys move selection within the group, and the group label names the radiogroup.",
+  "confidence": "high"
+ },
+ "1081:57": {
+  "name": "Radio Indicator",
+  "page": "radio",
+  "level": "atom",
+  "description": "The circle atom of a radio button with a green dot when selected.",
+  "useWhen": [
+   "Inside Radio",
+   "Custom selectable rows that need the standard radio mark"
+  ],
+  "dontUseWhen": [
+   "A labelled option: use Radio",
+   "Independent toggles: use Checkbox Indicator"
+  ],
+  "partOf": [
+   "Radio"
+  ],
+  "contains": [],
+  "keyProps": "Size (lg, md, sm), State (unselected, hover, focus, selected, disabled-unselected, disabled-selected); no Direction.",
+  "a11y": "sm is 16dp; extend the tap area to the whole row.",
+  "confidence": "high"
+ },
+ "1083:69": {
+  "name": "Radio",
+  "page": "radio",
+  "level": "organism",
+  "description": "A single labelled radio option, always used inside a group of two or more mutually exclusive choices.",
+  "useWhen": [
+   "Items inside Radio Group",
+   "One option of an exclusive choice that needs its own helper line"
+  ],
+  "dontUseWhen": [
+   "Standing alone for yes or no: use Checkbox or Switch",
+   "Multi-select: use Checkbox"
+  ],
+  "partOf": [
+   "Radio Group"
+  ],
+  "contains": [
+   "Radio Indicator"
+  ],
+  "keyProps": "State (unselected, hover, focus, selected, disabled-unselected, disabled-selected), Size, Label text, Show Helper, Helper text, Direction.",
+  "a11y": "Never use one Radio alone; the whole label row is the tap target.",
+  "confidence": "high"
+ },
+ "1099:57": {
+  "name": "Switch Indicator",
+  "page": "switch",
+  "level": "atom",
+  "description": "The pill track and sliding thumb atom of a switch (thumb right means on in both directions).",
+  "useWhen": [
+   "Inside Switch",
+   "Toggle slot of ListItem or ActionList rows where the row text is the label"
+  ],
+  "dontUseWhen": [
+   "A labelled toggle: use Switch"
+  ],
+  "partOf": [
+   "Switch"
+  ],
+  "contains": [],
+  "keyProps": "Size (lg, md, sm), State (off, on, hover-off, hover-on, focus-off, focus-on, disabled-off, disabled-on); no Direction.",
+  "a11y": "Expose as a switch with on/off state and a name from the row label.",
+  "confidence": "high"
+ },
+ "1101:105": {
+  "name": "Switch",
+  "page": "switch",
+  "level": "organism",
+  "description": "A labelled on/off toggle that applies the setting immediately with no submit button.",
+  "useWhen": [
+   "Notification channel preferences",
+   "Face ID or biometric login, 2FA on/off",
+   "Auto-invest or marketing opt-in settings",
+   "Settings forced by policy: State=disabled-on with a helper"
+  ],
+  "dontUseWhen": [
+   "The value is saved on submit (terms acceptance, form answers): use Checkbox",
+   "Picking one of several options: use Radio Group or SegmentedControl_2/_3",
+   "Several independent options in a form: use Checkbox Group"
+  ],
+  "partOf": [],
+  "contains": [
+   "Switch Indicator"
+  ],
+  "keyProps": "State (off, on, hover-off, hover-on, focus-off, focus-on, disabled-off, disabled-on), Size, Label text, Show Helper, Helper text, Direction.",
+  "a11y": "Do not flip the thumb in RTL, and confirm risky changes (turning off 2FA) because the toggle commits instantly.",
+  "confidence": "high"
+ },
+ "1121:225": {
+  "name": "Slider Field",
+  "page": "slider",
+  "level": "organism",
+  "description": "A Slider wrapped with a label and helper for picking an approximate value within a range, with error messaging.",
+  "useWhen": [
+   "Choosing an approximate investment amount within a deal range in a calculator",
+   "Risk tolerance or allocation percentage in onboarding",
+   "Showing a value locked by tier rules: State=disabled"
+  ],
+  "dontUseWhen": [
+   "The exact amount matters (investing, withdrawing): use Input Amount",
+   "Two-ended ranges (min and max): use two linked Sliders or Date Range Field for dates; there is no range slider",
+   "Small integer counts: use NumericStepper"
+  ],
+  "partOf": [],
+  "contains": [
+   "Input Label",
+   "Slider",
+   "Input Helper Text"
+  ],
+  "keyProps": "State (default, hover, focus, error, disabled), Size, Show Label, Label text, Show Helper, Helper text, Show Tooltip, Direction; not yet in the published library.",
+  "a11y": "Support arrow keys and announce the current value with units (for example 5,000 ر.س); md and sm thumbs need a larger touch region.",
+  "confidence": "high"
+ },
+ "1117:57": {
+  "name": "Slider",
+  "page": "slider",
+  "level": "molecule",
+  "description": "The bare slider control (track, fill, thumb, optional value tooltip) for layouts that provide their own label.",
+  "useWhen": [
+   "Inside Slider Field or a Form Field slot",
+   "Custom calculator layouts where the value is shown elsewhere"
+  ],
+  "dontUseWhen": [
+   "A primary form field that needs a label and error: use Slider Field",
+   "Precise amounts: use Input Amount",
+   "Showing progress (not input): use ProgressBar"
+  ],
+  "partOf": [
+   "Slider Field",
+   "Form Field"
+  ],
+  "contains": [],
+  "keyProps": "State (default, hover, focus, error, disabled), Size, Show Tooltip, Value text, Direction (fill starts at the right in RTL).",
+  "a11y": "Needs an external accessible name and value text when used alone.",
+  "confidence": "high"
+ },
+ "1138:63": {
+  "name": "File Item",
+  "page": "file-upload",
+  "level": "atom",
+  "description": "Bare file metadata: filename, size and one action link (View file or Retry), with no card chrome.",
+  "useWhen": [
+   "Listing an attached document inside an existing container (a form section or table row)",
+   "Showing a failed file inline with Retry: State=error"
+  ],
+  "dontUseWhen": [
+   "Upload in progress or the main post-upload display: use File Item with Progress",
+   "Starting an upload: use Upload Button"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Filename, File size, Action text, State (ready, error, uploaded), Direction.",
+  "a11y": "Error must be stated in text, not only by the red filename color.",
+  "confidence": "high"
+ },
+ "1141:63": {
+  "name": "Upload Button",
+  "page": "file-upload",
+  "level": "molecule",
+  "description": "A compact attach-file trigger with paperclip, label and a supported-formats hint that opens the file picker.",
+  "useWhen": [
+   "Uploading KYC documents, an IBAN certificate or an income proof",
+   "Any form field that accepts a file, with formats shown upfront"
+  ],
+  "dontUseWhen": [
+   "After a file is picked: replace it with File Item with Progress",
+   "Generic actions: use Button"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Button label, Hint text, Show hint, Show Delete, State (default, hover, focus, disabled), Direction.",
+  "a11y": "Icons are 16dp; wrap them in 24dp+ tap regions and keep the format hint as readable text.",
+  "confidence": "high"
+ },
+ "1147:63": {
+  "name": "File Item with Progress",
+  "page": "file-upload",
+  "level": "organism",
+  "description": "A file card showing upload progress, success, error with Retry, or the uploaded state with View file and remove actions.",
+  "useWhen": [
+   "While a KYC document or IBAN certificate uploads: State=progress",
+   "Persistent confirmation of what was submitted: State=uploaded",
+   "Failed upload with inline Retry: State=error"
+  ],
+  "dontUseWhen": [
+   "Before a file is chosen: use Upload Button",
+   "Compact metadata inside another container: use File Item",
+   "Page-level loading: use ProgressBar or a Spinner"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "State (progress, complete, error, uploaded), Filename, File size, Direction; complete is transient, settle on uploaded.",
+  "a11y": "Announce progress and the final result, and give the trash icon a label like «حذف الملف».",
+  "confidence": "high"
+ },
+ "1174:63": {
+  "name": "Form Field Helper",
+  "page": "form-field",
+  "level": "atom",
+  "description": "Helper text with tone color and icon (neutral, error, success, info) shown under a form control.",
+  "useWhen": [
+   "Validation errors under a field: Tone=error",
+   "Advisory notes such as «يستخدم للتحقق فقط»: Tone=info",
+   "Confirming a check that matters (valid IBAN format): Tone=success"
+  ],
+  "dontUseWhen": [
+   "Page or form-level messages: use Alert or Banner",
+   "Transient confirmations: use Toast",
+   "Long explanations: use Tooltip from Form Field Label"
+  ],
+  "partOf": [
+   "Form Field"
+  ],
+  "contains": [],
+  "keyProps": "Helper text, Tone (neutral, error, success, info), Size (md, sm), Direction.",
+  "a11y": "Tone is shown by icon and color; the text itself must say what is wrong.",
+  "confidence": "high"
+ },
+ "1169:63": {
+  "name": "Form Field Label",
+  "page": "form-field",
+  "level": "atom",
+  "description": "The direction-aware form label atom with optional required asterisk and info tooltip icon; supersedes Input Label for new layouts.",
+  "useWhen": [
+   "KYC and compliance fields that need a regulatory explanation: Tooltip=true",
+   "Required fields: Required=true",
+   "Labels above custom controls not covered by Form Field"
+  ],
+  "dontUseWhen": [
+   "Section or page titles: use Section",
+   "Labels already built into Input or Select: do not add a second one"
+  ],
+  "partOf": [
+   "Form Field"
+  ],
+  "contains": [],
+  "keyProps": "Label text, Size (lg, md, sm), Required (false, true), Tooltip (false, true), Direction; not yet in the published library.",
+  "a11y": "Do not write «(مطلوب)» in the label; use the asterisk and mark the control required in code.",
+  "confidence": "high"
+ },
+ "1177:453": {
+  "name": "Form Field",
+  "page": "form-field",
+  "level": "organism",
+  "description": "The layout wrapper that stacks Form Field Label, a swappable control slot and Form Field Helper so any input shares the same label and validation chrome.",
+  "useWhen": [
+   "Mixed forms where fields use different controls (Input Field, Select, Switch, Slider, Checkbox)",
+   "KYC and bank-details forms needing required marks, tooltips and inline errors",
+   "Success confirmation on a field: State=success"
+  ],
+  "dontUseWhen": [
+   "The control already includes its own label and helper (Input, Select, Slider Field, TextArea): do not wrap it again",
+   "Grouping several fields under a title: use Section"
+  ],
+  "partOf": [],
+  "contains": [
+   "Form Field Label",
+   "Input Field",
+   "Form Field Helper"
+  ],
+  "keyProps": "State (default, error, success, disabled), Size, Show Label, Label text, Show Helper, Direction; swap the Input Field slot for other bare controls; not yet in the published library.",
+  "a11y": "Label, control and error must be programmatically linked; State does not cascade to the swapped control, so set both.",
+  "confidence": "high"
+ },
+ "1217:63": {
+  "name": "Date Input",
+  "page": "date-picker-time-picker",
+  "level": "atom",
+  "description": "A field with a calendar icon that shows a date and opens Date Wheel Picker on mobile or Date Calendar Picker on web.",
+  "useWhen": [
+   "Date of birth or ID expiry in KYC",
+   "A single date filter in transaction history",
+   "Each side of a From / To range inside Date Range Field"
+  ],
+  "dontUseWhen": [
+   "Start and end dates together: use Date Range Field",
+   "Free text dates typed by hand: do not use Input"
+  ],
+  "partOf": [
+   "Date Range Field"
+  ],
+  "contains": [],
+  "keyProps": "Value text, Size (lg, md, sm), State (default, filled, hover, focus, error, disabled), Direction.",
+  "a11y": "Announce it as a button that opens a picker and read the chosen date in full (15 سبتمبر 2024).",
+  "confidence": "high"
+ },
+ "1219:87": {
+  "name": "Date Wheel Picker",
+  "page": "date-picker-time-picker",
+  "level": "organism",
+  "description": "The mobile wheel picker opened as a sheet from Date Input, for dates, times or both, committed with an Apply button.",
+  "useWhen": [
+   "Picking a date of birth on mobile: Mode=single-date",
+   "Time of day such as a reminder time: Mode=time",
+   "Exact timestamps: Mode=datetime"
+  ],
+  "dontUseWhen": [
+   "Web and desktop date picking: use Date Calendar Picker",
+   "Choosing an investment term from a few durations: use SegmentedControl_3 or Radio Group"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Mode (single-date, date-range, time, datetime), Direction; Arabic uses full month names and «تطبيق».",
+  "a11y": "Keep the 40dp selection row and hide or disable dates outside min and max instead of rejecting after selection.",
+  "confidence": "high"
+ },
+ "1228:321": {
+  "name": "Date Calendar Picker",
+  "page": "date-picker-time-picker",
+  "level": "organism",
+  "description": "The web month-grid calendar popover opened from Date Input, for single, range or multi-date selection.",
+  "useWhen": [
+   "Date filters on back-office or web dashboards: Mode=single or range",
+   "Picking non-contiguous days (rare): Mode=multi"
+  ],
+  "dontUseWhen": [
+   "Mobile date entry: use Date Wheel Picker",
+   "Time selection: use Date Wheel Picker with Mode=time",
+   "A From / To filter: use Date Range Field, not a two-month calendar"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Mode (single, range, multi), Direction.",
+  "a11y": "Support arrow-key navigation and Enter, and keep 40dp day cells.",
+  "confidence": "high"
+ },
+ "1230:801": {
+  "name": "Date Range Field",
+  "page": "date-picker-time-picker",
+  "level": "organism",
+  "description": "Two Date Inputs side by side (من / إلى) for a start and end date, each opening its own picker. This is the Safqah range pattern on mobile and web.",
+  "useWhen": [
+   "Transaction history or statement period filters",
+   "Deal duration or payout window filters"
+  ],
+  "dontUseWhen": [
+   "A single date: use Date Input",
+   "Preset periods such as 30 days or 3 months: use SegmentedControl_3 or Tag Group"
+  ],
+  "partOf": [],
+  "contains": [
+   "Date Input"
+  ],
+  "keyProps": "Size (lg, md, sm), State (default, filled, focus, error, disabled), Direction.",
+  "a11y": "Label each input distinctly (من, إلى) and validate that the end is not before the start.",
+  "confidence": "high"
+ },
+ "1241:63": {
+  "name": "Search Input",
+  "page": "search",
+  "level": "atom",
+  "description": "A search field with a leading magnifier and a clear X when it has text. Used above lists to filter or as the top of Search Dropdown.",
+  "useWhen": [
+   "Filtering a deals list, transactions or investors in place",
+   "The input at the top of Search Dropdown"
+  ],
+  "dontUseWhen": [
+   "Header or toolbar search with little space: use Compact Search Trigger",
+   "Picking one value from a long list: use Combobox Field",
+   "Non-search text: use Input"
+  ],
+  "partOf": [
+   "Search Dropdown"
+  ],
+  "contains": [],
+  "keyProps": "Value text, Size (lg, md, sm), State (default, filled, hover, focus, error, disabled), Direction; not yet in the published library.",
+  "a11y": "Give the field a search role and label, and label the clear button «مسح».",
+  "confidence": "high"
+ },
+ "1244:63": {
+  "name": "Search Result Item",
+  "page": "search",
+  "level": "atom",
+  "description": "One result row in Search Dropdown: title only, with subtitle, with icon, or a recent search.",
+  "useWhen": [
+   "Deal results with meta such as «صكوك · إغلاق نوفمبر 2024»: Type=with-meta",
+   "Document results with a file icon: Type=with-icon",
+   "Recent searches before typing: Type=recent"
+  ],
+  "dontUseWhen": [
+   "Options of a picker: use Dropdown Item",
+   "Rows in a standalone list screen: use ListItem"
+  ],
+  "partOf": [
+   "Search Dropdown"
+  ],
+  "contains": [],
+  "keyProps": "Type (default, with-meta, with-icon, recent), State (default, hover, selected), Direction.",
+  "a11y": "Expose rows as options so keyboard highlight (State=selected) is announced.",
+  "confidence": "high"
+ },
+ "1256:171": {
+  "name": "Search Dropdown",
+  "page": "search",
+  "level": "organism",
+  "description": "The floating search panel: Search Input on top with results, empty, loading or recent states below. Used for global search and typeahead.",
+  "useWhen": [
+   "Global app search across deals, documents and transactions",
+   "Typeahead suggestions while typing",
+   "No matches: State=empty with a recovery hint"
+  ],
+  "dontUseWhen": [
+   "Filtering the list already on screen: use Search Input alone, no dropdown",
+   "Choosing a form value from options: use Combobox Menu",
+   "Full-page no-results states: use EmptyState"
+  ],
+  "partOf": [],
+  "contains": [
+   "Search Input",
+   "Search Result Item"
+  ],
+  "keyProps": "State (results, empty, loading, recent), Direction.",
+  "a11y": "Announce result counts and loading, and debounce queries around 250ms.",
+  "confidence": "high"
+ },
+ "1264:171": {
+  "name": "Compact Search Trigger",
+  "page": "search",
+  "level": "molecule",
+  "description": "An icon-only search trigger for headers that expands into a full search field (with a keyboard shortcut hint on desktop).",
+  "useWhen": [
+   "Search entry in an AppBar or back-office header",
+   "Dense dashboards or table toolbars where a permanent field crowds the layout"
+  ],
+  "dontUseWhen": [
+   "Search is the main task of the screen: use Search Input",
+   "Quick command access across the app on web: use Command palette"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "State (collapsed, hover, expanded), Direction; show the ⌘K hint on desktop only.",
+  "a11y": "The collapsed icon needs a label like «بحث» and focus must move into the field when it expands.",
+  "confidence": "medium"
+ },
+ "1281:63": {
+  "name": "TextArea Field",
+  "page": "text-area",
+  "level": "atom",
+  "description": "The bare bordered multi-line input box with auto-expand and a vertical resize handle, without label or helper.",
+  "useWhen": [
+   "The field slot inside TextArea or a Form Field",
+   "Custom layouts that compose their own label"
+  ],
+  "dontUseWhen": [
+   "A labelled multi-line field with counter: use TextArea",
+   "Single-line text: use Input Field",
+   "Notes inside dense tables: use TextArea Underline"
+  ],
+  "partOf": [
+   "TextArea"
+  ],
+  "contains": [],
+  "keyProps": "Value text, Size (lg, md, sm), State (default, filled, hover, focus, error, disabled), Direction.",
+  "a11y": "Needs an external label; cap growth with max lines so pasted text does not break the layout.",
+  "confidence": "high"
+ },
+ "1285:311": {
+  "name": "TextArea",
+  "page": "text-area",
+  "level": "organism",
+  "description": "A labelled multi-line text field with helper and optional character counter, for descriptions and justifications.",
+  "useWhen": [
+   "Source of funds explanation in KYC",
+   "Support or complaint messages",
+   "Deal descriptions with a length limit: Show Counter on"
+  ],
+  "dontUseWhen": [
+   "Single-line answers: use Input",
+   "Inline notes in dense admin tables: use TextArea Underline",
+   "No real character limit: turn Show Counter off"
+  ],
+  "partOf": [],
+  "contains": [
+   "TextArea Field"
+  ],
+  "keyProps": "State (default, filled, focus, error, disabled), Size, Show Label, Label text, Show Helper, Show Counter, Direction; not yet in the published library.",
+  "a11y": "Validate length on blur or submit, not per keystroke, and announce the counter when near the limit.",
+  "confidence": "high"
+ },
+ "1287:311": {
+  "name": "TextArea Underline",
+  "page": "text-area",
+  "level": "atom",
+  "description": "A minimal multi-line input with only a bottom underline, for notes that should recede inside dense layouts.",
+  "useWhen": [
+   "Internal notes on transaction or investor rows in the back office",
+   "Inline annotations where a column header provides context"
+  ],
+  "dontUseWhen": [
+   "Primary user-facing forms: use TextArea",
+   "Needs a box border: use TextArea Field"
+  ],
+  "partOf": [
+   "TextArea"
+  ],
+  "contains": [],
+  "keyProps": "Value text, Size, State (default, filled, hover, focus, error, disabled), Direction; add a label with Form Field Label if needed.",
+  "a11y": "Pair the red error underline with Form Field Helper text.",
+  "confidence": "medium"
+ },
+ "3887:1126": {
+  "name": "Combobox Field",
+  "page": "combobox",
+  "level": "atom",
+  "description": "A typable picker field (editable text, clear X, chevron) that filters a long option list in Combobox Menu.",
+  "useWhen": [
+   "Choosing a bank when adding an IBAN",
+   "City or sector selection from long lists"
+  ],
+  "dontUseWhen": [
+   "Two to five options: use Radio Group or SegmentedControl_2/_3",
+   "Short fixed lists: use Select",
+   "Searching content rather than choosing a value: use Search Input"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Text, Size (lg, md, sm), State (Default, Focus, Filled), Direction.",
+  "a11y": "Expose combobox semantics with expanded state and the active option.",
+  "confidence": "high"
+ },
+ "3888:1186": {
+  "name": "Combobox Menu",
+  "page": "combobox",
+  "level": "molecule",
+  "description": "The open filtered list of Dropdown Item options under a Combobox Field, with a no-results state.",
+  "useWhen": [
+   "The open state of Combobox Field while typing",
+   "No matches: State=No results with «جرّب كلمة أخرى»"
+  ],
+  "dontUseWhen": [
+   "Non-typable pickers: use Dropdown Menu",
+   "Global content search: use Search Dropdown"
+  ],
+  "partOf": [],
+  "contains": [
+   "Dropdown Item"
+  ],
+  "keyProps": "Size (lg, md, sm), State (Results, No results), Direction.",
+  "a11y": "Announce the number of matches and never show an empty box.",
+  "confidence": "high"
+ },
+ "3902:1186": {
+  "name": "NumericStepper",
+  "page": "numeric-stepper",
+  "level": "organism",
+  "description": "A compact minus / value / plus control for small integer quantities with min and max clamping. It is not the process Stepper.",
+  "useWhen": [
+   "Number of units or shares in a deal (small integers)",
+   "Number of installments or similar small counts",
+   "Value at a bound: State=AtMin or AtMax disables that button"
+  ],
+  "dontUseWhen": [
+   "SAR amounts: use Input Amount or Amount Stepper",
+   "Showing steps of a multi-step flow: use Stepper",
+   "Large or free-form numbers: use Input Amount"
+  ],
+  "partOf": [],
+  "contains": [],
+  "keyProps": "Value, Size (lg, md, sm), State (Default, AtMin, AtMax, Disabled), Direction.",
+  "a11y": "Disable the boundary button (aria-disabled) instead of ignoring taps, and announce the new value.",
+  "confidence": "high"
+ }
+}

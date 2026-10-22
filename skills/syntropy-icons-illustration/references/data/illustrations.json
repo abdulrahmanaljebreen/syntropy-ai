@@ -3,9 +3,9 @@
  "source": {
   "file": "DDI9ObV7rOP82XQ3OJzogv",
   "name": "Syntropy Icons",
-  "lastModified": "2026-10-05T17:37:53.956Z"
+  "lastModified": "2026-10-21T12:44:43.503Z"
  },
- "count": 39,
+ "count": 41,
  "illustrations": [
   {
    "concept": "Scheduled",
@@ -427,6 +427,28 @@
   },
   {
    "concept": "Recommendation · Orbit",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Completed",
+   "set": "Illustrations",
+   "setId": "228:89",
+   "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",
+   "figmaProperty": "Property 1",
+   "alignments": [
+    "Right",
+    "Left"
+   ]
+  },
+  {
+   "concept": "Partially repaid",
    "set": "Illustrations",
    "setId": "228:89",
    "setKey": "8bd1881729722a7a9ba5e266d189c82f72b5d85e",

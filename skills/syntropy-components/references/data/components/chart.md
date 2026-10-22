@@ -59,6 +59,10 @@ Safqah green data-visualisation foundation - Tufte-clean, full RTL + LTR, code-r
 | Chart / Waterfall · Mobile | [4165:3291](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4165-3291) | set | 6 | yes | `knowledge/examples/components/chart/chart-waterfall-mobile.png` |
 | Chart / Stacked · Mobile | [4165:3292](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4165-3292) | set | 6 | yes | `knowledge/examples/components/chart/chart-stacked-mobile.png` |
 | Chart / KPI list · Mobile | [4165:3293](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4165-3293) | set | 6 | yes | `knowledge/examples/components/chart/chart-kpi-list-mobile.png` |
+| Chart / Bubbles | [6632:6946](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6632-6946) | set | 2 | no | `knowledge/examples/components/chart/chart-bubbles.png` |
+| Chart / ValueLabel | [6632:7003](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6632-7003) | set | 2 | no | `knowledge/examples/components/chart/chart-value-label.png` |
+| Chart / LiquidBar | [6632:7079](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6632-7079) | set | 2 | no | `knowledge/examples/components/chart/chart-liquid-bar.png` |
+| Chart / Growth Projection · Mobile | [6632:7083](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6632-7083) | set | 52 | no | `knowledge/examples/components/chart/chart-growth-projection-mobile.png` |
 
 ### Chart / Gridlines
 
@@ -1045,6 +1049,49 @@ Accessibility: Each row reads label, value, delta in order; sparklines decorativ
 | --- | --- | --- | --- | --- |
 | Direction | `direction` | variant | LTR, RTL | LTR |
 | State | `state` | variant | Default, Hover, Group hover | Default |
+
+### Chart / Bubbles
+
+Looping fizz for Chart / LiquidBar. Phase 1 → 2 after 0.01 s (Smart animate, Linear 0.5 s), 2 → 1 instantly; every bubble moves up one slot so the loop is seamless. 26 × 200, place inside a clipping frame.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| Phase | `phase` | variant | 1, 2 | 1 |
+
+### Chart / ValueLabel
+
+Direct label for the focal bar/point (Tufte style, no box): value + Riyal icon, date, and an optional guide stem pointing at the mark. Use ChartTooltip when a boxed multi-series readout is needed.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| Has guide | `hasGuide` | boolean |  | true |
+| Direction | `direction` | variant | RTL, LTR | RTL |
+
+### Chart / LiquidBar
+
+Projection bar. Empty = track only; Filled = glowing liquid + looping Chart / Bubbles. Resize the instance to the data height (track and liquid stretch). Switch Empty → Filled with Smart animate (Gentle 0.6 s) and the liquid rises from the bottom.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| State | `state` | variant | Empty, Filled | Empty |
+
+### Chart / Growth Projection · Mobile
+
+Growth projection (FOMO) chart for the cash-out popup: RollingAmount + 10 Chart / LiquidBar + Chart / ValueLabel + NumericStepper + Link. Year=0 is the intro (bars grow, auto-advances to Year=4 after 0.4 s). Bars, − / + switch Year with Smart animate (Gentle). Projection at 16% compounded yearly, always labelled متوقعة with the assumption line.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| Year | `year` | variant | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Intro A, Intro B, 20 | Intro A |
+| Direction | `direction` | variant | LTR, RTL | RTL |
+| Principal | `principal` | variant | 10k, 2k | 10k |
 
 ## Guide from the doc page
 

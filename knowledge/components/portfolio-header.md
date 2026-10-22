@@ -19,6 +19,8 @@ The portfolio-page header - greeting, maskable wallet balance, total returns wit
 | WalletChip | [4241:1317](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4241-1317) | set | 2 | yes | `knowledge/examples/components/portfolio-header/wallet-chip.png` |
 | ReturnsDisplay | [4241:1368](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4241-1368) | set | 2 | yes | `knowledge/examples/components/portfolio-header/returns-display.png` |
 | PortfolioHeader | [4243:1823](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=4243-1823) | set | 4 | yes | `knowledge/examples/components/portfolio-header/portfolio-header.png` |
+| RollingDigit | [6631:1411](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6631-1411) | set | 20 | no | `knowledge/examples/components/portfolio-header/rolling-digit.png` |
+| RollingAmount | [6631:1484](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=6631-1484) | set | 4 | no | `knowledge/examples/components/portfolio-header/rolling-amount.png` |
 
 ### BalanceToggle
 
@@ -159,6 +161,28 @@ Compliance: Returns include expected profit; label it so.
 | Show payouts table | `showPayoutsTable` | boolean |  | true |
 | Direction | `direction` | variant | LTR, RTL | LTR |
 | Balance | `balance` | variant | Shown, Masked | Shown |
+
+### RollingDigit
+
+Odometer digit: a clipped 0–9 strip. Change Digit inside a smart-animated variant switch and the strip rolls to the new number. Direction-neutral.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| Size | `size` | variant | lg, md | lg |
+| Digit | `digit` | variant | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 | 0 |
+
+### RollingAmount
+
+Rolling money amount (odometer) built from 6 RollingDigit instances (D0 hidden by default, show it for 100,000+) + comma + Riyal icon. Set each D1–D5 Digit; swap variants with Smart animate (Gentle) and every digit rolls. D1–D5 cover 10,000–99,999; show D0 for 6 digits, hide D1 for 4 digits.
+
+> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
+
+| Property in Figma | Code name | Type | Values | Default |
+| --- | --- | --- | --- | --- |
+| Size | `size` | variant | lg, md | lg |
+| Direction | `direction` | variant | LTR, RTL | LTR |
 
 ## Guide from the doc page
 

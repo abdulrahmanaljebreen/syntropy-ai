@@ -20,7 +20,7 @@ Reference image (every variant, labelled): `knowledge/examples/components/status
 | IssuanceStatusBadge (Investor) | [1485:151](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=1485-151) | set | 30 | yes | `knowledge/examples/components/status-issuance-badge/issuance-status-badge.png` |
 | IssuanceStatusBadge (Developer) | [1486:171](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=1486-171) | set | 38 | yes | `knowledge/examples/components/status-issuance-badge/issuance-status-badge.png` |
 | IssuanceStatusBadge (Internal) | [1487:107](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=1487-107) | set | 6 | yes | `knowledge/examples/components/status-issuance-badge/issuance-status-badge.png` |
-| illustrations | [1552:50025](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=1552-50025) | set | 16 | yes | `knowledge/examples/components/status-issuance-badge/illustrations.png` |
+| illustrations | [1552:50025](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=1552-50025) | set | 25 | yes | `knowledge/examples/components/status-issuance-badge/illustrations.png` |
 
 ### Badge Dot
 
@@ -163,7 +163,7 @@ Accessibility: Decorative; hide from screen readers because the badge label alre
 
 | Property in Figma | Code name | Type | Values | Default |
 | --- | --- | --- | --- | --- |
-| Property 1 | `unnamed1` | variant | Scheduled, Defaulted, In recovery, Repayment due, Matured, Active, Preparing, Raising | Defaulted |
+| Property 1 | `unnamed1` | variant | Scheduled, Defaulted, In recovery, Repayment due, Matured, Active, Preparing, Raising, Partial, Data info alert, Info, Completed, Chosen checkmark, Partially repaid | Defaulted |
 | Alignment | `alignment` | variant | Right, Left | Left |
 
 ## Guide from the doc page

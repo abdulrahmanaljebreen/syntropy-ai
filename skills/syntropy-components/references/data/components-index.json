@@ -3,15 +3,15 @@
  "source": {
   "file": "a7Z956YZy9n6f9uz5DK16Y",
   "name": "Syntropy - Safqah Design System 2.0.0",
-  "lastModified": "2026-10-19T11:17:58Z"
+  "lastModified": "2026-10-22T16:35:49Z"
  },
  "counts": {
   "pages": 85,
-  "sets": 320,
+  "sets": 326,
   "standalone": 34,
-  "variants": 4840,
+  "variants": 4931,
   "published": 285,
-  "withDescription": 57
+  "withDescription": 63
  },
  "families": [
   {
@@ -5718,7 +5718,7 @@
    "hidden": false,
    "key": "274b853baa6847d483ca019d7b9baaab6295d257",
    "description": "",
-   "variantCount": 16,
+   "variantCount": 25,
    "props": [
     {
      "name": "Property 1",
@@ -5733,7 +5733,13 @@
       "Matured",
       "Active",
       "Preparing",
-      "Raising"
+      "Raising",
+      "Partial",
+      "Data info alert",
+      "Info",
+      "Completed",
+      "Chosen checkmark",
+      "Partially repaid"
      ],
      "canonicalOptions": [
       "Scheduled",
@@ -5743,7 +5749,13 @@
       "Matured",
       "Active",
       "Preparing",
-      "Raising"
+      "Raising",
+      "Partial",
+      "Data info alert",
+      "Info",
+      "Completed",
+      "Chosen checkmark",
+      "Partially repaid"
      ],
      "issue": "unnamed property in Figma"
     },
@@ -8921,6 +8933,202 @@
     "container": null
    },
    "published": true
+  },
+  {
+   "id": "6632:6946",
+   "name": "Chart / Bubbles",
+   "kind": "set",
+   "page": "chart",
+   "pageCode": "04k",
+   "family": "04 Data Display",
+   "status": "stable",
+   "hidden": false,
+   "key": "d023bccdbe22bf109968b9bf64b32910aa6bec1e",
+   "description": "Looping fizz for Chart / LiquidBar. Phase 1 → 2 after 0.01 s (Smart animate, Linear 0.5 s), 2 → 1 instantly; every bubble moves up one slot so the loop is seamless. 26 × 200, place inside a clipping frame.",
+   "variantCount": 2,
+   "props": [
+    {
+     "name": "Phase",
+     "canonical": "phase",
+     "type": "VARIANT",
+     "default": "1",
+     "options": [
+      "1",
+      "2"
+     ],
+     "canonicalOptions": [
+      "1",
+      "2"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4114:1255",
+    "reference": null,
+    "container": null
+   },
+   "published": false
+  },
+  {
+   "id": "6632:7003",
+   "name": "Chart / ValueLabel",
+   "kind": "set",
+   "page": "chart",
+   "pageCode": "04k",
+   "family": "04 Data Display",
+   "status": "stable",
+   "hidden": false,
+   "key": "dbe59ec37c65107454cee9cba8b1b9ae55129562",
+   "description": "Direct label for the focal bar/point (Tufte style, no box): value + Riyal icon, date, and an optional guide stem pointing at the mark. Use ChartTooltip when a boxed multi-series readout is needed.",
+   "variantCount": 2,
+   "props": [
+    {
+     "name": "Has guide",
+     "canonical": "hasGuide",
+     "type": "BOOLEAN",
+     "default": true
+    },
+    {
+     "name": "Direction",
+     "canonical": "direction",
+     "type": "VARIANT",
+     "default": "RTL",
+     "options": [
+      "RTL",
+      "LTR"
+     ],
+     "canonicalOptions": [
+      "RTL",
+      "LTR"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4114:1255",
+    "reference": null,
+    "container": null
+   },
+   "published": false
+  },
+  {
+   "id": "6632:7079",
+   "name": "Chart / LiquidBar",
+   "kind": "set",
+   "page": "chart",
+   "pageCode": "04k",
+   "family": "04 Data Display",
+   "status": "stable",
+   "hidden": false,
+   "key": "dacb91e8d89e194e82b379c6171855c332f88813",
+   "description": "Projection bar. Empty = track only; Filled = glowing liquid + looping Chart / Bubbles. Resize the instance to the data height (track and liquid stretch). Switch Empty → Filled with Smart animate (Gentle 0.6 s) and the liquid rises from the bottom.",
+   "variantCount": 2,
+   "props": [
+    {
+     "name": "State",
+     "canonical": "state",
+     "type": "VARIANT",
+     "default": "Empty",
+     "options": [
+      "Empty",
+      "Filled"
+     ],
+     "canonicalOptions": [
+      "Empty",
+      "Filled"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4114:1255",
+    "reference": null,
+    "container": null
+   },
+   "published": false
+  },
+  {
+   "id": "6632:7083",
+   "name": "Chart / Growth Projection · Mobile",
+   "kind": "set",
+   "page": "chart",
+   "pageCode": "04k",
+   "family": "04 Data Display",
+   "status": "stable",
+   "hidden": false,
+   "key": "dfb536f106cd9700da11b5e6151b465b6320c7f7",
+   "description": "Growth projection (FOMO) chart for the cash-out popup: RollingAmount + 10 Chart / LiquidBar + Chart / ValueLabel + NumericStepper + Link. Year=0 is the intro (bars grow, auto-advances to Year=4 after 0.4 s). Bars, − / + switch Year with Smart animate (Gentle). Projection at 16% compounded yearly, always labelled متوقعة with the assumption line.",
+   "variantCount": 52,
+   "props": [
+    {
+     "name": "Year",
+     "canonical": "year",
+     "type": "VARIANT",
+     "default": "Intro A",
+     "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "Intro A",
+      "Intro B",
+      "20"
+     ],
+     "canonicalOptions": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "Intro A",
+      "Intro B",
+      "20"
+     ]
+    },
+    {
+     "name": "Direction",
+     "canonical": "direction",
+     "type": "VARIANT",
+     "default": "RTL",
+     "options": [
+      "LTR",
+      "RTL"
+     ],
+     "canonicalOptions": [
+      "LTR",
+      "RTL"
+     ]
+    },
+    {
+     "name": "Principal",
+     "canonical": "principal",
+     "type": "VARIANT",
+     "default": "10k",
+     "options": [
+      "10k",
+      "2k"
+     ],
+     "canonicalOptions": [
+      "10k",
+      "2k"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4114:1255",
+    "reference": null,
+    "container": null
+   },
+   "published": false
   },
   {
    "id": "1950:212",
@@ -19495,6 +19703,120 @@
     "container": null
    },
    "published": true
+  },
+  {
+   "id": "6631:1411",
+   "name": "RollingDigit",
+   "kind": "set",
+   "page": "portfolio-header",
+   "pageCode": "08d",
+   "family": "08 Safqah-Specific",
+   "status": "stable",
+   "hidden": false,
+   "key": "871e4ac63af13cd1bf6f96989598771153dd056c",
+   "description": "Odometer digit: a clipped 0–9 strip. Change Digit inside a smart-animated variant switch and the strip rolls to the new number. Direction-neutral.",
+   "variantCount": 20,
+   "props": [
+    {
+     "name": "Size",
+     "canonical": "size",
+     "type": "VARIANT",
+     "default": "lg",
+     "options": [
+      "lg",
+      "md"
+     ],
+     "canonicalOptions": [
+      "lg",
+      "md"
+     ]
+    },
+    {
+     "name": "Digit",
+     "canonical": "digit",
+     "type": "VARIANT",
+     "default": "0",
+     "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "canonicalOptions": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4245:1514",
+    "reference": null,
+    "container": null
+   },
+   "published": false
+  },
+  {
+   "id": "6631:1484",
+   "name": "RollingAmount",
+   "kind": "set",
+   "page": "portfolio-header",
+   "pageCode": "08d",
+   "family": "08 Safqah-Specific",
+   "status": "stable",
+   "hidden": false,
+   "key": "26f09a6e2b60b790fd7e6d73294b6b947b74d8b7",
+   "description": "Rolling money amount (odometer) built from 6 RollingDigit instances (D0 hidden by default, show it for 100,000+) + comma + Riyal icon. Set each D1–D5 Digit; swap variants with Smart animate (Gentle) and every digit rolls. D1–D5 cover 10,000–99,999; show D0 for 6 digits, hide D1 for 4 digits.",
+   "variantCount": 4,
+   "props": [
+    {
+     "name": "Size",
+     "canonical": "size",
+     "type": "VARIANT",
+     "default": "lg",
+     "options": [
+      "lg",
+      "md"
+     ],
+     "canonicalOptions": [
+      "lg",
+      "md"
+     ]
+    },
+    {
+     "name": "Direction",
+     "canonical": "direction",
+     "type": "VARIANT",
+     "default": "LTR",
+     "options": [
+      "LTR",
+      "RTL"
+     ],
+     "canonicalOptions": [
+      "LTR",
+      "RTL"
+     ]
+    }
+   ],
+   "frames": {
+    "doc": "4245:1514",
+    "reference": null,
+    "container": null
+   },
+   "published": false
   },
   {
    "id": "3488:48634",

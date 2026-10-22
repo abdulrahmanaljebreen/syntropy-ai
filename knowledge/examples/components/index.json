@@ -635,6 +635,27 @@
   "path": "knowledge/examples/components/chart/chart-hover-indicator.png"
  },
  {
+  "id": "6632:6946",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Bubbles",
+  "path": "knowledge/examples/components/chart/chart-bubbles.png"
+ },
+ {
+  "id": "6632:7003",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / ValueLabel",
+  "path": "knowledge/examples/components/chart/chart-value-label.png"
+ },
+ {
+  "id": "6632:7079",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / LiquidBar",
+  "path": "knowledge/examples/components/chart/chart-liquid-bar.png"
+ },
+ {
   "id": "2083:647",
   "page": "empty-state",
   "kind": "component",
@@ -754,14 +775,6 @@
   "path": "knowledge/examples/components/progress/progress-segment.png"
  },
  {
-  "id": "4844:107612",
-  "page": "app-bar",
-  "kind": "set",
-  "name": "Header",
-  "error": "Figma renders no image for this set; see the page reference image",
-  "fallback": "knowledge/examples/components/app-bar/reference.png"
- },
- {
   "id": "2517:30",
   "page": "tab-bar",
   "kind": "set",
@@ -844,6 +857,14 @@
   "kind": "set",
   "name": "BreadcrumbSeparator",
   "path": "knowledge/examples/components/breadcrumb/breadcrumb-separator.png"
+ },
+ {
+  "id": "4844:107612",
+  "page": "app-bar",
+  "kind": "set",
+  "name": "Header",
+  "error": "Figma renders no image for this set; see the page reference image",
+  "fallback": "knowledge/examples/components/app-bar/reference.png"
  },
  {
   "id": "2734:20",
@@ -1355,6 +1376,20 @@
   "kind": "set",
   "name": "ProvinceSelector",
   "path": "knowledge/examples/components/province-selector/province-selector.png"
+ },
+ {
+  "id": "6631:1411",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "RollingDigit",
+  "path": "knowledge/examples/components/portfolio-header/rolling-digit.png"
+ },
+ {
+  "id": "6631:1484",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "RollingAmount",
+  "path": "knowledge/examples/components/portfolio-header/rolling-amount.png"
  },
  {
   "id": "3718:190",
@@ -2468,6 +2503,13 @@
   "kind": "set",
   "name": "Chart / KPI strip",
   "path": "knowledge/examples/components/chart/chart-kpi-strip.png"
+ },
+ {
+  "id": "6632:7083",
+  "page": "chart",
+  "kind": "set",
+  "name": "Chart / Growth Projection · Mobile",
+  "path": "knowledge/examples/components/chart/chart-growth-projection-mobile.png"
  },
  {
   "id": "1950:212",

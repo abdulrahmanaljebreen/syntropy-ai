@@ -285,10 +285,10 @@
     },
     {
       "id": 24,
-      "prompt": "(a Notion create-pages tool is connected; earlier the agent used Tag for a KYC status row) /syntropy feedback that should be StatusPill. ثم: نعم أضفها",
-      "expected_output": "Writes the report, asks once whether to add it, and on yes creates one page in collection://ffc45944-aefb-4ed8-8669-ad368acbd013 with Summary, Type Wrong component, Tool Claude Code and the full report in Details, then replies with the row link.",
+      "prompt": "(a Notion create-pages tool is connected; earlier the agent used Tag for a KYC status row) /syntropy feedback that should be StatusPill",
+      "expected_output": "Writes the report and, without asking, creates one page in collection://ffc45944-aefb-4ed8-8669-ad368acbd013 with Summary, Type Wrong component, Tool Claude Code and the full report in Details, then replies with the row link.",
       "expectations": [
-        "Asks before creating the row, once",
+        "Does not ask before creating the row",
         "Creates exactly one page in the feedback data source",
         "Sets Summary, Type, Tool and Details; does not set Status",
         "Replies with the new row's link in one line",

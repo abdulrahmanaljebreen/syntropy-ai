@@ -82,4 +82,4 @@ npm run links:check    validate the links hub (-- --live checks every URL)
 ```
 The Figma token is read from `FIGMA_TOKEN` or `~/.config/syntropy/figma-token` and is never committed.
 
-Report a gap or a wrong rule: open an issue with the label `knowledge-gap`.
+Report a mistake or an idea: type `/syntropy feedback` (or `syntropy: feedback`) and paste the report into the [feedback list](https://app.notion.com/p/521333af0f8046cb89a6692368be729c). GitHub issues are welcome too.

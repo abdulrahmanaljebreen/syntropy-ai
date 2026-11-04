@@ -17,7 +17,7 @@ When the person's message starts with `syntropy:` (or `/syntropy` in Claude Code
 4. **Design** in the medium the person wants, using only Syntropy.
 5. **Self-review** (heuristics, states, accessibility, copy, compliance, lint), fix, then hand off.
 
-Modes: `syntropy: research <topic>`, `syntropy: review <link|image|code>`, `syntropy: explain <component|token>`. A quick question gets a direct answer, no interview.
+Modes: `syntropy: research <topic>`, `syntropy: review <link|image|code>`, `syntropy: explain <component|token>`, `syntropy: feedback` (write a report of a mistake or idea for the feedback list: https://app.notion.com/p/521333af0f8046cb89a6692368be729c). A quick question gets a direct answer, no interview.
 
 ## Non-negotiables
 1. **Components:** only those in `knowledge/components/index.json`, with exact Figma names and variant values. Never invent one; if nothing fits, say so and suggest the closest composition.

@@ -1,11 +1,11 @@
 <!-- syntropy-lint-disable eastern-arabic-numerals: this file shows them as examples of what not to do -->
 # Modes
 
-How to parse a `/syntropy` or `syntropy:` message into one of five modes, what each mode does, which skill it hands to, and a full example session for each. Open this when the first word is ambiguous or when you want the expected shape of a session.
+How to parse a `/syntropy` or `syntropy:` message into one of six modes, what each mode does, which skill it hands to, and a full example session for each. Open this when the first word is ambiguous or when you want the expected shape of a session.
 
 ## Rules
 1. Parse only the **first word** after `/syntropy` or `syntropy:` (case-insensitive, Arabic accepted). Why: predictable for people, cheap for agents.
-2. `research`, `review` and `explain` are reserved words. Anything else is a request and starts the intake. Why: "review" as the first word always means review mode, even in "review my idea for a payout screen"; ask once if that reads like new work.
+2. `research`, `review`, `explain` and `feedback` are reserved words. Anything else is a request and starts the intake. Why: "review" as the first word always means review mode, even in "review my idea for a payout screen"; ask once if that reads like new work.
 3. A message with no command that asks for Safqah design work is treated as `/syntropy <request>`. Why: the skill auto-triggers; people should not need the command.
 4. A quick factual question (one token, one component prop, one rule) gets a direct answer, with no interview and no command needed. Why: interviews are for work, not facts.
 5. Never mix modes in one reply. If a research request turns into design, finish research, then offer "want me to design it? (`/syntropy <request>`)". Why: each mode has its own output shape.
@@ -17,6 +17,7 @@ How to parse a `/syntropy` or `syntropy:` message into one of five modes, what e
 | any other word | | Intake, auto-answered from the request | same |
 | `research` | ابحث, بحث, مراجع, إلهام | Research | syntropy-inspiration |
 | `review` | راجع, مراجعة, قيّم | Review | syntropy-ux-review |
+| `feedback` | ملاحظة, ملاحظات, بلّغ | Feedback | this skill, `feedback.md` |
 | `explain` | اشرح, ما هو, ما هي | Explain | answered here from syntropy-components, syntropy-foundations, syntropy-patterns, syntropy-content |
 | no command, a fact question | | Direct | the skill that owns the fact |
 
@@ -34,7 +35,7 @@ Example:
 > **Person:** none
 > **Agent:** (five-line brief) Confirm, or tell me what to change.
 > **Person:** yes
-> **Agent:** Three references (two Saudi banking apps, one GCC wallet), two options: A `BottomSheet` review with `KeyValue` rows and `SheetFooter`; B full screen with `Stat` amount and `ListItem` bank row. Recommend A (shorter, matches invest confirmation). Then the design: RTL first, fee incl. VAT as `{fee}`, net amount headline, IBAN masked, states (loading, insufficient balance, bank error, success), one `Button` `Variant=primary` «تأكيد السحب», contrast flag on the primary label, lint result.
+> **Agent:** Three references (two Saudi banking apps, one GCC wallet), two options: A `BottomSheet` review with `KeyValue` rows and `SheetFooter`; B full screen with `Stat` amount and `ListItem` bank row. Recommend A (shorter, matches invest confirmation). Then the design: RTL first, fee incl. VAT as `{fee}`, net amount headline, IBAN masked, states (loading, insufficient balance, bank error, success), one `Button` `Variant=primary` «تأكيد السحب», lint result.
 
 ## Mode 2. Research (`/syntropy research <topic>`)
 Hand to syntropy-inspiration research mode: detect research tools, ask at most what is unclear (one question at a time, with defaults), 5 to 10 real references from at most 2 tools, Saudi and GCC first, cited with links; extract patterns, never pixels; map each pattern to Syntropy components and tokens; recommend one. Ends with a recommendation and mapping, not a finished design. If syntropy-inspiration is not installed, use `research_plan` and `find_links` from the Syntropy MCP, else tell the person how to install (`lookup-order.md`).
@@ -46,7 +47,7 @@ Example:
 > **Agent:** (searches Mobbin and Refero for ID and document upload in Saudi and GCC fintech) 8 references with links. Patterns: camera-first capture with a frame guide, auto-capture with manual fallback, per-document status list, retake without restarting. Syntropy mapping: `KYCStep` for the checklist, `Upload Button` and `File Item with Progress` for upload, `Alert` `Tone=warning` for blurry capture. Recommendation: camera-first with the `KYCStep` list. Personal data: purpose line and no PII in events (syntropy-compliance-ux). Want me to design it? (`/syntropy KYC upload screen`)
 
 ## Mode 3. Review (`/syntropy review <link | image | code>`)
-Hand to syntropy-ux-review. Accepted inputs: a Figma link (read only if it is a design-system page or the person's own file; never other areas of the Syntropy file), a screenshot, code (Flutter, Angular, HTML, CSS), copy. Output follows the review format: verdict, findings ranked by severity, each with the rule, evidence, the Syntropy fix (component, token, copy), and owner. Always cover states, contrast (carry the known primary-button flag), RTL, numbers, copy, dark patterns and compliance; run `lint_ui` or `node lint/cli.mjs` on code. If the input is missing, ask for it in one line; do not run the intake.
+Hand to syntropy-ux-review. Accepted inputs: a Figma link (read only if it is a design-system page or the person's own file; never other areas of the Syntropy file), a screenshot, code (Flutter, Angular, HTML, CSS), copy. Output follows the review format: verdict, findings ranked by severity, each with the rule, evidence, the Syntropy fix (component, token, copy), and owner. Always cover states, contrast (brand green as built is accepted, never a finding), RTL, numbers, copy, dark patterns and compliance; run `lint_ui` or `node lint/cli.mjs` on code. If the input is missing, ask for it in one line; do not run the intake.
 
 Example:
 > **Person:** /syntropy review https://www.figma.com/design/<fileKey>?node-id=12-34
@@ -56,7 +57,6 @@ Example:
 > 3 Medium · Two primary buttons. Fix: «إلغاء» as `Variant=secondary`.
 > 4 Medium · No empty or error state. Fix: `EmptyState` and a retry `Alert`.
 > 5 Medium · Hex fill on the header. Fix: `bg/surface`.
-> Known issue carried: primary `Button` label contrast 2.92:1 (open DS decision, not a finding against this screen).
 
 ## Mode 4. Explain (`/syntropy explain <component | token | pattern | rule>`)
 Answer here, briefly, in this order:
@@ -94,3 +94,9 @@ Recognise: a single fact, a yes or no, a name lookup. Answer in one to three lin
 - mcp/README.md (tools)
 - knowledge/components/card-deal.md
 - knowledge/ux/accessibility/contrast-pairs.md
+## Mode 5. Feedback (`/syntropy feedback [what went wrong]`)
+Write a report of the mistake or idea from this conversation, in one code block, and point the person to the feedback list. No interview; ask one line only when there is nothing to report from. Template, rules and an example: `feedback.md`.
+
+Example:
+> **Person:** /syntropy feedback the fee row should come before the total
+> **Agent:** (report with Summary, Type `Copy or Arabic` or `Wrong component`, Tool, what was asked, what the agent did, what it should be and the rule, where) Then: open the feedback list and paste this into Details: https://app.notion.com/p/521333af0f8046cb89a6692368be729c

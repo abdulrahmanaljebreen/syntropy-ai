@@ -244,6 +244,44 @@
         "Mentions lint_ui or node lint/cli.mjs",
         "The answer itself contains no em dash character"
       ]
+    },
+    {
+      "id": 21,
+      "prompt": "(earlier in the conversation the agent used Tag for a KYC status row) /syntropy feedback that should be a StatusPill",
+      "expected_output": "Writes a feedback report in one code block from the conversation, with Type Wrong component, quoting what was asked and what the agent did, the right answer StatusPill with its source, and then one line pointing to the feedback list link.",
+      "expectations": [
+        "Does not start the intake interview",
+        "Report is in one code block",
+        "Includes Summary, Type, Tool, What was asked, What the agent did, What it should be, Where",
+        "Type is Wrong component",
+        "Names StatusPill and cites confusables or the component guide",
+        "Gives the feedback list link https://app.notion.com/p/521333af0f8046cb89a6692368be729c",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 22,
+      "prompt": "/syntropy feedback",
+      "expected_output": "With nothing to report from, asks one short line for what went wrong or the idea, and nothing else.",
+      "expectations": [
+        "Asks exactly one short question",
+        "Does not ask the intake question 'What are you making?'",
+        "Does not produce a report yet",
+        "Contains no em dash character"
+      ]
+    },
+    {
+      "id": 23,
+      "prompt": "syntropy: ملاحظة المبلغ ظهر بالأرقام الهندية في شاشة السحب لحساب الآيبان SA0380000000608010167519",
+      "expected_output": "Writes the report in Arabic with Type Copy or Arabic, states Western digits as the rule, and replaces the IBAN with a placeholder such as {iban}.",
+      "expectations": [
+        "Recognises «ملاحظة» as feedback mode",
+        "Report written in Arabic with component and file names in English",
+        "Does not include the IBAN; uses a placeholder",
+        "Cites Western digits (numbers rule or numbers-currency.md)",
+        "Gives the feedback list link https://app.notion.com/p/521333af0f8046cb89a6692368be729c",
+        "Contains no em dash character"
+      ]
     }
   ]
 }

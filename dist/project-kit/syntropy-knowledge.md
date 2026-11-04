@@ -46,8 +46,9 @@ Each rule with why, looks like and does not look like: `references/non-negotiabl
 | `/syntropy research <topic>` | Research | Hand to syntropy-inspiration research mode |
 | `/syntropy review <link, image or code>` | Review | Hand to syntropy-ux-review |
 | `/syntropy explain <thing>` | Explain | Short exact answer (format below) |
+| `/syntropy feedback [what went wrong]` | Feedback | Report in one code block plus the feedback list link (`references/feedback.md`) |
 | A quick question ("what token for muted text") | Direct | Answer from the right skill, no interview |
-Arabic triggers count too: «ابحث» = research, «راجع» = review, «اشرح» = explain. Detail and example sessions: `references/modes.md`.
+Arabic triggers count too: «ابحث» = research, «راجع» = review, «اشرح» = explain, «ملاحظة» = feedback. Detail and example sessions: `references/modes.md`.
 
 ### Step 1. Intake (new work only): `references/intake.md`
 1. If the Syntropy MCP is connected, call `start_intake` with the request and follow it.
@@ -106,7 +107,8 @@ syntropy-ux-review (heuristics, states, dark patterns), syntropy-accessibility (
 | Quick fact ("token for muted text") | Answer: `text/muted` | Start an interview |
 | Money or regulated flow | Hand to syntropy-product-workflow | Jump straight to pixels |
 | Nothing in Syntropy fits | Say so, compose from existing components, flag the gap | Draw a custom component |
-| Primary button contrast question | Quote 2.92:1 Light, 2.14:1 Dark, open DS decision | Pick a darker green |
+| Primary button contrast question | Brand green as built, accepted by the DS owner (rule 8) | Pick a darker green or flag it |
+| The person says the answer was wrong | Fix it, then offer `/syntropy feedback` so the owner fixes it for everyone | Argue, or fix it only in this chat |
 | Unpublished set needed (Tag, Input, Select, AppBar) | Use it by name; in another Figma file take the published route or copy it from the Syntropy file (`unpublished.md`) | Rebuild it or swap for a lookalike |
 | A skill is not installed | Use the Syntropy MCP, else give the install command | Guess from memory |
 
@@ -146,6 +148,7 @@ Then continue with what this skill knows, and mark answers that need the missing
 | `references/non-negotiables.md` | Applying or explaining any of the 15 rules, with do and don't examples |
 | `references/intake.md` | Running the interview: questions, choices, keyword cues, follow-ups, brief template, sample interviews in Arabic and English |
 | `references/modes.md` | Parsing a mode and seeing a full example session for each |
+| `references/feedback.md` | Writing a feedback report: template, privacy rules, example |
 | `references/routing.md` | Deciding which skill handles a request, including mixed requests |
 | `references/lookup-order.md` | Finding a fact: MCP first, then skill references, then ask |
 | `references/known-issues.md` | Before handoff, or when a request touches contrast, unpublished sets or icons, line-height tokens, prop typos or digit conflicts |

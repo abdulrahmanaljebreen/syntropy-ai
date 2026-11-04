@@ -1,6 +1,6 @@
 # Feedback mode
 
-`/syntropy feedback` (or `syntropy: feedback`, «ملاحظة», «ملاحظات», «بلّغ») turns a mistake or an idea into a report the Syntropy owner can act on in one read. The agent writes the report; the person only adds what they saw and pastes it into the feedback list.
+`/syntropy feedback` (or `syntropy: feedback`, «ملاحظة», «ملاحظات», «بلّغ») turns a mistake or an idea into a report the Syntropy owner can act on in one read. The agent writes the report and, when a Notion tool is connected, adds it to the feedback list itself after one yes; otherwise the person pastes it.
 
 Feedback list (Notion form): https://app.notion.com/p/521333af0f8046cb89a6692368be729c
 
@@ -11,7 +11,18 @@ Feedback list (Notion form): https://app.notion.com/p/521333af0f8046cb89a6692368
 4. Pick one type: Wrong component · Wrong token or colour · Copy or Arabic · Missing component or pattern · Install problem · Idea. Why: these are the options in the feedback list.
 5. Never include personal data, investor data, credentials, tokens, private Figma links or customer content. Replace them with placeholders (`{iban}`, `{name}`). Why: the list is readable by everyone at Safqah.
 6. Write the report in the person's language (Arabic by default). Keep component, token and file names in English. No em dash character.
-7. Output the report in one code block so it copies cleanly, then one line telling the person to open the feedback list and paste it into Details, with the Summary line as the title.
+7. Output the report in one code block so it copies cleanly.
+8. Then send it to the list:
+   - **A Notion tool is connected** (a create-pages tool from the Notion MCP): ask one line, «أضيفها لقائمة الملاحظات؟», unless the person already said to add it. On yes, create one page in the data source `collection://ffc45944-aefb-4ed8-8669-ad368acbd013` with these properties, then reply with the new row's link in one line:
+     | Property | Value |
+     |---|---|
+     | `Summary` (title) | the Summary line |
+     | `Type` | the Type, exactly one of the six options |
+     | `Tool` | one of: Claude Code, Claude Desktop, Claude.ai, Cursor, Codex, ChatGPT, Gemini, Figma Make, Other |
+     | `Details` | the whole report, as plain text |
+     | `Link` | a URL from the report if there is one, else leave empty |
+     Leave `Status` alone (it starts as New). If creating the page fails, say so in one line and fall back to the paste route. Never edit or delete other rows.
+   - **No Notion tool**: one line telling the person to open the feedback list, click New, paste the report into Details and use the Summary line as the title. Why: everyone can send feedback; those with Notion connected do it in one step.
 
 ## Report template
 ```text
@@ -52,4 +63,8 @@ Where:
 > Where:
 > Settings, identity verification row
 > ```
-> افتح قائمة الملاحظات والصق هذا في Details، والسطر الأول عنوانًا: https://app.notion.com/p/521333af0f8046cb89a6692368be729c
+> أضيفها لقائمة الملاحظات؟
+> **Person:** نعم
+> **Agent:** (creates the row) أُضيفت: <link to the new row>
+
+Without a Notion tool, the last line is instead: افتح قائمة الملاحظات والصق هذا في Details، والسطر الأول عنوانًا: https://app.notion.com/p/521333af0f8046cb89a6692368be729c

@@ -46,7 +46,7 @@ Each rule with why, looks like and does not look like: `references/non-negotiabl
 | `/syntropy research <topic>` | Research | Hand to syntropy-inspiration research mode |
 | `/syntropy review <link, image or code>` | Review | Hand to syntropy-ux-review |
 | `/syntropy explain <thing>` | Explain | Short exact answer (format below) |
-| `/syntropy feedback [what went wrong]` | Feedback | Report in one code block plus the feedback list link (`references/feedback.md`) |
+| `/syntropy feedback [what went wrong]` | Feedback | Report in one code block, then add it to the feedback list (Notion tool connected, after one yes) or give the link to paste (`references/feedback.md`) |
 | A quick question ("what token for muted text") | Direct | Answer from the right skill, no interview |
 Arabic triggers count too: «ابحث» = research, «راجع» = review, «اشرح» = explain, «ملاحظة» = feedback. Detail and example sessions: `references/modes.md`.
 

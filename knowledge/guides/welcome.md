@@ -8,7 +8,6 @@
 Figma: [Welcome (Cover)](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=0-1)
 
 Syntropy - Safqah Design System 2.0.0
-(In construction)
 
 A unified structure to be used by designer for developers to create a unique, yet simple experience, and all while being consistent and scalable.
 

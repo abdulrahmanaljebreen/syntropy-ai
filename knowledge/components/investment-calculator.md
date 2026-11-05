@@ -24,7 +24,7 @@ Reference image (every variant, labelled): `knowledge/examples/components/invest
 | Calculator-list-item | [3456:9742](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=3456-9742) | set | 16 | yes | `knowledge/examples/components/investment-calculator/calculator-list-item.png` |
 | Calculator / Info label | [5994:5888](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-5888) | set | 4 | no | `knowledge/examples/components/investment-calculator/calculator-info-label.png` |
 | Calculator / Stat tile | [5994:5949](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-5949) | set | 4 | no | `knowledge/examples/components/investment-calculator/calculator-stat-tile.png` |
-| Calculator / Duration option | [5994:5976](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-5976) | set | 6 | no | `knowledge/examples/components/investment-calculator/calculator-duration-option.png` |
+| Calculator / Duration option | [5994:5976](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-5976) | set | 6 | yes | `knowledge/examples/components/investment-calculator/calculator-duration-option.png` |
 | Calculator / Swipe arrow | [5994:6001](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-6001) | set | 4 | no | `knowledge/examples/components/investment-calculator/calculator-swipe-arrow.png` |
 | Calculator / Funded label | [5994:6008](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-6008) | set | 2 | no | `knowledge/examples/components/investment-calculator/calculator-funded-label.png` |
 | Calculator / Disclosure toggle | [5994:6041](https://www.figma.com/design/a7Z956YZy9n6f9uz5DK16Y?node-id=5994-6041) | set | 4 | no | `knowledge/examples/components/investment-calculator/calculator-disclosure-toggle.png` |
@@ -290,8 +290,6 @@ Don't use when:
 Accessibility: Closed terms are announced as closed and cannot be selected.
 
 Compliance: The rate is an annual projected rate; do not colour it green unless it is the selected term per the v2 colour rule.
-
-> Not published to the Figma library. Use it by name everywhere; in another Figma file take its published route or copy it from the Syntropy file (syntropy-components, unpublished.md).
 
 | Property in Figma | Code name | Type | Values | Default |
 | --- | --- | --- | --- | --- |

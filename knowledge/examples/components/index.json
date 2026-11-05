@@ -1350,6 +1350,20 @@
   "path": "knowledge/examples/components/portfolio-header/wallet-chip.png"
  },
  {
+  "id": "6631:1411",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "RollingDigit",
+  "path": "knowledge/examples/components/portfolio-header/rolling-digit.png"
+ },
+ {
+  "id": "6631:1484",
+  "page": "portfolio-header",
+  "kind": "set",
+  "name": "RollingAmount",
+  "path": "knowledge/examples/components/portfolio-header/rolling-amount.png"
+ },
+ {
   "id": "3521:3470",
   "page": "goal-tracker",
   "kind": "component",
@@ -1376,20 +1390,6 @@
   "kind": "set",
   "name": "ProvinceSelector",
   "path": "knowledge/examples/components/province-selector/province-selector.png"
- },
- {
-  "id": "6631:1411",
-  "page": "portfolio-header",
-  "kind": "set",
-  "name": "RollingDigit",
-  "path": "knowledge/examples/components/portfolio-header/rolling-digit.png"
- },
- {
-  "id": "6631:1484",
-  "page": "portfolio-header",
-  "kind": "set",
-  "name": "RollingAmount",
-  "path": "knowledge/examples/components/portfolio-header/rolling-amount.png"
  },
  {
   "id": "3718:190",

@@ -3,14 +3,14 @@
  "source": {
   "file": "a7Z956YZy9n6f9uz5DK16Y",
   "name": "Syntropy - Safqah Design System 2.0.0",
-  "lastModified": "2026-10-22T16:35:49Z"
+  "lastModified": "2026-11-04T16:39:54Z"
  },
  "counts": {
   "pages": 85,
   "sets": 326,
   "standalone": 34,
   "variants": 4931,
-  "published": 285,
+  "published": 286,
   "withDescription": 63
  },
  "families": [
@@ -17725,7 +17725,7 @@
     "reference": "3452:3591",
     "container": "5998:370314"
    },
-   "published": false
+   "published": true
   },
   {
    "id": "5994:6001",
